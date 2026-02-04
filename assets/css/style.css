@@ -133,3 +133,9 @@ section + section {
 .hero p{
   text-shadow: 0 10px 30px rgba(0,0,0,.55);
 }
+.kicker{
+  background: rgba(0,0,0,.45);
+  border: 1px solid rgba(255,255,255,.18);
+  color: rgba(255,255,255,.92);
+}
+.kicker span{ color: #f5d07a; }
