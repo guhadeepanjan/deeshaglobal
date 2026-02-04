@@ -3,6 +3,7 @@
   --bg1:#0b1220;
 
   --card: rgba(255,255,255,.06);
+  --card2: rgba(255,255,255,.08);
   --stroke: rgba(255,255,255,.12);
 
   --text:#f4f7ff;
@@ -13,36 +14,45 @@
   --gold2:#f3d58a;
 
   --shadow: 0 14px 40px rgba(0,0,0,.30);
+  --shadow2: 0 20px 60px rgba(0,0,0,.35);
+
   --max:1120px;
   --r:16px;
 }
 
 *{ box-sizing:border-box; }
 html,body{ margin:0; padding:0; }
-
 body{
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   background: linear-gradient(180deg, var(--bg0) 0%, var(--bg1) 55%, #070b13 100%);
   color: var(--text);
   line-height: 1.55;
 }
-
 a{ color:inherit; text-decoration:none; }
-.container{ max-width: var(--max); margin:0 auto; padding: 0 22px; }
+
+.container{
+  max-width: var(--max);
+  margin:0 auto;
+  padding: 0 22px;
+}
 
 /* =========================
    HEADER / NAV
+   Supports BOTH:
+   - .nav + .links (home)
+   - .navbar + .navlinks (services)
    ========================= */
 .header{
   position: sticky;
   top:0;
   z-index:50;
   background: linear-gradient(180deg, rgba(6,10,20,.96), rgba(6,10,20,.86));
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255,255,255,.08);
 }
 
-.nav{
+.nav,
+.navbar{
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -54,45 +64,58 @@ a{ color:inherit; text-decoration:none; }
   display:flex;
   align-items:center;
   gap:10px;
+  min-width: 180px;
 }
 .brand img{
   height:44px;
   width:44px;
   border-radius:10px;
+  background:#fff;
 }
 .brand .name{
-  font-weight:900;
-  letter-spacing:.2px;
+  font-weight: 900;
+  letter-spacing: .2px;
 }
 
-.links{
+.links,
+.navlinks{
   display:flex;
   align-items:center;
-  gap:14px;
+  gap: 14px;
   flex-wrap: nowrap;
 }
-.links a{
+
+.links a,
+.navlinks a{
   color: var(--muted);
-  padding:8px 10px;
-  border-radius:10px;
-  font-size:14px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  font-size: 14px;
   white-space: nowrap;
 }
-.links a:hover{
+.links a:hover,
+.navlinks a:hover{
   background: rgba(255,255,255,.06);
-  color:#fff;
+  color: #fff;
 }
-.links .cta{
-  padding:10px 16px;
-  border-radius:12px;
+
+.links .cta,
+.navlinks .cta{
+  padding: 10px 16px;
+  border-radius: 12px;
   background: linear-gradient(135deg, var(--gold), var(--gold2));
-  color:#0b1220;
-  font-weight:900;
+  color: #0b1220;
+  font-weight: 900;
   box-shadow: 0 8px 22px rgba(231,182,90,.22);
 }
 
 /* =========================
    HERO
+   Supports BOTH:
+   - .container.inner (home)
+   - .container.hero-inner (services)
+   - .actions (home) / .hero-actions (services)
+   - .btn.primary (home) / .btn-primary (services)
    ========================= */
 .hero{
   position: relative;
@@ -103,18 +126,18 @@ a{ color:inherit; text-decoration:none; }
   background-position: center;
 }
 
+/* Overlay to ensure contrast without “smoky” tacky feel */
 .hero::before{
   content:"";
   position:absolute;
   inset:0;
-  background: linear-gradient(180deg,
-    rgba(6,10,20,.18) 0%,
-    rgba(6,10,20,.34) 55%,
-    rgba(6,10,20,.55) 100%
-  );
+  background:
+    radial-gradient(1200px 600px at 20% 40%, rgba(0,0,0,.10), rgba(0,0,0,.0) 60%),
+    linear-gradient(180deg, rgba(6,10,20,.20) 0%, rgba(6,10,20,.45) 55%, rgba(6,10,20,.62) 100%);
 }
 
-.container.inner{
+.container.inner,
+.container.hero-inner{
   position: relative;
   z-index: 2;
   padding: 64px 22px;
@@ -124,7 +147,7 @@ a{ color:inherit; text-decoration:none; }
   gap: 14px;
 }
 
-/* keep kicker */
+/* Kicker pill */
 .kicker{
   display:inline-block;
   padding: 7px 12px;
@@ -133,23 +156,24 @@ a{ color:inherit; text-decoration:none; }
   border: 1px solid rgba(255,255,255,.14);
   color: rgba(255,255,255,.92);
   font-size: 13px;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(8px);
 }
 .kicker span{
   color: var(--gold2);
   font-weight: 900;
 }
 
-/* REMOVE HERO HEADLINE EVERYWHERE */
+/* ✅ Remove the “Guiding Growth, Globally.” headline everywhere */
 .hero h1{ display:none !important; }
 
-/* Lead paragraph – readable, not “eating” the image */
-.lead{
-  max-width: 560px;
+/* Ensure the paragraph is readable + premium */
+.hero .lead,
+.hero p{
+  max-width: 600px;
   font-size: 16.5px;
-  line-height: 1.6;
-  color: #ffffff;
+  line-height: 1.65;
   margin: 0;
+  color: #fff;
   padding: 14px 16px;
   border-radius: 14px;
   background: rgba(6,10,20,.52);
@@ -158,26 +182,32 @@ a{ color:inherit; text-decoration:none; }
 }
 
 /* Buttons */
-.actions{
+.actions,
+.hero-actions{
   display:flex;
   gap: 12px;
   flex-wrap: wrap;
   align-items: center;
   margin-top: 6px;
 }
+
 .btn{
   display:inline-flex;
   align-items:center;
   justify-content:center;
   padding: 12px 16px;
   border-radius: 14px;
-  border: 1px solid rgba(255,255,255,.16);
+  border: 1px solid rgba(255,255,255,.18);
   background: rgba(6,10,20,.26);
   color:#fff;
   font-weight: 800;
   min-width: 210px;
 }
-.btn.primary{
+
+.btn:hover{ background: rgba(255,255,255,.06); }
+
+.btn.primary,
+.btn-primary{
   border: none;
   background: linear-gradient(135deg, var(--gold), var(--gold2));
   color:#0b1220;
@@ -185,36 +215,71 @@ a{ color:inherit; text-decoration:none; }
 }
 
 /* =========================
-   SECTIONS / CARDS
+   SECTIONS – more premium spacing
    ========================= */
 .section{
-  padding: 72px 0;
+  padding: 56px 0;
   border-top: 1px solid rgba(255,255,255,.06);
+  position: relative;
 }
+.section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(700px 280px at 20% 0%, rgba(231,182,90,.10), rgba(0,0,0,0) 60%),
+    radial-gradient(700px 280px at 85% 30%, rgba(47,125,255,.08), rgba(0,0,0,0) 60%);
+  opacity:.75;
+}
+
+.section .container{ position:relative; z-index:1; }
 
 h2{
-  font-size: 28px;
-  margin: 0 0 12px;
+  font-size: 30px;
+  margin: 0 0 10px;
 }
+.lead{ color: rgba(255,255,255,.90); }
 
-/* IMPORTANT: FORCE 3 + 2 ON DESKTOP */
+/* =========================
+   GRID / CARDS
+   ========================= */
 .grid{
   display:grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
-  margin-top: 22px;
+  margin-top: 18px;
+}
+
+/* ✅ 5 pillars layout: 3 + 2 (no orphan) on desktop */
+@media (min-width: 1025px){
+  .grid{ grid-template-columns: repeat(3, 1fr); }
+}
+/* Tablet = 2 columns */
+@media (max-width: 1024px){
+  .grid{ grid-template-columns: repeat(2, 1fr); }
+}
+/* Mobile = 1 column */
+@media (max-width: 640px){
+  .grid{ grid-template-columns: 1fr; }
 }
 
 .card{
   padding: 22px;
   border-radius: var(--r);
-  background: var(--card);
+  background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.045));
   border: 1px solid rgba(255,255,255,.10);
   box-shadow: var(--shadow);
+  transition: transform .25s ease, border-color .25s ease, background .25s ease;
 }
 
-.card h3{ margin:0 0 8px; font-size:18px; }
-.card p{ margin:0; color: var(--muted); }
+.card:hover{
+  transform: translateY(-4px);
+  border-color: rgba(231,182,90,.25);
+  background: linear-gradient(180deg, rgba(255,255,255,.09), rgba(255,255,255,.055));
+}
+
+.card h3{ margin: 0 0 8px; font-size: 18px; }
+.card p{ margin: 0; color: var(--muted); }
 
 .more{
   display:inline-block;
@@ -223,8 +288,31 @@ h2{
   color: var(--gold2);
 }
 
+/* ✅ Stagger animation: all cards appear one after the other */
+@keyframes fadeUp{
+  from{ opacity:0; transform: translateY(14px); }
+  to{ opacity:1; transform: translateY(0); }
+}
+.card{
+  opacity:0;
+  animation: fadeUp .65s ease forwards;
+}
+.card:nth-child(1){ animation-delay: .05s; }
+.card:nth-child(2){ animation-delay: .12s; }
+.card:nth-child(3){ animation-delay: .19s; }
+.card:nth-child(4){ animation-delay: .26s; }
+.card:nth-child(5){ animation-delay: .33s; }
+.card:nth-child(6){ animation-delay: .40s; }
+.card:nth-child(7){ animation-delay: .47s; }
+.card:nth-child(8){ animation-delay: .54s; }
+
+@media (prefers-reduced-motion: reduce){
+  .card{ opacity:1; animation:none; }
+  .card:hover{ transform:none; }
+}
+
 /* =========================
-   SPLIT SECTION
+   SPLIT (Founder section)
    ========================= */
 .split{
   display:grid;
@@ -232,13 +320,12 @@ h2{
   gap: 26px;
   align-items: center;
 }
-
 .portrait{
   width: 100%;
   max-width: 420px;
   border-radius: 20px;
   border: 1px solid rgba(255,255,255,.14);
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow2);
 }
 
 /* =========================
@@ -249,17 +336,12 @@ h2{
   background: rgba(6,10,20,.35);
   border-top: 1px solid rgba(255,255,255,.10);
 }
-
 .cols{
   display:grid;
   grid-template-columns: 1.4fr 1fr 1fr;
   gap: 18px;
 }
-
-.small{
-  color: var(--muted2);
-  font-size: 13px;
-}
+.small{ color: var(--muted2); font-size: 13px; }
 
 .social{
   display:flex;
@@ -279,34 +361,28 @@ h2{
 /* =========================
    RESPONSIVE
    ========================= */
-
-/* iPad / smaller laptop */
-@media (max-width: 1024px){
-  .links{
-    gap: 10px;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  /* Five pillars becomes 2 columns */
-  .grid{
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
 @media (max-width: 860px){
   .split{ grid-template-columns: 1fr; }
 }
 
-/* Mobile */
+/* Mobile header: show only CTA */
 @media (max-width: 640px){
+  .container{ padding: 0 16px; }
 
-  /* nav = logo + CTA only */
   .brand .name{ display:none; }
-  .links a{ display:none; }
-  .links a.cta{ display:inline-flex; }
 
-  /* hero = show full image */
+  .links a,
+  .navlinks a{ display:none; }
+
+  .links a.cta,
+  .navlinks a.cta{
+    display:inline-flex;
+    padding: 9px 12px;
+    border-radius: 12px;
+    font-size: 13px;
+  }
+
+  /* Mobile hero: show full image (no weird crop) */
   .hero{
     min-height: 86vh;
     background-size: contain;
@@ -315,21 +391,23 @@ h2{
     background-color: #050812;
   }
 
-  /* content sits lower */
-  .container.inner{
-    padding: 20px 22px 30px;
+  .container.inner,
+  .container.hero-inner{
+    padding: 18px 16px 26px;
     min-height: 86vh;
     justify-content: flex-end;
   }
 
-  .lead{
+  .hero .lead,
+  .hero p{
     max-width: 100%;
     font-size: 15.5px;
     padding: 12px 12px;
     background: rgba(6,10,20,.58);
   }
 
-  .actions{
+  .actions,
+  .hero-actions{
     width: 100%;
     flex-direction: column;
     align-items: stretch;
@@ -343,132 +421,5 @@ h2{
     padding: 14px 16px;
   }
 
-  /* Five pillars becomes 1 column */
-  .grid{
-    grid-template-columns: 1fr;
-  }
-}
-/* =========================
-   PREMIUM SPACING PACK
-   Paste at the VERY bottom
-   ========================= */
-
-/* 1) Slightly narrower container so it feels premium (less empty on big screens) */
-:root{
-  --max: 1040px; /* was 1120px */
-}
-
-/* 2) Reduce section padding a bit (removes top/bottom dead space) */
-.section{
-  padding: 54px 0; /* was 72px */
-}
-
-/* 3) Make the title area tighter */
-.section h2{
-  margin-bottom: 10px;
-}
-
-/* 4) The paragraph under "Our Five Pillars" — make it look like a refined subtitle */
-.section .lead{
-  max-width: 760px;
-  padding: 14px 16px;
-  border-radius: 16px;
-  background: rgba(255,255,255,.04);
-  border: 1px solid rgba(255,255,255,.10);
-  box-shadow: none;
-  margin: 10px 0 18px;
-}
-
-/* 5) Grid spacing: slightly tighter, more balanced */
-.grid{
-  gap: 16px;              /* was 18px */
-  margin-top: 16px;       /* was 22px */
-}
-
-/* 6) Cards: sharper premium look + subtle lift on hover */
-.card{
-  background: rgba(255,255,255,.055);
-  border: 1px solid rgba(255,255,255,.11);
-  border-radius: 18px;
-  padding: 22px;
-  transition: transform .18s ease, border-color .18s ease, background .18s ease;
-}
-
-.card:hover{
-  transform: translateY(-3px);
-  background: rgba(255,255,255,.07);
-  border-color: rgba(231,182,90,.28);
-}
-
-/* 7) Improve typography inside cards */
-.card h3{
-  font-size: 18px;
-  line-height: 1.25;
-  margin-bottom: 10px;
-}
-
-.card p{
-  font-size: 14.5px;
-  line-height: 1.6;
-}
-
-/* 8) "Learn more" link: looks more premium */
-.more{
-  display:inline-flex;
-  gap: 8px;
-  align-items:center;
-  margin-top: 14px;
-  font-weight: 900;
-  color: var(--gold2);
-  opacity: .95;
-}
-
-.more:hover{
-  opacity: 1;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-
-/* 9) On iPad widths, reduce side gaps a bit more */
-@media (max-width: 1024px){
-  .container{ padding: 0 18px; }
-  .section{ padding: 46px 0; }
-}
-
-/* 10) Mobile: keep it snug, not airy */
-@media (max-width: 640px){
-  .section{ padding: 40px 0; }
-  .section .lead{ margin: 10px 0 14px; }
-  .grid{ gap: 14px; }
-}
-/* =========================
-   Global Scroll Reveal (ALL CARDS)
-   ========================= */
-
-.card{
-  opacity: 0;
-  transform: translateY(14px);
-  transition: opacity .6s ease, transform .6s ease;
-  will-change: opacity, transform;
-}
-
-.card.is-visible{
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Optional: slightly nicer hover (premium feel) */
-.card:hover{
-  transform: translateY(-2px);
-  transition: transform .25s ease;
-}
-
-/* Respect accessibility */
-@media (prefers-reduced-motion: reduce){
-  .card,
-  .card.is-visible{
-    opacity: 1 !important;
-    transform: none !important;
-    transition: none !important;
-  }
+  .cols{ grid-template-columns: 1fr; }
 }
