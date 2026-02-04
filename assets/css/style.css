@@ -396,3 +396,17 @@ h2{
     );
   }
 }
+@media (max-width: 640px){
+
+  /* Hide hero text on mobile */
+  .hero .kicker,
+  .hero h1,
+  .hero .lead{
+    display: none;
+  }
+
+  /* Pull buttons up slightly so layout stays balanced */
+  .hero .actions{
+    margin-top: 24px;
+  }
+}
