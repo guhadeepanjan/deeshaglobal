@@ -348,3 +348,96 @@ h2{
     grid-template-columns: 1fr;
   }
 }
+/* =========================
+   PREMIUM SPACING PACK
+   Paste at the VERY bottom
+   ========================= */
+
+/* 1) Slightly narrower container so it feels premium (less empty on big screens) */
+:root{
+  --max: 1040px; /* was 1120px */
+}
+
+/* 2) Reduce section padding a bit (removes top/bottom dead space) */
+.section{
+  padding: 54px 0; /* was 72px */
+}
+
+/* 3) Make the title area tighter */
+.section h2{
+  margin-bottom: 10px;
+}
+
+/* 4) The paragraph under "Our Five Pillars" — make it look like a refined subtitle */
+.section .lead{
+  max-width: 760px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.10);
+  box-shadow: none;
+  margin: 10px 0 18px;
+}
+
+/* 5) Grid spacing: slightly tighter, more balanced */
+.grid{
+  gap: 16px;              /* was 18px */
+  margin-top: 16px;       /* was 22px */
+}
+
+/* 6) Cards: sharper premium look + subtle lift on hover */
+.card{
+  background: rgba(255,255,255,.055);
+  border: 1px solid rgba(255,255,255,.11);
+  border-radius: 18px;
+  padding: 22px;
+  transition: transform .18s ease, border-color .18s ease, background .18s ease;
+}
+
+.card:hover{
+  transform: translateY(-3px);
+  background: rgba(255,255,255,.07);
+  border-color: rgba(231,182,90,.28);
+}
+
+/* 7) Improve typography inside cards */
+.card h3{
+  font-size: 18px;
+  line-height: 1.25;
+  margin-bottom: 10px;
+}
+
+.card p{
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+
+/* 8) "Learn more" link: looks more premium */
+.more{
+  display:inline-flex;
+  gap: 8px;
+  align-items:center;
+  margin-top: 14px;
+  font-weight: 900;
+  color: var(--gold2);
+  opacity: .95;
+}
+
+.more:hover{
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* 9) On iPad widths, reduce side gaps a bit more */
+@media (max-width: 1024px){
+  .container{ padding: 0 18px; }
+  .section{ padding: 46px 0; }
+}
+
+/* 10) Mobile: keep it snug, not airy */
+@media (max-width: 640px){
+  .section{ padding: 40px 0; }
+  .section .lead{ margin: 10px 0 14px; }
+  .grid{ gap: 14px; }
+}
