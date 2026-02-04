@@ -86,3 +86,13 @@ nav a {
   line-height: 1.65;
   opacity: 0.92;
 }
+.btn-primary {
+  background: linear-gradient(135deg, #e7b65a, #f3d58a);
+  color: #111;
+  box-shadow: 0 10px 30px rgba(231,182,90,0.35);
+}
+.btn-secondary {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.35);
+}
