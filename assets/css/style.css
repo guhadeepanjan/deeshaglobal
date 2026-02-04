@@ -426,3 +426,28 @@ h2{
     padding: 14px 16px;
   }
 }
+/* =========================
+   FIVE PILLARS GRID FIX
+   3 + 2 layout (no orphan card)
+   ========================= */
+
+/* Desktop & large screens */
+@media (min-width: 1025px){
+  .grid{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px){
+  .grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px){
+  .grid{
+    grid-template-columns: 1fr;
+  }
+}
