@@ -312,7 +312,115 @@ h2{
     align-items: stretch;
     gap: 12px;
   }
+/* =========================
+   HERO REFINEMENT (premium alignment)
+   Paste at the very bottom
+   ========================= */
 
+/* Keep headline hidden */
+.hero h1{ display:none !important; }
+
+/* Better hero composition */
+.hero{
+  align-items: center;
+}
+
+.container.inner{
+  padding: 64px 22px;
+  max-width: var(--max);
+}
+
+/* Create a neat left column */
+.hero .container.inner{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+/* Kicker: cleaner + aligned */
+.kicker{
+  margin: 0;
+  padding: 7px 12px;
+  background: rgba(6,10,20,.42);
+  border: 1px solid rgba(255,255,255,.14);
+  color: rgba(255,255,255,.92);
+  backdrop-filter: blur(6px);
+}
+
+/* Lead: slimmer + lighter so image shows through */
+.lead{
+  margin: 0;
+  max-width: 560px;
+  font-size: 16.5px;
+  line-height: 1.6;
+  padding: 14px 16px;
+  background: rgba(6,10,20,.52);   /* lighter than before */
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 14px;
+  box-shadow: 0 12px 28px rgba(0,0,0,.22);
+}
+
+/* Buttons: align as a clean cluster */
+.actions{
+  margin-top: 6px;
+  gap: 12px;
+}
+
+.btn{
+  min-width: 210px;
+  padding: 12px 16px;
+  border-radius: 14px;
+}
+
+.btn:not(.primary){
+  background: rgba(6,10,20,.26);
+  border: 1px solid rgba(255,255,255,.16);
+}
+
+/* =========================
+   MOBILE: keep it tight + clean
+   ========================= */
+@media (max-width: 640px){
+
+  .hero{
+    min-height: 86vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-color: #050812;
+  }
+
+  .container.inner{
+    padding: 20px 22px 30px;
+    min-height: 86vh;
+    justify-content: flex-end;
+  }
+
+  .kicker{
+    font-size: 12.5px;
+  }
+
+  .lead{
+    max-width: 100%;
+    font-size: 15.5px;
+    padding: 12px 12px;
+    background: rgba(6,10,20,.58);
+  }
+
+  .actions{
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn{
+    width: 100%;
+    min-width: 0;
+    justify-content: center;
+    padding: 14px 16px;
+  }
+}
   .btn{
     width: 100%;
     padding: 14px 16px;
