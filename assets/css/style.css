@@ -39,3 +39,21 @@ border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);font-wei
 .social a{padding:8px 10px;border-radius:10px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.06);color:var(--muted)}
 .social a:hover{color:var(--text)}
 @media (max-width:860px){h1{font-size:38px}.split{grid-template-columns:1fr}}
+header {
+  padding: 16px 48px;
+  background: linear-gradient(
+    180deg,
+    rgba(6,10,20,0.98),
+    rgba(6,10,20,0.92)
+  );
+  backdrop-filter: blur(6px);
+}
+
+header img {
+  height: 52px;
+}
+
+nav a {
+  margin-left: 28px;
+  font-weight: 500;
+}
