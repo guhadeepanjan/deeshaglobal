@@ -590,3 +590,58 @@ h2{
     padding: 9px 12px;
   }
 }
+/* =========================
+   HERO FULL-WIDTH STATEMENT
+   ========================= */
+
+.hero-statement{
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  padding: 26px 8vw;
+
+  text-align: center;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.55;
+  letter-spacing: .2px;
+
+  color: rgba(255,255,255,.95);
+
+  background: linear-gradient(
+    180deg,
+    rgba(6,10,20,.55),
+    rgba(6,10,20,.72)
+  );
+
+  border-top: 1px solid rgba(255,255,255,.12);
+  border-bottom: 1px solid rgba(255,255,255,.12);
+
+  animation: heroFadeUp 1.2s ease-out both;
+}
+
+/* Highlighted words */
+.hero-statement span{
+  color: var(--gold2);
+  font-weight: 700;
+}
+
+/* Animation */
+@keyframes heroFadeUp{
+  from{
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile tuning */
+@media (max-width: 640px){
+  .hero-statement{
+    font-size: 18px;
+    padding: 22px 18px;
+  }
+}
