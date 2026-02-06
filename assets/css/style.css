@@ -665,3 +665,166 @@ h2{
     padding: 22px 18px;
   }
 }
+/* =========================
+   HERO STATEMENT – ANIMATED + CORPORATE COLOR
+   Paste at END of style.css
+   ========================= */
+
+.hero-statement.hero-animate{
+  position: relative;
+  max-width: 1120px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+
+  /* subtle “corporate glass” base */
+  padding: 18px 22px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(6,10,20,.44), rgba(6,10,20,.22));
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: 0 18px 52px rgba(0,0,0,.35);
+
+  /* make it breathe on desktop */
+  backdrop-filter: blur(10px);
+}
+
+/* Keep it readable over bright hero images */
+.hero-statement.hero-animate::before{
+  content:"";
+  position:absolute;
+  inset:-1px;
+  border-radius: 18px;
+  pointer-events:none;
+  background:
+    radial-gradient(700px 220px at 18% 20%, rgba(231,182,90,.18), rgba(0,0,0,0) 60%),
+    radial-gradient(700px 220px at 85% 55%, rgba(47,125,255,.14), rgba(0,0,0,0) 60%);
+  opacity: .85;
+}
+
+/* Lines behave nicely on all screens */
+.hero-animate .hs-line{
+  position: relative;
+  display: block;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(14px);
+  animation: hsFadeUp .8s ease forwards;
+}
+
+.hero-animate .hs-1{
+  font-size: clamp(20px, 2.2vw, 34px);
+  font-weight: 900;
+  letter-spacing: -0.3px;
+  margin-bottom: 10px;
+  animation-delay: .05s;
+}
+
+.hero-animate .hs-2{
+  font-size: clamp(15px, 1.35vw, 19px);
+  font-weight: 600;
+  line-height: 1.6;
+  color: rgba(244,247,255,.92);
+  animation-delay: .18s;
+}
+
+/* Corporate “accent” for key words: gold gradient + gentle shimmer */
+.hs-accent{
+  position: relative;
+  display: inline-block;
+  font-weight: 900;
+  color: transparent;
+  background: linear-gradient(135deg, var(--gold2), var(--gold));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.hs-accent::after{
+  content:"";
+  position:absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(231,182,90,0), rgba(231,182,90,.9), rgba(231,182,90,0));
+  opacity: .55;
+
+  transform: scaleX(.2);
+  transform-origin: center;
+  animation: hsUnderline 1.2s ease forwards;
+  animation-delay: .55s;
+}
+
+/* Pill tags (education/careers/technology): corporate chips with a soft animated sheen */
+.hs-pill{
+  position: relative;
+  display: inline-block;
+  padding: 6px 10px;
+  margin: 0 2px;
+  border-radius: 999px;
+  font-weight: 900;
+  letter-spacing: .2px;
+
+  background: rgba(6,10,20,.38);
+  border: 1px solid rgba(255,255,255,.14);
+  box-shadow: 0 10px 22px rgba(0,0,0,.22);
+}
+
+.hs-pill::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius: 999px;
+  pointer-events:none;
+
+  /* gold + cool-blue corporate sheen */
+  background: linear-gradient(120deg,
+    rgba(231,182,90,.0) 0%,
+    rgba(231,182,90,.22) 35%,
+    rgba(47,125,255,.18) 55%,
+    rgba(231,182,90,.0) 85%
+  );
+
+  opacity: 0;
+  transform: translateX(-18%);
+  animation: hsSheen 1.6s ease forwards;
+  animation-delay: .55s;
+}
+
+/* Animations */
+@keyframes hsFadeUp{
+  to{ opacity: 1; transform: translateY(0); }
+}
+
+@keyframes hsUnderline{
+  to{ transform: scaleX(1); opacity: .75; }
+}
+
+@keyframes hsSheen{
+  0%{ opacity: 0; transform: translateX(-22%); }
+  30%{ opacity: .55; }
+  100%{ opacity: .15; transform: translateX(22%); }
+}
+
+/* Optional: hover polish (desktop only) */
+@media (hover:hover){
+  .hero-statement.hero-animate:hover{
+    border-color: rgba(231,182,90,.22);
+    box-shadow: 0 22px 70px rgba(0,0,0,.40);
+  }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .hero-animate .hs-line{
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+  .hs-accent::after,
+  .hs-pill::before{
+    animation: none;
+    opacity: .2;
+    transform: none;
+  }
+}
