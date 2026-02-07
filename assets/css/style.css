@@ -520,3 +520,51 @@ h2{ font-size: 30px; margin: 0 0 10px; }
   .card:hover{ transform:none; }
   .after-glass::before{ animation:none; opacity:.12; }
 }
+/* iPad Safari fix: gradient text sometimes looks plain without this */
+.hero-headline span,
+.after-glass .accent{
+  -webkit-text-fill-color: transparent;
+}
+/* =========================
+   iPad / Tablet hero tuning
+   ========================= */
+@media (min-width: 768px) and (max-width: 1180px){
+
+  /* Show more video area */
+  .hero{ min-height: 72vh; }
+  .hero-min{
+    min-height: 72vh;
+    padding: 22px 0 22px !important;
+  }
+
+  /* Make the headline smaller so it doesn't eat the video */
+  .hero-headline{
+    font-size: clamp(18px, 2vw, 30px) !important;
+    margin-top: 6px !important;
+  }
+
+  /* Kicker slightly smaller */
+  .kicker{
+    font-size: 12px !important;
+    padding: 6px 10px !important;
+  }
+
+  /* CTA row truly goes to left/right corners of viewport */
+  .hero-cta-row{
+    width: 100% !important;
+    max-width: none !important;
+    padding: 0 18px !important;        /* edge padding */
+    margin-top: 12px !important;
+    justify-content: space-between !important;
+  }
+
+  /* Buttons not too huge on iPad */
+  .hero-cta-row .btn{
+    min-width: 220px !important;
+  }
+}
+.hero::before{
+  background:
+    radial-gradient(1200px 600px at 20% 40%, rgba(0,0,0,.06), rgba(0,0,0,0) 60%),
+    linear-gradient(180deg, rgba(6,10,20,.08) 0%, rgba(6,10,20,.24) 55%, rgba(6,10,20,.52) 100%) !important;
+}
