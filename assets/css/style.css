@@ -583,3 +583,41 @@ h2{ font-size: 30px; margin: 0 0 10px; }
 .contact-form textarea{
   resize: vertical;
 }
+/* =========================
+   CONTACT FORM
+   ========================= */
+.contact-form{
+  display:grid;
+  gap: 14px;
+}
+
+.contact-form label{
+  display:flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea{
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(6,10,20,.35);
+  color: #fff;
+  font-size: 15px;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus{
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 2px rgba(231,182,90,.25);
+}
+
+.contact-form textarea{
+  resize: vertical;
+}
