@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Get Started | Deesha Global</title>
   <meta name="description" content="Deesha Global Pte. Ltd. — People • Education • Technology. Guiding Growth Globally.">
-  <link rel="stylesheet" href="assets/css/style.css?v=20260210-1">
+  <link rel="stylesheet" href="assets/css/style.css?v=20260210-2">
 </head>
 
 <body>
@@ -30,74 +30,126 @@
     </div>
   </div>
 
-  <!-- PAGE -->
-  <div class="section">
+  <!-- HERO HEADER -->
+  <div class="contact-hero">
+    <div class="container">
+      <div class="contact-hero-inner">
+        <div class="contact-badge">Get Started</div>
+        <h1 class="contact-title">Let’s discuss your next step.</h1>
+        <p class="contact-subtitle">
+          Tell us what you’re trying to achieve — we’ll respond with a clear, practical plan.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div class="section contact-section">
     <div class="container">
 
-      <h2 style="margin:0 0 10px">Get Started</h2>
-      <p class="lead" style="max-width:760px">
-        Start with a discovery conversation. Share your requirement and we’ll come back with a clear next-step plan.
-      </p>
+      <div class="contact-layout">
 
-      <!-- CONTACT FORM -->
-      <div class="card" style="max-width:820px; margin-top:18px">
-        <h3 style="margin:0 0 10px">Send us an enquiry</h3>
-        <p class="small" style="margin:0 0 16px">
-          Typically we respond within 24 hours.
-        </p>
+        <!-- LEFT: Form (premium glass) -->
+        <div class="contact-card contact-glass">
+          <div class="contact-card-head">
+            <h2>Send an enquiry</h2>
+            <p class="small">We usually respond within 24 hours.</p>
+          </div>
 
-        <form action="https://formspree.io/f/meelobqn" method="POST" class="contact-form">
+          <form action="https://formspree.io/f/meelobqn" method="POST" class="contact-form">
 
-          <label>
-            Full Name
-            <input type="text" name="name" required>
-          </label>
+            <div class="contact-row">
+              <label>
+                Full Name
+                <input type="text" name="name" placeholder="Your name" required>
+              </label>
 
-          <label>
-            Email Address
-            <input type="email" name="email" required>
-          </label>
+              <label>
+                Email Address
+                <input type="email" name="email" placeholder="you@email.com" required>
+              </label>
+            </div>
 
-          <label>
-            Phone / WhatsApp (optional)
-            <input type="text" name="phone">
-          </label>
+            <div class="contact-row">
+              <label>
+                Phone / WhatsApp (optional)
+                <input type="text" name="phone" placeholder="+65 / +91 / +971 …">
+              </label>
 
-          <label>
-            I’m interested in
-            <select name="interest" required>
-              <option value="">Select</option>
-              <option>Education Advisory</option>
-              <option>Career Guidance</option>
-              <option>Co-Founder / Startup</option>
-              <option>TutorHub</option>
-              <option>AI Mentor Lab</option>
-              <option>Technology / Website / Automation</option>
-              <option>General Enquiry</option>
-            </select>
-          </label>
+              <label>
+                I’m interested in
+                <select name="interest" required>
+                  <option value="">Select</option>
+                  <option>Education Advisory</option>
+                  <option>Career Guidance</option>
+                  <option>Co-Founder / Startup</option>
+                  <option>TutorHub</option>
+                  <option>AI Mentor Lab</option>
+                  <option>Technology / Website / Automation</option>
+                  <option>General Enquiry</option>
+                </select>
+              </label>
+            </div>
 
-          <label>
-            Message
-            <textarea name="message" rows="5" required></textarea>
-          </label>
+            <label>
+              Message
+              <textarea name="message" rows="6" placeholder="Write your requirement in 2–3 lines…" required></textarea>
+            </label>
 
-          <!-- Helps Formspree subject line -->
-          <input type="hidden" name="_subject" value="New enquiry — Deesha Global website">
+            <!-- Formspree helpers -->
+            <input type="hidden" name="_subject" value="New enquiry — Deesha Global website">
+            <input type="hidden" name="_next" value="https://www.deesha-global.com/thank-you.html">
 
-          <button type="submit" class="btn primary" style="min-width:0">
-            Submit Enquiry
-          </button>
+            <div class="contact-actions">
+              <button type="submit" class="btn primary contact-submit">Submit Enquiry</button>
+              <div class="small contact-note">
+                Prefer email? <a class="more" href="mailto:info@deesha-global.com">info@deesha-global.com</a>
+              </div>
+            </div>
 
-          <p class="small" style="margin:12px 0 0">
-            Prefer email? Write to <a class="more" href="mailto:info@deesha-global.com">info@deesha-global.com</a>
-          </p>
+            <div class="contact-trust small">
+              By submitting, you agree we may contact you back regarding this enquiry.
+            </div>
 
-        </form>
+          </form>
+        </div>
+
+        <!-- RIGHT: Quick contact / trust -->
+        <div class="contact-side">
+
+          <div class="contact-card">
+            <h3 style="margin:0 0 8px">Direct Contact</h3>
+            <p class="small" style="margin:0 0 10px">
+              For urgent queries, email works best.
+            </p>
+            <p style="margin:0">
+              <a class="more" href="mailto:info@deesha-global.com">info@deesha-global.com →</a>
+            </p>
+          </div>
+
+          <div class="contact-card">
+            <h3 style="margin:0 0 10px">Social</h3>
+            <div class="contact-social">
+              <a href="https://youtube.com/@deeshaglobal?si=qTfd_5K8CEQ2Bjzt" target="_blank" rel="noopener">YouTube</a>
+              <a href="https://www.linkedin.com/company/deesha-global-pte-ltd/" target="_blank" rel="noopener">LinkedIn</a>
+              <a href="https://instagram.com/deeshaglobal" target="_blank" rel="noopener">Instagram</a>
+            </div>
+          </div>
+
+          <div class="contact-card contact-mini-glass">
+            <h3 style="margin:0 0 8px">What happens next?</h3>
+            <ul class="contact-steps">
+              <li>We read your enquiry and understand your goal</li>
+              <li>We respond with a clear next step / options</li>
+              <li>If needed, we schedule a short call</li>
+            </ul>
+          </div>
+
+        </div>
       </div>
 
-      <!-- QUICK CONTACT CARDS -->
-      <div class="grid" style="margin-top:20px">
+      <!-- CONTACT CARDS (kept consistent with your site) -->
+      <div class="grid" style="margin-top:26px">
         <div class="card">
           <h3>Email</h3>
           <p><a class="more" href="mailto:info@deesha-global.com">info@deesha-global.com →</a></p>
