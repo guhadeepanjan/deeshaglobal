@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: /seo/sitemap.xml
+Sitemap: https://www.deesha-global.com/seo/sitemap.xml
+Sitemap: https://www.deesha-global.com/sitemap.xml
