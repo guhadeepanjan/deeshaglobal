@@ -112,7 +112,7 @@ h3{font-size:24px;font-weight:700}
 .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:32px}
 .footer a{text-decoration:none;color:var(--ink2);display:block;margin:6px 0;font-size:15px}
 .footer a:hover{color:var(--ink);text-decoration:underline}
-.footer h4{margin:0 0 12px;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.footer h4,.footer h3{margin:0 0 12px;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
 .footer-bottom{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 /* Forms */
 .form{display:grid;gap:14px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px}
