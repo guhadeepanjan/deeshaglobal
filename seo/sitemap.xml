@@ -1,1 +1,21 @@
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.deesha-global.com/</loc><priority>1.0</priority></url>
+  <url><loc>https://www.deesha-global.com/about.html</loc><priority>0.8</priority></url>
+  <url><loc>https://www.deesha-global.com/services.html</loc><priority>0.9</priority></url>
+  <url><loc>https://www.deesha-global.com/how-we-work.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.deesha-global.com/trust.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.deesha-global.com/research.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.deesha-global.com/contact.html</loc><priority>0.9</priority></url>
+  <url><loc>https://www.deesha-global.com/investment.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.deesha-global.com/disclaimer.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.deesha-global.com/privacy-policy.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.deesha-global.com/terms-of-use.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.deesha-global.com/hr-technology-singapore-smes.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.deesha-global.com/singaporecertifications.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.deesha-global.com/services/launchpad.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.deesha-global.com/services/education.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.deesha-global.com/services/career.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.deesha-global.com/services/tutorhub.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.deesha-global.com/services/ai-mentor.html</loc><priority>0.7</priority></url>
+</urlset>
