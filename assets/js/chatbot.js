@@ -16,9 +16,7 @@
   /* ---------- configuration ---------- */
   var FORM_KEY = "86e51186-3a80-4d35-ac0f-e926110541a5"; /* Web3Forms access key — set before publish */
   var FORM_ENDPOINT = "https://api.web3forms.com/submit";
-  var AVATAR = ROOT + "assets/images/chat/deesha-avatar.webp";
   var WA_LINK = "https://wa.me/6580304975?text=Hello%20Deesha%20Global,%20I%20visited%20your%20website%20and%20would%20like%20to%20discuss%20my%20requirements.";
-  var AVATAR_SM = ROOT + "assets/images/chat/deesha-avatar-sm.webp";
   var TEAM_EMAIL = "info@deesha-global.com";
 
   /* Base path of the site root, derived from this script's URL so
@@ -28,6 +26,8 @@
   if (scriptEl && scriptEl.src) {
     ROOT = scriptEl.src.replace(/assets\/js\/chatbot\.js.*$/, "");
   }
+  var AVATAR = ROOT + "assets/images/chat/deesha-avatar.webp";
+  var AVATAR_SM = ROOT + "assets/images/chat/deesha-avatar-sm.webp";
 
   var COUNTRIES = [
     { key: "singapore", name: "Singapore" },
