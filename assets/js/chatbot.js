@@ -17,6 +17,7 @@
   var FORM_KEY = "86e51186-3a80-4d35-ac0f-e926110541a5"; /* Web3Forms access key — set before publish */
   var FORM_ENDPOINT = "https://api.web3forms.com/submit";
   var AVATAR = ROOT + "assets/images/chat/tara-avatar.webp";
+  var WA_LINK = "https://wa.me/6580304975?text=Hello%20Deesha%20Global,%20I%20visited%20your%20website%20and%20would%20like%20to%20discuss%20my%20requirements.";
   var AVATAR_SM = ROOT + "assets/images/chat/tara-avatar-sm.webp";
   var TEAM_EMAIL = "info@deesha-global.com";
 
@@ -92,6 +93,11 @@
       keys: ["fee", "price", "cost", "charge", "how much"],
       answer: "The Admission Fact Check is completely <b>free</b>. For advisory services, fees depend on the engagement and are confirmed in writing before any work begins — the first step is a consultation so we can scope exactly what you need.",
       link: ["contact.html", "Book a consultation"]
+    },
+    {
+      keys: ["whatsapp", "talk to a human", "speak to a human", "real person", "human being"],
+      answer: "Of course \u2014 the Deesha Global team replies on WhatsApp personally. Tap below and say hello; your message is already started for you.",
+      wa: true
     },
     {
       keys: ["book", "consultation", "appointment", "talk", "call", "contact", "reach"],
@@ -236,6 +242,21 @@
       window.location.href = ROOT + it.href;
     });
   }
+  function waChip() {
+    var wrap = document.createElement("div");
+    wrap.className = "dg-chips";
+    var a = document.createElement("a");
+    a.className = "dg-chip gold";
+    a.href = WA_LINK;
+    a.target = "_blank";
+    a.rel = "noopener";
+    a.textContent = "\uD83D\uDCAC Chat on WhatsApp";
+    a.style.textDecoration = "none";
+    a.style.display = "inline-block";
+    wrap.appendChild(a);
+    body.appendChild(wrap);
+    scrollDown();
+  }
 
   /* ---------- lead email ---------- */
   function sendLead(fields) {
@@ -273,6 +294,7 @@
       },
       true
     );
+    waChip();
   }
   function greet() {
     if (greeted) return;
@@ -291,7 +313,8 @@
       for (var k = 0; k < KB[j].keys.length; k++) {
         if (t.indexOf(KB[j].keys[k]) >= 0) {
           bot(KB[j].answer);
-          if (KB[j].link) linkChip(KB[j].link[0], KB[j].link[1]);
+          if (KB[j].wa) waChip();
+          else if (KB[j].link) linkChip(KB[j].link[0], KB[j].link[1]);
           return true;
         }
       }
@@ -432,6 +455,7 @@
       bot("I've filled it in on this page and run it for you — scroll to see your full result.");
       homeChips();
     } else {
+      waChip();
       chips([{ label: "See my Fact Check →", act: "go" }], function () {
         store("dg_fc_picks", JSON.stringify(p));
         window.location.href = ROOT + "admissions-fact-check.html?fc=1#fact-check-tool";
