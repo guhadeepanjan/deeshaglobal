@@ -16,6 +16,8 @@
   /* ---------- configuration ---------- */
   var FORM_KEY = "86e51186-3a80-4d35-ac0f-e926110541a5"; /* Web3Forms access key — set before publish */
   var FORM_ENDPOINT = "https://api.web3forms.com/submit";
+  var AVATAR = ROOT + "assets/images/chat/tara-avatar.webp";
+  var AVATAR_SM = ROOT + "assets/images/chat/tara-avatar-sm.webp";
   var TEAM_EMAIL = "info@deesha-global.com";
 
   /* Base path of the site root, derived from this script's URL so
@@ -121,9 +123,14 @@
 
   /* ---------- styles ---------- */
   var css = [
-    ".dg-chat-btn{position:fixed;right:20px;bottom:20px;z-index:9998;display:flex;align-items:center;gap:9px;background:#0a1622;color:#fff;border:2px solid #e3b23c;border-radius:999px;padding:12px 18px;font:700 15px/1.2 'Source Sans 3',Arial,sans-serif;cursor:pointer;box-shadow:0 16px 36px rgba(10,22,34,.35)}",
+    ".dg-chat-btn{position:fixed;right:20px;bottom:20px;z-index:9998;display:flex;align-items:center;gap:9px;background:#0a1622;color:#fff;border:2px solid #e3b23c;border-radius:999px;padding:7px 18px 7px 8px;font:700 15px/1.2 'Source Sans 3',Arial,sans-serif;cursor:pointer;box-shadow:0 16px 36px rgba(10,22,34,.35)}",
     ".dg-chat-btn:hover{background:#12314e}",
     ".dg-chat-btn svg{flex:none}",
+    ".dg-chat-btn img{width:38px;height:38px;border-radius:50%;object-fit:cover;border:2px solid #e3b23c;flex:none}",
+    ".dg-chat-head img{width:42px;height:42px;border-radius:50%;object-fit:cover;border:2px solid #e3b23c;flex:none}",
+    ".dg-row{display:flex;gap:7px;align-items:flex-end;max-width:96%}",
+    ".dg-row>img{width:26px;height:26px;border-radius:50%;object-fit:cover;flex:none;border:1px solid #e3b23c}",
+    ".dg-row .dg-msg.bot{max-width:100%}",
     ".dg-chat-panel{position:fixed;right:20px;bottom:84px;z-index:9999;width:min(392px,calc(100vw - 32px));height:min(600px,calc(100vh - 120px));background:#fff;border-radius:18px;box-shadow:0 30px 70px rgba(10,22,34,.4);display:none;flex-direction:column;overflow:hidden;border:1px solid #d9dee6;font-family:'Source Sans 3',Arial,sans-serif}",
     ".dg-chat-panel.open{display:flex}",
     ".dg-chat-head{background:#0a1622;color:#fff;padding:14px 16px;display:flex;align-items:center;gap:10px}",
@@ -157,13 +164,13 @@
   var btn = document.createElement("button");
   btn.className = "dg-chat-btn";
   btn.setAttribute("aria-label", "Open the Deesha assistant chat");
-  btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 12a8 8 0 0 1-8 8H4l2.3-2.9A8 8 0 1 1 21 12Z" stroke="#e3b23c" stroke-width="2" stroke-linejoin="round"/><circle cx="9" cy="12" r="1.4" fill="#e3b23c"/><circle cx="13" cy="12" r="1.4" fill="#e3b23c"/><circle cx="17" cy="12" r="1.4" fill="#e3b23c"/></svg><span>Ask Deesha</span>';
+  btn.innerHTML = '<img src="' + AVATAR_SM + '" alt="Tara"><span>Ask Tara</span>';
 
   var panel = document.createElement("section");
   panel.className = "dg-chat-panel";
   panel.setAttribute("aria-label", "Deesha Global assistant");
   panel.innerHTML =
-    '<div class="dg-chat-head"><div><b>Deesha Assistant</b><span>Services help · Free Admission Fact Check</span></div>' +
+    '<div class="dg-chat-head"><img src="' + AVATAR + '" alt="Tara"><div><b>Ask Tara</b><span>Deesha Global guide · replies instantly</span></div>' +
     '<button class="dg-chat-close" aria-label="Close chat">×</button></div>' +
     '<div class="dg-chat-body" id="dgChatBody"></div>' +
     '<form class="dg-chat-input"><input type="text" placeholder="Type your question…" aria-label="Type your question" autocomplete="off"><button type="submit">Send</button></form>';
@@ -186,10 +193,17 @@
   /* ---------- messaging helpers ---------- */
   function scrollDown() { body.scrollTop = body.scrollHeight; }
   function bot(html) {
+    var row = document.createElement("div");
+    row.className = "dg-row";
+    var im = document.createElement("img");
+    im.src = AVATAR_SM;
+    im.alt = "Tara";
     var d = document.createElement("div");
     d.className = "dg-msg bot";
     d.innerHTML = html;
-    body.appendChild(d);
+    row.appendChild(im);
+    row.appendChild(d);
+    body.appendChild(row);
     scrollDown();
     return d;
   }
@@ -263,7 +277,7 @@
   function greet() {
     if (greeted) return;
     greeted = true;
-    bot("Hello, and welcome to Deesha Global. I can answer questions about our <b>services</b>, or run our <b>free Admission Fact Check</b> with you — just tell me the country, your child's board and the university, in plain words.");
+    bot("Hi, I'm <b>Tara</b> — Deesha Global's little guide, and welcome! I can answer questions about our <b>services</b>, or run our <b>free Admission Fact Check</b> with you — just tell me the country, your child's board and the university, in plain words.");
     homeChips();
   }
 
@@ -454,7 +468,7 @@
       driveTool(p);
       panel.classList.add("open");
       greeted = true;
-      bot("Welcome back — your Fact Check for <b>" + p.uniName + "</b> (" + p.countryName + " · " + p.boardName + ") is on the page. Anything else I can help with?");
+      bot("Welcome back — your Fact Check for <b>" + p.uniName + "</b> (" + p.countryName + " · " + p.boardName + ") is on the page. Anything else Tara can help with?");
       homeChips();
     } catch (e) {}
   }
