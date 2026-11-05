@@ -16,9 +16,9 @@
   /* ---------- configuration ---------- */
   var FORM_KEY = "86e51186-3a80-4d35-ac0f-e926110541a5"; /* Web3Forms access key — set before publish */
   var FORM_ENDPOINT = "https://api.web3forms.com/submit";
-  var AVATAR = ROOT + "assets/images/chat/tara-avatar.webp";
+  var AVATAR = ROOT + "assets/images/chat/deesha-avatar.webp";
   var WA_LINK = "https://wa.me/6580304975?text=Hello%20Deesha%20Global,%20I%20visited%20your%20website%20and%20would%20like%20to%20discuss%20my%20requirements.";
-  var AVATAR_SM = ROOT + "assets/images/chat/tara-avatar-sm.webp";
+  var AVATAR_SM = ROOT + "assets/images/chat/deesha-avatar-sm.webp";
   var TEAM_EMAIL = "info@deesha-global.com";
 
   /* Base path of the site root, derived from this script's URL so
@@ -170,13 +170,13 @@
   var btn = document.createElement("button");
   btn.className = "dg-chat-btn";
   btn.setAttribute("aria-label", "Open the Deesha assistant chat");
-  btn.innerHTML = '<img src="' + AVATAR_SM + '" alt="Tara"><span>Ask Tara</span>';
+  btn.innerHTML = '<img src="' + AVATAR_SM + '" alt="Deesha"><span>Ask Deesha</span>';
 
   var panel = document.createElement("section");
   panel.className = "dg-chat-panel";
   panel.setAttribute("aria-label", "Deesha Global assistant");
   panel.innerHTML =
-    '<div class="dg-chat-head"><img src="' + AVATAR + '" alt="Tara"><div><b>Ask Tara</b><span>Deesha Global guide · replies instantly</span></div>' +
+    '<div class="dg-chat-head"><img src="' + AVATAR + '" alt="Deesha"><div><b>Ask Deesha</b><span>Your virtual consultant · replies instantly</span></div>' +
     '<button class="dg-chat-close" aria-label="Close chat">×</button></div>' +
     '<div class="dg-chat-body" id="dgChatBody"></div>' +
     '<form class="dg-chat-input"><input type="text" placeholder="Type your question…" aria-label="Type your question" autocomplete="off"><button type="submit">Send</button></form>';
@@ -203,7 +203,7 @@
     row.className = "dg-row";
     var im = document.createElement("img");
     im.src = AVATAR_SM;
-    im.alt = "Tara";
+    im.alt = "Deesha";
     var d = document.createElement("div");
     d.className = "dg-msg bot";
     d.innerHTML = html;
@@ -299,7 +299,7 @@
   function greet() {
     if (greeted) return;
     greeted = true;
-    bot("Hi, I'm <b>Tara</b> — Deesha Global's little guide, and welcome! I can answer questions about our <b>services</b>, or run our <b>free Admission Fact Check</b> with you — just tell me the country, your child's board and the university, in plain words.");
+    bot("Hi, I'm <b>Deesha</b> — your virtual consultant at Deesha Global. Welcome! I can answer questions about our <b>services</b>, or run our <b>free Admission Fact Check</b> with you — just tell me the country, your child's board and the university, in plain words.");
     homeChips();
   }
 
@@ -492,7 +492,7 @@
       driveTool(p);
       panel.classList.add("open");
       greeted = true;
-      bot("Welcome back — your Fact Check for <b>" + p.uniName + "</b> (" + p.countryName + " · " + p.boardName + ") is on the page. Anything else Tara can help with?");
+      bot("Welcome back — your Fact Check for <b>" + p.uniName + "</b> (" + p.countryName + " · " + p.boardName + ") is on the page. Anything else I can help with?");
       homeChips();
     } catch (e) {}
   }
