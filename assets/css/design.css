@@ -161,9 +161,7 @@ h3{font-size:24px;font-weight:700}
    five-pillar grid without the empty cell, Fact Check feature band.
    Scoped to body.home so other pages keep their current spacing. */
 .home .hero{padding:60px 0 52px}
-.home .hero-grid{align-items:stretch;gap:44px}
-.home .hero-media{height:100%}
-.home .hero-media video{height:100%;aspect-ratio:auto}
+.home .hero-grid{align-items:center;gap:44px}
 /* Buttons on dark bands: gold primary, outlined white secondary
    (the base .btn-dark/.btn-light are invisible on navy) */
 .home .hero-navy .btn-dark,.home .section-dark .btn-dark{background:var(--gold-bright);border-color:var(--gold-bright);color:#0a1622}
@@ -173,7 +171,7 @@ h3{font-size:24px;font-weight:700}
 .home .hero-ctas{margin-top:24px}
 .home .hero-meta{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:30px;padding-top:22px}
 .home .hero-meta b{font-size:20px}
-.home .hero-media video{aspect-ratio:16/10.5}
+.home .hero-media video{aspect-ratio:16/10}
 .home .section{padding:60px 0}
 .home .section-head{margin-bottom:26px}
 .home .section h2,.home .cta-band h2{font-size:clamp(30px,3.6vw,44px)}
@@ -201,8 +199,6 @@ h3{font-size:24px;font-weight:700}
 .fc-chips{display:flex;gap:8px;flex-wrap:wrap}
 .fc-chips span{font-size:13px;font-weight:700;letter-spacing:.02em;background:#fff;border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:999px;padding:7px 13px;color:var(--ink2)}
 @media(max-width:900px){
-  .home .hero-media{height:auto}
-  .home .hero-media video{height:auto;aspect-ratio:16/10}
   .home .hero{padding:48px 0 40px}
   .home .section{padding:48px 0}
   .home .hero-meta{grid-template-columns:1fr 1fr}
