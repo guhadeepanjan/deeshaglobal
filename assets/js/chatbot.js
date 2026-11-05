@@ -18,6 +18,7 @@
   var FORM_ENDPOINT = "https://api.web3forms.com/submit";
   var WA_LINK = "https://wa.me/6580304975?text=Hello%20Deesha%20Global,%20I%20visited%20your%20website%20and%20would%20like%20to%20discuss%20my%20requirements.";
   var TEAM_EMAIL = "info@deesha-global.com";
+  var OTP_ENDPOINT = "https://script.google.com/macros/s/AKfycbyQOfGAieP9CXwg825lMpESD26AbHwKT1FNkDy1DouSz5QbymVkhVmwlqg3RiHiBsc/exec";
 
   /* Base path of the site root, derived from this script's URL so
      links and lazy data loads work from any page depth. */
@@ -160,6 +161,9 @@
     ".dg-chat-input{display:flex;gap:8px;padding:10px;border-top:1px solid #e2e6ee;background:#fff}",
     ".dg-chat-input input{flex:1;border:1.5px solid #c3cad6;border-radius:999px;padding:10px 15px;font-size:14.5px;min-width:0}",
     ".dg-chat-input button{background:#0a1622;color:#fff;border:none;border-radius:999px;padding:10px 18px;font-weight:800;cursor:pointer}",
+    ".dg-emailbox button.dg-linkbtn{background:none;color:#0a1622;text-decoration:underline;padding:2px 4px;font-size:13px;font-weight:700;box-shadow:none}",
+    ".dg-emailbox .dg-otp-actions{display:flex;gap:14px;justify-content:space-between}",
+    ".dg-emailbox input[type=text].dg-otp{letter-spacing:6px;font-size:18px;text-align:center;font-weight:700}",
     "@media(max-width:640px){.dg-chat-panel{right:8px;bottom:78px}.dg-chat-btn{right:12px;bottom:14px}}"
   ].join("\n");
   var style = document.createElement("style");
@@ -322,6 +326,96 @@
     return false;
   }
 
+  function completeEmailStep(v) {
+    store("dg_chat_email", v);
+    sendLead({
+      subject: "Website lead — Fact Check started (email verified)",
+      email: v,
+      type: "Fact Check lead (OTP verified)",
+      page: window.location.pathname
+    });
+    bot("Email verified ✓ — thank you. Now, which <b>country</b> are you checking?");
+    askCountry();
+  }
+  function jsonp(url, cb) {
+    var name = "dgcb" + Math.random().toString(36).slice(2, 10);
+    var s = document.createElement("script");
+    var done = false;
+    var timer = setTimeout(function () { finish(null); }, 20000);
+    function finish(data) {
+      if (done) return;
+      done = true;
+      clearTimeout(timer);
+      try { delete window[name]; } catch (e) { window[name] = undefined; }
+      if (s.parentNode) s.parentNode.removeChild(s);
+      cb(data);
+    }
+    window[name] = function (data) { finish(data); };
+    s.onerror = function () { finish(null); };
+    s.src = url + (url.indexOf("?") >= 0 ? "&" : "?") + "callback=" + name;
+    document.head.appendChild(s);
+  }
+  function requestOtp(email) {
+    state.pendingEmail = email;
+    state.step = "otp";
+    bot("To keep your results private, I've sent a <b>6-digit verification code</b> to <b>" + email + "</b>. Please enter it below — it expires in 10 minutes.");
+    jsonp(OTP_ENDPOINT + "?action=send&email=" + encodeURIComponent(email), function (res) {
+      if (!res || !res.ok) {
+        bot("Hmm, the code could not be sent just now" + (res && res.error === "wait_before_resend" ? " — a code was sent very recently, please check your inbox or wait a minute and resend." : ". Please check the address and use Resend below."));
+      }
+    });
+    otpBox(email);
+  }
+  function otpBox(email) {
+    var box = document.createElement("div");
+    box.className = "dg-emailbox";
+    box.innerHTML =
+      '<input type="text" class="dg-otp" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="••••••" aria-label="6-digit verification code">' +
+      '<div class="dg-err"></div>' +
+      '<button type="button" class="dg-verify">Verify code →</button>' +
+      '<div class="dg-otp-actions"><button type="button" class="dg-linkbtn dg-resend">Resend code</button><button type="button" class="dg-linkbtn dg-change">Use a different email</button></div>';
+    body.appendChild(box);
+    scrollDown();
+    var inp = box.querySelector(".dg-otp");
+    var err = box.querySelector(".dg-err");
+    inp.focus();
+    function showErr(m) { err.textContent = m; err.style.display = "block"; }
+    box.querySelector(".dg-verify").addEventListener("click", function () {
+      var code = inp.value.trim();
+      if (!/^\d{6}$/.test(code)) { showErr("Please enter the 6-digit code from your email."); return; }
+      err.style.display = "none";
+      jsonp(OTP_ENDPOINT + "?action=verify&email=" + encodeURIComponent(email) + "&code=" + encodeURIComponent(code), function (res) {
+        if (res && res.ok) {
+          box.remove();
+          completeEmailStep(email);
+        } else if (res && res.error === "wrong_code") {
+          showErr("That code doesn't match" + (typeof res.attemptsLeft === "number" ? " — " + res.attemptsLeft + " attempt(s) left." : "."));
+        } else if (res && res.error === "too_many_attempts") {
+          showErr("Too many wrong attempts — this code is cancelled. Please resend a fresh code.");
+        } else if (res && res.error === "expired_or_missing") {
+          showErr("That code has expired or was replaced. Please resend a fresh code.");
+        } else {
+          showErr("Verification could not be completed just now. Please try again.");
+        }
+      });
+    });
+    box.querySelector(".dg-resend").addEventListener("click", function () {
+      err.style.display = "none";
+      inp.value = "";
+      jsonp(OTP_ENDPOINT + "?action=send&email=" + encodeURIComponent(email), function (res) {
+        if (res && res.ok) bot("A fresh code is on its way to <b>" + email + "</b>.");
+        else if (res && res.error === "wait_before_resend") showErr("A code was sent very recently — please wait a minute, then resend.");
+        else showErr("The code could not be sent just now. Please try again in a moment.");
+      });
+    });
+    box.querySelector(".dg-change").addEventListener("click", function () {
+      box.remove();
+      state.step = "email";
+      bot("No problem — let's use a different email address.");
+      emailBox();
+    });
+  }
+
   /* ---------- Fact Check flow ---------- */
   function startFactCheck() {
     state.flow = "fc";
@@ -359,17 +453,13 @@
         err.style.display = "block";
         return;
       }
-      store("dg_chat_email", v);
-      sendLead({
-        subject: "Website lead — Fact Check started",
-        email: v,
-        type: "Fact Check lead (email captured in chat)",
-        page: window.location.pathname
-      });
       box.remove();
       user(v);
-      bot("Thank you — noted. Now, which <b>country</b> are you checking?");
-      askCountry();
+      if (OTP_ENDPOINT) {
+        requestOtp(v);
+      } else {
+        completeEmailStep(v);
+      }
     });
   }
   function askCountry() {
