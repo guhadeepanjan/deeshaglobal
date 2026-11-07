@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Morning Globe — Saturday, 7 November 2026</title>
+<meta name="description" content="The Morning Globe e-newspaper: 49 verified stories across seven sections plus briefs — Breaking, Sports, Science & Tech, Business, AI, Banking and Banking Regulators. Every story sourced.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800;900&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--grad:linear-gradient(92deg,#7c3aed,#ec4899 55%,#f97316);--ink:#14101f;--mut:#5c5570;--bg:#faf8ff;--card:#fff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+a{color:inherit;text-decoration:none}
+img{display:block;width:100%;height:100%;object-fit:cover}
+.topstrip{background:#14101f;color:#fff;font-size:.82rem;padding:.5rem 1rem;text-align:center}
+.topstrip a{color:#ffb38a;font-weight:700;text-decoration:underline}
+header.mast{text-align:center;padding:1.2rem 1rem .4rem}
+.mast h1{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-weight:800;font-size:clamp(2.1rem,8.5vw,4.2rem);letter-spacing:.005em;line-height:1.05;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.mast .date{font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.8rem;color:var(--mut);margin-top:.35rem}
+.mast .tag{font-size:.95rem;color:var(--mut);margin-top:.2rem}
+.banner{height:150px;margin:.9rem auto 0;max-width:1180px;border-radius:0;overflow:hidden;position:relative}
+.banner img{object-position:center 38%}
+.banner span{position:absolute;left:0;right:0;bottom:0;padding:1.4rem 1rem .55rem;color:#fff;font-weight:600;font-size:.85rem;background:linear-gradient(transparent,rgba(10,6,24,.75))}
+.wrap{max-width:1180px;margin:0 auto;padding:0 14px}
+.ticker{display:flex;gap:1.4rem;overflow-x:auto;white-space:nowrap;background:#14101f;color:#fff;border-radius:12px;padding:.55rem 1rem;margin:1rem 0;font-size:.83rem;scrollbar-width:none}
+.ticker b{color:#ffb38a} .ticker .up{color:#4ade80}
+nav.sections{display:flex;gap:.45rem;overflow-x:auto;padding:.4rem 0 .8rem;scrollbar-width:none}
+nav.sections a{flex:0 0 auto;font-size:.8rem;font-weight:700;padding:.42rem .8rem;border-radius:999px;background:#fff;border:1.5px solid #e6def7;color:var(--ink)}
+.hero{display:grid;grid-template-columns:1.15fr 1fr;background:var(--card);border-radius:20px;overflow:hidden;box-shadow:0 12px 34px rgba(60,20,120,.13);margin:.4rem 0 1.4rem}
+.hero .thumb{min-height:260px}
+.hero .body{padding:1.3rem 1.4rem}
+.kicker{display:inline-block;background:var(--grad);color:#fff;font-weight:800;font-size:.72rem;letter-spacing:.12em;padding:.3rem .7rem;border-radius:999px;text-transform:uppercase}
+.hero h2{font-family:'Archivo',sans-serif;font-weight:900;font-size:clamp(1.5rem,4.6vw,2.3rem);line-height:1.12;margin:.6rem 0 .55rem}
+.hero p{color:#37304d;font-size:1rem}
+.section{margin:2rem 0}
+.sec-head{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap;border-bottom:3px solid var(--sec);padding-bottom:.5rem;margin-bottom:1rem}
+.sec-chip{background:var(--sec);color:#fff;font-family:'Archivo',sans-serif;font-weight:800;font-size:1.05rem;padding:.35rem .9rem;border-radius:10px;text-transform:uppercase;letter-spacing:.03em}
+.sec-sub{color:var(--mut);font-size:.85rem;font-weight:600}
+.sec-count{margin-left:auto;color:var(--mut);font-size:.8rem;font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.1rem}
+.card{background:var(--card);border-radius:16px;overflow:hidden;box-shadow:0 4px 18px rgba(60,20,120,.08);display:flex;flex-direction:column;border-top:4px solid var(--sec)}
+.card .thumb{height:170px;flex:0 0 auto}
+.card.lead{grid-column:span 2}
+.card.lead .thumb{height:230px}
+.card .body{padding:.95rem 1.05rem 1.05rem;display:flex;flex-direction:column;gap:.5rem;flex:1}
+.card h3,.brief h4{font-family:'Archivo',sans-serif;font-weight:800;line-height:1.22}
+.card h3{font-size:1.13rem} .card.lead h3{font-size:1.45rem}
+.card p,.brief p{font-size:.92rem;color:#37304d}
+.meta{margin-top:auto;display:flex;justify-content:space-between;align-items:baseline;gap:.6rem;padding-top:.35rem}
+.credit{font-size:.7rem;color:#8a83a0}
+.read{font-size:.8rem;font-weight:700;color:#7c3aed;white-space:nowrap}
+.hl:hover h3,.hl:hover h4{text-decoration:underline}
+.briefs{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:1rem}
+.brief{background:var(--card);border-radius:14px;overflow:hidden;box-shadow:0 4px 16px rgba(60,20,120,.08);display:flex;flex-direction:column}
+.brief .thumb{height:130px;flex:0 0 auto}
+.brief .body{padding:.8rem .95rem .95rem;display:flex;flex-direction:column;gap:.45rem;flex:1}
+.brief h4{font-size:1rem}
+.brief p{font-size:.87rem}
+.more-head{border-bottom:3px solid transparent;border-image:var(--grad) 1}
+footer{margin:2.6rem 0 0;background:#14101f;color:#cfc9e6;padding:1.6rem 1rem 2rem;text-align:center;font-size:.88rem}
+footer .brand{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-weight:800;font-size:1.35rem;letter-spacing:.01em;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+footer a{color:#ffb38a;font-weight:700}
+footer .small{font-size:.75rem;color:#8a83a0;margin-top:.6rem}
+#followModal{position:fixed;inset:0;display:none;align-items:flex-end;justify-content:center;background:rgba(16,10,32,.55);z-index:60;padding:0}
+#followModal.open{display:flex}
+.modal-card{background:#fff;width:100%;max-width:460px;border-radius:22px 22px 0 0;padding:1.5rem 1.4rem 1.7rem;text-align:center;box-shadow:0 -12px 40px rgba(0,0,0,.3);animation:slideUp .45s cubic-bezier(.2,.9,.3,1)}
+@keyframes slideUp{from{transform:translateY(60px);opacity:0}to{transform:translateY(0);opacity:1}}
+@media(min-width:640px){#followModal{align-items:center;padding:1rem}.modal-card{border-radius:22px}}
+.modal-card .globe{width:64px;height:64px;margin:0 auto .7rem;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:1.9rem}
+.modal-card h3{font-family:'Archivo',sans-serif;font-weight:900;font-size:1.35rem;line-height:1.2}
+.modal-card p{color:var(--mut);font-size:.93rem;margin:.55rem 0 1.1rem}
+.btn-follow{display:block;background:var(--grad);color:#fff;font-weight:800;font-size:1rem;padding:.85rem 1rem;border-radius:999px}
+.btn-continue{display:block;margin-top:.6rem;background:none;border:none;width:100%;font:inherit;font-weight:600;color:var(--mut);padding:.6rem;cursor:pointer}
+.modal-x{float:right;background:none;border:none;font-size:1.3rem;color:var(--mut);cursor:pointer;line-height:1}
+@media(max-width:760px){.hero{grid-template-columns:1fr}.card.lead{grid-column:span 1}.card.lead .thumb{height:190px}.banner{height:110px}}
+</style>
+</head>
+<body>
+<div class="topstrip">Today's edition is also live as one swipeable post on Instagram — <a href="https://www.instagram.com/p/DfcJ3PzG-RZ/" target="_blank" rel="noopener">read it on @themorningglobe</a></div>
+<header class="mast">
+  <h1>THE MORNING GLOBE</h1>
+  <div class="date">Saturday, 7 November 2026 · Morning Edition · Vol. 1 No. 1</div>
+  <div class="tag">Your morning news in seven sections — every story sourced, every photo real.</div>
+</header>
+<div class="banner"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="The White House, Washington DC"><span>Washington leads the day: a new chief of staff at the White House after the midterm shake-up.</span></div>
+<div class="wrap">
+  <div class="ticker"><span><b>SENSEX</b> 81,028.02 <span class="up">▲ 2.17%</span></span><span><b>NIFTY</b> 25,030.35 <span class="up">▲ 2.01%</span></span><span><b>NIFTY BANK</b> 58,946.00 <span class="up">▲ 2.03%</span></span><span><b>RUPEE</b> 93.91 / $</span><span><b>BRENT</b> ~$99</span><span><b>INDIA VIX</b> 17.66</span><span><b>FII WEEK</b> +Rs 45,960 cr</span></div>
+  <nav class="sections">
+    <a href="#breaking">Breaking</a><a href="#sports">Sports</a><a href="#scitech">Sci-Tech</a><a href="#business">Business</a><a href="#ai">AI</a><a href="#banking">Banking</a><a href="#regulators">Regulators</a><a href="#more">More Sections</a>
+  </nav>
+  <article class="hero">
+    <a class="thumb" href="https://www.thehindu.com/news/morning-digest-on-november-7-2026/article71677130.ece" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Stephen_Miller_by_Gage_Skidmore.jpg/1280px-Stephen_Miller_by_Gage_Skidmore.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="Stephen Miller"></a>
+    <div class="body">
+      <span class="kicker">Top Story · Breaking</span>
+      <a class="hl" href="https://www.thehindu.com/news/morning-digest-on-november-7-2026/article71677130.ece" target="_blank" rel="noopener"><h2>Trump names Stephen Miller as White House chief of staff</h2></a>
+      <p>Days after Republicans lost control of Congress in the midterm elections, President Donald Trump announced on Friday that Stephen Miller is replacing Susie Wiles as White House chief of staff. Trump praised Wiles and said she would continue working for his political organisation; Wiles released her own statement the same day. The shuffle is the first big move of Trump's post-midterm reset.</p>
+      <div class="meta"><span class="credit">Photo: Gage Skidmore / Wikimedia Commons</span><a class="read" href="https://www.thehindu.com/news/morning-digest-on-november-7-2026/article71677130.ece" target="_blank" rel="noopener">Read at The Hindu &#8599;</a></div>
+    </div>
+  </article>
+  <section id="breaking" class="section" style="--sec:#e11d48">
+  <div class="sec-head"><span class="sec-chip">Breaking Top News</span><span class="sec-sub">Politics · India & Global</span><span class="sec-count">5 stories</span></div>
+  <div class="grid"><article class="card lead">
+      <a class="thumb" href="https://www.thehindu.com/news/morning-digest-on-november-7-2026/article71677130.ece" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Gandhisonia05052007.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.thehindu.com/news/morning-digest-on-november-7-2026/article71677130.ece" target="_blank" rel="noopener"><h3>Sonia Gandhi: 'Great damage done to the fabric of India by the BJP'</h3></a>
+        <p>In a wide-ranging written interview with The Hindu ahead of her book <i>Belonging: A Journey of Love</i>, the Congress leader said twelve years of BJP rule had done great damage to the country's fabric, its democracy and its institutions, answering questions from N. Ram on personal, historical and political themes.</p>
+        <div class="meta"><span class="credit">Photo: Wikimedia Commons</span><a class="read" href="https://www.thehindu.com/news/morning-digest-on-november-7-2026/article71677130.ece" target="_blank" rel="noopener">Read at The Hindu &#8599;</a></div>
+      </div>
+    </article>
+<article class="card">
+      <a class="thumb" href="https://www.thehindu.com/news/morning-digest-on-november-7-2026/article71677130.ece" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Queues_of_Indian_voters_-_Flickr_-_Al_Jazeera_English.jpg/1280px-Queues_of_Indian_voters_-_Flickr_-_Al_Jazeera_English.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.thehindu.com/news/morning-digest-on-november-7-2026/article71677130.ece" target="_blank" rel="noopener"><h3>Voters left off draft rolls get one more chance to make the final list</h3></a>
+        <p>Electors missing from the SIR draft rolls in Delhi and six states will get one more chance to reach the final list. The issue has sharpened after reports of false Form 7 deletion filings — in Delhi's Mustafabad, the election official has lodged a police complaint seeking an FIR against those filing them.</p>
+        <div class="meta"><span class="credit">Photo: Al Jazeera English / Wikimedia Commons</span><a class="read" href="https://www.thehindu.com/news/morning-digest-on-november-7-2026/article71677130.ece" target="_blank" rel="noopener">Read at The Hindu &#8599;</a></div>
+      </div>
+    </article>
+<article class="card">
+      <a class="thumb" href="https://www.thehindu.com/news/morning-digest-on-november-7-2026/article71677130.ece" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Ro_Khanna%2C_official_portrait%2C_115th_Congress.jpg/960px-Ro_Khanna%2C_official_portrait%2C_115th_Congress.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.thehindu.com/news/morning-digest-on-november-7-2026/article71677130.ece" target="_blank" rel="noopener"><h3>Ro Khanna condemns Hindu nationalism, backs students' protests</h3></a>
+        <p>A day after winning another term in the US Congress from California in the November 3 elections, Representative Ro Khanna said he stands against &lsquo;Hindu nationalism&rsquo; and supported the students' protests in India. His remarks carry weight: he co-chairs the Congressional Caucus on India and Indian-Americans.</p>
+        <div class="meta"><span class="credit">Photo: Wikimedia Commons</span><a class="read" href="https://www.thehindu.com/news/morning-digest-on-november-7-2026/article71677130.ece" target="_blank" rel="noopener">Read at The Hindu &#8599;</a></div>
+      </div>
+    </article>
+<article class="card">
+      <a class="thumb" href="https://www.thehindu.com/news/morning-digest-on-november-7-2026/article71677130.ece" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/The_Minister_of_Defence%2C_Shri_Rajnath_Singh_in_March_2026.jpg/960px-The_Minister_of_Defence%2C_Shri_Rajnath_Singh_in_March_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.thehindu.com/news/morning-digest-on-november-7-2026/article71677130.ece" target="_blank" rel="noopener"><h3>Rajnath Singh to celebrate Deepavali with troops at Nathu La</h3></a>
+        <p>Defence Minister Rajnath Singh will celebrate Deepavali with Army personnel deployed along the India-China border at Nathu La in Sikkim, a senior Defence Ministry official said. Mr Singh will be in Sikkim on Saturday and Sunday, and will also visit the Sherathang War Memorial.</p>
+        <div class="meta"><span class="credit">Photo: Wikimedia Commons</span><a class="read" href="https://www.thehindu.com/news/morning-digest-on-november-7-2026/article71677130.ece" target="_blank" rel="noopener">Read at The Hindu &#8599;</a></div>
+      </div>
+    </article>
+<article class="card">
+      <a class="thumb" href="https://www.thehindu.com/news/morning-digest-on-november-7-2026/article71677130.ece" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Polling_officials_carrying_the_Electronic_Voting_Machine_%28EVMs%29_and_other_necessary_inputs_required_for_the_Assam_Assembly_Election%2C_at_a_distribution_centre%2C_in_Tinsukia%2C_Assam_on_March_26%2C_2021.jpg/960px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.thehindu.com/news/morning-digest-on-november-7-2026/article71677130.ece" target="_blank" rel="noopener"><h3>West Bengal election was not legally valid, says former CEC Quraishi</h3></a>
+        <p>Former Chief Election Commissioner S.Y. Quraishi has alleged that the West Bengal elections were not legally valid, reiterating that decisions at the Election Commission should be taken by majority. &lsquo;It is now in front of the Supreme Court; I am hoping they will take the right decision,&rsquo; he said.</p>
+        <div class="meta"><span class="credit">Photo: Wikimedia Commons</span><a class="read" href="https://www.thehindu.com/news/morning-digest-on-november-7-2026/article71677130.ece" target="_blank" rel="noopener">Read at The Hindu &#8599;</a></div>
+      </div>
+    </article></div>
+</section><section id="sports" class="section" style="--sec:#16a34a">
+  <div class="sec-head"><span class="sec-chip">Sports</span><span class="sec-sub">Cricket First · Then The World</span><span class="sec-count">6 stories</span></div>
+  <div class="grid"><article class="card lead">
+      <a class="thumb" href="https://ddindia.co.in/2026/11/2nd-odi-gurnoor-brar-claims-four-wickets-as-india-bowl-out-new-zealand-for-134/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Axar.Patel.jpg/1280px-Axar.Patel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://ddindia.co.in/2026/11/2nd-odi-gurnoor-brar-claims-four-wickets-as-india-bowl-out-new-zealand-for-134/" target="_blank" rel="noopener"><h3>India bowl out New Zealand for 134 in Wellington ODI</h3></a>
+        <p>Gurnoor Brar's 4/30 led a disciplined attack as India bowled New Zealand out for 134 in 41 overs in the second ODI at the Basin Reserve. Daryl Mitchell's fighting 55 off 104 balls held the innings together, while Anshul Kamboj, Axar Patel (2/28) and Auqib Nabi claimed two wickets each on a two-paced surface.</p>
+        <div class="meta"><span class="credit">Photo: Axar Patel (file photo) — Wikimedia Commons</span><a class="read" href="https://ddindia.co.in/2026/11/2nd-odi-gurnoor-brar-claims-four-wickets-as-india-bowl-out-new-zealand-for-134/" target="_blank" rel="noopener">Read at DD India (IANS) &#8599;</a></div>
+      </div>
+    </article>
+<article class="card">
+      <a class="thumb" href="https://www.reuters.com/sports/cricket/indias-shami-keeps-white-ball-focus-after-ending-test-career-2026-11-07/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Mohammed_Shami_%28Indian_Cricket_team_training_SCG_2015%29.jpg/1280px-Mohammed_Shami_%28Indian_Cricket_team_training_SCG_2015%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.reuters.com/sports/cricket/indias-shami-keeps-white-ball-focus-after-ending-test-career-2026-11-07/" target="_blank" rel="noopener"><h3>Mohammed Shami calls time on a 13-year Test career</h3></a>
+        <p>India's pace spearhead has announced his retirement from Test cricket, closing a career of 229 wickets from 64 matches. The 36-year-old, out of the Indian side since the 2025 Champions Trophy, announced the decision on Instagram — and made clear he will continue playing white-ball cricket.</p>
+        <div class="meta"><span class="credit">Photo: Wikimedia Commons</span><a class="read" href="https://www.reuters.com/sports/cricket/indias-shami-keeps-white-ball-focus-after-ending-test-career-2026-11-07/" target="_blank" rel="noopener">Read at Reuters &#8599;</a></div>
+      </div>
+    </article>
+<article class="card">
+      <a class="thumb" href="https://www.cricinfo.com/series/india-a-in-new-zealand-2026-27-1552526/new-zealand-a-vs-india-a-3rd-unofficial-test-1552531/match-report" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Yashasvi_Jaiswal_2.jpg/1280px-Yashasvi_Jaiswal_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.cricinfo.com/series/india-a-in-new-zealand-2026-27-1552526/new-zealand-a-vs-india-a-3rd-unofficial-test-1552531/match-report" target="_blank" rel="noopener"><h3>Jaiswal's second straight hundred powers India A in Lincoln</h3></a>
+        <p>Yashasvi Jaiswal followed his 155 not out in the previous game with an aggressive 138-ball 102 on a greentop in Lincoln, dominating a 175-run opening stand with B Sai Sudharsan (77 not out). India A reached 227 for 2 at stumps on day one of the third unofficial Test before rain intervened — timely form ahead of India's Test series in New Zealand.</p>
+        <div class="meta"><span class="credit">Photo: Wikimedia Commons</span><a class="read" href="https://www.cricinfo.com/series/india-a-in-new-zealand-2026-27-1552526/new-zealand-a-vs-india-a-3rd-unofficial-test-1552531/match-report" target="_blank" rel="noopener">Read at ESPNcricinfo &#8599;</a></div>
+      </div>
+    </article>
+<article class="card">
+      <a class="thumb" href="https://www.aljazeera.com/sports/2026/11/7/carlos-alcaraz-match-point-paris-masters-semifinals-tennis" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Carlos_Alcaraz_serving_while_playing_Jan-Lennard_Struff_%28Wimbledon_2025%29.jpg/1280px-Carlos_Alcaraz_serving_while_playing_Jan-Lennard_Struff_%28Wimbledon_2025%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.aljazeera.com/sports/2026/11/7/carlos-alcaraz-match-point-paris-masters-semifinals-tennis" target="_blank" rel="noopener"><h3>Alcaraz saves two match points to beat Fritz at Paris Masters</h3></a>
+        <p>Carlos Alcaraz produced another Paris miracle, fending off two match points to beat Taylor Fritz 6-7 (10/12), 7-5, 6-3 and reach the Paris Masters semifinals for the first time. The seven-time Grand Slam champion next faces former world number two Casper Ruud on Saturday.</p>
+        <div class="meta"><span class="credit">Photo: Wikimedia Commons</span><a class="read" href="https://www.aljazeera.com/sports/2026/11/7/carlos-alcaraz-match-point-paris-masters-semifinals-tennis" target="_blank" rel="noopener">Read at Al Jazeera &#8599;</a></div>
+      </div>
+    </article>
+<article class="card">
+      <a class="thumb" href="https://www.dtnext.in/news/sports/everton-storms-back-to-beat-coventry-and-leapfrog-liverpool-into-5th-place" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Liverpool_fc_everton_stadium.jpg/960px-Liverpool_fc_everton_stadium.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.dtnext.in/news/sports/everton-storms-back-to-beat-coventry-and-leapfrog-liverpool-into-5th-place" target="_blank" rel="noopener"><h3>Everton storm back to beat Coventry and leapfrog Liverpool into fifth</h3></a>
+        <p>Thierno Barry scored twice in five second-half minutes (56' and 61') as Everton rallied from Yan Gboho's 52nd-minute opener to beat Coventry 3-1, with Kiernan Dewsbury-Hall sealing it late. David Moyes' side made it three straight wins and 16 points, jumping above Liverpool into fifth; Coventry, back in the top flight after 25 years, stay 16th.</p>
+        <div class="meta"><span class="credit">Photo: Everton Stadium — Wikimedia Commons</span><a class="read" href="https://www.dtnext.in/news/sports/everton-storms-back-to-beat-coventry-and-leapfrog-liverpool-into-5th-place" target="_blank" rel="noopener">Read at DT Next &#8599;</a></div>
+      </div>
+    </article>
+<article class="card">
+      <a class="thumb" href="https://www.1news.co.nz/2026/11/07/phoenix-weather-auckland-storm-for-derby-draw/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Wellington_Regional_Stadium_2024-09-28.jpg/960px-Wellington_Regional_Stadium_2024-09-28.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.1news.co.nz/2026/11/07/phoenix-weather-auckland-storm-for-derby-draw/" target="_blank" rel="noopener"><h3>Phoenix weather the storm for a first derby point against Auckland</h3></a>
+        <p>Wellington Phoenix claimed their first-ever point against Auckland FC, holding on desperately for a 0-0 draw in a derby delayed an hour by thunder and lightning at Go Media Stadium. The unbeaten Phoenix head into the international break as A-League Men leaders.</p>
+        <div class="meta"><span class="credit">Photo: NZ stadium scene — Wikimedia Commons</span><a class="read" href="https://www.1news.co.nz/2026/11/07/phoenix-weather-auckland-storm-for-derby-draw/" target="_blank" rel="noopener">Read at 1News &#8599;</a></div>
+      </div>
+    </article></div>
+</section><section id="scitech" class="section" style="--sec:#0891b2">
+  <div class="sec-head"><span class="sec-chip">Science & Technology</span><span class="sec-sub">Space · Chips · The Planet</span><span class="sec-count">6 stories</span></div>
+  <div class="grid"><article class="card lead">
+      <a class="thumb" href="https://www.technologyforyou.org/union-minister-ashwini-vaishnaw-launches-semicon-2-0-web-application-portal-and-announces-12-approved-applicants-under-electronics-components-manufacturing-scheme/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Precision_Wafer_Processing_in_a_Cleanroom.png/1280px-Precision_Wafer_Processing_in_a_Cleanroom.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.technologyforyou.org/union-minister-ashwini-vaishnaw-launches-semicon-2-0-web-application-portal-and-announces-12-approved-applicants-under-electronics-components-manufacturing-scheme/" target="_blank" rel="noopener"><h3>Semicon 2.0 portal opens — 12 projects worth Rs 7,503 crore cleared</h3></a>
+        <p>Union Minister Ashwini Vaishnaw launched the Semicon 2.0 web application portal — applications are live for Pillars 2, 3 and 4 — and announced 12 newly approved applicants under the Electronics Components Manufacturing Scheme. The projects carry projected investment of Rs 7,503 crore, expected production of Rs 39,045 crore and 7,127 direct jobs across seven states, taking total ECMS approvals to 118 applications worth Rs 77,051 crore.</p>
+        <div class="meta"><span class="credit">Photo: cleanroom wafer processing — Wikimedia Commons</span><a class="read" href="https://www.technologyforyou.org/union-minister-ashwini-vaishnaw-launches-semicon-2-0-web-application-portal-and-announces-12-approved-applicants-under-electronics-components-manufacturing-scheme/" target="_blank" rel="noopener">Read at PIB &#8599;</a></div>
+      </div>
+    </article>
+<article class="card">
+      <a class="thumb" href="https://www.thehansindia.com/news/cities/chennai/rocket-launches-from-kulasekharapatnam-spaceport-by-next-year-isro-chief-1139639" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/02_Launch_of_GSLV_Mk_III_D2_with_GSAT-29_from_Second_Launch_Pad_of_Satish_Dhawan_Space_Centre%2C_Sriharikota_%28SDSC_SHAR%29.jpg/960px-02_Launch_of_GSLV_Mk_III_D2_with_GSAT-29_from_Second_Launch_Pad_of_Satish_Dhawan_Space_Centre%2C_Sriharikota_%28SDSC_SHAR%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.thehansindia.com/news/cities/chennai/rocket-launches-from-kulasekharapatnam-spaceport-by-next-year-isro-chief-1139639" target="_blank" rel="noopener"><h3>Rocket launches from Kulasekharapatnam spaceport by next year: ISRO chief</h3></a>
+        <p>ISRO chairman V. Narayanan said rocket launches from India's second spaceport at Kulasekharapatnam, a coastal village in Tamil Nadu's Thoothukudi district, will commence next year, with construction of the new launch pad progressing successfully. Prime Minister Narendra Modi laid the spaceport's foundation stone on 28 February 2024.</p>
+        <div class="meta"><span class="credit">Photo: GSLV at Sriharikota's second launch pad — Wikimedia Commons</span><a class="read" href="https://www.thehansindia.com/news/cities/chennai/rocket-launches-from-kulasekharapatnam-spaceport-by-next-year-isro-chief-1139639" target="_blank" rel="noopener">Read at The Hans India &#8599;</a></div>
+      </div>
+    </article>
+<article class="card">
+      <a class="thumb" href="https://www.ndtv.com/india-news/swachh-space-indias-plan-to-clean-up-its-orbital-trash-by-2030-12289848/amp/1" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Debris-GEO1280.jpg/960px-Debris-GEO1280.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.ndtv.com/india-news/swachh-space-indias-plan-to-clean-up-its-orbital-trash-by-2030-12289848/amp/1" target="_blank" rel="noopener"><h3>'Swachh Space': India's plan to clean up its orbital trash by 2030</h3></a>
+        <p>India has unveiled a &lsquo;Swachh Space&rsquo; vision under its Debris Free Space Mission: every Indian space actor, government and private, should eliminate the creation of new orbital debris by 2030. Minister Jitendra Singh announced the goal on 5 November while opening a space robotics facility built by Hyderabad startup Cosmoserve Space. The US Space Surveillance Network had catalogued over 34,000 objects in Earth orbit as of August 2026.</p>
+        <div class="meta"><span class="credit">Image: ESA / Wikimedia Commons</span><a class="read" href="https://www.ndtv.com/india-news/swachh-space-indias-plan-to-clean-up-its-orbital-trash-by-2030-12289848/amp/1" target="_blank" rel="noopener">Read at NDTV &#8599;</a></div>
+      </div>
+    </article>
+<article class="card">
+      <a class="thumb" href="https://www.thehansindia.com/news/cities/chennai/rocket-launches-from-kulasekharapatnam-spaceport-by-next-year-isro-chief-1139639" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/GSLV-F18%2C_NVS-03_Mission_-_Lift_off_07.webp/960px-GSLV-F18%2C_NVS-03_Mission_-_Lift_off_07.webp?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.thehansindia.com/news/cities/chennai/rocket-launches-from-kulasekharapatnam-spaceport-by-next-year-isro-chief-1139639" target="_blank" rel="noopener"><h3>ISRO's latest navigation satellite NVS-03 is 'fully healthy'</h3></a>
+        <p>ISRO has confirmed that NVS-03, the next-generation NavIC navigation satellite launched on 30 October, is fully healthy after its onboard liquid apogee motor fired for 6,400 seconds to lift it from an elliptical orbit into its required 36,000-kilometre circular orbit. Extensive in-orbit testing of the payloads is now under way before the satellite is declared operational.</p>
+        <div class="meta"><span class="credit">Photo: GSLV-F18 lifts off with NVS-03 — ISRO / Wikimedia Commons</span><a class="read" href="https://www.thehansindia.com/news/cities/chennai/rocket-launches-from-kulasekharapatnam-spaceport-by-next-year-isro-chief-1139639" target="_blank" rel="noopener">Read at The Hans India &#8599;</a></div>
+      </div>
+    </article>
+<article class="card">
+      <a class="thumb" href="https://science.mkhz.kr/en/today/2026-11-07/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Working_at_an_optical_communications_system_testbed.jpg/1280px-Working_at_an_optical_communications_system_testbed.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://science.mkhz.kr/en/today/2026-11-07/" target="_blank" rel="noopener"><h3>AI that learns with light instead of electricity</h3></a>
+        <p>Researchers at the University of Tokyo and NTT have simplified both the learning method and the network design to suit a device that calculates with light, matching the performance of complex neural networks with far less calculation. The approach was tested in simulations and on a device using a 200-metre loop of optical fibre — though it has not yet been tried on today's largest language models.</p>
+        <div class="meta"><span class="credit">Photo: Wikimedia Commons</span><a class="read" href="https://science.mkhz.kr/en/today/2026-11-07/" target="_blank" rel="noopener">Read at Nature Computational Science &#8599;</a></div>
+      </div>
+    </article>
+<article class="card">
+      <a class="thumb" href="https://science.mkhz.kr/en/today/2026-11-07/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Plastic_Ocean_%284408273247%29.jpg/1280px-Plastic_Ocean_%284408273247%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://science.mkhz.kr/en/today/2026-11-07/" target="_blank" rel="noopener"><h3>Sea near the Pacific garbage patch is slowly changing colour</h3></a>
+        <p>University of Bergen researchers mining twenty years of satellite data (2002–2022) found the sea near the Great Pacific Garbage Patch now reflects more blue and green light together. Simulations point to invisible microplastics scattering light: the blue-green shift appeared in about 13% of modelled cases with microplastics added, against roughly 3% with natural changes alone. Direct checks in the ocean are still needed.</p>
+        <div class="meta"><span class="credit">Photo: Wikimedia Commons</span><a class="read" href="https://science.mkhz.kr/en/today/2026-11-07/" target="_blank" rel="noopener">Read at Communications Earth & Environment &#8599;</a></div>
+      </div>
+    </article></div>
+</section><section id="business" class="section" style="--sec:#d97706">
+  <div class="sec-head"><span class="sec-chip">Business & Investment</span><span class="sec-sub">Markets · Earnings · Deals</span><span class="sec-count">6 stories</span></div>
+  <div class="grid"><article class="card lead">
+      <a class="thumb" href="https://economictimes.indiatimes.com/markets/stocks/news/d-street-lights-up-ends-diwali-week-with-a-firecracker-of-a-friday/articleshow/135625998.cms" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/BSE_-_Bombay_Stock_Exchange_Building.jpg/1280px-BSE_-_Bombay_Stock_Exchange_Building.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://economictimes.indiatimes.com/markets/stocks/news/d-street-lights-up-ends-diwali-week-with-a-firecracker-of-a-friday/articleshow/135625998.cms" target="_blank" rel="noopener"><h3>Sensex jumps 1,718 points to 81,028 — best week in nearly six years</h3></a>
+        <p>The Sensex climbed 1,718.01 points (2.17%) to 81,028.02 and the Nifty surged 493.75 points (2.01%) to 25,030.35 on Friday, capping weekly gains of 8.8% and 8.5% — the Sensex's strongest week since February 2021. India stood out as Japan, South Korea, China, Taiwan and Singapore fell between 2% and 7% in an AI-led Asian selloff, while collapsing crude and foreign buying powered Dalal Street.</p>
+        <div class="meta"><span class="credit">Photo: BSE, Mumbai — Wikimedia Commons</span><a class="read" href="https://economictimes.indiatimes.com/markets/stocks/news/d-street-lights-up-ends-diwali-week-with-a-firecracker-of-a-friday/articleshow/135625998.cms" target="_blank" rel="noopener">Read at The Economic Times &#8599;</a></div>
+      </div>
+    </article>
+<article class="card">
+      <a class="thumb" href="https://ddindia.co.in/2026/11/foreign-investors-pump-rs-45960-crore-this-week-in-indian-stock-market/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/National_Stock_Exchange.jpg/1280px-National_Stock_Exchange.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://ddindia.co.in/2026/11/foreign-investors-pump-rs-45960-crore-this-week-in-indian-stock-market/" target="_blank" rel="noopener"><h3>Foreign investors pour Rs 45,960 crore into Indian stocks in one week</h3></a>
+        <p>Foreign institutional investors recorded net inflows of approximately Rs 45,960 crore during the week (IANS), a sharp turnaround from the persistent selling trend of recent months. Foreign portfolio investors have made net purchases of more than $4 billion over the past 13 sessions, with banking and financial shares — traditional FII favourites — leading the gains.</p>
+        <div class="meta"><span class="credit">Photo: NSE, Mumbai — Wikimedia Commons</span><a class="read" href="https://ddindia.co.in/2026/11/foreign-investors-pump-rs-45960-crore-this-week-in-indian-stock-market/" target="_blank" rel="noopener">Read at IANS via DD India &#8599;</a></div>
+      </div>
+    </article>
+<article class="card">
+      <a class="thumb" href="https://hdfcsky.com/news/sensex-jumps-8-82percent-to-81028-nifty-reclaims-25000-as-rs28-7-lakh-crore-added-in-best-week-since-2021" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Mukesh_Ambani_was_Awarded_the_Asia_Society_Leadership_Award.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://hdfcsky.com/news/sensex-jumps-8-82percent-to-81028-nifty-reclaims-25000-as-rs28-7-lakh-crore-added-in-best-week-since-2021" target="_blank" rel="noopener"><h3>Reliance posts record quarterly profit of Rs 29,550 crore</h3></a>
+        <p>Reliance Industries, India's largest company by market capitalisation, reported a record consolidated net profit of Rs 29,550 crore for Q2 FY27, up 33.8% year on year, with gross revenue rising 27.8% to Rs 3,62,268 crore and EBITDA up 23.9% to Rs 62,409 crore. The oil-to-chemicals business delivered a 68% jump in EBITDA, and Reliance shares surged 8% following the results.</p>
+        <div class="meta"><span class="credit">Photo: Asia Society / Wikimedia Commons</span><a class="read" href="https://hdfcsky.com/news/sensex-jumps-8-82percent-to-81028-nifty-reclaims-25000-as-rs28-7-lakh-crore-added-in-best-week-since-2021" target="_blank" rel="noopener">Read at HDFC Sky &#8599;</a></div>
+      </div>
+    </article>
+<article class="card">
+      <a class="thumb" href="https://hdfcsky.com/news/sensex-jumps-8-82percent-to-81028-nifty-reclaims-25000-as-rs28-7-lakh-crore-added-in-best-week-since-2021" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Sunil_Bharti_Mittal_World_Economic_Forum_2013.jpg/960px-Sunil_Bharti_Mittal_World_Economic_Forum_2013.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://hdfcsky.com/news/sensex-jumps-8-82percent-to-81028-nifty-reclaims-25000-as-rs28-7-lakh-crore-added-in-best-week-since-2021" target="_blank" rel="noopener"><h3>Bharti Airtel profit climbs 31% as ARPU beats estimates at Rs 271</h3></a>
+        <p>Bharti Airtel reported a 31% rise in consolidated net profit to Rs 8,888 crore for Q2 FY27, with revenue growing 16.7% to Rs 60,878 crore across its India and Africa businesses. Mobile average revenue per user climbed to Rs 271, beating estimates, and the stock rose 3% to a day high of Rs 2,120 on 6 November.</p>
+        <div class="meta"><span class="credit">Photo: Wikimedia Commons</span><a class="read" href="https://hdfcsky.com/news/sensex-jumps-8-82percent-to-81028-nifty-reclaims-25000-as-rs28-7-lakh-crore-added-in-best-week-since-2021" target="_blank" rel="noopener">Read at HDFC Sky &#8599;</a></div>
+      </div>
+    </article>
+<article class="card">
+      <a class="thumb" href="https://hdfcsky.com/news/sensex-jumps-8-82percent-to-81028-nifty-reclaims-25000-as-rs28-7-lakh-crore-added-in-best-week-since-2021" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Anand_G._Mahindra_World_Economic_Forum_2013.jpg/960px-Anand_G._Mahindra_World_Economic_Forum_2013.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://hdfcsky.com/news/sensex-jumps-8-82percent-to-81028-nifty-reclaims-25000-as-rs28-7-lakh-crore-added-in-best-week-since-2021" target="_blank" rel="noopener"><h3>M&M profit jumps 25% on SUV demand; autos lead the sector rally</h3></a>
+        <p>Mahindra & Mahindra's consolidated net profit rose 25% year on year to Rs 4,588 crore, with revenue up 25% to Rs 57,553 crore and standalone profit up 13% to Rs 5,102 crore, driven by strong SUV demand. M&M was the top Sensex gainer on Friday, rising 6.15%, as the Nifty Auto index outperformed on crude relief and strong monthly sales.</p>
+        <div class="meta"><span class="credit">Photo: Wikimedia Commons</span><a class="read" href="https://hdfcsky.com/news/sensex-jumps-8-82percent-to-81028-nifty-reclaims-25000-as-rs28-7-lakh-crore-added-in-best-week-since-2021" target="_blank" rel="noopener">Read at HDFC Sky &#8599;</a></div>
+      </div>
+    </article>
+<article class="card">
+      <a class="thumb" href="https://hdfcsky.com/news/sensex-jumps-8-82percent-to-81028-nifty-reclaims-25000-as-rs28-7-lakh-crore-added-in-best-week-since-2021" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Aerial_view_of_the_Glass_Pyramid_at_the_Infosys_Campus.jpg/960px-Aerial_view_of_the_Glass_Pyramid_at_the_Infosys_Campus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://hdfcsky.com/news/sensex-jumps-8-82percent-to-81028-nifty-reclaims-25000-as-rs28-7-lakh-crore-added-in-best-week-since-2021" target="_blank" rel="noopener"><h3>Nifty IT hits a nine-month high as the global AI rout redirects money to India</h3></a>
+        <p>The Nifty IT index surged 778 points (2.37%) on Friday to an intraday high of 33,616, its highest in nine months. Indian software exporters were seen as relatively insulated from the capital-intensive AI investments that triggered a 5.6% plunge in the Nasdaq on 5 November, and global funds rotated in — Mphasis, HCL Technologies, TCS and Infosys led the gains.</p>
+        <div class="meta"><span class="credit">Photo: Infosys campus — Wikimedia Commons</span><a class="read" href="https://hdfcsky.com/news/sensex-jumps-8-82percent-to-81028-nifty-reclaims-25000-as-rs28-7-lakh-crore-added-in-best-week-since-2021" target="_blank" rel="noopener">Read at HDFC Sky &#8599;</a></div>
+      </div>
+    </article></div>
+</section><section id="ai" class="section" style="--sec:#7c3aed">
+  <div class="sec-head"><span class="sec-chip">Artificial Intelligence</span><span class="sec-sub">Models · Policy · The Build-Out</span><span class="sec-count">6 stories</span></div>
+  <div class="grid"><article class="card lead">
+      <a class="thumb" href="https://ai-news-online.com/briefing/2026-11-07/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Secretary_of_State_Peter_Kyle_visits_Anthropic_in_San_Francisco._%2854098999333%29.jpg/1280px-Secretary_of_State_Peter_Kyle_visits_Anthropic_in_San_Francisco._%2854098999333%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://ai-news-online.com/briefing/2026-11-07/" target="_blank" rel="noopener"><h3>AI is now speeding up AI itself, independent evaluator finds</h3></a>
+        <p>In a report published 5 November, independent evaluator METR estimated that Anthropic's benchmark scores have grown about 1.9x faster since October 2025. METR judges — subjectively, and with high uncertainty — that about 80% of the October 2026 acceleration is due to AI assistance, and that faster training compute is not the cause. Anthropic redacted much of the evidence METR found most informative.</p>
+        <div class="meta"><span class="credit">Photo: Anthropic, San Francisco — UK Gov / Wikimedia Commons</span><a class="read" href="https://ai-news-online.com/briefing/2026-11-07/" target="_blank" rel="noopener">Read at METR, via AI News &#8599;</a></div>
+      </div>
+    </article>
+<article class="card">
+      <a class="thumb" href="https://ai-news-online.com/briefing/2026-11-07/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Demis_Hassabis_at_2024_Nobel_Week_3.jpg/1280px-Demis_Hassabis_at_2024_Nobel_Week_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://ai-news-online.com/briefing/2026-11-07/" target="_blank" rel="noopener"><h3>DeepMind's AI agents find cracks in legacy 1024-bit RSA encryption</h3></a>
+        <p>Google DeepMind's Pushmeet Kohli announced on 6 November that AI agents, under human supervision, found two advances against legacy 1024-bit RSA: a signature-forgery technique said to be up to 1,600x faster than previous methods, and a roughly 30x cut in the average cost of factoring each additional key in a batch. Modern encryption in use today is unaffected — the figures come from DeepMind's own announcement.</p>
+        <div class="meta"><span class="credit">Photo: Demis Hassabis — Wikimedia Commons</span><a class="read" href="https://ai-news-online.com/briefing/2026-11-07/" target="_blank" rel="noopener">Read at Google DeepMind &#8599;</a></div>
+      </div>
+    </article>
+<article class="card">
+      <a class="thumb" href="https://ai-news-online.com/briefing/2026-11-07/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Googleplex_HQ_%28cropped%29.jpg/1280px-Googleplex_HQ_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://ai-news-online.com/briefing/2026-11-07/" target="_blank" rel="noopener"><h3>Google's new AI video model makes 15-second clips, 30% cheaper</h3></a>
+        <p>Google has made its Gemini Omni 1.2 Flash video generation and editing model generally available in the Gemini API and Google Cloud. Clips now run up to 15 seconds (up from 10), and 720p costs $0.07 per second — 30% less than Omni 1.1. It reaches Flow, Vids, Google Ads and the Gemini app, and outputs carry a SynthID watermark.</p>
+        <div class="meta"><span class="credit">Photo: Googleplex — Wikimedia Commons</span><a class="read" href="https://ai-news-online.com/briefing/2026-11-07/" target="_blank" rel="noopener">Read at Google DeepMind &#8599;</a></div>
+      </div>
+    </article>
+<article class="card">
+      <a class="thumb" href="https://ai-news-online.com/briefing/2026-11-07/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Sam_Altman_CropEdit_James_Tamim.jpg/960px-Sam_Altman_CropEdit_James_Tamim.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://ai-news-online.com/briefing/2026-11-07/" target="_blank" rel="noopener"><h3>40 US local data-centre curbs pass — OpenAI answers with a community compact</h3></a>
+        <p>At least 40 local laws to curb and scrutinise data-centre construction passed across the US during the midterms. OpenAI responded on Thursday with a National Community Compact promising to cover the energy costs of the infrastructure it builds, protect local resources, publish local jobs reports and stop using non-disclosure agreements with public officials.</p>
+        <div class="meta"><span class="credit">Photo: Wikimedia Commons</span><a class="read" href="https://ai-news-online.com/briefing/2026-11-07/" target="_blank" rel="noopener">Read at The National / OpenAI &#8599;</a></div>
+      </div>
+    </article>
+<article class="card">
+      <a class="thumb" href="https://ai-news-online.com/briefing/2026-11-07/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/U.S._Department_of_Justice_headquarters%2C_August_12%2C_2006.jpg/960px-U.S._Department_of_Justice_headquarters%2C_August_12%2C_2006.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://ai-news-online.com/briefing/2026-11-07/" target="_blank" rel="noopener"><h3>Justice Department launches a Super Intelligence Task Force to police AI misuse</h3></a>
+        <p>The DOJ announced the task force on 5 November, set up by an Attorney General memo dated 13 October. It targets foreign governments, criminal groups and actors committing fraud or other unlawful conduct with AI, coordinating criminal and civil enforcement and issuing prosecution guidance. It absorbs the earlier AI Litigation Task Force and creates no new crimes.</p>
+        <div class="meta"><span class="credit">Photo: US Department of Justice — Wikimedia Commons</span><a class="read" href="https://ai-news-online.com/briefing/2026-11-07/" target="_blank" rel="noopener">Read at Nextgov/FCW &#8599;</a></div>
+      </div>
+    </article>
+<article class="card">
+      <a class="thumb" href="https://ai-news-online.com/briefing/2026-11-07/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Google_data_center.jpg/960px-Google_data_center.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://ai-news-online.com/briefing/2026-11-07/" target="_blank" rel="noopener"><h3>Google commits $17 billion to a Wyoming data centre with its own power plant</h3></a>
+        <p>Google announced a $17 billion investment in its first Wyoming data centre, near Cheyenne. Power comes partly from a 702-megawatt natural-gas fuel-cell development under a 20-year take-or-pay deal with AEP, and Google says it will pay for 100% of the power used at the site — a direct response to the local backlash against data-centre growth.</p>
+        <div class="meta"><span class="credit">Photo: Google data centre — Wikimedia Commons</span><a class="read" href="https://ai-news-online.com/briefing/2026-11-07/" target="_blank" rel="noopener">Read at Yahoo Finance &#8599;</a></div>
+      </div>
+    </article></div>
+</section><section id="banking" class="section" style="--sec:#2563eb">
+  <div class="sec-head"><span class="sec-chip">Banking</span><span class="sec-sub">Indian & Global Banks</span><span class="sec-count">6 stories</span></div>
+  <div class="grid"><article class="card lead">
+      <a class="thumb" href="https://telanganatoday.com/nifty-sensex-post-strongest-weekly-gains-in-over-a-year" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Bandra-Kurla_complex_Bombay_3239.JPG/1280px-Bandra-Kurla_complex_Bombay_3239.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://telanganatoday.com/nifty-sensex-post-strongest-weekly-gains-in-over-a-year" target="_blank" rel="noopener"><h3>Bank stocks power the rally — Nifty Bank up about 8% this week</h3></a>
+        <p>Banking shares led the market rally, with the Bank Nifty gaining about 8% during the week as strong foreign inflows, domestic fundamentals and easing global concerns lifted financials. The surge came even as Thursday's US selloff erased roughly $3 trillion in market value from S&P 500 companies — investors treated India as a relatively safe harbour.</p>
+        <div class="meta"><span class="credit">Photo: Bandra Kurla Complex, Mumbai — Wikimedia Commons</span><a class="read" href="https://telanganatoday.com/nifty-sensex-post-strongest-weekly-gains-in-over-a-year" target="_blank" rel="noopener">Read at IANS &#8599;</a></div>
+      </div>
+    </article>
+<article class="card">
+      <a class="thumb" href="https://upstox.com/news/market-news/stocks/diwali-fireworks-on-d-street-nifty-bank-explodes-1-191-points-sbi-icici-bank-hdfc-bank-in-focus/article-203023/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/SBI-headquarters.JPG/1280px-SBI-headquarters.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://upstox.com/news/market-news/stocks/diwali-fireworks-on-d-street-nifty-bank-explodes-1-191-points-sbi-icici-bank-hdfc-bank-in-focus/article-203023/" target="_blank" rel="noopener"><h3>SBI's quarterly profit rises 14% to Rs 23,038 crore</h3></a>
+        <p>State Bank of India, the country's largest lender, reported a 14% rise in standalone net profit to Rs 23,038 crore for Q2 FY27 (from Rs 20,160 crore a year ago), with total income up to Rs 1,43,796 crore. Asset quality improved sharply: gross NPAs fell to 1.39% of advances from 1.73%, net NPAs moderated to 0.36%, and consolidated profit rose 20% to Rs 25,361 crore.</p>
+        <div class="meta"><span class="credit">Photo: SBI HQ, Mumbai — Wikimedia Commons</span><a class="read" href="https://upstox.com/news/market-news/stocks/diwali-fireworks-on-d-street-nifty-bank-explodes-1-191-points-sbi-icici-bank-hdfc-bank-in-focus/article-203023/" target="_blank" rel="noopener">Read at Upstox (PTI) &#8599;</a></div>
+      </div>
+    </article>
+<article class="card">
+      <a class="thumb" href="https://hdfcsky.com/news/sensex-jumps-8-82percent-to-81028-nifty-reclaims-25000-as-rs28-7-lakh-crore-added-in-best-week-since-2021" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Deutsche-Bank-Frankfurt-am-Main.jpg/1280px-Deutsche-Bank-Frankfurt-am-Main.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://hdfcsky.com/news/sensex-jumps-8-82percent-to-81028-nifty-reclaims-25000-as-rs28-7-lakh-crore-added-in-best-week-since-2021" target="_blank" rel="noopener"><h3>Watchdog clears Kotak's buy of Deutsche Bank's India retail and wealth units</h3></a>
+        <p>The Competition Commission of India on 4 November approved Kotak Mahindra Bank's acquisition of Deutsche Bank's retail and wealth management operations in India, removing a key regulatory hurdle for the deal. The transaction is central to Kotak's strategy to expand its retail banking and wealth footprint; its shares rose 2.68% on Friday.</p>
+        <div class="meta"><span class="credit">Photo: Deutsche Bank HQ, Frankfurt — Wikimedia Commons</span><a class="read" href="https://hdfcsky.com/news/sensex-jumps-8-82percent-to-81028-nifty-reclaims-25000-as-rs28-7-lakh-crore-added-in-best-week-since-2021" target="_blank" rel="noopener">Read at HDFC Sky &#8599;</a></div>
+      </div>
+    </article>
+<article class="card">
+      <a class="thumb" href="https://www.thehindu.com/news/morning-digest-on-november-7-2026/article71677130.ece" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Santiago_Pe%C3%B1a_2026_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.thehindu.com/news/morning-digest-on-november-7-2026/article71677130.ece" target="_blank" rel="noopener"><h3>Paraguay's president impeached over banking crisis</h3></a>
+        <p>Paraguayan senators voted on Friday to impeach President Santiago Peña over the collapse of a major bank that locked almost half the population out of their accounts and triggered widespread protests. Mr Peña had offered his resignation over the disaster, but lawmakers pressed ahead with proceedings that would also strip him of the immunity granted to former presidents.</p>
+        <div class="meta"><span class="credit">Photo: Wikimedia Commons</span><a class="read" href="https://www.thehindu.com/news/morning-digest-on-november-7-2026/article71677130.ece" target="_blank" rel="noopener">Read at The Hindu &#8599;</a></div>
+      </div>
+    </article>
+<article class="card">
+      <a class="thumb" href="https://ai-news-online.com/briefing/2026-11-07/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Banca_m%C3%B3vil.jpg/960px-Banca_m%C3%B3vil.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://ai-news-online.com/briefing/2026-11-07/" target="_blank" rel="noopener"><h3>Claude moves into personal finance — read-only, via Plaid</h3></a>
+        <p>Anthropic's new beta lets US Pro, Max and Ultra subscribers connect bank and credit-card accounts through Plaid and ask Claude about spending, duplicate charges and rising bills. Claude can see up to two years of transactions but cannot move money; Anthropic says the conversations are not used for training and carry no ads or sponsored recommendations.</p>
+        <div class="meta"><span class="credit">Photo: Wikimedia Commons</span><a class="read" href="https://ai-news-online.com/briefing/2026-11-07/" target="_blank" rel="noopener">Read at TechCrunch, via AI News &#8599;</a></div>
+      </div>
+    </article>
+<article class="card">
+      <a class="thumb" href="https://upstox.com/news/market-news/stocks/diwali-fireworks-on-d-street-nifty-bank-explodes-1-191-points-sbi-icici-bank-hdfc-bank-in-focus/article-203023/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Icici-bandra_kurla_complex.jpg/960px-Icici-bandra_kurla_complex.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://upstox.com/news/market-news/stocks/diwali-fireworks-on-d-street-nifty-bank-explodes-1-191-points-sbi-icici-bank-hdfc-bank-in-focus/article-203023/" target="_blank" rel="noopener"><h3>Every Nifty Bank stock in the green as the index leaps 1,480 points</h3></a>
+        <p>All 14 Nifty Bank constituents traded higher on Thursday as the index jumped up to 1,480.25 points (2.64%) in a Diwali-week spectacle. ICICI Bank advanced 3.01% to Rs 1,467, HDFC Bank rose 2.23% to Rs 753.15 and SBI added 1.25% — powered by crude slipping below $100 a barrel, a fourth straight session of FII buying and earnings optimism.</p>
+        <div class="meta"><span class="credit">Photo: ICICI Bank towers, BKC — Wikimedia Commons</span><a class="read" href="https://upstox.com/news/market-news/stocks/diwali-fireworks-on-d-street-nifty-bank-explodes-1-191-points-sbi-icici-bank-hdfc-bank-in-focus/article-203023/" target="_blank" rel="noopener">Read at Upstox &#8599;</a></div>
+      </div>
+    </article></div>
+</section><section id="regulators" class="section" style="--sec:#475569">
+  <div class="sec-head"><span class="sec-chip">Banking Regulators</span><span class="sec-sub">Rulebooks · Worldwide</span><span class="sec-count">5 stories</span></div>
+  <div class="grid"><article class="card lead">
+      <a class="thumb" href="https://the420.in/rbi-consolidates-cybersecurity-rules-for-digital-payment-operators/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Tower_and_building_of_Reserve_Bank_of_India%2C_Mumbai_04.jpg/1280px-Tower_and_building_of_Reserve_Bank_of_India%2C_Mumbai_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://the420.in/rbi-consolidates-cybersecurity-rules-for-digital-payment-operators/" target="_blank" rel="noopener"><h3>RBI brings payment operators under one cybersecurity rulebook</h3></a>
+        <p>The Reserve Bank of India's consolidated Master Directions, issued 5 November, bring non-bank payment system operators — payment aggregators, card networks, prepaid instrument issuers and white-label ATM operators — under a single cybersecurity framework. Operators must hold source code or escrow arrangements for critical third-party software, undergo annual independent system audits, and keep the six-hour cyber-incident reporting rule. The framework applies immediately to large and medium operators; smaller ones have until 1 April 2028.</p>
+        <div class="meta"><span class="credit">Photo: RBI, Mumbai — Wikimedia Commons</span><a class="read" href="https://the420.in/rbi-consolidates-cybersecurity-rules-for-digital-payment-operators/" target="_blank" rel="noopener">Read at Reserve Bank of India &#8599;</a></div>
+      </div>
+    </article>
+<article class="card">
+      <a class="thumb" href="https://menafn.com/1111926853/RBI-Proposes-Raising-Priority-Sector-Loan-Limit-To-Rs-100-Crore-For-Agriculture-Infra-And-Food-Processing" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Village_Farmer_field%2C_Parakena%2C_ps-_Satyabadi%2C_DT-_Puri%2C_IMG_20200828_181810.jpg/1280px-Village_Farmer_field%2C_Parakena%2C_ps-_Satyabadi%2C_DT-_Puri%2C_IMG_20200828_181810.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://menafn.com/1111926853/RBI-Proposes-Raising-Priority-Sector-Loan-Limit-To-Rs-100-Crore-For-Agriculture-Infra-And-Food-Processing" target="_blank" rel="noopener"><h3>RBI seeks comments on new priority sector lending drafts</h3></a>
+        <p>The RBI's draft priority sector lending directions propose that bank loans of up to Rs 100 crore per borrower for agriculture infrastructure and food processing qualify as priority sector credit, potentially improving access for MSMEs across the farm value chain. The overall PSL target stays at 40% of adjusted net bank credit, education loans up to Rs 25 lakh are proposed as eligible, and comments are invited until 26 November.</p>
+        <div class="meta"><span class="credit">Photo: Wikimedia Commons</span><a class="read" href="https://menafn.com/1111926853/RBI-Proposes-Raising-Priority-Sector-Loan-Limit-To-Rs-100-Crore-For-Agriculture-Infra-And-Food-Processing" target="_blank" rel="noopener">Read at KNN India &#8599;</a></div>
+      </div>
+    </article>
+<article class="card">
+      <a class="thumb" href="https://hdfcsky.com/news/sensex-jumps-8-82percent-to-81028-nifty-reclaims-25000-as-rs28-7-lakh-crore-added-in-best-week-since-2021" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Trading_apps_on_an_iPhone_screen.jpg/960px-Trading_apps_on_an_iPhone_screen.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://hdfcsky.com/news/sensex-jumps-8-82percent-to-81028-nifty-reclaims-25000-as-rs28-7-lakh-crore-added-in-best-week-since-2021" target="_blank" rel="noopener"><h3>RBI sets up a Technical Consultative Committee for Financial Markets</h3></a>
+        <p>The Reserve Bank of India announced on 4 November the constitution of a Technical Consultative Committee for Financial Markets (TCCFM), to discuss policy and operational issues in rapidly evolving financial markets and infrastructure — from bond market development to forex market operations. The same week, the RBI conducted a second overnight variable rate reverse repo auction as part of liquidity management.</p>
+        <div class="meta"><span class="credit">Photo: Wikimedia Commons</span><a class="read" href="https://hdfcsky.com/news/sensex-jumps-8-82percent-to-81028-nifty-reclaims-25000-as-rs28-7-lakh-crore-added-in-best-week-since-2021" target="_blank" rel="noopener">Read at HDFC Sky &#8599;</a></div>
+      </div>
+    </article>
+<article class="card">
+      <a class="thumb" href="https://hdfcsky.com/news/sensex-jumps-8-82percent-to-81028-nifty-reclaims-25000-as-rs28-7-lakh-crore-added-in-best-week-since-2021" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/SEBI_Bhavan.jpg/960px-SEBI_Bhavan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://hdfcsky.com/news/sensex-jumps-8-82percent-to-81028-nifty-reclaims-25000-as-rs28-7-lakh-crore-added-in-best-week-since-2021" target="_blank" rel="noopener"><h3>SEBI clears IPO pipeline: Mahanadi Coalfields, Sagar Defence, Arjun Jewellers</h3></a>
+        <p>The Securities and Exchange Board of India granted approval on 5 November for initial public offerings by Mahanadi Coalfields Limited, Sagar Defence Engineering Limited and Arjun Jewellers Limited. Coal India subsidiary Mahanadi Coalfields plans an IPO of up to 66.18 crore equity shares, with the launch expected in the second half of November or early December — a sign the primary market remains active despite secondary-market volatility.</p>
+        <div class="meta"><span class="credit">Photo: SEBI & BSE, BKC Mumbai — Wikimedia Commons</span><a class="read" href="https://hdfcsky.com/news/sensex-jumps-8-82percent-to-81028-nifty-reclaims-25000-as-rs28-7-lakh-crore-added-in-best-week-since-2021" target="_blank" rel="noopener">Read at HDFC Sky &#8599;</a></div>
+      </div>
+    </article>
+<article class="card">
+      <a class="thumb" href="https://bankingjournal.aba.com/2026/11/fincen-fed-withdraw-proposal-to-lower-international-fund-transfer-recordkeeping-threshold/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Eccles_Building_%2826088200676%29.jpg/1280px-Eccles_Building_%2826088200676%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://bankingjournal.aba.com/2026/11/fincen-fed-withdraw-proposal-to-lower-international-fund-transfer-recordkeeping-threshold/" target="_blank" rel="noopener"><h3>US keeps $3,000 threshold for cross-border transfer records</h3></a>
+        <p>FinCEN and the Federal Reserve have withdrawn their 2020 proposal to lower the recordkeeping threshold for international fund transfers from $3,000 to $250, pointing to the many comments warning of a significant regulatory burden on financial institutions, particularly smaller ones. The agencies said no final rule will be issued without a fresh opportunity for public comment.</p>
+        <div class="meta"><span class="credit">Photo: Federal Reserve, Washington — Wikimedia Commons</span><a class="read" href="https://bankingjournal.aba.com/2026/11/fincen-fed-withdraw-proposal-to-lower-international-fund-transfer-recordkeeping-threshold/" target="_blank" rel="noopener">Read at ABA Banking Journal &#8599;</a></div>
+      </div>
+    </article></div>
+</section>
+  <section id="more" class="section">
+    <div class="sec-head more-head"><span class="sec-chip" style="background:linear-gradient(92deg,#7c3aed,#ec4899,#f97316)">More Across The Sections</span><span class="sec-sub">Weather · Health · Education · Climate · Entertainment · Nature · Startups</span><span class="sec-count">8 briefs</span></div>
+    <div class="briefs"><article class="brief">
+      <a class="thumb" href="https://www.thehindubusinessline.com/economy/agri-business/imd-update-more-rain-likely-as-weather-models-signal-stormy-conditions-over-bay-of-bengal-arabian-sea/article71677437.ece" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Monsoon_%2836877269620%29.jpg/960px-Monsoon_%2836877269620%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body"><a class="hl" href="https://www.thehindubusinessline.com/economy/agri-business/imd-update-more-rain-likely-as-weather-models-signal-stormy-conditions-over-bay-of-bengal-arabian-sea/article71677437.ece" target="_blank" rel="noopener"><h4>WEATHER — Rain for the South as both seas stir</h4></a>
+      <p>IMD expects isolated heavy rainfall to continue over Coastal Andhra Pradesh, Tamil Nadu, Puducherry and Kerala, with both the Bay of Bengal and the Arabian Sea showing signs of fresh storm activity. Google DeepMind's storm outlook assigns a 53% chance to a system that could rank among the three strongest North Indian Ocean storms of 2026.</p>
+      <div class="meta"><span class="credit">Photo: Wikimedia Commons</span><a class="read" href="https://www.thehindubusinessline.com/economy/agri-business/imd-update-more-rain-likely-as-weather-models-signal-stormy-conditions-over-bay-of-bengal-arabian-sea/article71677437.ece" target="_blank" rel="noopener">The Hindu BusinessLine &#8599;</a></div></div>
+    </article>
+<article class="brief">
+      <a class="thumb" href="https://www.ndtv.com/health/why-is-diarrhea-on-rise-in-children-under-5-icmr-study-reveals-possible-causes-11349513/amp/1" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Doctor_looking_in_the_microscope.jpg/960px-Doctor_looking_in_the_microscope.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body"><a class="hl" href="https://www.ndtv.com/health/why-is-diarrhea-on-rise-in-children-under-5-icmr-study-reveals-possible-causes-11349513/amp/1" target="_blank" rel="noopener"><h4>HEALTH — What's making under-5s sick? ICMR study has answers</h4></a>
+      <p>Testing 1,283 stool samples from hospitalised Kolkata children, ICMR researchers found rotavirus behind 23.46% of diarrhea cases, human adenovirus-F 10.68% and norovirus 9.12%. Children aged 6–24 months face the highest risk, and the team calls for stronger national surveillance and vaccine development.</p>
+      <div class="meta"><span class="credit">Photo: Wikimedia Commons</span><a class="read" href="https://www.ndtv.com/health/why-is-diarrhea-on-rise-in-children-under-5-icmr-study-reveals-possible-causes-11349513/amp/1" target="_blank" rel="noopener">NDTV &#8599;</a></div></div>
+    </article>
+<article class="brief">
+      <a class="thumb" href="https://testbook.com/news/isro-apprentice-recruitment-2026/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Satish_Dhawan_Space_Centre%2C_India_by_Planet_Labs.jpg/960px-Satish_Dhawan_Space_Centre%2C_India_by_Planet_Labs.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body"><a class="hl" href="https://testbook.com/news/isro-apprentice-recruitment-2026/" target="_blank" rel="noopener"><h4>EDUCATION — 400 apprentice seats open at Sriharikota</h4></a>
+      <p>ISRO's Satish Dhawan Space Centre has released its 2026 apprentice notification: 400 places across engineering graduate, diploma, ITI, trade and vocational categories, with 12 months of training at Sriharikota. Applications opened 6 November and close on 26 November 2026.</p>
+      <div class="meta"><span class="credit">Photo: Satish Dhawan Space Centre — Wikimedia Commons</span><a class="read" href="https://testbook.com/news/isro-apprentice-recruitment-2026/" target="_blank" rel="noopener">Testbook &#8599;</a></div></div>
+    </article>
+<article class="brief">
+      <a class="thumb" href="https://particle.news/story/heavy-rain-threatens-south-india-as-delhi-faces-severe-diwali-air-pollution" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Delhi_air_pollution_2019.jpg/960px-Delhi_air_pollution_2019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body"><a class="hl" href="https://particle.news/story/heavy-rain-threatens-south-india-as-delhi-faces-severe-diwali-air-pollution" target="_blank" rel="noopener"><h4>CLIMATE — Delhi chokes through the Diwali weekend</h4></a>
+      <p>The capital stayed dry but its air turned severe: the Air Quality Early Warning System predicted severe pollution through the Diwali weekend, and Friday morning stations across Delhi sat in the severe band — Rohini at 475 AQI and IIT Delhi at 472.</p>
+      <div class="meta"><span class="credit">Photo: Wikimedia Commons</span><a class="read" href="https://particle.news/story/heavy-rain-threatens-south-india-as-delhi-faces-severe-diwali-air-pollution" target="_blank" rel="noopener">Particle News &#8599;</a></div></div>
+    </article>
+<article class="brief">
+      <a class="thumb" href="https://www.thehindu.com/news/morning-digest-on-november-7-2026/article71677130.ece" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Tiger_Shroff_snapped_at_Film_City.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled" alt="" loading="lazy"></a>
+      <div class="body"><a class="hl" href="https://www.thehindu.com/news/morning-digest-on-november-7-2026/article71677130.ece" target="_blank" rel="noopener"><h4>ENTERTAINMENT — Tiger Shroff firing case: court orders age check</h4></a>
+      <p>A special MCOCA court has ordered an inquiry into the age of the alleged shooter arrested over the firing at actor Tiger Shroff's car, after he claimed to be a minor at the time of the incident. Police must verify his age and report back within 15 days.</p>
+      <div class="meta"><span class="credit">Photo: Wikimedia Commons</span><a class="read" href="https://www.thehindu.com/news/morning-digest-on-november-7-2026/article71677130.ece" target="_blank" rel="noopener">The Hindu &#8599;</a></div></div>
+    </article>
+<article class="brief">
+      <a class="thumb" href="https://science.mkhz.kr/en/today/2026-11-07/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Hemignathus_wilsoni_painting.png/960px-Hemignathus_wilsoni_painting.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body"><a class="hl" href="https://science.mkhz.kr/en/today/2026-11-07/" target="_blank" rel="noopener"><h4>NATURE — The little bird that digs like a woodpecker, without being one</h4></a>
+      <p>Hawaii has no woodpeckers, so the endangered ʻakiapōlāʻau does the job itself: researchers found it swings its whole body down from its ankles, axe-like, to dig into wood. Fewer than 2,000 survive, all on one Hawaiian mountainside.</p>
+      <div class="meta"><span class="credit">Illustration: Wikimedia Commons</span><a class="read" href="https://science.mkhz.kr/en/today/2026-11-07/" target="_blank" rel="noopener">Ornithology, via Science Digest &#8599;</a></div></div>
+    </article>
+<article class="brief">
+      <a class="thumb" href="https://hdfcsky.com/news/sensex-jumps-8-82percent-to-81028-nifty-reclaims-25000-as-rs28-7-lakh-crore-added-in-best-week-since-2021" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/BalticServers_data_center.jpg/960px-BalticServers_data_center.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body"><a class="hl" href="https://hdfcsky.com/news/sensex-jumps-8-82percent-to-81028-nifty-reclaims-25000-as-rs28-7-lakh-crore-added-in-best-week-since-2021" target="_blank" rel="noopener"><h4>STARTUPS & INFRA — AdaniConneX buys Vizag data centre park for Rs 1,085 crore</h4></a>
+      <p>Adani Enterprises' joint venture AdaniConneX has signed a share purchase agreement to acquire 100% of Vizag Mega Data Center Park Limited for Rs 1,085.51 crore, with the deal expected to close by 10 November — another push into data-centre capacity riding on cloud and AI demand.</p>
+      <div class="meta"><span class="credit">Photo: Wikimedia Commons</span><a class="read" href="https://hdfcsky.com/news/sensex-jumps-8-82percent-to-81028-nifty-reclaims-25000-as-rs28-7-lakh-crore-added-in-best-week-since-2021" target="_blank" rel="noopener">HDFC Sky &#8599;</a></div></div>
+    </article>
+<article class="brief">
+      <a class="thumb" href="https://hdfcsky.com/news/sensex-jumps-8-82percent-to-81028-nifty-reclaims-25000-as-rs28-7-lakh-crore-added-in-best-week-since-2021" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Ayurvedic_Product_Stall_-_Greater_Behala_Book_Fair_-_Calcutta_Blind_School_Grounds_-_Kolkata_2015-12-12_7845.JPG/960px-Ayurvedic_Product_Stall_-_Greater_Behala_Book_Fair_-_Calcutta_Blind_School_Grounds_-_Kolkata_2015-12-12_7845.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body"><a class="hl" href="https://hdfcsky.com/news/sensex-jumps-8-82percent-to-81028-nifty-reclaims-25000-as-rs28-7-lakh-crore-added-in-best-week-since-2021" target="_blank" rel="noopener"><h4>CONSUMER — Marico buys into new-age wellness brand Bonorizon</h4></a>
+      <p>FMCG major Marico will acquire a 51% stake in Bonorizon Consumer Ventures for up to Rs 35 crore, continuing the playbook of large consumer companies buying into emerging health and wellness brands to diversify their portfolios.</p>
+      <div class="meta"><span class="credit">Photo: Wikimedia Commons</span><a class="read" href="https://hdfcsky.com/news/sensex-jumps-8-82percent-to-81028-nifty-reclaims-25000-as-rs28-7-lakh-crore-added-in-best-week-since-2021" target="_blank" rel="noopener">HDFC Sky &#8599;</a></div></div>
+    </article></div>
+  </section>
+</div>
+<footer>
+  <div class="brand">THE MORNING GLOBE</div>
+  <p>Every story sourced. Every photo real. Back tomorrow at 6:30 AM.</p>
+  <p>Follow the paper: <a href="https://www.instagram.com/themorningglobe" target="_blank" rel="noopener">@themorningglobe</a> · From the house of Deesha Global: <a href="https://www.instagram.com/deeshaglobal" target="_blank" rel="noopener">@deeshaglobal</a></p>
+  <p class="small">The Morning Globe — web edition, Saturday 7 November 2026. Stories link to their original publishers; photos via Wikimedia Commons unless credited otherwise.</p>
+</footer>
+<div id="followModal" role="dialog" aria-modal="true" aria-labelledby="fmTitle">
+  <div class="modal-card">
+    <button class="modal-x" id="fmClose" aria-label="Close">&times;</button>
+    <div class="globe">🌅</div>
+    <h3 id="fmTitle">Enjoying the paper?</h3>
+    <p>The Morning Globe comes from the team at <b>Deesha Global</b> — follow <b>@deeshaglobal</b> for honest study, work and move-abroad guidance, and this paper in your feed every morning.</p>
+    <a class="btn-follow" href="https://www.instagram.com/deeshaglobal" target="_blank" rel="noopener">Follow @deeshaglobal</a>
+    <button class="btn-continue" id="fmContinue">Continue reading</button>
+  </div>
+</div>
+<script>
+(function () {
+  var KEY = 'tmg_follow_prompt_seen';
+  var modal = document.getElementById('followModal');
+  function dismiss() {
+    modal.classList.remove('open');
+    try { sessionStorage.setItem(KEY, '1'); } catch (e) {}
+  }
+  document.getElementById('fmContinue').addEventListener('click', dismiss);
+  document.getElementById('fmClose').addEventListener('click', dismiss);
+  modal.addEventListener('click', function (e) { if (e.target === modal) dismiss(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') dismiss(); });
+  var already = false;
+  try { already = !!sessionStorage.getItem(KEY); } catch (e) {}
+  if (!already) {
+    setTimeout(function () {
+      modal.classList.add('open');
+      try { sessionStorage.setItem(KEY, '1'); } catch (e) {}
+    }, 60000);
+  }
+})();
+</script>
+</body>
+</html>
