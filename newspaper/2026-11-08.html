@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Morning Globe — Sunday, 8 November 2026</title>
+<meta name="description" content="The Morning Globe e-newspaper: 42 verified stories across seven sections plus briefs — Breaking, Sports, Science & Tech, Business, AI, Banking and Banking Regulators. Every story sourced.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800;900&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--grad:linear-gradient(92deg,#7c3aed,#ec4899 55%,#f97316);--ink:#14101f;--mut:#5c5570;--bg:#faf8ff;--card:#fff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+a{color:inherit;text-decoration:none}
+img{display:block;width:100%;height:100%;object-fit:cover}
+.topstrip{background:#14101f;color:#fff;font-size:.82rem;padding:.5rem 1rem;text-align:center}
+.topstrip a{color:#ffb38a;font-weight:700;text-decoration:underline}
+header.mast{text-align:center;padding:1.2rem 1rem .4rem}
+.mast h1{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-weight:800;font-size:clamp(2.1rem,8.5vw,4.2rem);letter-spacing:.005em;line-height:1.05;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.mast .date{font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.8rem;color:var(--mut);margin-top:.35rem}
+.mast .tag{font-size:.95rem;color:var(--mut);margin-top:.2rem}
+.banner{height:150px;margin:.9rem auto 0;max-width:1180px;border-radius:0;overflow:hidden;position:relative}
+.banner img{object-position:center 38%}
+.banner span{position:absolute;left:0;right:0;bottom:0;padding:1.4rem 1rem .55rem;color:#fff;font-weight:600;font-size:.85rem;background:linear-gradient(transparent,rgba(10,6,24,.75))}
+.wrap{max-width:1180px;margin:0 auto;padding:0 14px}
+.ticker{display:flex;gap:1.4rem;overflow-x:auto;white-space:nowrap;background:#14101f;color:#fff;border-radius:12px;padding:.55rem 1rem;margin:1rem 0;font-size:.83rem;scrollbar-width:none}
+.ticker b{color:#ffb38a} .ticker .up{color:#4ade80}
+nav.sections{display:flex;gap:.45rem;overflow-x:auto;padding:.4rem 0 .8rem;scrollbar-width:none}
+nav.sections a{flex:0 0 auto;font-size:.8rem;font-weight:700;padding:.42rem .8rem;border-radius:999px;background:#fff;border:1.5px solid #e6def7;color:var(--ink)}
+.hero{display:grid;grid-template-columns:1.15fr 1fr;background:var(--card);border-radius:20px;overflow:hidden;box-shadow:0 12px 34px rgba(60,20,120,.13);margin:.4rem 0 1.4rem}
+.hero .thumb{min-height:260px}
+.hero .body{padding:1.3rem 1.4rem}
+.kicker{display:inline-block;background:var(--grad);color:#fff;font-weight:800;font-size:.72rem;letter-spacing:.12em;padding:.3rem .7rem;border-radius:999px;text-transform:uppercase}
+.hero h2{font-family:'Archivo',sans-serif;font-weight:900;font-size:clamp(1.5rem,4.6vw,2.3rem);line-height:1.12;margin:.6rem 0 .55rem}
+.hero p{color:#37304d;font-size:1rem}
+.section{margin:2rem 0}
+.sec-head{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap;border-bottom:3px solid var(--sec);padding-bottom:.5rem;margin-bottom:1rem}
+.sec-chip{background:var(--sec);color:#fff;font-family:'Archivo',sans-serif;font-weight:800;font-size:1.05rem;padding:.35rem .9rem;border-radius:10px;text-transform:uppercase;letter-spacing:.03em}
+.sec-sub{color:var(--mut);font-size:.85rem;font-weight:600}
+.sec-count{margin-left:auto;color:var(--mut);font-size:.8rem;font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.1rem}
+.card{background:var(--card);border-radius:16px;overflow:hidden;box-shadow:0 4px 18px rgba(60,20,120,.08);display:flex;flex-direction:column;border-top:4px solid var(--sec)}
+.card .thumb{height:170px;flex:0 0 auto}
+.card.lead{grid-column:span 2}
+.card.lead .thumb{height:230px}
+.card .body{padding:.95rem 1.05rem 1.05rem;display:flex;flex-direction:column;gap:.5rem;flex:1}
+.card h3,.brief h4{font-family:'Archivo',sans-serif;font-weight:800;line-height:1.22}
+.card h3{font-size:1.13rem} .card.lead h3{font-size:1.45rem}
+.card p,.brief p{font-size:.92rem;color:#37304d}
+.meta{margin-top:auto;display:flex;justify-content:space-between;align-items:baseline;gap:.6rem;padding-top:.35rem}
+.credit{font-size:.7rem;color:#8a83a0}
+.read{font-size:.8rem;font-weight:700;color:#7c3aed;white-space:nowrap}
+.hl:hover h3,.hl:hover h4{text-decoration:underline}
+.briefs{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:1rem}
+.brief{background:var(--card);border-radius:14px;overflow:hidden;box-shadow:0 4px 16px rgba(60,20,120,.08);display:flex;flex-direction:column}
+.brief .thumb{height:130px;flex:0 0 auto}
+.brief .body{padding:.8rem .95rem .95rem;display:flex;flex-direction:column;gap:.45rem;flex:1}
+.brief h4{font-size:1rem}
+.brief p{font-size:.87rem}
+.more-head{border-bottom:3px solid transparent;border-image:var(--grad) 1}
+footer{margin:2.6rem 0 0;background:#14101f;color:#cfc9e6;padding:1.6rem 1rem 2rem;text-align:center;font-size:.88rem}
+footer .brand{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-weight:800;font-size:1.35rem;letter-spacing:.01em;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+footer a{color:#ffb38a;font-weight:700}
+footer .small{font-size:.75rem;color:#8a83a0;margin-top:.6rem}
+#followModal{position:fixed;inset:0;display:none;align-items:flex-end;justify-content:center;background:rgba(16,10,32,.55);z-index:60;padding:0}
+#followModal.open{display:flex}
+.modal-card{background:#fff;width:100%;max-width:460px;border-radius:22px 22px 0 0;padding:1.5rem 1.4rem 1.7rem;text-align:center;box-shadow:0 -12px 40px rgba(0,0,0,.3);animation:slideUp .45s cubic-bezier(.2,.9,.3,1)}
+@keyframes slideUp{from{transform:translateY(60px);opacity:0}to{transform:translateY(0);opacity:1}}
+@media(min-width:640px){#followModal{align-items:center;padding:1rem}.modal-card{border-radius:22px}}
+.modal-card .globe{width:64px;height:64px;margin:0 auto .7rem;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:1.9rem}
+.modal-card h3{font-family:'Archivo',sans-serif;font-weight:900;font-size:1.35rem;line-height:1.2}
+.modal-card p{color:var(--mut);font-size:.93rem;margin:.55rem 0 1.1rem}
+.btn-follow{display:block;background:var(--grad);color:#fff;font-weight:800;font-size:1rem;padding:.85rem 1rem;border-radius:999px}
+.btn-continue{display:block;margin-top:.6rem;background:none;border:none;width:100%;font:inherit;font-weight:600;color:var(--mut);padding:.6rem;cursor:pointer}
+.modal-x{float:right;background:none;border:none;font-size:1.3rem;color:var(--mut);cursor:pointer;line-height:1}
+@media(max-width:760px){.hero{grid-template-columns:1fr}.card.lead{grid-column:span 1}.card.lead .thumb{height:190px}.banner{height:110px}}
+</style>
+</head>
+<body>
+<div class="topstrip">Today's edition is also live as one swipeable post on Instagram — <a href="https://www.instagram.com/themorningglobe/" target="_blank" rel="noopener">read it on @themorningglobe</a></div>
+<header class="mast">
+  <h1>THE MORNING GLOBE</h1>
+  <div class="date">Sunday, 8 November 2026 · Morning Edition · Vol. 1 No. 2 · Diwali</div>
+  <div class="tag">Your morning news in seven sections — every story sourced, every photo real.</div>
+</header>
+<div class="banner"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/22._Cracovia_Marathon%2C_Main_Market_Square%2C_Advertising_masts%2C_Old_Town%2C_Krak%C3%B3w%2C_Poland.jpg/960px-22._Cracovia_Marathon%2C_Main_Market_Square%2C_Advertising_masts%2C_Old_Town%2C_Krak%C3%B3w%2C_Poland.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="Krakow Main Market Square"><span>Krakow leads the day: six killed in a shooting in the Main Market Square.</span></div>
+<div class="wrap">
+  <div class="ticker"><span><b>SENSEX</b> 81,028.02 <span class="up">▲ 2.17% Fri</span></span><span><b>NIFTY</b> 25,030.35 <span class="up">▲ 2.01% Fri</span></span><span><b>WEEK</b> Sensex +8.82% · Nifty +8.58%</span><span><b>FII WEEK</b> +Rs 45,960 cr</span><span><b>MUHURAT TODAY</b> 2:20–3:30 PM</span><span><b>DELHI AQI</b> 363 (CPCB) · 581 (IQAir US)</span></div>
+  <nav class="sections">
+    <a href="#breaking">Breaking</a><a href="#sports">Sports</a><a href="#scitech">Sci-Tech</a><a href="#business">Business</a><a href="#ai">AI</a><a href="#banking">Banking</a><a href="#regulators">Regulators</a><a href="#more">More Sections</a>
+  </nav>
+  <article class="hero">
+    <a class="thumb" href="https://www.aljazeera.com/amp/news/2026/11/7/casualties-reported-after-shooting-in-polands-krakow" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/22._Cracovia_Marathon%2C_Main_Market_Square%2C_Advertising_masts%2C_Old_Town%2C_Krak%C3%B3w%2C_Poland.jpg/960px-22._Cracovia_Marathon%2C_Main_Market_Square%2C_Advertising_masts%2C_Old_Town%2C_Krak%C3%B3w%2C_Poland.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="Krakow Main Market Square"></a>
+    <div class="body">
+      <span class="kicker">Top Story · Breaking</span>
+      <a class="hl" href="https://www.aljazeera.com/amp/news/2026/11/7/casualties-reported-after-shooting-in-polands-krakow" target="_blank" rel="noopener"><h2>Six killed, 15 wounded as gunman opens fire in Krakow&#x27;s main square</h2></a>
+      <p>A man drove onto Krakow&#x27;s Main Market Square at about 3pm on Saturday and fired at random from his car before police shot and detained him. Six people — four women and two men — were killed and 15 wounded, including two police officers, one critically. Interior Minister Marcin Kierwinski said early signs point to far-right ideology; Prime Minister Donald Tusk said three more people were found dead at the suspect&#x27;s home.</p>
+      <div class="meta"><span class="credit">Photo: Krakow Main Market Square — Wikimedia Commons</span><a class="read" href="https://www.aljazeera.com/amp/news/2026/11/7/casualties-reported-after-shooting-in-polands-krakow" target="_blank" rel="noopener">Read at Al Jazeera &#8599;</a></div>
+    </div>
+  </article>
+  <section id="breaking" class="section" style="--sec:#e11d48">
+  <div class="sec-head"><span class="sec-chip">Breaking Top News</span><span class="sec-sub">Politics · India & Global</span><span class="sec-count">6 stories</span></div>
+  <div class="grid"><article class="card lead">
+      <a class="thumb" href="https://www.aljazeera.com/amp/news/2026/11/7/casualties-reported-after-shooting-in-polands-krakow" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/22._Cracovia_Marathon%2C_Main_Market_Square%2C_Advertising_masts%2C_Old_Town%2C_Krak%C3%B3w%2C_Poland.jpg/960px-22._Cracovia_Marathon%2C_Main_Market_Square%2C_Advertising_masts%2C_Old_Town%2C_Krak%C3%B3w%2C_Poland.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.aljazeera.com/amp/news/2026/11/7/casualties-reported-after-shooting-in-polands-krakow" target="_blank" rel="noopener"><h3>Six killed, 15 wounded as gunman opens fire in Krakow&#x27;s main square</h3></a>
+        <p>A man drove onto Krakow&#x27;s Main Market Square at about 3pm on Saturday and fired at random from his car before police shot and detained him. Six people — four women and two men — were killed and 15 wounded, including two police officers, one critically. Interior Minister Marcin Kierwinski said early signs point to far-right ideology; Prime Minister Donald Tusk said three more people were found dead at the suspect&#x27;s home.</p>
+        <div class="meta"><span class="credit">Photo: Krakow Main Market Square — Wikimedia Commons</span><a class="read" href="https://www.aljazeera.com/amp/news/2026/11/7/casualties-reported-after-shooting-in-polands-krakow" target="_blank" rel="noopener">Read at Al Jazeera &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.reuters.com/business/environment/delhi-worlds-most-polluted-major-city-eve-diwali-swiss-group-says-2026-11-07/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Air_Pollution_Chokes_Northern_India_%28NESDIS_2018-12-14%29.jpg/960px-Air_Pollution_Chokes_Northern_India_%28NESDIS_2018-12-14%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.reuters.com/business/environment/delhi-worlds-most-polluted-major-city-eve-diwali-swiss-group-says-2026-11-07/" target="_blank" rel="noopener"><h3>Delhi is the world&#x27;s most polluted major city on the eve of Diwali</h3></a>
+        <p>Swiss group IQAir ranked Delhi first among major cities on Saturday morning with a US AQI reading of 581, double Lahore&#x27;s 285. India&#x27;s Central Pollution Control Board put Delhi at 363, in the &#x27;very poor&#x27; band, and Friday was the worst pre-Diwali air in eight years, local media said.</p>
+        <div class="meta"><span class="credit">Photo: Delhi smog (scene photo) — Wikimedia Commons</span><a class="read" href="https://www.reuters.com/business/environment/delhi-worlds-most-polluted-major-city-eve-diwali-swiss-group-says-2026-11-07/" target="_blank" rel="noopener">Read at Reuters &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.thehindu.com/newsletter/the-evening-wrap/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Defence_Minister_of_Bharat%2C_Shri_Rajnath_Singh_with_the_CDS_at_the_India%E2%80%93EU_Security_and_Defence_Partnership_meet.jpg/960px-Defence_Minister_of_Bharat%2C_Shri_Rajnath_Singh_with_the_CDS_at_the_India%E2%80%93EU_Security_and_Defence_Partnership_meet.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.thehindu.com/newsletter/the-evening-wrap/" target="_blank" rel="noopener"><h3>Rajnath Singh calls for highest preparedness at Bagdogra airbase</h3></a>
+        <p>From the strategic eastern airbase on the eve of Deepavali, Defence Minister Rajnath Singh told personnel the security landscape has grown more complex and the adversary now exploits vulnerabilities through social media, cyber and information operations. He urged focus on domain awareness, cyber resilience and information integrity, and will spend Diwali with troops at Nathu La.</p>
+        <div class="meta"><span class="credit">Photo: Rajnath Singh — Wikimedia Commons</span><a class="read" href="https://www.thehindu.com/newsletter/the-evening-wrap/" target="_blank" rel="noopener">Read at The Hindu &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.thehindu.com/newsletter/the-evening-wrap/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.thehindu.com/newsletter/the-evening-wrap/" target="_blank" rel="noopener"><h3>Karnataka CEO admits duplicate voter IDs slipped through SIR</h3></a>
+        <p>After The Hindu reported at least 803 voter IDs linked to 397 people in Mahadevapura even after the Special Intensive Revision, the Chief Electoral Officer&#x27;s office admitted the gaps came from &#x27;procedural circumstances during data processing&#x27; — multiple Form 6 applications processed independently. Cases have gone to district officers for verification and remedial action.</p>
+        <div class="meta"><span class="credit">Photo: Indian voters queue — Al Jazeera English / Wikimedia Commons</span><a class="read" href="https://www.thehindu.com/newsletter/the-evening-wrap/" target="_blank" rel="noopener">Read at The Hindu &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.thehindu.com/newsletter/the-evening-wrap/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Bharat_Petroleum_Fuel_Filling_Station_Chengannor_%28Joseph_Joseph%29.jpg/960px-Bharat_Petroleum_Fuel_Filling_Station_Chengannor_%28Joseph_Joseph%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.thehindu.com/newsletter/the-evening-wrap/" target="_blank" rel="noopener"><h3>Rahul Gandhi attacks E20 rollout; oil firms dispute Karnataka tests</h3></a>
+        <p>Rahul Gandhi said Karnataka tests found ethanol above 20% in 11 of 14 samples — 31.2% at IOCL and 30.5% at HPCL — and demanded the Centre &#x27;come clean&#x27;. State-run IOCL, BPCL and HPCL jointly disputed the findings, saying E20 supplied conforms to BIS IS 17021 (19–21%) and questioning the sampling and testing method.</p>
+        <div class="meta"><span class="credit">Photo: Fuel station, India (scene photo) — Wikimedia Commons</span><a class="read" href="https://www.thehindu.com/newsletter/the-evening-wrap/" target="_blank" rel="noopener">Read at The Hindu &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.thehindu.com/newsletter/the-evening-wrap/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Delhi%2C_Jama_Masjid_%289713619848%29.jpg/960px-Delhi%2C_Jama_Masjid_%289713619848%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.thehindu.com/newsletter/the-evening-wrap/" target="_blank" rel="noopener"><h3>Chawri Bazar collapse toll rises to six; owner arrested in Delhi</h3></a>
+        <p>Four more bodies were recovered on Saturday from the collapsed unauthorised building in Old Delhi&#x27;s Chawri Bazar, taking the toll to six, all natives of Bihar. Police arrested owner Saimullah alias Ayub; three contractors were arrested earlier. Rescue work continued with drilling machines and mini-trolleys in the congested lanes.</p>
+        <div class="meta"><span class="credit">Photo: Old Delhi (scene photo) — Wikimedia Commons</span><a class="read" href="https://www.thehindu.com/newsletter/the-evening-wrap/" target="_blank" rel="noopener">Read at The Hindu &#8599;</a></div>
+      </div>
+    </article></div>
+</section><section id="sports" class="section" style="--sec:#16a34a">
+  <div class="sec-head"><span class="sec-chip">Sports</span><span class="sec-sub">Cricket First · Then The World</span><span class="sec-count">5 stories</span></div>
+  <div class="grid"><article class="card lead">
+      <a class="thumb" href="https://www.cricinfo.com/series/india-in-new-zealand-2026-27-1539421/new-zealand-vs-india-2nd-odi-1539438/live-cricket-score" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.cricinfo.com/series/india-in-new-zealand-2026-27-1539421/new-zealand-vs-india-2nd-odi-1539438/live-cricket-score" target="_blank" rel="noopener"><h3>India edge New Zealand by four runs on DLS to lead ODI series 2-0</h3></a>
+        <p>New Zealand 134 all out (Daryl Mitchell 55; Gurnoor Brar 4/30) looked enough on a treacherous Wellington surface until rain ended play with India 113/7 in 26 overs — four runs ahead of the DLS par of 109. Shreyas Iyer made 30 and KL Rahul finished unbeaten on 26. Brar was Player of the Match; game three is in Hamilton on Tuesday.</p>
+        <div class="meta"><span class="credit">Photo: Axar Patel, 2 wickets in the Wellington ODI (file photo) — Wikimedia Commons</span><a class="read" href="https://www.cricinfo.com/series/india-in-new-zealand-2026-27-1539421/new-zealand-vs-india-2nd-odi-1539438/live-cricket-score" target="_blank" rel="noopener">Read at ESPNcricinfo &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.outlookindia.com/amp/story/sports/cricket/india-u-19-vs-pakistan-u-19-live-streaming-where-to-watch-under-19-asia-cup-2026-match" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Barsapara_Cricket_Stadium_match_under_floodlights.jpg/960px-Barsapara_Cricket_Stadium_match_under_floodlights.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.outlookindia.com/amp/story/sports/cricket/india-u-19-vs-pakistan-u-19-live-streaming-where-to-watch-under-19-asia-cup-2026-match" target="_blank" rel="noopener"><h3>India U19 face Pakistan U19 today in the U19 Asia Cup in Oman</h3></a>
+        <p>The Group A clash at Al Amerat Cricket Ground starts at 10:30 AM IST on Sony Sports Network and SonyLIV. India, led by Lakshya Raichandani, thrashed Nepal by 10 wickets in their opener — Aryaveer Sehwag unbeaten on 70 — while defending champions Pakistan beat the UAE by nine wickets, Usman Khan scoring 139.</p>
+        <div class="meta"><span class="credit">Photo: Cricket stadium (scene photo) — Wikimedia Commons</span><a class="read" href="https://www.outlookindia.com/amp/story/sports/cricket/india-u-19-vs-pakistan-u-19-live-streaming-where-to-watch-under-19-asia-cup-2026-match" target="_blank" rel="noopener">Read at Outlook India &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.usatoday.com/story/sports/soccer/epl/2026/11/07/manchester-city-nottingham-forest-premier-league/92661741007/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/City_Ground_-_Bridgford_Stand.jpg/960px-City_Ground_-_Bridgford_Stand.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.usatoday.com/story/sports/soccer/epl/2026/11/07/manchester-city-nottingham-forest-premier-league/92661741007/" target="_blank" rel="noopener"><h3>Forest stun Manchester City 3-1 as Arsenal stretch lead to six points</h3></a>
+        <p>Liam Delap scored twice as Nottingham Forest beat Manchester City 3-1 at the City Ground — City&#x27;s third straight defeat. Earlier, Martin Odegaard&#x27;s 72nd-minute goal gave Arsenal a 1-0 win over Hull, their ninth win in ten. Leeds beat Tottenham 1-0 through Noah Okafor, and Fulham drew 1-1 with Newcastle.</p>
+        <div class="meta"><span class="credit">Photo: Football stadium (scene photo) — Wikimedia Commons</span><a class="read" href="https://www.usatoday.com/story/sports/soccer/epl/2026/11/07/manchester-city-nottingham-forest-premier-league/92661741007/" target="_blank" rel="noopener">Read at USA Today &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.thedailyjagran.com/education/news/todays-school-assembly-news-headline-november-8-check-top-national-international-and-sports-news-here-10335511" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.thedailyjagran.com/education/news/todays-school-assembly-news-headline-november-8-check-top-national-international-and-sports-news-here-10335511" target="_blank" rel="noopener"><h3>Vaibhav Sooryavanshi named Bihar captain for Syed Mushtaq Ali Trophy</h3></a>
+        <p>The teenage opener will lead Bihar in the domestic T20 tournament, per the day&#x27;s headline roundup. Also in the roundup: India beat Pakistan in their SAFF Championship opener, and swimmer Dhinidhi Desinghu won bronze at the Dakar Youth Olympics to become the first Indian with two medals at a single Youth Olympics edition.</p>
+        <div class="meta"><span class="credit">Photo: Yashasvi Jaiswal (file photo, illustrative) — Wikimedia Commons</span><a class="read" href="https://www.thedailyjagran.com/education/news/todays-school-assembly-news-headline-november-8-check-top-national-international-and-sports-news-here-10335511" target="_blank" rel="noopener">Read at The Daily Jagran &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.thedailyjagran.com/education/news/todays-school-assembly-news-headline-november-8-check-top-national-international-and-sports-news-here-10335511" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.thedailyjagran.com/education/news/todays-school-assembly-news-headline-november-8-check-top-national-international-and-sports-news-here-10335511" target="_blank" rel="noopener"><h3>Devon Conway ruled out of the rest of the India ODI series</h3></a>
+        <p>New Zealand opener Devon Conway will miss the remaining matches of the ODI series against India, with Kelly called in as cover, per the day&#x27;s sports headlines. New Zealand already trail 0-2 and must win in Hamilton on Tuesday to keep the five-match series alive.</p>
+        <div class="meta"><span class="credit">Photo: Stadium (scene photo) — Wikimedia Commons</span><a class="read" href="https://www.thedailyjagran.com/education/news/todays-school-assembly-news-headline-november-8-check-top-national-international-and-sports-news-here-10335511" target="_blank" rel="noopener">Read at The Daily Jagran &#8599;</a></div>
+      </div>
+    </article></div>
+</section><section id="scitech" class="section" style="--sec:#0891b2">
+  <div class="sec-head"><span class="sec-chip">Science &amp; Technology</span><span class="sec-sub">Space · Research · The Planet</span><span class="sec-count">5 stories</span></div>
+  <div class="grid"><article class="card lead">
+      <a class="thumb" href="https://www.newindianexpress.com/india/2026/Nov/06/ahead-of-pm-modis-visit-india-eu-conclude-negotiations-on-flagship-research-innovation-programme" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Belgique_-_Bruxelles_-_Schuman_-_Berlaymont_-_01.jpg/960px-Belgique_-_Bruxelles_-_Schuman_-_Berlaymont_-_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.newindianexpress.com/india/2026/Nov/06/ahead-of-pm-modis-visit-india-eu-conclude-negotiations-on-flagship-research-innovation-programme" target="_blank" rel="noopener"><h3>India and EU conclude talks to join the €93.5 billion Horizon Europe programme</h3></a>
+        <p>Negotiations on India&#x27;s association with Horizon Europe have concluded, the European Commission said. Once signed, Indian researchers and organisations can receive funding directly and lead Pillar II projects — health, digital, industry, space, climate, energy and the bioeconomy. Association is envisaged from January 2027, ahead of PM Modi&#x27;s expected Brussels visit in mid-December for the India-EU trade deal.</p>
+        <div class="meta"><span class="credit">Photo: European Commission, Brussels — Wikimedia Commons</span><a class="read" href="https://www.newindianexpress.com/india/2026/Nov/06/ahead-of-pm-modis-visit-india-eu-conclude-negotiations-on-flagship-research-innovation-programme" target="_blank" rel="noopener">Read at The New Indian Express &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://timesofoman.com/article/177065-nasa-officially-invites-isro-to-join-its-moon-base-programme" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Apollo_11_Lunar_Lander_-_5927_NASA.jpg/960px-Apollo_11_Lunar_Lander_-_5927_NASA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://timesofoman.com/article/177065-nasa-officially-invites-isro-to-join-its-moon-base-programme" target="_blank" rel="noopener"><h3>NASA has officially invited ISRO to join its Moon base programme</h3></a>
+        <p>US Ambassador Sergio Gor told the Bengaluru Space Expo that NASA wants India &#x27;by our side&#x27; as the US returns to the Moon. The invitation was first extended at an India-US civil-space meeting in Bengaluru in August. India has not yet accepted, announced funding or named hardware; cooperation continues under the Artemis Accords.</p>
+        <div class="meta"><span class="credit">Photo: The Moon — Wikimedia Commons</span><a class="read" href="https://timesofoman.com/article/177065-nasa-officially-invites-isro-to-join-its-moon-base-programme" target="_blank" rel="noopener">Read at Times of Oman &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://worldofnow.com/space-and-aeronautics/nasa-space-station-final-solar-array-upgrade-november-2026/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/A_view_peering_down_a_pair_of_the_International_Space_Station%27s_roll-out_solar_arrays_%28iss074e0403068%29.jpg/960px-A_view_peering_down_a_pair_of_the_International_Space_Station%27s_roll-out_solar_arrays_%28iss074e0403068%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://worldofnow.com/space-and-aeronautics/nasa-space-station-final-solar-array-upgrade-november-2026/" target="_blank" rel="noopener"><h3>ISS completes its solar upgrade: power rises from 160 to about 215 kW</h3></a>
+        <p>NASA&#x27;s 6 November update confirmed the station&#x27;s eighth and final roll-out solar array is in place after a 6-hour 59-minute spacewalk on 5 November by NASA&#x27;s Anil Menon and Canada&#x27;s Joshua Kutryk. The upgrade lifts generation capacity by about 55 kW, closing a programme begun in February 2021.</p>
+        <div class="meta"><span class="credit">Photo: International Space Station — Wikimedia Commons</span><a class="read" href="https://worldofnow.com/space-and-aeronautics/nasa-space-station-final-solar-array-upgrade-november-2026/" target="_blank" rel="noopener">Read at NASA via World of Now &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://aroundprague.cz/en/news/science/nasa-s-twin-mars-probes-swing-past-earth-for-a-9-minute-speed-boost" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Mars_-_Valles_Marineris_-_Tithonium_and_Ius_Chasma_-_ESA_Mars_Express_%2853135229494%29.png/960px-Mars_-_Valles_Marineris_-_Tithonium_and_Ius_Chasma_-_ESA_Mars_Express_%2853135229494%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://aroundprague.cz/en/news/science/nasa-s-twin-mars-probes-swing-past-earth-for-a-9-minute-speed-boost" target="_blank" rel="noopener"><h3>NASA&#x27;s twin Mars probes swing past Earth for a nine-minute speed boost</h3></a>
+        <p>The two ESCAPADE spacecraft, Red and Blue, will fire thrusters near Earth on 7 and 9 November, using gravity as a slingshot toward Mars. They will pass 965 to 1,770 km above the surface; each trans-Mars injection burn lasts about nine minutes. At Mars they will study how the solar wind stripped the planet&#x27;s air.</p>
+        <div class="meta"><span class="credit">Photo: Mars — Wikimedia Commons</span><a class="read" href="https://aroundprague.cz/en/news/science/nasa-s-twin-mars-probes-swing-past-earth-for-a-9-minute-speed-boost" target="_blank" rel="noopener">Read at Universe Today via Around Prague &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.news18.com/viral/natures-very-own-fireworks-shubhanshu-shukla-shares-stunning-view-of-earth-from-space-watch-ws-l-10416549.html" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/ISS-36_Night_picture_of_Italy.jpg/960px-ISS-36_Night_picture_of_Italy.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.news18.com/viral/natures-very-own-fireworks-shubhanshu-shukla-shares-stunning-view-of-earth-from-space-watch-ws-l-10416549.html" target="_blank" rel="noopener"><h3>Shukla shares Earth&#x27;s lightning from space: &#x27;nature&#x27;s very own fireworks&#x27;</h3></a>
+        <p>ISRO astronaut Shubhanshu Shukla shared a video of lightning flashes over Earth from orbit ahead of Diwali, calling them &#x27;nature&#x27;s very own fireworks&#x27;. Shukla was the first Indian to visit the International Space Station, reaching it on 26 June 2025 with the Axiom-4 mission.</p>
+        <div class="meta"><span class="credit">Photo: Earth from orbit (scene photo) — Wikimedia Commons</span><a class="read" href="https://www.news18.com/viral/natures-very-own-fireworks-shubhanshu-shukla-shares-stunning-view-of-earth-from-space-watch-ws-l-10416549.html" target="_blank" rel="noopener">Read at News18 &#8599;</a></div>
+      </div>
+    </article></div>
+</section><section id="business" class="section" style="--sec:#d97706">
+  <div class="sec-head"><span class="sec-chip">Business &amp; Investment</span><span class="sec-sub">Markets · Earnings · Deals</span><span class="sec-count">4 stories</span></div>
+  <div class="grid"><article class="card lead">
+      <a class="thumb" href="https://www.theweek.in/news/biz-tech/2026/11/07/why-is-the-stock-market-open-this-sunday-check-nifty-sensex-diwali-muhurat-session-time.html" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.theweek.in/news/biz-tech/2026/11/07/why-is-the-stock-market-open-this-sunday-check-nifty-sensex-diwali-muhurat-session-time.html" target="_blank" rel="noopener"><h3>Markets open on a Sunday: Muhurat trading today, 2:20–3:30 PM</h3></a>
+        <p>BSE and NSE will hold the special 70-minute Diwali Muhurat session today, Sunday 8 November — pre-open 2:05–2:20 PM, closing session 3:30–3:50 PM — marking the start of Samvat 2083. The market enters it on a seven-session winning streak, with the Nifty at 25,030 and the Sensex at 81,028.</p>
+        <div class="meta"><span class="credit">Photo: BSE, Mumbai — Wikimedia Commons</span><a class="read" href="https://www.theweek.in/news/biz-tech/2026/11/07/why-is-the-stock-market-open-this-sunday-check-nifty-sensex-diwali-muhurat-session-time.html" target="_blank" rel="noopener">Read at The Week &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.nationpress.com/business/nifty-sensex-log-best-week-in-over-a-year" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.nationpress.com/business/nifty-sensex-log-best-week-in-over-a-year" target="_blank" rel="noopener"><h3>Best week since 2021: Nifty +8.58%, Sensex +8.82% on Rs 45,960 crore FII inflows</h3></a>
+        <p>Indian equities closed their strongest week in over a year — in the Sensex&#x27;s case since February 2021 — as foreign investors poured in about Rs 45,960 crore, crude fell more than 12% and the US midterm verdict lifted hopes of de-escalation. Bank Nifty gained about 8%; midcaps added 5.77%. US and India CPI prints are the next triggers.</p>
+        <div class="meta"><span class="credit">Photo: NSE, Mumbai — Wikimedia Commons</span><a class="read" href="https://www.nationpress.com/business/nifty-sensex-log-best-week-in-over-a-year" target="_blank" rel="noopener">Read at NationPress &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.tradingview.com/news/moodys:9c80ff1826811:0-muhurat-trading-2026-ganesh-dongre-of-anand-rathi-sees-sensex-at-1-00-000-next-diwali-shares-3-samvat-2083-stock-picks/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.tradingview.com/news/moodys:9c80ff1826811:0-muhurat-trading-2026-ganesh-dongre-of-anand-rathi-sees-sensex-at-1-00-000-next-diwali-shares-3-samvat-2083-stock-picks/" target="_blank" rel="noopener"><h3>Sensex at 1,00,000 by next Diwali? Brokers set Samvat 2083 targets</h3></a>
+        <p>Anand Rathi&#x27;s Ganesh Dongre expects at least 20% upside, with the Nifty above 30,000 by next Diwali and the Sensex above 90,000 in the base case and around 1,05,000 in the bull case. His Muhurat picks: Reliance Industries, Eternal and ICICI Bank. Other houses are more measured, seeing 11–13% upside — views, not forecasts.</p>
+        <div class="meta"><span class="credit">Photo: Mukesh Ambani, Reliance chairman — Asia Society / Wikimedia Commons</span><a class="read" href="https://www.tradingview.com/news/moodys:9c80ff1826811:0-muhurat-trading-2026-ganesh-dongre-of-anand-rathi-sees-sensex-at-1-00-000-next-diwali-shares-3-samvat-2083-stock-picks/" target="_blank" rel="noopener">Read at TradingView News &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.thedailyjagran.com/education/news/todays-school-assembly-news-headline-november-8-check-top-national-international-and-sports-news-here-10335511" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.thedailyjagran.com/education/news/todays-school-assembly-news-headline-november-8-check-top-national-international-and-sports-news-here-10335511" target="_blank" rel="noopener"><h3>Centre tightens rice stock rules as prices rise</h3></a>
+        <p>The Centre has tightened rice stock rules as prices climb, allowing Andhra Pradesh, Karnataka, Kerala, Tamil Nadu and Telangana to set stock limits, per the day&#x27;s national headlines. The move aims to cool prices by discouraging hoarding in the southern rice-consuming states.</p>
+        <div class="meta"><span class="credit">Photo: Paddy field, Odisha (scene photo) — Wikimedia Commons</span><a class="read" href="https://www.thedailyjagran.com/education/news/todays-school-assembly-news-headline-november-8-check-top-national-international-and-sports-news-here-10335511" target="_blank" rel="noopener">Read at The Daily Jagran &#8599;</a></div>
+      </div>
+    </article></div>
+</section><section id="ai" class="section" style="--sec:#7c3aed">
+  <div class="sec-head"><span class="sec-chip">Artificial Intelligence</span><span class="sec-sub">Models · Policy · The Build-Out</span><span class="sec-count">5 stories</span></div>
+  <div class="grid"><article class="card lead">
+      <a class="thumb" href="https://sharedsapience.com/century-report/the-century-report-november-7-2026/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/IBM_Quantum_Computer_Demo.jpg/960px-IBM_Quantum_Computer_Demo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://sharedsapience.com/century-report/the-century-report-november-7-2026/" target="_blank" rel="noopener"><h3>AI system proves an 18-year-old quantum conjecture in three days</h3></a>
+        <p>Physical Superintelligence says its research system, running an unreleased Anthropic model, produced a complete proof of the Aaronson-Ambainis conjecture, open since 2008, on day three of its run — with the main theorem machine-checked in Lean. Limits: the result is not yet peer-reviewed, and the model stays unreleased.</p>
+        <div class="meta"><span class="credit">Photo: Quantum computer (scene photo) — Wikimedia Commons</span><a class="read" href="https://sharedsapience.com/century-report/the-century-report-november-7-2026/" target="_blank" rel="noopener">Read at The Century Report &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://sharedsapience.com/century-report/the-century-report-november-7-2026/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/A_group_of_scientists_working_in_a_laboratory_Esculab.jpg/960px-A_group_of_scientists_working_in_a_laboratory_Esculab.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://sharedsapience.com/century-report/the-century-report-november-7-2026/" target="_blank" rel="noopener"><h3>OpenAI&#x27;s wet-lab exam: GPT-6 Astra scores 66.7% on real bench science</h3></a>
+        <p>OpenAI, with enzyme-design firm Ligo, published BioBasicsBench — 100 tasks testing whether AI agents can read raw lab evidence: gels, colony plates, microscopy and sequencing reads. At the highest reasoning setting GPT-6 Astra earned 66.7% of rubric credit against 43.8% for GPT-5.6 Sol. The scores are OpenAI&#x27;s own, with no human baseline published.</p>
+        <div class="meta"><span class="credit">Photo: Laboratory (scene photo) — Wikimedia Commons</span><a class="read" href="https://sharedsapience.com/century-report/the-century-report-november-7-2026/" target="_blank" rel="noopener">Read at OpenAI via The Century Report &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://sharedsapience.com/century-report/the-century-report-november-7-2026/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://sharedsapience.com/century-report/the-century-report-november-7-2026/" target="_blank" rel="noopener"><h3>GitHub logs 1.2 billion commits in one October week, up over 400%</h3></a>
+        <p>GitHub says commits in a single October week passed 1.2 billion, more than 400% above a year earlier, as coding agents flood repositories. A cited Faros AI study found pull requests wait 441% longer in review at high AI adoption — generation is outrunning human review, and GitHub has rebuilt Git storage for 5,000 concurrent agents.</p>
+        <div class="meta"><span class="credit">Photo: Googleplex (institution scene) — Wikimedia Commons</span><a class="read" href="https://sharedsapience.com/century-report/the-century-report-november-7-2026/" target="_blank" rel="noopener">Read at GitHub via The Century Report &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://sharedsapience.com/century-report/the-century-report-november-7-2026/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/BalticServers_data_center.jpg/960px-BalticServers_data_center.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://sharedsapience.com/century-report/the-century-report-november-7-2026/" target="_blank" rel="noopener"><h3>Sanders seeks a national data-centre moratorium; Duke keeps its $103bn plan</h3></a>
+        <p>Senator Bernie Sanders and newly elected Democrats called for a national data-centre moratorium after at least 38–40 local curbs passed in the US midterms. Duke Energy said its gas-heavy $103 billion plan and 15.4 GW large-load pipeline stand unchanged, while protesters stormed Microsoft&#x27;s Amsterdam site.</p>
+        <div class="meta"><span class="credit">Photo: Data centre (scene photo) — Wikimedia Commons</span><a class="read" href="https://sharedsapience.com/century-report/the-century-report-november-7-2026/" target="_blank" rel="noopener">Read at The Century Report &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://sharedsapience.com/century-report/the-century-report-november-7-2026/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/2014-04-04-Robert-F-Kennedy-Department-of-Justice-Building-Washington-DC.jpg/960px-2014-04-04-Robert-F-Kennedy-Department-of-Justice-Building-Washington-DC.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://sharedsapience.com/century-report/the-century-report-november-7-2026/" target="_blank" rel="noopener"><h3>US Justice Department launches a Super Intelligence Task Force</h3></a>
+        <p>The DOJ&#x27;s new task force targets AI misuse by foreign governments, criminal groups and fraudsters, coordinating criminal and civil enforcement. In the same week prosecutors charged three men over $129 million in AI-impersonation thefts, and Censys reported 800-plus exposed Artex hacking deployments. The task force creates no new crimes.</p>
+        <div class="meta"><span class="credit">Photo: US Department of Justice — Wikimedia Commons</span><a class="read" href="https://sharedsapience.com/century-report/the-century-report-november-7-2026/" target="_blank" rel="noopener">Read at The Century Report &#8599;</a></div>
+      </div>
+    </article></div>
+</section><section id="banking" class="section" style="--sec:#0f766e">
+  <div class="sec-head"><span class="sec-chip">Banking</span><span class="sec-sub">Indian & Global Banks</span><span class="sec-count">5 stories</span></div>
+  <div class="grid"><article class="card lead">
+      <a class="thumb" href="https://www.indianbankingradar.com/articles/ndian-banking-radar-ibr-banking-economy-intelligence-daily" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.indianbankingradar.com/articles/ndian-banking-radar-ibr-banking-economy-intelligence-daily" target="_blank" rel="noopener"><h3>IndusInd Bank expands outward remittances to 123 currencies with J.P. Morgan</h3></a>
+        <p>IndusInd Bank has partnered with J.P. Morgan Payments, integrating its Xpedite solution so customers can remit directly in beneficiaries&#x27; local currencies across 123 currencies, cutting intermediary conversions. The facility is available through branches first, with online and mobile banking to follow.</p>
+        <div class="meta"><span class="credit">Photo: Bandra Kurla Complex, Mumbai — Wikimedia Commons</span><a class="read" href="https://www.indianbankingradar.com/articles/ndian-banking-radar-ibr-banking-economy-intelligence-daily" target="_blank" rel="noopener">Read at Indian Banking Radar &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.indianbankingradar.com/articles/ndian-banking-radar-ibr-banking-economy-intelligence-daily" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/1_Churchill_Place_Barclays_global_headquarters_Canary_Wharf_London_England.jpg/960px-1_Churchill_Place_Barclays_global_headquarters_Canary_Wharf_London_England.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.indianbankingradar.com/articles/ndian-banking-radar-ibr-banking-economy-intelligence-daily" target="_blank" rel="noopener"><h3>Barclays infuses over Rs 1,500 crore more into its India operations</h3></a>
+        <p>Barclays Bank PLC announced a fresh capital infusion exceeding Rs 1,500 crore — its third in five years — taking total invested capital in India, including capital and reserves, to nearly Rs 16,600 crore. The money supports its investment banking and private banking businesses.</p>
+        <div class="meta"><span class="credit">Photo: Barclays HQ, London (scene photo) — Wikimedia Commons</span><a class="read" href="https://www.indianbankingradar.com/articles/ndian-banking-radar-ibr-banking-economy-intelligence-daily" target="_blank" rel="noopener">Read at Indian Banking Radar &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.indianbankingradar.com/articles/ndian-banking-radar-ibr-banking-economy-intelligence-daily" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Biju_Karakkonam.jpg/960px-Biju_Karakkonam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.indianbankingradar.com/articles/ndian-banking-radar-ibr-banking-economy-intelligence-daily" target="_blank" rel="noopener"><h3>NPCI sets up NPCI Tech Solutions to build AI and blockchain capability</h3></a>
+        <p>The National Payments Corporation of India has incorporated NPCI Tech Solutions Limited as a wholly owned subsidiary, with Vishal Kanvaty as MD &amp; CEO. The unit will focus on artificial intelligence, blockchain and digital financial infrastructure beyond NPCI&#x27;s traditional payments mandate.</p>
+        <div class="meta"><span class="credit">Photo: Digital payments, India (scene photo) — Wikimedia Commons</span><a class="read" href="https://www.indianbankingradar.com/articles/ndian-banking-radar-ibr-banking-economy-intelligence-daily" target="_blank" rel="noopener">Read at Indian Banking Radar &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.indianbankingradar.com/articles/ndian-banking-radar-ibr-banking-economy-intelligence-daily" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/1000_Indian_Rupee_Currency_Note_signed_by_K._R._Puri_.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.indianbankingradar.com/articles/ndian-banking-radar-ibr-banking-economy-intelligence-daily" target="_blank" rel="noopener"><h3>SIDBI and NABARD raise Rs 11,607 crore in five-year bonds</h3></a>
+        <p>SIDBI raised Rs 5,607 crore at an 8.17% coupon against bids above Rs 13,300 crore for its Rs 6,000 crore issue, while NABARD mobilised its full Rs 6,000 crore at 8.27%. Both issues run five years and fund MSME, agriculture and rural lending.</p>
+        <div class="meta"><span class="credit">Photo: Indian rupee (scene photo) — Wikimedia Commons</span><a class="read" href="https://www.indianbankingradar.com/articles/ndian-banking-radar-ibr-banking-economy-intelligence-daily" target="_blank" rel="noopener">Read at Indian Banking Radar &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.indianbankingradar.com/articles/ndian-banking-radar-ibr-banking-economy-intelligence-daily" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.indianbankingradar.com/articles/ndian-banking-radar-ibr-banking-economy-intelligence-daily" target="_blank" rel="noopener"><h3>OneStack raises Rs 12.5 crore to take cooperative banks digital</h3></a>
+        <p>Fintech infrastructure firm OneStack raised Rs 12.5 crore in a round led by Shepherd&#x27;s Hill. It reports serving more than 200 cooperative banks and enabling partner banks to join UPI as issuers and acquirers under their own identities — direct participation still subject to NPCI eligibility and compliance.</p>
+        <div class="meta"><span class="credit">Photo: SBI HQ, Mumbai (institution scene) — Wikimedia Commons</span><a class="read" href="https://www.indianbankingradar.com/articles/ndian-banking-radar-ibr-banking-economy-intelligence-daily" target="_blank" rel="noopener">Read at Indian Banking Radar &#8599;</a></div>
+      </div>
+    </article></div>
+</section><section id="regulators" class="section" style="--sec:#b45309">
+  <div class="sec-head"><span class="sec-chip">Banking Regulators</span><span class="sec-sub">Guidelines & Actions Worldwide</span><span class="sec-count">6 stories</span></div>
+  <div class="grid"><article class="card lead">
+      <a class="thumb" href="https://www.morungexpress.com/rbi-proposes-tighter-farm-loan-verification-new-psl-calculation-norms" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.morungexpress.com/rbi-proposes-tighter-farm-loan-verification-new-psl-calculation-norms" target="_blank" rel="noopener"><h3>RBI proposes tighter farm-loan checks and a new PSL calculation</h3></a>
+        <p>The RBI&#x27;s draft Priority Sector Lending Directions, 2026 would require banks to verify gold-backed farm loans against the district scale of finance, document land, crops and hypothecation, and keep alternative proof for landless cultivators. Trade bills discounted under letters of credit would stay in ANBC — every Rs 10,000 crore retained adds Rs 4,000 crore to the 40% PSL obligation. Comments close 26 November.</p>
+        <div class="meta"><span class="credit">Photo: RBI, Mumbai — Wikimedia Commons</span><a class="read" href="https://www.morungexpress.com/rbi-proposes-tighter-farm-loan-verification-new-psl-calculation-norms" target="_blank" rel="noopener">Read at IANS via Morung Express &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://taxguru.in/sebi/sebi-revises-currency-derivatives-exposure-limit-usd-5-million-fpis-domestic-clients.html" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/SEBI_Bhavan.jpg/960px-SEBI_Bhavan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://taxguru.in/sebi/sebi-revises-currency-derivatives-exposure-limit-usd-5-million-fpis-domestic-clients.html" target="_blank" rel="noopener"><h3>SEBI cuts the no-proof rupee derivatives limit to $5 million</h3></a>
+        <p>SEBI&#x27;s 5 November circular caps exchange-traded rupee derivative positions without proof of underlying exposure at $5 million outstanding, across all pairs and exchanges — matching the RBI&#x27;s 10 October cut from $100 million, a 95% reduction. Positions above the limit need documented underlying exposure.</p>
+        <div class="meta"><span class="credit">Photo: SEBI Bhavan, Mumbai — Wikimedia Commons</span><a class="read" href="https://taxguru.in/sebi/sebi-revises-currency-derivatives-exposure-limit-usd-5-million-fpis-domestic-clients.html" target="_blank" rel="noopener">Read at SEBI via TaxGuru &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.indianbankingradar.com/articles/ndian-banking-radar-ibr-banking-economy-intelligence-daily" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Indian_Emergency_Certificate_%28cropped%29.jpg/960px-Indian_Emergency_Certificate_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.indianbankingradar.com/articles/ndian-banking-radar-ibr-banking-economy-intelligence-daily" target="_blank" rel="noopener"><h3>SEBI eases digital KYC for overseas investors from 3 December</h3></a>
+        <p>NRIs, OCIs and foreign nationals in FATF-compliant jurisdictions will be able to complete KYC — and re-KYC — digitally from abroad from 3 December, without physical presence in India. Intermediaries may rely on central KYC records and video verification. FPI registration remains under the separate FPI framework.</p>
+        <div class="meta"><span class="credit">Photo: Identity documents (scene photo) — Wikimedia Commons</span><a class="read" href="https://www.indianbankingradar.com/articles/ndian-banking-radar-ibr-banking-economy-intelligence-daily" target="_blank" rel="noopener">Read at SEBI via Indian Banking Radar &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.indianbankingradar.com/articles/ndian-banking-radar-ibr-banking-economy-intelligence-daily" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.indianbankingradar.com/articles/ndian-banking-radar-ibr-banking-economy-intelligence-daily" target="_blank" rel="noopener"><h3>NBFC credit grew 15.4% in a year, RBI data shows — retail up 21.9%</h3></a>
+        <p>RBI sectoral credit data for September 2026 puts NBFC credit growth at 15.4% year on year, up from 13.3% a year earlier. Retail loans grew 21.9%, agriculture 17.8% and services 17.3%, while industry slowed to 7.4%. The figures are provisional and cover about 87% of the relevant credit base.</p>
+        <div class="meta"><span class="credit">Photo: Federal Reserve (regulator scene) — Wikimedia Commons</span><a class="read" href="https://www.indianbankingradar.com/articles/ndian-banking-radar-ibr-banking-economy-intelligence-daily" target="_blank" rel="noopener">Read at RBI via Indian Banking Radar &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.indianbankingradar.com/articles/ndian-banking-radar-ibr-banking-economy-intelligence-daily" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/01_2016_Cyberattacks.png/960px-01_2016_Cyberattacks.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.indianbankingradar.com/articles/ndian-banking-radar-ibr-banking-economy-intelligence-daily" target="_blank" rel="noopener"><h3>CERT-In warns of escalating AI-driven attacks on financial firms</h3></a>
+        <p>CERT-In&#x27;s 4 November advisory flags an AI-assisted campaign by threat actor CRAFTY FALCON against NBFCs, digital lenders, fintechs and payment firms — exploiting payment APIs, abusing credentials and moving funds through victims&#x27; own infrastructure. It urges zero-trust controls, API monitoring and prompt reporting to CERT-In/CSIRT-Fin.</p>
+        <div class="meta"><span class="credit">Photo: Cybersecurity (scene photo) — Wikimedia Commons</span><a class="read" href="https://www.indianbankingradar.com/articles/ndian-banking-radar-ibr-banking-economy-intelligence-daily" target="_blank" rel="noopener">Read at CERT-In via Indian Banking Radar &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.indianbankingradar.com/articles/ndian-banking-radar-ibr-banking-economy-intelligence-daily" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Kasturba_and_children.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.indianbankingradar.com/articles/ndian-banking-radar-ibr-banking-economy-intelligence-daily" target="_blank" rel="noopener"><h3>RBI opens its November household surveys on inflation and confidence</h3></a>
+        <p>The RBI has launched the November 2026 rounds of its Inflation Expectations Survey (19 cities), Urban Consumer Confidence Survey and Rural Consumer Confidence Survey. The results feed into the central bank&#x27;s next monetary policy assessment.</p>
+        <div class="meta"><span class="credit">Photo: Households, India (scene photo) — Wikimedia Commons</span><a class="read" href="https://www.indianbankingradar.com/articles/ndian-banking-radar-ibr-banking-economy-intelligence-daily" target="_blank" rel="noopener">Read at Indian Banking Radar &#8599;</a></div>
+      </div>
+    </article></div>
+</section>
+  <section id="more" class="section">
+    <div class="sec-head more-head"><span class="sec-chip" style="background:linear-gradient(92deg,#7c3aed,#ec4899,#f97316)">More Across The Sections</span><span class="sec-sub">Festival · Protest · World · Diplomacy · Culture</span><span class="sec-count">6 briefs</span></div>
+    <div class="briefs"><article class="brief">
+      <a class="thumb" href="https://news24online.com/india/diwali-2026-delhi-metro-to-start-services-early-morning-on-these-routes-check-special-timings-lines-key-details/951714/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Delhi_Airport_Metro_standing_on_New_Delhi_metro_station.jpg/960px-Delhi_Airport_Metro_standing_on_New_Delhi_metro_station.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body"><a class="hl" href="https://news24online.com/india/diwali-2026-delhi-metro-to-start-services-early-morning-on-these-routes-check-special-timings-lines-key-details/951714/" target="_blank" rel="noopener"><h4>FESTIVAL — Delhi Metro starts early for Diwali</h4></a>
+      <p>DMRC will start services at 6 AM instead of 7 AM on the Pink, Magenta and Grey lines today for Diwali, with last trains at 10 PM across corridors including the Airport Express. Delhi Police has set a three-hour cracker window and 300-metre no-cracker zones around hospitals and schools.</p>
+      <div class="meta"><span class="credit">Photo: Delhi Metro — Wikimedia Commons</span><a class="read" href="https://news24online.com/india/diwali-2026-delhi-metro-to-start-services-early-morning-on-these-routes-check-special-timings-lines-key-details/951714/" target="_blank" rel="noopener">News24 &#8599;</a></div></div>
+    </article><article class="brief">
+      <a class="thumb" href="https://en.themooknayak.com/farmer/vba-to-observe-black-diwali-across-maharashtra-on-november-8" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body"><a class="hl" href="https://en.themooknayak.com/farmer/vba-to-observe-black-diwali-across-maharashtra-on-november-8" target="_blank" rel="noopener"><h4>PROTEST — VBA calls a &#x27;Black Diwali&#x27; across Maharashtra</h4></a>
+      <p>The Vanchit Bahujan Aghadi will observe a &#x27;Black Diwali&#x27; today from 1 PM outside every District Collector&#x27;s office in Maharashtra, sharing chutney-bhakri in solidarity with drought-hit farmers and unorganised workers.</p>
+      <div class="meta"><span class="credit">Photo: Farm field, Maharashtra (scene photo) — Wikimedia Commons</span><a class="read" href="https://en.themooknayak.com/farmer/vba-to-observe-black-diwali-across-maharashtra-on-november-8" target="_blank" rel="noopener">The Mooknayak &#8599;</a></div></div>
+    </article><article class="brief">
+      <a class="thumb" href="https://www.thedailyjagran.com/education/news/todays-school-assembly-news-headline-november-8-check-top-national-international-and-sports-news-here-10335511" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Earth%27s_City_Lights_by_DMSP%2C_1994-1995_%28large%29.jpg/960px-Earth%27s_City_Lights_by_DMSP%2C_1994-1995_%28large%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body"><a class="hl" href="https://www.thedailyjagran.com/education/news/todays-school-assembly-news-headline-november-8-check-top-national-international-and-sports-news-here-10335511" target="_blank" rel="noopener"><h4>WORLD — Paraguay president impeached; Myanmar sets by-elections</h4></a>
+      <p>Paraguay&#x27;s President Pena has been impeached over a banking crisis, per the day&#x27;s international headlines, while Myanmar will hold by-elections next April. Also starting today: the India-US joint exercise Tiger Triumph 2026 in Visakhapatnam.</p>
+      <div class="meta"><span class="credit">Photo: Globe (scene photo) — Wikimedia Commons</span><a class="read" href="https://www.thedailyjagran.com/education/news/todays-school-assembly-news-headline-november-8-check-top-national-international-and-sports-news-here-10335511" target="_blank" rel="noopener">The Daily Jagran &#8599;</a></div></div>
+    </article><article class="brief">
+      <a class="thumb" href="https://www.thedailyjagran.com/education/news/todays-school-assembly-news-headline-november-8-check-top-national-international-and-sports-news-here-10335511" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Pashupatinath_Temple-2020.jpg/960px-Pashupatinath_Temple-2020.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body"><a class="hl" href="https://www.thedailyjagran.com/education/news/todays-school-assembly-news-headline-november-8-check-top-national-international-and-sports-news-here-10335511" target="_blank" rel="noopener"><h4>DIPLOMACY — Sudhakar Dalela takes charge as Ambassador to Nepal</h4></a>
+      <p>Sudhakar Dalela has taken charge as India&#x27;s new Ambassador to Nepal, as Foreign Secretary Vikram Misri sets the stage for the Nepal Prime Minister&#x27;s upcoming visit to India.</p>
+      <div class="meta"><span class="credit">Photo: Kathmandu (scene photo) — Wikimedia Commons</span><a class="read" href="https://www.thedailyjagran.com/education/news/todays-school-assembly-news-headline-november-8-check-top-national-international-and-sports-news-here-10335511" target="_blank" rel="noopener">The Daily Jagran &#8599;</a></div></div>
+    </article><article class="brief">
+      <a class="thumb" href="https://world.newsx.com/bl-news/sugee-to-host-grand-diwali-pahaat-musical-celebration-on-november-8-2026-at-chhatrapati-shivaji-maharaj-park-250762/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/DadarChowpatty-Mumbai.jpg/960px-DadarChowpatty-Mumbai.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body"><a class="hl" href="https://world.newsx.com/bl-news/sugee-to-host-grand-diwali-pahaat-musical-celebration-on-november-8-2026-at-chhatrapati-shivaji-maharaj-park-250762/" target="_blank" rel="noopener"><h4>CULTURE — Diwali Pahaat dawn concert in Mumbai</h4></a>
+      <p>The Sugee Group&#x27;s Diwali Pahaat returns at 6 AM today at Chhatrapati Shivaji Maharaj Park, Dadar, with Rahul Deshpande, Prajakta Shukre and anchor Sankarshan Karhade welcoming the festival dawn with music and poetry.</p>
+      <div class="meta"><span class="credit">Photo: Mumbai (scene photo) — Wikimedia Commons</span><a class="read" href="https://world.newsx.com/bl-news/sugee-to-host-grand-diwali-pahaat-musical-celebration-on-november-8-2026-at-chhatrapati-shivaji-maharaj-park-250762/" target="_blank" rel="noopener">NewsX &#8599;</a></div></div>
+    </article><article class="brief">
+      <a class="thumb" href="https://www.thedailyjagran.com/education/news/todays-school-assembly-news-headline-november-8-check-top-national-international-and-sports-news-here-10335511" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Great_Wall_of_China_July_2006.JPG/960px-Great_Wall_of_China_July_2006.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body"><a class="hl" href="https://www.thedailyjagran.com/education/news/todays-school-assembly-news-headline-november-8-check-top-national-international-and-sports-news-here-10335511" target="_blank" rel="noopener"><h4>CHINA — Discussions under way on a Xi-Trump-Putin meeting</h4></a>
+      <p>China says discussions are under way on a possible meeting between Xi Jinping, Donald Trump and Vladimir Putin, per the day&#x27;s international headlines — no date or venue has been announced.</p>
+      <div class="meta"><span class="credit">Photo: China (scene photo) — Wikimedia Commons</span><a class="read" href="https://www.thedailyjagran.com/education/news/todays-school-assembly-news-headline-november-8-check-top-national-international-and-sports-news-here-10335511" target="_blank" rel="noopener">The Daily Jagran &#8599;</a></div></div>
+    </article></div>
+  </section>
+</div>
+<footer>
+  <div class="brand">THE MORNING GLOBE</div>
+  <p>Every story sourced. Every photo real. Back tomorrow at 6:30 AM.</p>
+  <p>Follow the paper: <a href="https://www.instagram.com/themorningglobe" target="_blank" rel="noopener">@themorningglobe</a> · From the house of Deesha Global: <a href="https://www.instagram.com/deeshaglobal" target="_blank" rel="noopener">@deeshaglobal</a></p>
+  <p class="small">The Morning Globe — web edition, Sunday 8 November 2026. Stories link to their original publishers; photos via Wikimedia Commons unless credited otherwise.</p>
+</footer>
+<div id="followModal" role="dialog" aria-modal="true" aria-labelledby="fmTitle">
+  <div class="modal-card">
+    <button class="modal-x" id="fmClose" aria-label="Close">&times;</button>
+    <div class="globe">🌅</div>
+    <h3 id="fmTitle">Enjoying the paper?</h3>
+    <p>The Morning Globe comes from the team at <b>Deesha Global</b> — follow <b>@deeshaglobal</b> for honest study, work and move-abroad guidance, and this paper in your feed every morning.</p>
+    <a class="btn-follow" href="https://www.instagram.com/deeshaglobal" target="_blank" rel="noopener">Follow @deeshaglobal</a>
+    <button class="btn-continue" id="fmContinue">Continue reading</button>
+  </div>
+</div>
+<script>
+(function () {
+  var KEY = 'tmg_follow_prompt_seen';
+  var modal = document.getElementById('followModal');
+  function dismiss() {
+    modal.classList.remove('open');
+    try { sessionStorage.setItem(KEY, '1'); } catch (e) {}
+  }
+  document.getElementById('fmContinue').addEventListener('click', dismiss);
+  document.getElementById('fmClose').addEventListener('click', dismiss);
+  modal.addEventListener('click', function (e) { if (e.target === modal) dismiss(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') dismiss(); });
+  var already = false;
+  try { already = !!sessionStorage.getItem(KEY); } catch (e) {}
+  if (!already) {
+    setTimeout(function () {
+      modal.classList.add('open');
+      try { sessionStorage.setItem(KEY, '1'); } catch (e) {}
+    }, 60000);
+  }
+})();
+</script>
+</body>
+</html>
+
+<script>
+(function () {
+  var KEY = 'tmg_follow_prompt_seen';
+  var modal = document.getElementById('followModal');
+  function dismiss() {
+    modal.classList.remove('open');
+    try { sessionStorage.setItem(KEY, '1'); } catch (e) {}
+  }
+  document.getElementById('fmContinue').addEventListener('click', dismiss);
+  document.getElementById('fmClose').addEventListener('click', dismiss);
+  modal.addEventListener('click', function (e) { if (e.target === modal) dismiss(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') dismiss(); });
+  var already = false;
+  try { already = !!sessionStorage.getItem(KEY); } catch (e) {}
+  if (!already) {
+    setTimeout(function () {
+      modal.classList.add('open');
+      try { sessionStorage.setItem(KEY, '1'); } catch (e) {}
+    }, 60000);
+  }
+})();
+</script>
+</body>
+</html>
