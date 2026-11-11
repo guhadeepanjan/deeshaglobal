@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Morning Globe — Thursday, 12 November 2026</title>
+<meta name="description" content="The Morning Globe e-newspaper: 47 verified stories across seven sections plus briefs — Breaking, Sports, Science & Tech, Business, AI, Banking and Banking Regulators. Every story sourced.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800;900&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--grad:linear-gradient(92deg,#7c3aed,#ec4899 55%,#f97316);--ink:#14101f;--mut:#5c5570;--bg:#faf8ff;--card:#fff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+a{color:inherit;text-decoration:none}
+img{display:block;width:100%;height:100%;object-fit:cover}
+.topstrip{background:#14101f;color:#fff;font-size:.82rem;padding:.5rem 1rem;text-align:center}
+.topstrip a{color:#ffb38a;font-weight:700;text-decoration:underline}
+header.mast{text-align:center;padding:1.2rem 1rem .4rem}
+.mast h1{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-weight:800;font-size:clamp(2.1rem,8.5vw,4.2rem);letter-spacing:.005em;line-height:1.05;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.mast .date{font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.8rem;color:var(--mut);margin-top:.35rem}
+.mast .tag{font-size:.95rem;color:var(--mut);margin-top:.2rem}
+.banner{height:150px;margin:.9rem auto 0;max-width:1180px;border-radius:0;overflow:hidden;position:relative}
+.banner img{object-position:center 38%}
+.banner span{position:absolute;left:0;right:0;bottom:0;padding:1.4rem 1rem .55rem;color:#fff;font-weight:600;font-size:.85rem;background:linear-gradient(transparent,rgba(10,6,24,.75))}
+.wrap{max-width:1180px;margin:0 auto;padding:0 14px}
+.ticker{display:flex;gap:1.4rem;overflow-x:auto;white-space:nowrap;background:#14101f;color:#fff;border-radius:12px;padding:.55rem 1rem;margin:1rem 0;font-size:.83rem;scrollbar-width:none}
+.ticker b{color:#ffb38a} .ticker .up{color:#4ade80}
+nav.sections{display:flex;gap:.45rem;overflow-x:auto;padding:.4rem 0 .8rem;scrollbar-width:none}
+nav.sections a{flex:0 0 auto;font-size:.8rem;font-weight:700;padding:.42rem .8rem;border-radius:999px;background:#fff;border:1.5px solid #e6def7;color:var(--ink)}
+.hero{display:grid;grid-template-columns:1.15fr 1fr;background:var(--card);border-radius:20px;overflow:hidden;box-shadow:0 12px 34px rgba(60,20,120,.13);margin:.4rem 0 1.4rem}
+.hero .thumb{min-height:260px}
+.hero .body{padding:1.3rem 1.4rem}
+.kicker{display:inline-block;background:var(--grad);color:#fff;font-weight:800;font-size:.72rem;letter-spacing:.12em;padding:.3rem .7rem;border-radius:999px;text-transform:uppercase}
+.hero h2{font-family:'Archivo',sans-serif;font-weight:900;font-size:clamp(1.5rem,4.6vw,2.3rem);line-height:1.12;margin:.6rem 0 .55rem}
+.hero p{color:#37304d;font-size:1rem}
+.section{margin:2rem 0}
+.sec-head{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap;border-bottom:3px solid var(--sec);padding-bottom:.5rem;margin-bottom:1rem}
+.sec-chip{background:var(--sec);color:#fff;font-family:'Archivo',sans-serif;font-weight:800;font-size:1.05rem;padding:.35rem .9rem;border-radius:10px;text-transform:uppercase;letter-spacing:.03em}
+.sec-sub{color:var(--mut);font-size:.85rem;font-weight:600}
+.sec-count{margin-left:auto;color:var(--mut);font-size:.8rem;font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.1rem}
+.card{background:var(--card);border-radius:16px;overflow:hidden;box-shadow:0 4px 18px rgba(60,20,120,.08);display:flex;flex-direction:column;border-top:4px solid var(--sec)}
+.card .thumb{height:170px;flex:0 0 auto}
+.card.lead{grid-column:span 2}
+.card.lead .thumb{height:230px}
+.card .body{padding:.95rem 1.05rem 1.05rem;display:flex;flex-direction:column;gap:.5rem;flex:1}
+.card h3,.brief h4{font-family:'Archivo',sans-serif;font-weight:800;line-height:1.22}
+.card h3{font-size:1.13rem} .card.lead h3{font-size:1.45rem}
+.card p,.brief p{font-size:.92rem;color:#37304d}
+.meta{margin-top:auto;display:flex;justify-content:space-between;align-items:baseline;gap:.6rem;padding-top:.35rem}
+.credit{font-size:.7rem;color:#8a83a0}
+.read{font-size:.8rem;font-weight:700;color:#7c3aed;white-space:nowrap}
+.hl:hover h3,.hl:hover h4{text-decoration:underline}
+.briefs{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:1rem}
+.brief{background:var(--card);border-radius:14px;overflow:hidden;box-shadow:0 4px 16px rgba(60,20,120,.08);display:flex;flex-direction:column}
+.brief .thumb{height:130px;flex:0 0 auto}
+.brief .body{padding:.8rem .95rem .95rem;display:flex;flex-direction:column;gap:.45rem;flex:1}
+.brief h4{font-size:1rem}
+.brief p{font-size:.87rem}
+.more-head{border-bottom:3px solid transparent;border-image:var(--grad) 1}
+footer{margin:2.6rem 0 0;background:#14101f;color:#cfc9e6;padding:1.6rem 1rem 2rem;text-align:center;font-size:.88rem}
+footer .brand{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-weight:800;font-size:1.35rem;letter-spacing:.01em;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+footer a{color:#ffb38a;font-weight:700}
+footer .small{font-size:.75rem;color:#8a83a0;margin-top:.6rem}
+#followModal{position:fixed;inset:0;display:none;align-items:flex-end;justify-content:center;background:rgba(16,10,32,.55);z-index:60;padding:0}
+#followModal.open{display:flex}
+.modal-card{background:#fff;width:100%;max-width:460px;border-radius:22px 22px 0 0;padding:1.5rem 1.4rem 1.7rem;text-align:center;box-shadow:0 -12px 40px rgba(0,0,0,.3);animation:slideUp .45s cubic-bezier(.2,.9,.3,1)}
+@keyframes slideUp{from{transform:translateY(60px);opacity:0}to{transform:translateY(0);opacity:1}}
+@media(min-width:640px){#followModal{align-items:center;padding:1rem}.modal-card{border-radius:22px}}
+.modal-card .globe{width:64px;height:64px;margin:0 auto .7rem;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:1.9rem}
+.modal-card h3{font-family:'Archivo',sans-serif;font-weight:900;font-size:1.35rem;line-height:1.2}
+.modal-card p{color:var(--mut);font-size:.93rem;margin:.55rem 0 1.1rem}
+.btn-follow{display:block;background:var(--grad);color:#fff;font-weight:800;font-size:1rem;padding:.85rem 1rem;border-radius:999px}
+.btn-continue{display:block;margin-top:.6rem;background:none;border:none;width:100%;font:inherit;font-weight:600;color:var(--mut);padding:.6rem;cursor:pointer}
+.modal-x{float:right;background:none;border:none;font-size:1.3rem;color:var(--mut);cursor:pointer;line-height:1}
+@media(max-width:760px){.hero{grid-template-columns:1fr}.card.lead{grid-column:span 1}.card.lead .thumb{height:190px}.banner{height:110px}}
+</style>
+</head>
+<body>
+<div class="topstrip">Today's edition is also live as one swipeable post on Instagram — <a href="https://www.instagram.com/themorningglobe/" target="_blank" rel="noopener">read it on @themorningglobe</a></div>
+<header class="mast">
+  <h1>THE MORNING GLOBE</h1>
+  <div class="date">Thursday, 12 November 2026 · Morning Edition · Vol. 1 No. 6</div>
+  <div class="tag">Your morning news in seven sections — every story sourced, every photo real.</div>
+</header>
+<div class="banner"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Wonderful_News_from_Seringapatam_%28BM_1868%2C0808.6195%29.jpg/960px-Wonderful_News_from_Seringapatam_%28BM_1868%2C0808.6195%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="Narendra Modi"><span>New Delhi leads the day: the Cabinet extends Stand-Up India to 2031, two CRPF personnel are injured in Kulgam, and the IPL sees its biggest trade.</span></div>
+<div class="wrap">
+  <div class="ticker"><span><b>SENSEX</b> 81,879.40 <span class="up">▲ 0.95%</span></span><span><b>NIFTY</b> 25,255.05 <span class="up">▲ 0.84%</span></span><span><b>NIFTY BANK</b> <span class="up">▲ &gt;1.7%</span></span><span><b>BRENT</b> &lt;$93</span><span><b>FII 11 NOV</b> +Rs 12,563 cr</span><span><b>INDIA VIX</b> 17.58</span><span><b>BERNSTEIN NIFTY TARGET</b> 26,100 (Dec)</span></div>
+  <nav class="sections">
+    <a href="#breaking">Breaking</a><a href="#sports">Sports</a><a href="#scitech">Sci-Tech</a><a href="#business">Business</a><a href="#ai">AI</a><a href="#banking">Banking</a><a href="#regulators">Regulators</a><a href="#more">More Sections</a>
+  </nav>
+  <article class="hero">
+    <a class="thumb" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Wonderful_News_from_Seringapatam_%28BM_1868%2C0808.6195%29.jpg/960px-Wonderful_News_from_Seringapatam_%28BM_1868%2C0808.6195%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="Narendra Modi"></a>
+    <div class="body">
+      <span class="kicker">Top Story · Breaking</span>
+      <a class="hl" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener"><h2>Cabinet extends Stand-Up India for five years, with a Rs 4,111 crore guarantee corpus</h2></a>
+      <p>The Union Cabinet has approved continuation of the Stand-Up India scheme for five years till March 2031, with a credit guarantee corpus of Rs 4,111 crore and a target of supporting 2.5 lakh more women, SC and ST entrepreneurs. The Cabinet also extended the Credit Guarantee Fund for Micro Units for five years, enabling collateral-free Mudra loans worth Rs 12.6 lakh crore over the next five years, and approved Nutrient Based Subsidy rates for phosphatic and potassic fertilisers for Rabi 2026-27.</p>
+      <div class="meta"><span class="credit">Photo: Narendra Modi - Wikimedia Commons</span><a class="read" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener">Read at Jagran Josh &#8599;</a></div>
+    </div>
+  </article>
+  <section id="breaking" class="section" style="--sec:#e11d48">
+  <div class="sec-head"><span class="sec-chip">Breaking Top News</span><span class="sec-sub">Politics · India & Global</span><span class="sec-count">6 stories</span></div>
+  <div class="grid"><article class="card lead">
+      <a class="thumb" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Wonderful_News_from_Seringapatam_%28BM_1868%2C0808.6195%29.jpg/960px-Wonderful_News_from_Seringapatam_%28BM_1868%2C0808.6195%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener"><h3>Cabinet extends Stand-Up India for five years, with a Rs 4,111 crore guarantee corpus</h3></a>
+        <p>The Union Cabinet has approved continuation of the Stand-Up India scheme for five years till March 2031, with a credit guarantee corpus of Rs 4,111 crore and a target of supporting 2.5 lakh more women, SC and ST entrepreneurs. The Cabinet also extended the Credit Guarantee Fund for Micro Units for five years, enabling collateral-free Mudra loans worth Rs 12.6 lakh crore over the next five years, and approved Nutrient Based Subsidy rates for phosphatic and potassic fertilisers for Rabi 2026-27.</p>
+        <div class="meta"><span class="credit">Photo: Narendra Modi - Wikimedia Commons</span><a class="read" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener">Read at Jagran Josh &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/An_Indian_army_soldier_prepares_to_advance_towards_a_village_during_a_dismounted_patrol_during_Yudh_Abyas_2009.jpg/960px-An_Indian_army_soldier_prepares_to_advance_towards_a_village_during_a_dismounted_patrol_during_Yudh_Abyas_2009.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener"><h3>Two CRPF personnel injured in Kulgam terror attack; search operation launched</h3></a>
+        <p>Two CRPF personnel were injured in a terror attack in Kulgam, Jammu and Kashmir, after unidentified motorcycle-borne attackers opened fire at a security checkpoint near Mir Bazar. A search operation has been launched to trace the attackers. NDTV&#x27;s bulletin separately reported firing at a CRPF camp in the district; the checkpoint account is the version carried by multiple morning roundups.</p>
+        <div class="meta"><span class="credit">Photo: Security forces, Kashmir (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener">Read at Jagran Josh &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Minister_of_Commerce_and_Industry%2C_Shri_Piyush_Goyal_exchanges_MoU_with_the_Director_General_of_Free_Trade_Negotiations%2C_Mr._Yeo_Han-koo.jpg/960px-Minister_of_Commerce_and_Industry%2C_Shri_Piyush_Goyal_exchanges_MoU_with_the_Director_General_of_Free_Trade_Negotiations%2C_Mr._Yeo_Han-koo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener"><h3>India and Canada hold talks on advancing the proposed free trade agreement</h3></a>
+        <p>India and Canada have held talks on advancing negotiations for their proposed free trade agreement, between Commerce Minister Piyush Goyal and Canada&#x27;s visiting Trade Minister Maninder Sidhu. The meeting is the latest step in rebuilding trade engagement between the two countries.</p>
+        <div class="meta"><span class="credit">Photo: Piyush Goyal - Wikimedia Commons</span><a class="read" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener">Read at Jagran Josh &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.ndtv.com/education/school-assembly-headlines-november-12-top-national-international-sports-news-12313562/amp/1" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Pete_Hegseth_%282025%29_%28cropped%29.jpg/960px-Pete_Hegseth_%282025%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.ndtv.com/education/school-assembly-headlines-november-12-top-national-international-sports-news-12313562/amp/1" target="_blank" rel="noopener"><h3>US House rejects effort to impeach Defence Secretary Pete Hegseth</h3></a>
+        <p>The US House of Representatives has rejected an effort to impeach Defence Secretary Pete Hegseth over the Iran war, NDTV&#x27;s international bulletin reports. The move had gathered attention in Washington and deepened political divisions, as President Trump maintains that the US naval blockade on Iran will continue while Qatar and Saudi Arabia press for a diplomatic solution.</p>
+        <div class="meta"><span class="credit">Photo: Pete Hegseth - Wikimedia Commons</span><a class="read" href="https://www.ndtv.com/education/school-assembly-headlines-november-12-top-national-international-sports-news-12313562/amp/1" target="_blank" rel="noopener">Read at NDTV &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.thedailyjagran.com/education/news/todays-school-assembly-news-headline-november-12-check-top-national-international-and-sports-news-here-10335947" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Address_by_the_President_of_Ukraine_on_the_Fourth_Anniversary_of_the_Beginning_of_Russia%E2%80%99s_Full-Scale_Invasion_of_Ukraine._%2855113242776%29.jpg/960px-Address_by_the_President_of_Ukraine_on_the_Fourth_Anniversary_of_the_Beginning_of_Russia%E2%80%99s_Full-Scale_Invasion_of_Ukraine._%2855113242776%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.thedailyjagran.com/education/news/todays-school-assembly-news-headline-november-12-check-top-national-international-and-sports-news-here-10335947" target="_blank" rel="noopener"><h3>Russia and Ukraine hold a second day of US-brokered talks in Abu Dhabi</h3></a>
+        <p>Russia and Ukraine have held a second day of US-brokered talks in Abu Dhabi, The Daily Jagran&#x27;s international roundup reports, with negotiators from both sides expected to hold further rounds of discussion in the coming days. India has said it remains engaged with both Moscow and Kyiv on Black Sea shipping, grain and energy questions.</p>
+        <div class="meta"><span class="credit">Photo: Kyiv, Ukraine (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.thedailyjagran.com/education/news/todays-school-assembly-news-headline-november-12-check-top-national-international-and-sports-news-here-10335947" target="_blank" rel="noopener">Read at The Daily Jagran &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://indianexpress.com/article/education/today-news-headlines-for-school-assembly-november-12-2026-mi-trade-hardik-pandya-to-pbks-for-rs-18-crore-10956122/" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Masoud_Pezeshkian_2024_%28A%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://indianexpress.com/article/education/today-news-headlines-for-school-assembly-november-12-2026-mi-trade-hardik-pandya-to-pbks-for-rs-18-crore-10956122/" target="_blank" rel="noopener"><h3>Iran&#x27;s Pezeshkian to raise war&#x27;s environmental damage at COP31 in Antalya</h3></a>
+        <p>Iranian President Masoud Pezeshkian has said he will raise concerns over the environmental damage caused by US and Israeli military actions at the 31st UN Climate Change Conference (COP31) in Antalya, The Indian Express reports. Iran has also displayed its missile stocks and warned the US and Israel over escalating tensions, as world leaders urge restraint.</p>
+        <div class="meta"><span class="credit">Photo: Masoud Pezeshkian - Wikimedia Commons</span><a class="read" href="https://indianexpress.com/article/education/today-news-headlines-for-school-assembly-november-12-2026-mi-trade-hardik-pandya-to-pbks-for-rs-18-crore-10956122/" target="_blank" rel="noopener">Read at The Indian Express &#8599;</a></div>
+      </div>
+    </article></div>
+</section><section id="sports" class="section" style="--sec:#16a34a">
+  <div class="sec-head"><span class="sec-chip">Sports</span><span class="sec-sub">Cricket First · Then The World</span><span class="sec-count">6 stories</span></div>
+  <div class="grid"><article class="card lead">
+      <a class="thumb" href="https://indianexpress.com/article/education/today-news-headlines-for-school-assembly-november-12-2026-mi-trade-hardik-pandya-to-pbks-for-rs-18-crore-10956122/" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Hardik_Pandya_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://indianexpress.com/article/education/today-news-headlines-for-school-assembly-november-12-2026-mi-trade-hardik-pandya-to-pbks-for-rs-18-crore-10956122/" target="_blank" rel="noopener"><h3>Blockbuster IPL trade: Hardik Pandya to Punjab Kings, Arshdeep Singh to Mumbai Indians</h3></a>
+        <p>Ahead of the IPL 2027 retention deadline, Mumbai Indians have traded their former captain Hardik Pandya to Punjab Kings for Rs 18 crore, swapping him with former PBKS bowler Arshdeep Singh, in what is being called the IPL&#x27;s biggest player exchange. NDTV reports Pandya moves with a pay hike, and Mumbai have issued a captaincy update following his departure.</p>
+        <div class="meta"><span class="credit">Photo: Hardik Pandya - Wikimedia Commons</span><a class="read" href="https://indianexpress.com/article/education/today-news-headlines-for-school-assembly-november-12-2026-mi-trade-hardik-pandya-to-pbks-for-rs-18-crore-10956122/" target="_blank" rel="noopener">Read at The Indian Express &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://news.abplive.com/sports/cricket/ind-vs-nz-4th-odi-india-probable-playing-xi-shubman-gill-kl-rahul-out-shreyas-iyer-captain-1875469/amp" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://news.abplive.com/sports/cricket/ind-vs-nz-4th-odi-india-probable-playing-xi-shubman-gill-kl-rahul-out-shreyas-iyer-captain-1875469/amp" target="_blank" rel="noopener"><h3>Shreyas Iyer to captain India in the final two ODIs as Gill and Rahul head to Wellington</h3></a>
+        <p>Shubman Gill and KL Rahul will miss the fourth and fifth ODIs against New Zealand, with Shreyas Iyer taking over the captaincy at Bay Oval, Mount Maunganui on Friday 13 November. Gill, Rahul and Anshul Kamboj were picked only for the first three ODIs and have left to prepare for the Test series starting 19 November in Wellington. India lead the series 2-0 after the third ODI in Hamilton was abandoned in the rain; Ruturaj Gaikwad is expected to come into the XI.</p>
+        <div class="meta"><span class="credit">Photo: Cricket stadium (scene photo) - Wikimedia Commons</span><a class="read" href="https://news.abplive.com/sports/cricket/ind-vs-nz-4th-odi-india-probable-playing-xi-shubman-gill-kl-rahul-out-shreyas-iyer-captain-1875469/amp" target="_blank" rel="noopener">Read at ABP Live &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://apnamatvchannel.com/sports/youve-been-rock-solid-in-supporting-us-rohit-sharma-thanks-bharat-army-ahead-of-india-vs-new-zealand-4th-odi/" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Prime_Minister_Of_Bharat_Shri_Narendra_Damodardas_Modi_with_Shri_Rohit_Gurunath_Sharma_%28Cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://apnamatvchannel.com/sports/youve-been-rock-solid-in-supporting-us-rohit-sharma-thanks-bharat-army-ahead-of-india-vs-new-zealand-4th-odi/" target="_blank" rel="noopener"><h3>&#x27;Rock solid&#x27;: Rohit Sharma thanks the Bharat Army ahead of the fourth ODI</h3></a>
+        <p>Rohit Sharma has shared a heartfelt message for the Bharat Army, thanking its members for standing by the Indian team through its highs and lows and calling for their continued support in the years ahead, ANI reports from Mount Maunganui. The message comes as India build towards the ICC Men&#x27;s Cricket World Cup 2027, to be hosted by South Africa, Zimbabwe and Namibia, less than a year away.</p>
+        <div class="meta"><span class="credit">Photo: Rohit Sharma - Wikimedia Commons</span><a class="read" href="https://apnamatvchannel.com/sports/youve-been-rock-solid-in-supporting-us-rohit-sharma-thanks-bharat-army-ahead-of-india-vs-new-zealand-4th-odi/" target="_blank" rel="noopener">Read at ANI via APNA MA TV &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Championship-Soccer-Stadium-SE-Field-View-2024-08-03.jpg/960px-Championship-Soccer-Stadium-SE-Field-View-2024-08-03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener"><h3>India face Maldives in their second SAFF Championship group match</h3></a>
+        <p>India face Maldives in their second group match of the 2026 SAFF Championship, looking to strengthen their place in the tournament. The fixture continues a busy international window for Indian football.</p>
+        <div class="meta"><span class="credit">Photo: Football stadium (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener">Read at Jagran Josh &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://indianexpress.com/article/education/today-news-headlines-for-school-assembly-november-12-2026-mi-trade-hardik-pandya-to-pbks-for-rs-18-crore-10956122/" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Bundesarchiv_Bild_183-76052-0335%2C_Schacholympiade%2C_Tal_%28UdSSR%29_gegen_Fischer_%28USA%29_Crop.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://indianexpress.com/article/education/today-news-headlines-for-school-assembly-november-12-2026-mi-trade-hardik-pandya-to-pbks-for-rs-18-crore-10956122/" target="_blank" rel="noopener"><h3>Vaishali starts Total Chess pilot with blitz wins over Niemann and So</h3></a>
+        <p>Vaishali Rameshbabu began her Total Chess World Championship Tour pilot campaign with a blitz victory over Hans Niemann, followed by a win against Wesley So. She also drew against Jan-Krzysztof Duda, Richard Rapport, Anish Giri and Bibisara Assaubayeva, finishing 17th among 24 players. R Praggnanandhaa and Arjun Erigaisi are also in action at the event.</p>
+        <div class="meta"><span class="credit">Photo: Chess (scene photo) - Wikimedia Commons</span><a class="read" href="https://indianexpress.com/article/education/today-news-headlines-for-school-assembly-november-12-2026-mi-trade-hardik-pandya-to-pbks-for-rs-18-crore-10956122/" target="_blank" rel="noopener">Read at The Indian Express &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.thedailyjagran.com/education/news/todays-school-assembly-news-headline-november-12-check-top-national-international-and-sports-news-here-10335947" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/2018.01.05.17.43.25-Usman_Khawaja_%26_Steve_Smith_%2838876757994%29_%28Khawaja_cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.thedailyjagran.com/education/news/todays-school-assembly-news-headline-november-12-check-top-national-international-and-sports-news-here-10335947" target="_blank" rel="noopener"><h3>Khawaja withdraws from book interviews amid the Sandpapergate row</h3></a>
+        <p>Usman Khawaja has withdrawn from book interviews amid the Sandpapergate row, and the Australian Cricketers&#x27; Association has urged an end to online abuse, The Daily Jagran reports. NDTV&#x27;s bulletin adds that Khawaja has alleged racial abuse by MCC members during the 2023 Lord&#x27;s Ashes, and said two Australia players refused to take accountability for Sandpapergate.</p>
+        <div class="meta"><span class="credit">Photo: Usman Khawaja - Wikimedia Commons</span><a class="read" href="https://www.thedailyjagran.com/education/news/todays-school-assembly-news-headline-november-12-check-top-national-international-and-sports-news-here-10335947" target="_blank" rel="noopener">Read at The Daily Jagran &#8599;</a></div>
+      </div>
+    </article></div>
+</section><section id="scitech" class="section" style="--sec:#0891b2">
+  <div class="sec-head"><span class="sec-chip">Science &amp; Technology</span><span class="sec-sub">Space · Research · The Planet</span><span class="sec-count">6 stories</span></div>
+  <div class="grid"><article class="card lead">
+      <a class="thumb" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Gaganyaan_module_infographic_%28cropped%29.jpg/960px-Gaganyaan_module_infographic_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener"><h3>Gaganyaan&#x27;s first uncrewed test flight G1 stays on track for late 2026</h3></a>
+        <p>India&#x27;s first uncrewed Gaganyaan test flight (G1) remains on track for late 2026, following the successful second Integrated Air Drop Test completed by ISRO in April, Jagran Josh&#x27;s science roundup reports. The mission is the key precursor flight for India&#x27;s human spaceflight programme.</p>
+        <div class="meta"><span class="credit">Photo: Gaganyaan programme (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener">Read at Jagran Josh &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener"><h3>Indian scientists first to prove the &#x27;quantum measure&#x27; can exceed 1</h3></a>
+        <p>Indian scientists have become the first in the world to prove that the &#x27;quantum measure&#x27; can exceed 1, a significant step forward in quantum physics research, the day&#x27;s science roundup reports.</p>
+        <div class="meta"><span class="credit">Photo: Quantum research (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener">Read at Jagran Josh &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener"><h3>Tesla to wind down Cybertruck production in 2027 to make way for the Cybercab</h3></a>
+        <p>Tesla plans to wind down Cybertruck production around June or July 2027, as the company prepares to repurpose its Texas factory production line for the Cybercab autonomous robotaxi, according to the day&#x27;s technology roundup.</p>
+        <div class="meta"><span class="credit">Photo: Electric vehicle (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener">Read at Jagran Josh &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Douglas_SBD-6_Dauntless_-_DPLA_-_71028774a9a6be0f49ca47ea7eb15f28_%28page_10%29.jpg/960px-Douglas_SBD-6_Dauntless_-_DPLA_-_71028774a9a6be0f49ca47ea7eb15f28_%28page_10%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener"><h3>China&#x27;s space station sets a record-low temperature in orbit</h3></a>
+        <p>China&#x27;s space station has created a record-low temperature in orbit, opening new possibilities for advanced physics experiments in microgravity, the science roundup reports.</p>
+        <div class="meta"><span class="credit">Photo: Space station in orbit (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener">Read at Jagran Josh &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/ISS_Aug2005.jpg/960px-ISS_Aug2005.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener"><h3>NASA prepares for the post-ISS era as commercial stations take shape</h3></a>
+        <p>NASA is preparing for the post-ISS era, as commercial space stations begin reshaping how astronauts will live and work in orbit, the day&#x27;s science roundup notes. The transition will hand low-Earth-orbit presence increasingly to private station operators.</p>
+        <div class="meta"><span class="credit">Photo: Space station (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener">Read at Jagran Josh &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener"><h3>New COVID variant PJ.2.1 detected in several countries; no sign of greater severity</h3></a>
+        <p>The new COVID variant PJ.2.1 has been detected in several countries, including the US, Singapore, Australia, France and Spain. Experts say there is currently no evidence that it causes more severe illness than earlier variants, but recommend continued monitoring and precautions.</p>
+        <div class="meta"><span class="credit">Photo: Laboratory research (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener">Read at Jagran Josh &#8599;</a></div>
+      </div>
+    </article></div>
+</section><section id="business" class="section" style="--sec:#d97706">
+  <div class="sec-head"><span class="sec-chip">Business &amp; Investment</span><span class="sec-sub">Markets · Earnings · Deals</span><span class="sec-count">6 stories</span></div>
+  <div class="grid"><article class="card lead">
+      <a class="thumb" href="https://www.ndtvprofit.com/markets/trade-setup-for-nov-12-nifty-faces-resistance-at-25-500-will-overbought-zone-trigger-pullback-12314176?pfrom=home-business_topstories" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.ndtvprofit.com/markets/trade-setup-for-nov-12-nifty-faces-resistance-at-25-500-will-overbought-zone-trigger-pullback-12314176?pfrom=home-business_topstories" target="_blank" rel="noopener"><h3>Sensex closes 772 points higher at 81,879; Nifty ends above 25,250</h3></a>
+        <p>Domestic benchmarks settled higher on Wednesday 11 November, led by state-run lenders and autos: the Sensex rose 772.75 points (0.95%) to 81,879.40 and the Nifty 50 gained 210.40 points (0.84%) to 25,255.05, their highest close since 26 February 2026. Nifty Bank ended over 1.7% higher, the Nifty Smallcap 100 surged 1.67% and Midcap 100 gained 0.6%. Progress in US-Iran peace talks lifted risk appetite and Brent slipped under $93 a barrel.</p>
+        <div class="meta"><span class="credit">Photo: BSE, Mumbai - Wikimedia Commons</span><a class="read" href="https://www.ndtvprofit.com/markets/trade-setup-for-nov-12-nifty-faces-resistance-at-25-500-will-overbought-zone-trigger-pullback-12314176?pfrom=home-business_topstories" target="_blank" rel="noopener">Read at NDTV Profit &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.moneycontrol.com/news/business/markets/bernstein-sees-further-upside-for-nifty-by-december-despite-11-surge-in-12-sessions-check-target-14077256.html/amp" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.moneycontrol.com/news/business/markets/bernstein-sees-further-upside-for-nifty-by-december-despite-11-surge-in-12-sessions-check-target-14077256.html/amp" target="_blank" rel="noopener"><h3>Bernstein raises its December Nifty target to 26,100 after an 11% surge in 12 sessions</h3></a>
+        <p>The Nifty has risen more than 11% in 12 trading sessions from its 28 October low of 22,497, prompting Bernstein to raise its December target to 26,100 from 25,000, citing improving sentiment and easing geopolitical concerns. The brokerage kept a near-term &#x27;Trading Buy&#x27; on Indian equities with a Neutral 12-month stance. Citi has raised its end-2027 Nifty target to 28,000 and HSBC has upgraded Indian equities to Overweight; FPIs invested a net Rs 53,739 crore between 2 and 9 November.</p>
+        <div class="meta"><span class="credit">Photo: NSE, Mumbai - Wikimedia Commons</span><a class="read" href="https://www.moneycontrol.com/news/business/markets/bernstein-sees-further-upside-for-nifty-by-december-despite-11-surge-in-12-sessions-check-target-14077256.html/amp" target="_blank" rel="noopener">Read at Moneycontrol &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://flashfinance.news/market-today/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://flashfinance.news/market-today/" target="_blank" rel="noopener"><h3>FIIs buy Rs 12,563 crore on 11 November — an eighth straight session of buying</h3></a>
+        <p>Foreign institutions were net buyers of Rs 12,563 crore in the cash market on Wednesday, with domestic institutions net sellers of Rs 8,435 crore; FIIs have now bought for eight sessions in a row. Breadth was broad-based, with 2,362 stocks advancing against 1,044 declining on NSE. PSU Bank was the strongest sector index, up 2.94%, while IT was the weakest, down 0.53%; India VIX rose 0.9% to 17.58.</p>
+        <div class="meta"><span class="credit">Photo: Bandra Kurla Complex, Mumbai - Wikimedia Commons</span><a class="read" href="https://flashfinance.news/market-today/" target="_blank" rel="noopener">Read at Flash Finance (exchange data) &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://indianexpress.com/article/education/today-news-headlines-for-school-assembly-november-12-2026-mi-trade-hardik-pandya-to-pbks-for-rs-18-crore-10956122/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/1.5V_Lithium_Battery_Charger_and_Cable_Back_Picture.png/960px-1.5V_Lithium_Battery_Charger_and_Cable_Back_Picture.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://indianexpress.com/article/education/today-news-headlines-for-school-assembly-november-12-2026-mi-trade-hardik-pandya-to-pbks-for-rs-18-crore-10956122/" target="_blank" rel="noopener"><h3>Centre bans export of lithium-ion battery black mass to back domestic recycling</h3></a>
+        <p>The Centre has banned the export of lithium-ion battery black mass — a recycled material containing critical minerals such as lithium, cobalt and nickel — with immediate effect, to strengthen the domestic ecosystem for battery recycling and refining, The Indian Express reports.</p>
+        <div class="meta"><span class="credit">Photo: Battery recycling (scene photo) - Wikimedia Commons</span><a class="read" href="https://indianexpress.com/article/education/today-news-headlines-for-school-assembly-november-12-2026-mi-trade-hardik-pandya-to-pbks-for-rs-18-crore-10956122/" target="_blank" rel="noopener">Read at The Indian Express &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Godess_Solotar.jpg/960px-Godess_Solotar.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener"><h3>Kalyan Jewellers surges nearly 10% to a new 52-week high of Rs 689</h3></a>
+        <p>Kalyan Jewellers&#x27; share price surged nearly 10% during trading on 11 November, reaching an intraday high of Rs 689 and touching a new 52-week high amid strong buying activity, Jagran Josh&#x27;s business roundup reports.</p>
+        <div class="meta"><span class="credit">Photo: Gold jewellery (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener">Read at Jagran Josh &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.thehindubusinessline.com/markets/q2-results-today-live-updates-tata-power-company-cupid-hindustan-copper-garden-reach-shipbuilders-lalithaa-jewellery-triveni-turbine-tsf-mrf-kalyan-jewellers-company-results-11-november-2026/article71685748.ece/amp/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/A_village_of_MP_3.jpg/960px-A_village_of_MP_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.thehindubusinessline.com/markets/q2-results-today-live-updates-tata-power-company-cupid-hindustan-copper-garden-reach-shipbuilders-lalithaa-jewellery-triveni-turbine-tsf-mrf-kalyan-jewellers-company-results-11-november-2026/article71685748.ece/amp/" target="_blank" rel="noopener"><h3>Tata Power Q2 profit jumps 33% to a record Rs 1,652 crore</h3></a>
+        <p>Tata Power&#x27;s net profit jumped 33% to a record Rs 1,652 crore in the September quarter, The Hindu BusinessLine&#x27;s results coverage reports. Investor attention on 11 November also covered Garden Reach Shipbuilders, Hindustan Copper and Triveni Turbine results, while EAAA India Alternatives, an Edelweiss arm, reported a 27% rise in consolidated profit to Rs 88 crore.</p>
+        <div class="meta"><span class="credit">Photo: Solar power (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.thehindubusinessline.com/markets/q2-results-today-live-updates-tata-power-company-cupid-hindustan-copper-garden-reach-shipbuilders-lalithaa-jewellery-triveni-turbine-tsf-mrf-kalyan-jewellers-company-results-11-november-2026/article71685748.ece/amp/" target="_blank" rel="noopener">Read at The Hindu BusinessLine &#8599;</a></div>
+      </div>
+    </article></div>
+</section><section id="ai" class="section" style="--sec:#7c3aed">
+  <div class="sec-head"><span class="sec-chip">Artificial Intelligence</span><span class="sec-sub">Models · Policy · The Build-Out</span><span class="sec-count">6 stories</span></div>
+  <div class="grid"><article class="card lead">
+      <a class="thumb" href="https://www.thehindubusinessline.com/info-tech/tsmc-to-invest-up-to-1-billion-in-anthropic-openai/article71688330.ece/amp/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/231105-1_TSMC_Fab_21_construction.jpg/960px-231105-1_TSMC_Fab_21_construction.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.thehindubusinessline.com/info-tech/tsmc-to-invest-up-to-1-billion-in-anthropic-openai/article71688330.ece/amp/" target="_blank" rel="noopener"><h3>TSMC approves up to $500 million each in Anthropic and OpenAI, plus $40.9 billion capex</h3></a>
+        <p>TSMC&#x27;s board, meeting on 10 November, approved investments of up to $500 million in Anthropic — common shares at the IPO price — and up to $500 million in OpenAI preferred stock, alongside about $40.93 billion in capital appropriations for advanced capacity, packaging and 2027 R&amp;D. The resolutions set ceilings, not completed purchases. TSMC reported Q3 revenue of NT$1,494.24 billion and net income of NT$763.06 billion, and raised its quarterly dividend to NT$9.0 a share.</p>
+        <div class="meta"><span class="credit">Photo: Semiconductor fab (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.thehindubusinessline.com/info-tech/tsmc-to-invest-up-to-1-billion-in-anthropic-openai/article71688330.ece/amp/" target="_blank" rel="noopener">Read at The Hindu BusinessLine &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-wednesday-november-11-2026/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-wednesday-november-11-2026/" target="_blank" rel="noopener"><h3>Anthropic takes its IPO on the road: $70–$78 a share, ticker ANT</h3></a>
+        <p>Anthropic has launched the roadshow for its proposed Nasdaq listing under the ticker ANT, with an expected price range of $70 to $78 a share and 825 million Class A shares on offer — a raise of up to about $64.35 billion. Valuation estimates in coverage run up to about $1.4 trillion fully diluted at the top of the range.</p>
+        <div class="meta"><span class="credit">Photo: Anthropic, San Francisco - Wikimedia Commons</span><a class="read" href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-wednesday-november-11-2026/" target="_blank" rel="noopener">Read at The Neuron &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-wednesday-november-11-2026/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-wednesday-november-11-2026/" target="_blank" rel="noopener"><h3>Google&#x27;s Gemini 4 Carbon goes generally available, with a /swarm agent feature</h3></a>
+        <p>Google has opened Gemini 4 Carbon — its frontier model for demanding coding, research and multi-step agent tasks — to paying developers via the API and to Google AI Ultra subscribers in the Gemini app, AI Mode in Search and Antigravity. Introductory pricing is $2 per million input tokens and $10 per million output until 30 November, then $4 and $20. Google also previewed /swarm, which coordinates multiple coding agents.</p>
+        <div class="meta"><span class="credit">Photo: Googleplex - Wikimedia Commons</span><a class="read" href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-wednesday-november-11-2026/" target="_blank" rel="noopener">Read at Google via The Neuron &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-wednesday-november-11-2026/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-wednesday-november-11-2026/" target="_blank" rel="noopener"><h3>Claude moves into the office: Sheets, Whiteboards, Data and Meetings</h3></a>
+        <p>Anthropic has launched Claude Sheets (spreadsheets with tabs, formulas and xlsx/CSV export) and Claude Whiteboards in beta on paid plans, made Claude Data — formerly Dashboards — generally available, and put Claude Meetings into beta for Team and Enterprise users. Meetings joins Google Meet as a visible participant, takes notes and builds task lists and plans, and leaves automatically when an outside guest joins.</p>
+        <div class="meta"><span class="credit">Photo: Code (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-wednesday-november-11-2026/" target="_blank" rel="noopener">Read at Anthropic via The Neuron &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-wednesday-november-11-2026/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-wednesday-november-11-2026/" target="_blank" rel="noopener"><h3>OpenAI&#x27;s Q3 revenue jumps nearly 50% to about $10 billion — losses stay enormous</h3></a>
+        <p>OpenAI&#x27;s third-quarter revenue rose nearly 50% to about $10 billion, driven by enterprise products and recent models, while operating losses remained enormous, The Neuron&#x27;s roundup reports. OpenAI also introduced a beta Business Hub in ChatGPT, where companies can claim profiles and eligible US e-commerce and online-service businesses can create Business Agents to answer shopper questions.</p>
+        <div class="meta"><span class="credit">Photo: Sam Altman - Wikimedia Commons</span><a class="read" href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-wednesday-november-11-2026/" target="_blank" rel="noopener">Read at OpenAI via The Neuron &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.tokenpost.com/news/technology/53665" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.tokenpost.com/news/technology/53665" target="_blank" rel="noopener"><h3>Anthropic and OpenAI tighten AI access rules taking effect this month</h3></a>
+        <p>Anthropic&#x27;s updated rules take effect today, Thursday 12 November — announced on 8 October, they prohibit Claude use from mainland China and other regions where the service is unsupported. OpenAI announced on 21 October that third-party platforms providing direct access to GPT models must get approval in advance, a requirement starting 20 November, and is also limiting use across multiple paid accounts.</p>
+        <div class="meta"><span class="credit">Photo: Data centre (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.tokenpost.com/news/technology/53665" target="_blank" rel="noopener">Read at TokenPost &#8599;</a></div>
+      </div>
+    </article></div>
+</section><section id="banking" class="section" style="--sec:#0f766e">
+  <div class="sec-head"><span class="sec-chip">Banking</span><span class="sec-sub">Indian & Global Banks</span><span class="sec-count">5 stories</span></div>
+  <div class="grid"><article class="card lead">
+      <a class="thumb" href="https://www.thehindubusinessline.com/money-and-banking/psbs-edge-private-sector-banks-in-q2fy27-profit-growth-sbi-research/article71688853.ece" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.thehindubusinessline.com/money-and-banking/psbs-edge-private-sector-banks-in-q2fy27-profit-growth-sbi-research/article71688853.ece" target="_blank" rel="noopener"><h3>PSBs edge out private banks on Q2 profit growth, SBI Research finds</h3></a>
+        <p>Public sector banks delivered slightly stronger profit growth of 20% year on year to Rs 59,366 crore in Q2 FY27, marginally ahead of major private sector banks, whose profit rose 19.8% to Rs 53,629 crore, according to SBI&#x27;s Economic Research Department. PSBs recorded 13.1% deposit growth and 18.8% credit growth; major private banks posted 21.0% deposit growth and 19.6% credit growth. Gross/net NPA stood at 1.80%/1.21% for PSBs against 1.61%/1.39% for major private banks.</p>
+        <div class="meta"><span class="credit">Photo: SBI HQ, Mumbai (institution scene) - Wikimedia Commons</span><a class="read" href="https://www.thehindubusinessline.com/money-and-banking/psbs-edge-private-sector-banks-in-q2fy27-profit-growth-sbi-research/article71688853.ece" target="_blank" rel="noopener">Read at The Hindu BusinessLine (SBI Research) &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.tradingview.com/news/moodys:2f913130a8c16:0-nifty-psu-bank-index-performance-bank-of-india-uco-bank-among-7-stocks-rebound-15-56-from-1-yr-lows-here-s-why/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.tradingview.com/news/moodys:2f913130a8c16:0-nifty-psu-bank-index-performance-bank-of-india-uco-bank-among-7-stocks-rebound-15-56-from-1-yr-lows-here-s-why/" target="_blank" rel="noopener"><h3>PSU bank stocks rebound sharply: Nifty PSU Bank&#x27;s biggest gain in nearly two years</h3></a>
+        <p>The Nifty PSU Bank index surged about 4% in the recent rally — its biggest single-day gain in nearly two years — with all 12 constituents closing higher, up between 0.7% and 5.6%. Seven PSU banks have rebounded 15–58% from their one-year lows, led by Bank of Maharashtra at about 58%. PSU banks&#x27; net interest income grew 15.9% year on year, other income rose 4.2% to Rs 51,669 crore, and net interest margins expanded 15 basis points to 2.58%.</p>
+        <div class="meta"><span class="credit">Photo: Bank branch (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.tradingview.com/news/moodys:2f913130a8c16:0-nifty-psu-bank-index-performance-bank-of-india-uco-bank-among-7-stocks-rebound-15-56-from-1-yr-lows-here-s-why/" target="_blank" rel="noopener">Read at TradingView (LiveMint) &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.thehindubusinessline.com/markets/sensex-nifty50-today-stock-market-highlights-11th-november-2026/article71682389.ece" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.thehindubusinessline.com/markets/sensex-nifty50-today-stock-market-highlights-11th-november-2026/article71682389.ece" target="_blank" rel="noopener"><h3>Indian Overseas Bank raises rates on its 444-day term deposits by up to 15 bps</h3></a>
+        <p>Indian Overseas Bank has raised interest rates on its 444-day term deposits by up to 15 basis points, The Hindu BusinessLine&#x27;s market coverage reports — a move depositors will want to check against the bank&#x27;s published rate card before booking.</p>
+        <div class="meta"><span class="credit">Photo: Indian rupee (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.thehindubusinessline.com/markets/sensex-nifty50-today-stock-market-highlights-11th-november-2026/article71682389.ece" target="_blank" rel="noopener">Read at The Hindu BusinessLine &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.kalkine.co.in/article/announcements/utkarsh-small-finance-bank-nseutkarshbnk-what-did-management-reveal-at-the-q2-fy27-earnings-call" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.kalkine.co.in/article/announcements/utkarsh-small-finance-bank-nseutkarshbnk-what-did-management-reveal-at-the-q2-fy27-earnings-call" target="_blank" rel="noopener"><h3>Utkarsh Small Finance Bank&#x27;s Q2 loss narrows about 80% to Rs 70 crore</h3></a>
+        <p>Utkarsh Small Finance Bank&#x27;s pre-provisioning operating profit rose to Rs 85 crore in Q2 FY27, against an operating loss of Rs 3 crore a year earlier and up 34% sequentially, according to its earnings-call transcript filed on 11 November. The net loss narrowed by about 80% year on year to Rs 70 crore, helped by lower credit costs, and gross NPA improved to 5.9% of the loan portfolio, down about 630 basis points year on year. The amalgamation of its holding company is pending, with the next NCLT hearing on 19 November.</p>
+        <div class="meta"><span class="credit">Photo: Bandra Kurla Complex, Mumbai - Wikimedia Commons</span><a class="read" href="https://www.kalkine.co.in/article/announcements/utkarsh-small-finance-bank-nseutkarshbnk-what-did-management-reveal-at-the-q2-fy27-earnings-call" target="_blank" rel="noopener">Read at Kalkine (exchange filing) &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.thehindubusinessline.com/markets/sensex-nifty50-today-stock-market-highlights-11th-november-2026/article71682389.ece" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.thehindubusinessline.com/markets/sensex-nifty50-today-stock-market-highlights-11th-november-2026/article71682389.ece" target="_blank" rel="noopener"><h3>Debt mutual funds see Rs 1.13 lakh crore of inflows in October as outflows reverse</h3></a>
+        <p>Debt mutual funds recorded net inflows of Rs 1,13,438 crore in October, reversing September&#x27;s outflows of Rs 1,83,156 crore as quarter-end flows normalised, The Hindu BusinessLine reports, citing fund-industry data. Duration categories continued to see outflows, led by corporate bond funds (Rs 3,143 crore), short duration (Rs 2,093 crore) and banking &amp; PSU debt (Rs 1,238 crore).</p>
+        <div class="meta"><span class="credit">Photo: Mumbai (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.thehindubusinessline.com/markets/sensex-nifty50-today-stock-market-highlights-11th-november-2026/article71682389.ece" target="_blank" rel="noopener">Read at The Hindu BusinessLine &#8599;</a></div>
+      </div>
+    </article></div>
+</section><section id="regulators" class="section" style="--sec:#b45309">
+  <div class="sec-head"><span class="sec-chip">Banking Regulators</span><span class="sec-sub">Guidelines & Actions Worldwide</span><span class="sec-count">6 stories</span></div>
+  <div class="grid"><article class="card lead">
+      <a class="thumb" href="https://www.corplawupdates.in/updates" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.corplawupdates.in/updates" target="_blank" rel="noopener"><h3>RBI&#x27;s Domestic Money Transfer Directions 2026 consolidate the rules in one document</h3></a>
+        <p>The RBI&#x27;s 11 November 2026 Directions consolidate domestic money transfer rules into a single document. The cash pay-out limit stays at Rs 10,000 per transaction, and the walk-in NEFT limit stays at Rs 50,000, CorpLawUpdates&#x27; summary of the official notification explains.</p>
+        <div class="meta"><span class="credit">Photo: Digital payments (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.corplawupdates.in/updates" target="_blank" rel="noopener">Read at CorpLawUpdates (RBI) &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.corplawupdates.in/updates" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.corplawupdates.in/updates" target="_blank" rel="noopener"><h3>SEBI revises FATCA/CRS reporting under the Income-tax Act, 2025</h3></a>
+        <p>SEBI&#x27;s 11 November 2026 circular moves FATCA and CRS reporting to the Income-tax Act, 2025: section 508, Rules 238–240 and Form 166 replace the 1961-Act regime. Reporting financial institutions will need to rebuild their KYC software and reporting workflows to the new references, the regulatory summary notes.</p>
+        <div class="meta"><span class="credit">Photo: SEBI Bhavan, Mumbai - Wikimedia Commons</span><a class="read" href="https://www.corplawupdates.in/updates" target="_blank" rel="noopener">Read at CorpLawUpdates (SEBI) &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.corplawupdates.in/updates" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.corplawupdates.in/updates" target="_blank" rel="noopener"><h3>NRIs and OCIs can complete SEBI KYC digitally from abroad from 3 December</h3></a>
+        <p>SEBI&#x27;s 4 November circular (HO/38/30/12(3)2026-MIRSD-POD2/I/25175/2026) lets individual NRIs, OCIs and foreign nationals in FATF-compliant countries complete KYC digitally from abroad from 3 December 2026. A separate 30 October circular stretches FPI KYC reviews to every 2 or 8 years from 1 December 2026.</p>
+        <div class="meta"><span class="credit">Photo: KYC verification (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.corplawupdates.in/updates" target="_blank" rel="noopener">Read at CorpLawUpdates (SEBI) &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.corplawupdates.in/updates" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.corplawupdates.in/updates" target="_blank" rel="noopener"><h3>IFSCA consults on &#x27;model portfolios&#x27; by research entities in GIFT IFSC</h3></a>
+        <p>IFSCA&#x27;s 9 November consultation paper proposes allowing research entities in the IFSC to offer &#x27;model portfolios&#x27;, with comments due by 30 November 2026. It sits alongside the same day&#x27;s consultation on Financial Solicitation Professionals for GIFT IFSC institutions.</p>
+        <div class="meta"><span class="credit">Photo: GIFT City (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.corplawupdates.in/updates" target="_blank" rel="noopener">Read at CorpLawUpdates (IFSCA) &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.corplawupdates.in/updates" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/SEBI_Bhavan.jpg/960px-SEBI_Bhavan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.corplawupdates.in/updates" target="_blank" rel="noopener"><h3>SEBI&#x27;s Settlement Regulations 2026 are in force, with online filing live</h3></a>
+        <p>SEBI Press Release PR No. 70/2026 marks the commencement of the SEBI (Settlement of Administrative and Civil Proceedings) Regulations, 2026 from 7 November, with FAQs, a settlement calculator and online filing now live on sebi.gov.in, the regulatory roundup reports.</p>
+        <div class="meta"><span class="credit">Photo: SEBI Bhavan, Mumbai - Wikimedia Commons</span><a class="read" href="https://www.corplawupdates.in/updates" target="_blank" rel="noopener">Read at CorpLawUpdates (SEBI) &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener"><h3>RBI conducts a three-day VRRR auction and publishes Treasury Bill results</h3></a>
+        <p>The RBI conducted a three-day Variable Rate Reverse Repo auction and released the full Treasury Bill auction results as part of its regular liquidity management operations, Jagran Josh&#x27;s business roundup reports.</p>
+        <div class="meta"><span class="credit">Photo: RBI, Mumbai - Wikimedia Commons</span><a class="read" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener">Read at Jagran Josh (RBI) &#8599;</a></div>
+      </div>
+    </article></div>
+</section>
+  <section id="more" class="section">
+    <div class="sec-head more-head"><span class="sec-chip" style="background:linear-gradient(92deg,#7c3aed,#ec4899,#f97316)">More Across The Sections</span><span class="sec-sub">City · Health · Education · Awards · Defence · World</span><span class="sec-count">6 briefs</span></div>
+    <div class="briefs"><article class="brief">
+      <a class="thumb" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body"><a class="hl" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener"><h4>CITY - Namo Yamuna cruise launches in Delhi at Rs 500 a ride</h4></a>
+      <p>Delhi has launched the Namo Yamuna River Cruise Service at Sonia Vihar — an electric cruise between Sonia Vihar and Jagatpur to promote river tourism. The 35–45-minute ride is priced at Rs 500 per passenger.</p>
+      <div class="meta"><span class="credit">Photo: Yamuna river, Delhi (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener">Jagran Josh &#8599;</a></div></div>
+    </article><article class="brief">
+      <a class="thumb" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body"><a class="hl" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener"><h4>EDUCATION - ISC Class 12 exams run 9 February to 8 April 2027</h4></a>
+      <p>CISCE has released the ISC Class 12 date sheet for 2027, with exams from 9 February to 8 April, while ICSE Class 10 exams run from 15 February to 31 March. CBSE Class 12 board exams 2027 begin on 16 February with Physics and conclude on 8 April with Legal Studies.</p>
+      <div class="meta"><span class="credit">Photo: Students (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener">Jagran Josh &#8599;</a></div></div>
+    </article><article class="brief">
+      <a class="thumb" href="https://www.ndtv.com/education/school-assembly-headlines-november-12-top-national-international-sports-news-12313562/amp/1" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body"><a class="hl" href="https://www.ndtv.com/education/school-assembly-headlines-november-12-top-national-international-sports-news-12313562/amp/1" target="_blank" rel="noopener"><h4>HEALTH - FICCI warns air pollution costs India $95 billion a year</h4></a>
+      <p>India&#x27;s oldest industry body FICCI has warned that air pollution costs $95 billion annually, NDTV reports, as a former WHO chief scientist described air pollution as a public-health emergency as big as COVID. Delhi&#x27;s air quality remained &#x27;very poor&#x27; at an AQI of 305, with GRAP restrictions in force.</p>
+      <div class="meta"><span class="credit">Photo: Delhi (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.ndtv.com/education/school-assembly-headlines-november-12-top-national-international-sports-news-12313562/amp/1" target="_blank" rel="noopener">NDTV &#8599;</a></div></div>
+    </article><article class="brief">
+      <a class="thumb" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Aerial_view_of_Ramanaidu_Studios.jpg/960px-Aerial_view_of_Ramanaidu_Studios.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body"><a class="hl" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener"><h4>ENTERTAINMENT - Jeremy Latcham named head of DC Studios from 1 December</h4></a>
+      <p>Film producer Jeremy Latcham has been appointed President and Chief Creative Officer of DC Studios, effective 1 December 2026. He previously worked on Iron Man, The Avengers and Spider-Man: Homecoming.</p>
+      <div class="meta"><span class="credit">Photo: Film production (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener">Jagran Josh &#8599;</a></div></div>
+    </article><article class="brief">
+      <a class="thumb" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Carbon_History_and_Flux.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled" alt="" loading="lazy"></a>
+      <div class="body"><a class="hl" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener"><h4>CLIMATE - Fossil fuel emissions show a decline in 2026</h4></a>
+      <p>Fossil fuel emissions have shown a decline in 2026 — a positive climate signal welcomed by environmental scientists worldwide, the morning roundup reports, as COP31 convenes in Antalya.</p>
+      <div class="meta"><span class="credit">Photo: Earth from orbit (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.jagranjosh.com/articles/school-assembly-news-headlines-november-12-2026-kulgam-delhi-yamuna-tesla-cybertruck-and-other-news-1800018980-1" target="_blank" rel="noopener">Jagran Josh &#8599;</a></div></div>
+    </article><article class="brief">
+      <a class="thumb" href="https://indianexpress.com/article/education/today-news-headlines-for-school-assembly-november-12-2026-mi-trade-hardik-pandya-to-pbks-for-rs-18-crore-10956122/" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Student_Village%2C_University_of_East_London%2C_Docklands_Campus_-_geograph.org.uk_-_450566.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled" alt="" loading="lazy"></a>
+      <div class="body"><a class="hl" href="https://indianexpress.com/article/education/today-news-headlines-for-school-assembly-november-12-2026-mi-trade-hardik-pandya-to-pbks-for-rs-18-crore-10956122/" target="_blank" rel="noopener"><h4>EDUCATION ABROAD - 69% of UK business schools report falling international enrolments</h4></a>
+      <p>Nearly 69% of UK business schools have reported a decline in international student enrolments for the 2026-27 academic year, almost double the 35% recorded last year, according to the Chartered Association of Business Schools&#x27; Annual Membership Survey 2026.</p>
+      <div class="meta"><span class="credit">Photo: University campus (scene photo) - Wikimedia Commons</span><a class="read" href="https://indianexpress.com/article/education/today-news-headlines-for-school-assembly-november-12-2026-mi-trade-hardik-pandya-to-pbks-for-rs-18-crore-10956122/" target="_blank" rel="noopener">The Indian Express &#8599;</a></div></div>
+    </article></div>
+  </section>
+</div>
+<footer>
+  <div class="brand">THE MORNING GLOBE</div>
+  <p>Every story sourced. Every photo real. Back tomorrow at 6:30 AM.</p>
+  <p>Follow the paper: <a href="https://www.instagram.com/themorningglobe" target="_blank" rel="noopener">@themorningglobe</a> · From the house of Deesha Global: <a href="https://www.instagram.com/deeshaglobal" target="_blank" rel="noopener">@deeshaglobal</a></p>
+  <p class="small">The Morning Globe — web edition, Thursday, 12 November 2026. Stories link to their original publishers; photos via Wikimedia Commons unless credited otherwise.</p>
+</footer>
+<div id="followModal" role="dialog" aria-modal="true" aria-labelledby="fmTitle">
+  <div class="modal-card">
+    <button class="modal-x" id="fmClose" aria-label="Close">&times;</button>
+    <div class="globe">🌅</div>
+    <h3 id="fmTitle">Enjoying the paper?</h3>
+    <p>The Morning Globe comes from the team at <b>Deesha Global</b> — follow <b>@deeshaglobal</b> for honest study, work and move-abroad guidance, and this paper in your feed every morning.</p>
+    <a class="btn-follow" href="https://www.instagram.com/deeshaglobal" target="_blank" rel="noopener">Follow @deeshaglobal</a>
+    <button class="btn-continue" id="fmContinue">Continue reading</button>
+  </div>
+</div>
+<script>
+(function () {
+  var KEY = 'tmg_follow_prompt_seen';
+  var modal = document.getElementById('followModal');
+  function dismiss() {
+    modal.classList.remove('open');
+    try { sessionStorage.setItem(KEY, '1'); } catch (e) {}
+  }
+  document.getElementById('fmContinue').addEventListener('click', dismiss);
+  document.getElementById('fmClose').addEventListener('click', dismiss);
+  modal.addEventListener('click', function (e) { if (e.target === modal) dismiss(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') dismiss(); });
+  var already = false;
+  try { already = !!sessionStorage.getItem(KEY); } catch (e) {}
+  if (!already) {
+    setTimeout(function () {
+      modal.classList.add('open');
+      try { sessionStorage.setItem(KEY, '1'); } catch (e) {}
+    }, 60000);
+  }
+})();
+</script>
+</body>
+</html>
+
+<script>
+(function () {
+  var KEY = 'tmg_follow_prompt_seen';
+  var modal = document.getElementById('followModal');
+  function dismiss() {
+    modal.classList.remove('open');
+    try { sessionStorage.setItem(KEY, '1'); } catch (e) {}
+  }
+  document.getElementById('fmContinue').addEventListener('click', dismiss);
+  document.getElementById('fmClose').addEventListener('click', dismiss);
+  modal.addEventListener('click', function (e) { if (e.target === modal) dismiss(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') dismiss(); });
+  var already = false;
+  try { already = !!sessionStorage.getItem(KEY); } catch (e) {}
+  if (!already) {
+    setTimeout(function () {
+      modal.classList.add('open');
+      try { sessionStorage.setItem(KEY, '1'); } catch (e) {}
+    }, 60000);
+  }
+})();
+</script>
+</body>
+</html>
