@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pathway Check | Deesha Global — Check the immigration route you actually qualify for</title><meta name="description" content="Free Pathway Check by Deesha Global: answer about 10 questions and see which countries are worth considering for your profile, and which immigration routes you may actually qualify for — tested against official rules, verified 2026-11-12. Guidance only, not immigration advice.">
+<link rel="canonical" href="https://www.deesha-global.com/pathway-check/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Deesha Global">
+<meta property="og:title" content="Pathway Check | Deesha Global">
+<meta property="og:description" content="Don't just dream of a country. Check the route you actually qualify for. Cross-country immigration pathway check for Indian professionals, from official sources.">
+<meta property="og:url" content="https://www.deesha-global.com/pathway-check/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Pathway Check | Deesha Global">
+<meta name="twitter:description" content="Don't just dream of a country. Check the route you actually qualify for.">
+<link rel="stylesheet" href="../assets/css/design.css">
+<style>
+.pc-wrap{max-width:880px;margin:0 auto}
+.pc-form{display:grid;grid-template-columns:1fr 1fr;gap:18px 22px;margin-top:26px}
+.pc-field label{display:block;font-weight:700;font-size:14px;margin-bottom:7px;color:var(--ink)}
+.pc-field select{width:100%;padding:13px 12px;border:1.5px solid var(--line);border-radius:6px;font-size:15.5px;background:#fff;color:var(--ink)}
+.pc-field select:focus{outline:2px solid var(--gold);outline-offset:1px}
+.pc-form .pc-submit{grid-column:1/-1;text-align:center;margin-top:6px}
+.pc-error{display:none;background:#fdecec;border:1px solid #e5a3a3;color:#7a1f1f;border-radius:6px;padding:12px 16px;margin-top:16px}
+.pc-disclaimer{background:#fff;border:1.5px solid var(--gold);border-radius:8px;padding:18px 22px;margin-top:26px}
+.pc-disclaimer p{margin:0;font-size:14.5px;color:var(--muted)}
+.pc-layer{margin-top:44px}
+.pc-country{display:flex;gap:16px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:18px 20px;margin-bottom:14px}
+.pc-rank{flex:0 0 auto;width:40px;height:40px;border-radius:50%;background:var(--navy);color:var(--gold-bright);font-family:var(--serif);font-weight:700;font-size:19px;display:flex;align-items:center;justify-content:center}
+.pc-country h3{margin:0 0 5px;font-size:20px}
+.pc-country p{margin:0 0 5px;font-size:15px}
+.pc-cnote{color:var(--muted);font-size:13.5px!important}
+.pc-counts{color:var(--teal);font-weight:700;font-size:13px!important;text-transform:uppercase;letter-spacing:.04em}
+.pc-country-block{margin-top:34px}
+.pc-country-block>h3{font-size:23px;border-bottom:3px solid var(--gold);padding-bottom:8px}
+.pc-card{background:#fff;border:1px solid var(--line);border-left:6px solid var(--muted);border-radius:10px;padding:20px 22px;margin:16px 0}
+.pc-card-likely{border-left-color:#1e7d4f}
+.pc-card-borderline{border-left-color:var(--gold)}
+.pc-card-notyet{border-left-color:#b03a2e}
+.pc-card-offer{border-left-color:var(--teal)}
+.pc-card-unavailable{opacity:.75;border-left-color:#9aa5b1}
+.pc-card header h4{display:inline;font-size:18.5px;margin:0}
+.pc-who{color:var(--muted);font-size:14.5px;margin:6px 0 0}
+.pc-badge{display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:.05em;padding:4px 10px;border-radius:999px;margin:0 10px 8px 0;vertical-align:middle}
+.v-likely{background:#e2f3e8;color:#14532d}
+.v-borderline{background:#fdf3d7;color:#7a5b00}
+.v-notyet{background:#fde8e5;color:#7c241a}
+.v-offer{background:#e0efec;color:#0f3d36}
+.v-unavailable{background:#e8ebee;color:#44505c}
+.pc-gap{background:#fdf8ec;border:1px solid var(--gold);border-radius:8px;padding:12px 16px;margin:14px 0;font-size:14.5px}
+.pc-gap-hard{background:#fdf0ee;border-color:#e0a49c}
+.pc-gap ul{margin:6px 0 0;padding-left:19px}
+.pc-note{font-size:14px;color:var(--muted);margin:10px 0}
+.pc-facts{display:grid;grid-template-columns:1fr 1fr;gap:14px 22px;margin-top:12px}
+.pc-facts b{font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:var(--teal)}
+.pc-facts p{margin:4px 0 0;font-size:14.5px}
+.pc-est{background:#eef4ff;border:1px solid #b9c9e8;border-radius:8px;padding:12px 16px;margin-top:14px;font-size:14.5px}
+.pc-steps{margin-top:14px;font-size:14.5px}
+.pc-steps ol{margin:6px 0 0;padding-left:20px}
+.pc-sources{font-size:13px;color:var(--muted);margin-top:14px}
+.pc-sources a{color:var(--teal)}
+.pc-gate{background:var(--navy);color:#f5f8ff;border-radius:12px;padding:30px 30px 26px;margin-top:48px}
+.pc-gate h2{color:#fff;margin-top:0}
+.pc-gate p{color:#cbd5e1}
+.pc-gate-form{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:14px}
+.pc-gate-form input[type=email]{flex:1 1 260px;padding:14px;border-radius:6px;border:1.5px solid rgba(255,255,255,.35);font-size:15.5px}
+.pc-gate-consent{display:flex;gap:9px;align-items:flex-start;font-size:13.5px;color:#cbd5e1;margin-top:12px}
+.pc-gate-msg{font-size:14px;margin-top:12px;color:var(--gold-bright)}
+.pc-report{margin-top:40px}
+@media (max-width:680px){.pc-form{grid-template-columns:1fr}.pc-facts{grid-template-columns:1fr}.pc-country{flex-direction:column}}
+@media print{
+  .site-header,.footer,.hero,.pc-form-sec,.pc-gate,#pc-results,.chatbot-launcher,.chatbot-panel{display:none!important}
+  .pc-report{display:block!important}
+  body{background:#fff}
+}
+</style>
+</head><body>
+<div class="header-unit"><header class="site-header"><div class="wrap nav">
+<a class="brand" href="../index.html"><img src="../assets/images/brand/logo-header.jpg" alt="Deesha Global"><span class="brand-text"><span class="brand-name">DEESHA GLOBAL</span><span class="brand-sub">People · Education · Technology</span></span></a>
+<button class="nav-toggle" aria-expanded="false" aria-label="Open menu"><span aria-hidden="true" class="menu-icon">☰</span><span>Menu</span></button>
+<nav class="nav-links"><a href="../index.html">Home</a><a href="../about.html">About</a><a href="../services.html">Services</a><a href="../how-we-work.html">How we work</a><a href="../research.html">Research</a><a href="../admissions-fact-check.html">Admission Fact Check</a><a href="index.html" aria-current="page">Pathway Check</a><a href="../trust.html">Trust</a><a class="btn btn-dark" href="../contact.html" style="padding:10px 18px">Get started</a></nav>
+</div></header></div>
+
+<section class="hero hero-navy"><div class="wrap pc-wrap">
+<p class="eyebrow">Free tool · Pathway Check</p>
+<h1 style="margin:12px 0 14px">Pathway Check</h1>
+<p class="lede" style="font-size:21px">Don't just dream of a country. Check the route you actually qualify for.</p>
+<p style="color:#cbd5e1;max-width:700px">A country can look perfect and still have no route in for you — while a country you never considered may have one you already qualify for. Pathway Check separates the two. <b style="color:#fff">Layer 1</b> ranks the countries worth considering for your profile. <b style="color:#fff">Layer 2</b> then tests 61 real immigration routes across 8 countries against your answers, one by one, and tells you plainly: likely eligible, borderline, not eligible yet — or honest about the fact that the route starts with an employer offer.</p>
+<p style="color:#cbd5e1">Built for Indian professionals first. Every rule, fee and threshold comes from official government sources — <b style="color:#fff">rules verified 2026-11-12</b> — and is re-verified monthly.</p>
+</div></section>
+
+<section class="section pc-form-sec" style="padding-top:56px"><div class="wrap pc-wrap">
+<h2>Tell us about your profile</h2>
+<p>About 10 questions, two minutes. Nothing is stored on this page — your answers run entirely in your browser against the verified rule set.</p>
+<form id="pc-form" class="pc-form">
+  <div class="pc-field"><label for="pc-age">Your age</label>
+    <select id="pc-age" required>
+      <option value="18-24">18–24</option><option value="25-29" selected>25–29</option><option value="30-34">30–34</option><option value="35-39">35–39</option><option value="40-44">40–44</option><option value="45-49">45–49</option><option value="50-54">50–54</option><option value="55+">55 or over</option>
+    </select></div>
+  <div class="pc-field"><label for="pc-education">Highest education</label>
+    <select id="pc-education" required>
+      <option value="phd">PhD</option><option value="masters">Master's degree</option><option value="bachelors" selected>Bachelor's degree</option><option value="diploma">Diploma / vocational qualification</option><option value="school">School education</option>
+    </select></div>
+  <div class="pc-field"><label for="pc-field">Occupation field</label>
+    <select id="pc-field" required>
+      <option value="it" selected>IT &amp; software</option><option value="finance">Banking, finance &amp; accounting</option><option value="healthcare">Healthcare</option><option value="engineering">Engineering (non-IT)</option><option value="business">Business, management &amp; other professional</option><option value="trades">Skilled trades (electrician, plumber, chef…)</option><option value="arts-research">Academia, research, arts &amp; culture</option><option value="other">Other</option>
+    </select></div>
+  <div class="pc-field"><label for="pc-experience">Years of skilled work experience</label>
+    <select id="pc-experience" required>
+      <option value="0-1">0–1 years</option><option value="2-4">2–4 years</option><option value="5-9" selected>5–9 years</option><option value="10-14">10–14 years</option><option value="15+">15+ years</option>
+    </select></div>
+  <div class="pc-field"><label for="pc-english">English test status</label>
+    <select id="pc-english" required>
+      <option value="none">Not taken yet</option><option value="below6">Taken — around IELTS 5.0–5.5</option><option value="ielts6">Taken — around IELTS 6.0–6.5</option><option value="ielts7" selected>Taken — around IELTS 7.0–7.5</option><option value="ielts8">Taken — IELTS 8.0 or above</option><option value="native">Native-level English / exempt</option>
+    </select></div>
+  <div class="pc-field"><label for="pc-income">Current annual income</label>
+    <select id="pc-income" required>
+      <option value="lt25">Under ₹25 lakh</option><option value="25-50">₹25–50 lakh</option><option value="50-1cr" selected>₹50 lakh – ₹1 crore</option><option value="1-2cr">₹1–2 crore</option><option value="gt2cr">Over ₹2 crore</option>
+    </select></div>
+  <div class="pc-field"><label for="pc-funds">Funds you could show for migration &amp; settlement</label>
+    <select id="pc-funds" required>
+      <option value="lt10">Under ₹10 lakh</option><option value="10-25">₹10–25 lakh</option><option value="25-50" selected>₹25–50 lakh</option><option value="50-1cr">₹50 lakh – ₹1 crore</option><option value="1-3cr">₹1–3 crore</option><option value="gt3cr">Over ₹3 crore</option>
+    </select></div>
+  <div class="pc-field"><label for="pc-offer">Do you have a job offer in a target country?</label>
+    <select id="pc-offer" required>
+      <option value="no" selected>No</option><option value="yes">Yes</option>
+    </select></div>
+  <div class="pc-field"><label for="pc-family">Who would move with you?</label>
+    <select id="pc-family" required>
+      <option value="single" selected>Just me</option><option value="spouse">Spouse / partner</option><option value="spouse_children">Spouse and children</option><option value="parents">Family, and my parents hope to join later</option>
+    </select></div>
+  <div class="pc-field"><label for="pc-residence">Where do you live now?</label>
+    <select id="pc-residence" required>
+      <option value="India" selected>India</option><option value="Singapore">Singapore</option><option value="United Arab Emirates">UAE</option><option value="Canada">Canada</option><option value="Australia">Australia</option><option value="New Zealand">New Zealand</option><option value="Germany">Germany</option><option value="United Kingdom">United Kingdom</option><option value="United States">United States</option><option value="Other">Another country</option>
+    </select></div>
+  <div class="pc-field"><label for="pc-goal">Your goal</label>
+    <select id="pc-goal" required>
+      <option value="settle" selected>Settle permanently (PR / long-term)</option><option value="few-years">Work abroad for a few years</option><option value="either">Either — show me everything</option>
+    </select></div>
+  <div class="pc-submit"><button type="submit" class="btn btn-gold">Check my pathways →</button></div>
+</form>
+<div id="pc-error" class="pc-error"></div>
+<div class="pc-disclaimer"><p><b>Please read:</b> Pathway Check is general guidance, not immigration advice. It tests your answers against published official rules as verified on 2026-11-12; it cannot assess endorsements, skills assessments, employer decisions or discretionary judgements, and it never guarantees an outcome. Always confirm your own case on the official source linked on each route card, or with a licensed immigration adviser for your destination.</p></div>
+</div></section>
+
+<section id="pc-results" class="section" style="display:none;padding-top:20px"><div class="wrap pc-wrap">
+<div class="pc-layer"><h2>Layer 1 — Countries worth considering for your profile</h2>
+<p>Ranked by how your answers performed across every route in that country — not by popularity.</p>
+<div id="pc-layer1"></div></div>
+<div class="pc-layer"><h2>Layer 2 — Route-by-route verdicts</h2>
+<p>Every route tested against your answers. <b>Borderline</b> names the exact gap. <b>Not eligible yet</b> names what must change. <b>Needs an employer offer</b> means the country may suit you — but the route only opens once an employer says yes.</p>
+<div id="pc-layer2"></div></div>
+</div></section>
+
+<section id="pc-gate" style="display:none"><div class="wrap pc-wrap">
+<div class="pc-gate">
+<h2>Your full detailed report</h2>
+<p>The verdicts above are the headlines. The full report carries every route card in full — family accompaniment for spouse, children <i>and</i> parents, obstacles and risks, the practical next steps in order, and the official source links — in a printable format. Enter your email to unlock it; the Deesha team also receives your request at info@deesha-global.com so a human can follow up if you want one.</p>
+<form id="pc-gate-form" class="pc-gate-form">
+<input type="email" id="pc-email" placeholder="Your email address" autocomplete="email" required>
+<button type="submit" class="btn btn-gold">Unlock my report →</button>
+</form>
+<label class="pc-gate-consent"><input type="checkbox" id="pc-consent"> <span>I agree to Deesha Global emailing me my Pathway Check report and following up about it. No spam, no selling my data.</span></label>
+<div id="pc-gate-msg" class="pc-gate-msg"></div>
+</div>
+<div id="pc-report-lock" class="pc-disclaimer" style="text-align:center"><p>🔒 The detailed report unlocks here once you enter your email above.</p></div>
+<div id="pc-report" class="pc-report" style="display:none">
+<h2>Pathway Check — your detailed report</h2>
+<p>Generated from your answers on this page, against rules verified 2026-11-12 from official sources. Guidance only, not immigration advice. <button type="button" id="pc-print" class="btn btn-dark" style="padding:9px 18px">Print / save as PDF</button></p>
+<div id="pc-report-cards"></div>
+</div>
+</div></section>
+
+<footer class="footer"><div class="wrap"><div class="footer-grid">
+<div><div style="font-family:Georgia,serif;font-weight:700;font-size:19px">DEESHA GLOBAL PTE. LTD.</div><p class="small">People · Education · Technology<br>Founder &amp; Director: Shashwati Guha<br>Email: <a href="mailto:info@deesha-global.com" style="display:inline">info@deesha-global.com</a></p><p class="small"><a href="https://youtube.com/@deeshaglobal" target="_blank" rel="noopener">YouTube</a> · <a href="https://www.linkedin.com/company/deesha-global-pte-ltd/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://instagram.com/deeshaglobal" target="_blank" rel="noopener">Instagram</a></p></div>
+<div><h3>Explore</h3><a href="../services.html">Our services</a><a href="../how-we-work.html">How we work</a><a href="../trust.html">Trust &amp; standards</a><a href="../research.html">Research &amp; insights</a></div>
+<div><h3>Services</h3><a href="../services/launchpad.html">Co-Founder Launchpad</a><a href="../services/education.html">Global Education Gateway</a><a href="../services/career.html">Career Compass</a><a href="../services/tutorhub.html">TutorHub</a><a href="../services/ai-mentor.html">AI Mentor Lab</a></div>
+<div><h3>Legal</h3><a href="../disclaimer.html">Disclaimer</a><a href="../privacy-policy.html">Privacy policy</a><a href="../terms-of-use.html">Terms of use</a><a href="../investment.html">Pre-seed investment</a></div>
+</div><div class="footer-bottom"><span class="small">© 2026 Deesha Global Pte. Ltd. · UEN: 202554716D · SSIC 70201 · Singapore</span><span class="small">www.deesha-global.com</span></div></div></footer>
+<script src="../assets/js/main.js"></script>
+<script src="pathway-check.js"></script>
+<script src="../assets/js/chatbot.js" defer></script>
+</body></html>

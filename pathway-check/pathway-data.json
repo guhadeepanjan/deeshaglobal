@@ -1,0 +1,1826 @@
+{
+  "dataset": "Deesha Global Pathway Check — immigration pathways dataset",
+  "version": "v1",
+  "verified_date": "2026-11-12",
+  "audience": "Indian skilled professionals first",
+  "disclaimer": "Guidance only, not immigration advice. Official sources only. Figures marked UNVERIFIED were not confirmed on an official page during the 2026-11-12 research pass and are excluded from checker fields.",
+  "countries": [
+    {
+      "country": "Canada",
+      "sources_note": "IRCC / canada.ca, verified 2026-11-12",
+      "routes": [
+        {
+          "name": "Federal Skilled Worker Program (FSWP) — Express Entry",
+          "category": "points",
+          "who_for": "Skilled professionals with foreign work experience who want PR without a Canadian job offer.",
+          "requirements": "67-point selection grid (language, education, experience, age, arranged employment, adaptability) to enter the Express Entry pool; then ranked by CRS. Minimum language CLB 7 in all abilities. Skilled work experience in a TEER 0–3 occupation. Educational credential assessment (ECA) for foreign degrees. Proof of funds required unless exempt.",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": false,
+            "points_system": "Two-stage: 67-point FSWP eligibility grid, then CRS ranking in Express Entry pool. No fixed CRS pass mark — draws vary (single official example verified: Healthcare category round 4 Sep 2026, lowest invited CRS 475).",
+            "min_language": "CLB 7 (all abilities)",
+            "funds_or_salary_threshold": "Proof of funds: CAD 15,263 for 1 person (updated 7 Jul 2025); scales with family size",
+            "min_education": "Secondary minimum; foreign credentials need ECA",
+            "min_experience_years": 1,
+            "occupation_list_required": "TEER 0, 1, 2 or 3 occupation",
+            "notes": "From 3 Nov 2026 a Canadian job offer no longer requires an LMIA for Express Entry purposes, but a job offer is NOT required for this route."
+          },
+          "fees": "CAD 1,590 including Right of Permanent Residence Fee (verified 2026-11-12)",
+          "family": {
+            "spouse": "Yes — spouse/partner and dependent children are included in the PR application",
+            "spouse_work": "Spouse becomes a permanent resident with full work rights",
+            "children": "Yes, as dependants in the application",
+            "parents": "No — parents are never dependants on economic routes. Separate Parent and Grandparent Program is invitation-only (closed to new intake 9 Oct 2025 at research date); Super Visa allows visits up to 5 years per stay, visitor status only."
+          },
+          "pr_path": "Direct permanent residence. PR retention: 730 days physically in Canada in each 5-year period. Citizenship: 1,095 days in 5 years.",
+          "obstacles": "No fixed CRS cut-off — competitiveness depends on the draw; general draws have run well above most applicants' scores. Category-based rounds favour specific sectors (e.g. healthcare, French speakers).",
+          "next_steps": ["Get an ECA for your highest qualification", "Take an approved English/French test and target CLB 9+ for CRS competitiveness", "Check your CRS with the official IRCC calculator", "Create an Express Entry profile if you meet the 67-point grid", "Prepare proof of funds at the current table value"],
+          "sources": ["https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "Canadian Experience Class (CEC) — Express Entry",
+          "category": "points",
+          "who_for": "People who already have at least 1 year of skilled work experience inside Canada.",
+          "requirements": "At least 1 year of skilled work experience in Canada (TEER 0–3) in the 3 years before applying. Language CLB 7 for TEER 0/1 jobs, CLB 5 for TEER 2/3 jobs. No proof of funds required. No education minimum (points for education still help CRS).",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": false,
+            "points_system": "Express Entry CRS ranking after eligibility",
+            "min_language": "CLB 7 (TEER 0/1) or CLB 5 (TEER 2/3)",
+            "funds_or_salary_threshold": null,
+            "min_education": null,
+            "min_experience_years": 1,
+            "occupation_list_required": "TEER 0, 1, 2 or 3; experience must be in Canada",
+            "notes": "Requires prior Canadian work experience — not open to applicants who have never worked in Canada."
+          },
+          "fees": "UNVERIFIED in v1 research pass — check IRCC fee list before publishing",
+          "family": {
+            "spouse": "Yes, included in PR application with full work rights as PR",
+            "spouse_work": "Yes, as permanent resident",
+            "children": "Yes, as dependants",
+            "parents": "No — separate PGP (invitation-only, closed to new intake 9 Oct 2025) or Super Visa (visitor only)."
+          },
+          "pr_path": "Direct permanent residence. PR retention 730 days/5 years; citizenship 1,095 days/5 years.",
+          "obstacles": "Only useful after a period of authorised Canadian work (e.g. PGWP or employer work permit) — not a first-entry route from India.",
+          "next_steps": ["Confirm your Canadian experience is in a TEER 0–3 occupation", "Take the language test at the right CLB level for your TEER", "Enter the Express Entry pool under CEC", "Keep Canadian employment records and pay slips as evidence"],
+          "sources": ["https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "Federal Skilled Trades Program (FSTP) — Express Entry",
+          "category": "points",
+          "who_for": "Skilled tradespeople (electricians, plumbers, chefs, etc.) with a Canadian job offer or Canadian trade certificate.",
+          "requirements": "Skilled trades experience in an eligible trade group. Language CLB 5 for speaking/listening, CLB 4 for reading/writing. Requires EITHER a valid job offer of at least 1 year from a Canadian employer OR a certificate of qualification in the trade issued by a Canadian provincial/territorial authority. Proof of funds applies unless exempt.",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": true,
+            "points_system": "Express Entry CRS ranking after eligibility",
+            "min_language": "CLB 5 speaking/listening; CLB 4 reading/writing",
+            "funds_or_salary_threshold": "Proof of funds applies (same Express Entry table; 1 person CAD 15,263, updated 7 Jul 2025)",
+            "min_education": null,
+            "min_experience_years": 2,
+            "occupation_list_required": "Eligible skilled trades groups only",
+            "notes": "needs_job_offer is true UNLESS the applicant holds a Canadian certificate of qualification in the trade instead."
+          },
+          "fees": "UNVERIFIED in v1 research pass — check IRCC fee list before publishing",
+          "family": {
+            "spouse": "Yes, included in PR application",
+            "spouse_work": "Yes, as permanent resident",
+            "children": "Yes, as dependants",
+            "parents": "No — separate PGP (invitation-only, closed to new intake 9 Oct 2025) or Super Visa (visitor only)."
+          },
+          "pr_path": "Direct permanent residence. PR retention 730 days/5 years; citizenship 1,095 days/5 years.",
+          "obstacles": "The Canadian certificate of qualification is hard to obtain from overseas; most overseas applicants realistically need the 1-year Canadian job offer first.",
+          "next_steps": ["Check your trade is in an eligible FSTP group", "Decide between the job-offer route and a provincial certificate of qualification", "Take the language test (CLB 5/4 thresholds)", "Enter the Express Entry pool under FSTP"],
+          "sources": ["https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "Provincial Nominee Program (PNP)",
+          "category": "points",
+          "who_for": "Professionals whose skills match a specific province's labour needs; many streams run through Express Entry.",
+          "requirements": "Each province/territory and stream has its own criteria (occupation, job offer, language, funds vary). An Express Entry-aligned nomination adds 600 CRS points, which in practice guarantees an invitation. Non-EE streams apply on paper/directly to IRCC. Because criteria are province- and stream-specific, generic figures are UNVERIFIED and intentionally not coded.",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": null,
+            "points_system": "Varies by province/stream; EE-aligned nomination = +600 CRS",
+            "min_language": "Varies by stream — UNVERIFIED generically",
+            "funds_or_salary_threshold": "Varies by stream — UNVERIFIED generically",
+            "min_education": "Varies by stream",
+            "min_experience_years": null,
+            "occupation_list_required": "Varies by province/stream",
+            "notes": "Checker must branch to the specific province/stream before testing any numeric criterion."
+          },
+          "fees": "UNVERIFIED generically — provinces charge their own nomination fees on top of federal fees",
+          "family": {
+            "spouse": "Yes, included in PR application",
+            "spouse_work": "Yes, as permanent resident",
+            "children": "Yes, as dependants",
+            "parents": "No — separate PGP (invitation-only, closed to new intake 9 Oct 2025) or Super Visa (visitor only)."
+          },
+          "pr_path": "Permanent residence via nomination + federal approval. Must genuinely intend to live in the nominating province.",
+          "obstacles": "Streams open and close quickly; many require a provincial job offer or prior provincial ties. Choosing a province is a real commitment, not a back door to another province.",
+          "next_steps": ["Pick provinces where your occupation is in demand", "Check whether the stream is Express Entry-aligned", "Review the stream guide for job-offer and language rules before applying", "Apply to the province, then complete the federal stage after nomination"],
+          "sources": ["https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/provincial-nominees.html"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "Atlantic Immigration Program (AIP)",
+          "category": "employer-sponsored",
+          "who_for": "Skilled workers and international graduates with a job offer from a designated employer in Atlantic Canada (NB, NS, PEI, NL).",
+          "requirements": "Full-time, non-seasonal job offer from a designated Atlantic employer in a TEER 0–4 occupation. Language CLB 5 for TEER 0–3, CLB 4 for TEER 4. Work experience or an Atlantic international-graduate exemption. Settlement plan and provincial endorsement required. Funds set by a formula (12.5% of the urban LICO for the community size) — the exact table value is UNVERIFIED and not coded.",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": true,
+            "points_system": null,
+            "min_language": "CLB 5 (TEER 0–3) or CLB 4 (TEER 4)",
+            "funds_or_salary_threshold": "12.5% of urban LICO by community size — exact table UNVERIFIED, do not hard-code",
+            "min_education": "Canadian or ECA-assessed credential at the level the stream requires",
+            "min_experience_years": 1,
+            "occupation_list_required": "TEER 0–4 with a designated Atlantic employer",
+            "notes": "Employer must be designated by the Atlantic province before the offer counts."
+          },
+          "fees": "UNVERIFIED in v1 research pass — check IRCC fee list before publishing",
+          "family": {
+            "spouse": "Yes, included in PR application",
+            "spouse_work": "Yes, as permanent resident",
+            "children": "Yes, as dependants",
+            "parents": "No — separate PGP (invitation-only, closed to new intake 9 Oct 2025) or Super Visa (visitor only)."
+          },
+          "pr_path": "Direct permanent residence with provincial endorsement.",
+          "obstacles": "Depends entirely on finding a designated employer in a smaller regional labour market; fewer openings than national programs.",
+          "next_steps": ["Search the designated-employer lists for the four Atlantic provinces", "Secure a qualifying full-time offer", "Complete a settlement plan with a designated settlement service provider", "Get provincial endorsement, then apply to IRCC for PR"],
+          "sources": ["https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/atlantic-immigration.html"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "Rural Community Immigration Pilot (RCIP)",
+          "category": "employer-sponsored",
+          "who_for": "Skilled workers with a job offer from a designated employer in one of the participating rural communities.",
+          "requirements": "Job offer from a designated employer in a participating community. Language by TEER: CLB 6 (TEER 0/1), CLB 5 (TEER 2/3), CLB 4 (TEER 4/5). Community recommendation required. Funds set at 50% of the rural LICO — exact table UNVERIFIED and not coded. IMPORTANT: this pilot closes 1 Jan 2027; a successor program has been announced.",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": true,
+            "points_system": null,
+            "min_language": "CLB 6 (TEER 0/1), CLB 5 (TEER 2/3), CLB 4 (TEER 4/5)",
+            "funds_or_salary_threshold": "50% of rural LICO — exact table UNVERIFIED, do not hard-code",
+            "min_education": "Canadian or ECA-assessed credential",
+            "min_experience_years": 1,
+            "occupation_list_required": "Priority occupations set by each participating community",
+            "notes": "Program closes 1 Jan 2027 — treat as time-critical and re-verify before presenting as live."
+          },
+          "fees": "UNVERIFIED in v1 research pass — check IRCC fee list before publishing",
+          "family": {
+            "spouse": "Yes, included in PR application",
+            "spouse_work": "Yes, as permanent resident",
+            "children": "Yes, as dependants",
+            "parents": "No — separate PGP (invitation-only, closed to new intake 9 Oct 2025) or Super Visa (visitor only)."
+          },
+          "pr_path": "Direct permanent residence with community recommendation.",
+          "obstacles": "Closing 1 Jan 2027; small number of communities and designated employers; must genuinely intend to live in the community.",
+          "next_steps": ["Check the participating communities and their priority occupations", "Apply to designated employers in those communities", "Get the community recommendation", "Apply to IRCC before the pilot closes"],
+          "sources": ["https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/rural-community-immigration-pilot.html"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "Start-up Visa Program",
+          "category": "investor",
+          "who_for": "Entrepreneurs with an innovative business backed by a designated Canadian organisation.",
+          "requirements": "STATUS: PAUSED since 30 Jun 2026 — do not present as a live route. When open: support letter from a designated venture capital fund, angel investor group or business incubator; language CLB 5; settlement funds; applicant must hold at least 10% of voting rights and, with the designated organisation, over 50% jointly.",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": false,
+            "points_system": null,
+            "min_language": "CLB 5 (when program is open)",
+            "funds_or_salary_threshold": "Settlement funds required; designated-organisation support is the real gate",
+            "min_education": null,
+            "min_experience_years": null,
+            "occupation_list_required": null,
+            "notes": "PAUSED 30 Jun 2026 — checker must return 'not currently available'."
+          },
+          "fees": "UNVERIFIED in v1 research pass",
+          "family": {
+            "spouse": "Included in PR application when program operates",
+            "spouse_work": "As permanent resident",
+            "children": "Yes, as dependants",
+            "parents": "No — separate PGP or Super Visa."
+          },
+          "pr_path": "Direct permanent residence when operating.",
+          "obstacles": "Program paused; historically very long processing and peer-review of designated-organisation deals.",
+          "next_steps": ["Do not plan around this route while paused", "Monitor IRCC for the successor entrepreneur program", "Consider PNP entrepreneur streams in the meantime"],
+          "sources": ["https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/start-visa.html"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "Self-Employed Persons Program",
+          "category": "other",
+          "who_for": "People with self-employment experience in cultural activities or athletics intending to be self-employed in Canada.",
+          "requirements": "STATUS: PAUSED indefinitely since 30 Apr 2024 — do not present as a live route. When open it required relevant experience in cultural activities or athletics and a points-based selection assessment.",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": false,
+            "points_system": "Selection points grid applies when program is open",
+            "min_language": null,
+            "funds_or_salary_threshold": null,
+            "min_education": null,
+            "min_experience_years": 2,
+            "occupation_list_required": "Cultural activities or athletics occupations only",
+            "notes": "PAUSED indefinitely since 30 Apr 2024 — checker must return 'not currently available'."
+          },
+          "fees": "UNVERIFIED in v1 research pass",
+          "family": {
+            "spouse": "Included in PR application when program operates",
+            "spouse_work": "As permanent resident",
+            "children": "Yes, as dependants",
+            "parents": "No — separate PGP or Super Visa."
+          },
+          "pr_path": "Direct permanent residence when operating.",
+          "obstacles": "Paused indefinitely with no announced reopening; historically multi-year processing.",
+          "next_steps": ["Do not plan around this route while paused", "Consider Express Entry or PNP instead"],
+          "sources": ["https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/self-employed.html"],
+          "verified": "2026-11-12"
+        }
+      ]
+    },
+    {
+      "country": "Australia",
+      "sources_note": "Department of Home Affairs / homeaffairs.gov.au, verified 2026-11-12. Spouse/child add-on visa charges are UNVERIFIED for all subclasses and excluded from checker fields.",
+      "routes": [
+        {
+          "name": "Skilled Independent visa (subclass 189)",
+          "category": "points",
+          "who_for": "Skilled professionals in an occupation on the skilled occupation list, invited without any sponsor or employer.",
+          "requirements": "Points-tested. Must be under 45 at invitation. Competent English minimum (IELTS 6 in each component or equivalent). Points floor is 65, but realistic invited scores in the 15 Oct 2026 invitation round were 65–100 depending on occupation — 65 rarely suffices for popular occupations. Positive skills assessment in the nominated occupation required. Invitation via SkillSelect EOI.",
+          "checker": {
+            "age_max": 45,
+            "needs_job_offer": false,
+            "points_system": "Points test: 65-point legal floor; realistic invitations 65–100 by occupation (15 Oct 2026 round)",
+            "min_language": "Competent English — IELTS 6.0 in each component or equivalent",
+            "funds_or_salary_threshold": null,
+            "min_education": "Qualification assessed as comparable by the occupation's assessing authority",
+            "min_experience_years": null,
+            "occupation_list_required": "Must be on the skilled occupation list with a positive skills assessment",
+            "notes": "Age test applies at the date of invitation, not EOI."
+          },
+          "fees": "From AUD 6,135 (main applicant)",
+          "family": {
+            "spouse": "Yes — partner and children can be included in the application",
+            "spouse_work": "Partner becomes a permanent resident with full work rights",
+            "children": "Yes, included as dependants",
+            "parents": "No — parents can never be included; only via the separate Parent visa queue."
+          },
+          "pr_path": "Direct permanent residence. Citizenship generally after 4 years' residence including the last 12 months as a permanent resident.",
+          "obstacles": "Invitation rounds are competitive and occupation-dependent; popular occupations (ICT, accounting, engineering) need high points (often 85+). Skills assessment processing adds months before the EOI can compete.",
+          "next_steps": ["Check your occupation is on the skilled list and identify its assessing authority", "Complete the skills assessment", "Take an English test — aim for Superior English (IELTS 8) for maximum points", "Submit an EOI in SkillSelect", "Lodge the visa application within 60 days of invitation"],
+          "sources": ["https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "Skilled Nominated visa (subclass 190)",
+          "category": "points",
+          "who_for": "Skilled professionals nominated by an Australian state or territory government.",
+          "requirements": "Points-tested; under 45 at invitation; Competent English (IELTS 6 each). 65-point floor including the nomination points (the exact '+5 for nomination' figure is UNVERIFIED in the v1 pass and not coded). Each state runs its own occupation list and criteria, and some require a job offer or prior state residence/study.",
+          "checker": {
+            "age_max": 45,
+            "needs_job_offer": false,
+            "points_system": "Points test: 65-point floor including state nomination points (nomination value UNVERIFIED — do not hard-code)",
+            "min_language": "Competent English — IELTS 6.0 in each component or equivalent",
+            "funds_or_salary_threshold": null,
+            "min_education": "Qualification assessed as comparable by the occupation's assessing authority",
+            "min_experience_years": null,
+            "occupation_list_required": "Skilled occupation list AND the nominating state's own list/criteria",
+            "notes": "Some state programs require a job offer or state connection — check the specific state before answering 'no job offer needed'."
+          },
+          "fees": "From AUD 6,140 (main applicant)",
+          "family": {
+            "spouse": "Yes, included in the application",
+            "spouse_work": "Full work rights as permanent resident",
+            "children": "Yes, as dependants",
+            "parents": "No — separate Parent visa only."
+          },
+          "pr_path": "Direct permanent residence, with a moral (non-legal) expectation to live in the nominating state for the first period. Citizenship: 4 years incl. last 12 months as PR.",
+          "obstacles": "State programs open/close and change criteria through the year; nomination places are capped per state per year.",
+          "next_steps": ["Compare state lists for your occupation", "Complete skills assessment and English test", "Submit EOI selecting the state(s)", "Apply for state nomination when invited by the state", "Lodge the visa after nomination is approved"],
+          "sources": ["https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-nominated-190"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "Skilled Work Regional (Provisional) visa (subclass 491)",
+          "category": "points",
+          "who_for": "Skilled professionals willing to live and work in regional Australia, nominated by a state or sponsored by an eligible relative.",
+          "requirements": "Points-tested, 65-point floor; under 45 at invitation; Competent English (IELTS 6 each). Must live, work and study only in a designated regional area. Pathway to PR via subclass 191 after 3 years living/working in regional Australia meeting an income condition — the exact 191 income amount is UNVERIFIED and not coded.",
+          "checker": {
+            "age_max": 45,
+            "needs_job_offer": false,
+            "points_system": "Points test: 65-point floor incl. nomination/sponsorship points",
+            "min_language": "Competent English — IELTS 6.0 in each component or equivalent",
+            "funds_or_salary_threshold": "Subclass 191 PR step has an income condition — amount UNVERIFIED, do not hard-code",
+            "min_education": "Qualification assessed as comparable by the occupation's assessing authority",
+            "min_experience_years": null,
+            "occupation_list_required": "Skilled occupation list (broader list than 189/190) plus state criteria",
+            "notes": "Provisional visa, not PR at grant. Regional-area residence is a visa condition."
+          },
+          "fees": "From AUD 6,140 (main applicant)",
+          "family": {
+            "spouse": "Yes, included; family must also comply with regional conditions",
+            "spouse_work": "Yes, in regional areas",
+            "children": "Yes, as dependants",
+            "parents": "No — separate Parent visa only."
+          },
+          "pr_path": "PR via subclass 191 after 3 years in regional Australia meeting the income condition. Citizenship thereafter under the usual 4-year rule.",
+          "obstacles": "Three extra years before PR versus 189/190; employment must genuinely be regional; 191 income evidence is scrutinised.",
+          "next_steps": ["Check the broader 491 occupation list and state criteria", "Complete skills assessment and English test", "Submit EOI for state nomination or family sponsorship", "Plan for 3 years of regional work before the 191 application"],
+          "sources": ["https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-work-regional-provisional-491"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "Skills in Demand visa (subclass 482)",
+          "category": "employer-sponsored",
+          "who_for": "Skilled workers with a sponsoring Australian employer in an eligible occupation.",
+          "requirements": "Employer sponsorship and nomination required. English: IELTS 5.0 in each component or equivalent. At least 1 year of relevant work experience. Salary must meet the stream's income threshold: Core Skills Income Threshold AUD 79,423, Specialist Skills Income Threshold AUD 146,576 (both from 1 Jul 2026). Occupation must be on the Core Skills Occupation List (or meet the Specialist Skills salary test).",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": true,
+            "points_system": null,
+            "min_language": "IELTS 5.0 in each component or equivalent",
+            "funds_or_salary_threshold": "Salary ≥ AUD 79,423 (Core Skills) or ≥ AUD 146,576 (Specialist Skills), from 1 Jul 2026",
+            "min_education": null,
+            "min_experience_years": 1,
+            "occupation_list_required": "Core Skills Occupation List, unless Specialist Skills stream salary test met",
+            "notes": "Thresholds are indexed — re-verify at application time."
+          },
+          "fees": "From AUD 4,015 (main applicant)",
+          "family": {
+            "spouse": "Yes — partner and children can be added as subsequent entrants/included",
+            "spouse_work": "Partner generally has unrestricted work rights on the 482",
+            "children": "Yes",
+            "parents": "No — separate Parent visa only."
+          },
+          "pr_path": "After 2 years working for the sponsor, employer can nominate for the subclass 186 Temporary Residence Transition stream (permanent residence). Citizenship under the usual 4-year rule after PR.",
+          "obstacles": "Wholly dependent on finding a sponsoring employer; changing employers requires a new nomination. The 2-year clock for PR runs with the sponsoring employer.",
+          "next_steps": ["Target Australian employers willing to sponsor", "Confirm the role's salary clears AUD 79,423 (or 146,576 for Specialist)", "Employer lodges sponsorship and nomination", "Lodge the 482 application once nominated"],
+          "sources": ["https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skills-in-demand-visa-subclass-482"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "Employer Nomination Scheme (subclass 186)",
+          "category": "employer-sponsored",
+          "who_for": "Skilled workers nominated by an Australian employer for a permanent role.",
+          "requirements": "Permanent residence via employer nomination. Under 45 unless an exemption applies. Direct Entry stream: 3 years' relevant experience plus a positive skills assessment. Temporary Residence Transition stream: 2 years on a 482 with the nominating employer. Salary must meet the Core Skills Income Threshold AUD 79,423 (from 1 Jul 2026). Competent English generally required.",
+          "checker": {
+            "age_max": 45,
+            "needs_job_offer": true,
+            "points_system": null,
+            "min_language": "Competent English — IELTS 6.0 in each component or equivalent",
+            "funds_or_salary_threshold": "Salary ≥ AUD 79,423 CSIT (from 1 Jul 2026)",
+            "min_education": "Skills assessment for Direct Entry",
+            "min_experience_years": 3,
+            "occupation_list_required": "Eligible skilled occupation list for the stream",
+            "notes": "min_experience_years = 3 for Direct Entry; TRT stream instead requires 2 years on a 482 with the employer."
+          },
+          "fees": "From AUD 6,140 (main applicant)",
+          "family": {
+            "spouse": "Yes, included",
+            "spouse_work": "Full work rights as permanent resident",
+            "children": "Yes, as dependants",
+            "parents": "No — separate Parent visa only."
+          },
+          "pr_path": "Direct permanent residence. Citizenship: 4 years incl. last 12 months as PR.",
+          "obstacles": "Employer must be actively and lawfully operating and the position genuine; age-45 limit catches senior professionals who delay.",
+          "next_steps": ["Confirm stream (Direct Entry vs TRT)", "Complete skills assessment if Direct Entry", "Employer lodges nomination", "Lodge the 186 application"],
+          "sources": ["https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/employer-nomination-scheme-186"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "Skilled Employer Sponsored Regional visa (subclass 494)",
+          "category": "employer-sponsored",
+          "who_for": "Skilled workers sponsored by an employer in regional Australia.",
+          "requirements": "Employer-sponsored provisional visa for regional areas. Under 45. At least 3 years' relevant full-time experience. Positive skills assessment generally required. The exact English score and the salary figure for this subclass are UNVERIFIED in the v1 pass and are not coded.",
+          "checker": {
+            "age_max": 45,
+            "needs_job_offer": true,
+            "points_system": null,
+            "min_language": "UNVERIFIED — do not hard-code until checked on the subclass 494 page",
+            "funds_or_salary_threshold": "UNVERIFIED — annual market salary rate and threshold apply; do not hard-code",
+            "min_education": "Skills assessment generally required",
+            "min_experience_years": 3,
+            "occupation_list_required": "Regional employer-sponsored occupation list",
+            "notes": "Provisional visa; PR via subclass 191 after 3 years regional."
+          },
+          "fees": "From AUD 6,140 (main applicant)",
+          "family": {
+            "spouse": "Yes, included",
+            "spouse_work": "Yes, in regional areas",
+            "children": "Yes, as dependants",
+            "parents": "No — separate Parent visa only."
+          },
+          "pr_path": "PR via subclass 191 after 3 years living/working in regional Australia (income condition for 191 UNVERIFIED).",
+          "obstacles": "Regional employer required; provisional status for 3 years before PR eligibility.",
+          "next_steps": ["Find a regional employer willing to sponsor", "Complete skills assessment", "Employer completes sponsorship, certification and nomination steps", "Lodge the 494 application"],
+          "sources": ["https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-employer-sponsored-regional-provisional-494"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "National Innovation visa (subclass 858)",
+          "category": "other",
+          "who_for": "Internationally recognised experts — researchers, founders, investors, elite specialists — invited by the Australian Government.",
+          "requirements": "Invitation-only. Must demonstrate an internationally recognised record of proven achievement in a priority area and be nominated (including by an Australian organisation/expert or a state/territory). No salary or investment threshold is published for this visa; age and English specifics are UNVERIFIED in the v1 pass and not coded.",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": false,
+            "points_system": null,
+            "min_language": "UNVERIFIED — do not hard-code",
+            "funds_or_salary_threshold": null,
+            "min_education": null,
+            "min_experience_years": null,
+            "occupation_list_required": "No list — achievement-based, invitation required",
+            "notes": "An EOI must be submitted and an invitation received before applying."
+          },
+          "fees": "From AUD 6,235 (main applicant)",
+          "family": {
+            "spouse": "Yes, included",
+            "spouse_work": "Full work rights as permanent resident",
+            "children": "Yes, as dependants",
+            "parents": "No — separate Parent visa only."
+          },
+          "pr_path": "Direct permanent residence. Citizenship: 4 years incl. last 12 months as PR.",
+          "obstacles": "Invitation is discretionary and reserved for genuinely eminent profiles; most senior professionals will not meet the 'internationally recognised' bar.",
+          "next_steps": ["Assess your record honestly against 'internationally recognised achievement'", "Secure an Australian nominator with standing in your field", "Submit the National Innovation EOI", "Apply only if invited"],
+          "sources": ["https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/national-innovation-visa-858"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "Business Innovation and Investment visa (subclass 188)",
+          "category": "investor",
+          "who_for": "Business owners and investors — HISTORICAL ONLY.",
+          "requirements": "STATUS: CLOSED permanently to new applications on 31 Jul 2024. Never present as a live route. Australia has signalled a redesigned investor offering under the National Innovation visa framework, but no like-for-like replacement was verified in the v1 pass.",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": false,
+            "points_system": null,
+            "min_language": null,
+            "funds_or_salary_threshold": null,
+            "min_education": null,
+            "min_experience_years": null,
+            "occupation_list_required": null,
+            "notes": "CLOSED 31 Jul 2024 — checker must return 'not available'."
+          },
+          "fees": "N/A — closed",
+          "family": {
+            "spouse": "N/A — closed",
+            "spouse_work": "N/A",
+            "children": "N/A",
+            "parents": "No — separate Parent visa only."
+          },
+          "pr_path": "Was provisional-to-PR (subclass 888) for existing holders only.",
+          "obstacles": "Closed. Any agent still selling subclass 188 to new applicants is misleading the client.",
+          "next_steps": ["Do not apply — closed to new applicants", "Consider the National Innovation visa (858) if your profile fits", "Consider employer/points routes instead"],
+          "sources": ["https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/business-innovation-and-investment-provisional-188"],
+          "verified": "2026-11-12"
+        }
+      ]
+    },
+    {
+      "country": "Germany",
+      "sources_note": "make-it-in-germany.com / BAMF / Federal Foreign Office, verified 2026-11-12. Salary thresholds reset every January — date-stamp 'as of 2026' and re-verify each January.",
+      "routes": [
+        {
+          "name": "EU Blue Card",
+          "category": "employer-sponsored",
+          "who_for": "Degree-holding professionals with a concrete German job offer at or above the salary threshold.",
+          "requirements": "Recognised/comparable degree (check anabin or get a ZAB assessment). Binding job offer (at least 6 months). Salary 2026: €50,700 gross/year standard; €45,934.20 for shortage occupations, recent graduates (degree within last 3 years) and IT specialists. IT specialists without a degree qualify with at least 3 years' relevant experience in the last 7 years. No German required for the card itself.",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": true,
+            "points_system": null,
+            "min_language": "None for the card; German A1 shortens settlement to 27 months, B1 to 21 months",
+            "funds_or_salary_threshold": "€50,700/yr (2026); €45,934.20 shortage/new-entrant/IT",
+            "min_education": "Recognised degree (anabin/ZAB) — waived for IT specialists with 3 yrs experience in last 7",
+            "min_experience_years": null,
+            "occupation_list_required": "Lower threshold applies to the official shortage-occupation list",
+            "notes": "Thresholds reset every January."
+          },
+          "fees": "Visa fee €75; residence permit issuance up to €100; optional employer fast-track procedure €411",
+          "family": {
+            "spouse": "Yes — spouse can join; spouses of Blue Card holders can work without restriction",
+            "spouse_work": "Yes, unrestricted",
+            "children": "Yes",
+            "parents": "Possible for skilled-worker residence titles first issued on/after 1 Mar 2024 (§36 residence Act) if subsistence and health insurance are self-funded — case-specific, verify before promising."
+          },
+          "pr_path": "Settlement permit after 27 months with German A1, or 21 months with B1. Citizenship generally after 5 years.",
+          "obstacles": "Degree comparability is the common bottleneck — start the anabin/ZAB check before applying for jobs. Salary must clear the threshold for your exact category, not approximately.",
+          "next_steps": ["Check your degree on anabin; apply to ZAB if not listed", "Secure an offer at/above the correct 2026 threshold", "Employer can optionally run the €411 fast-track procedure", "Apply for the Blue Card visa, then the residence permit on arrival"],
+          "sources": ["https://www.make-it-in-germany.com/en/visa-residence/types/eu-blue-card"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "Work visa for qualified professionals (§§18a/18b)",
+          "category": "employer-sponsored",
+          "who_for": "Professionals with a recognised vocational or academic qualification and a German job offer in that qualification's field.",
+          "requirements": "Qualification must be recognised in Germany (vocational training or degree). Concrete job offer related to the qualification. No general salary floor for applicants under 45. Applicants aged 45+ must earn at least €55,770 (2026) or prove adequate pension provision. Settlement after 3 years (2 years if trained in Germany).",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": true,
+            "points_system": null,
+            "min_language": "Not a general legal requirement for §§18a/18b; employers often require German in practice",
+            "funds_or_salary_threshold": "No floor under 45; €55,770 (2026) or pension proof if 45+",
+            "min_education": "Recognised vocational qualification or degree",
+            "min_experience_years": null,
+            "occupation_list_required": "Job must match the recognised qualification",
+            "notes": "Age 45+ salary rule is a hard checker branch."
+          },
+          "fees": "Visa fee €75; residence permit up to €100; optional fast-track €411",
+          "family": {
+            "spouse": "Yes — family reunification available; spouse work rights generally unrestricted once resident",
+            "spouse_work": "Yes, generally unrestricted",
+            "children": "Yes",
+            "parents": "Possible for titles first issued on/after 1 Mar 2024 (§36) with self-funded subsistence/insurance — verify case by case."
+          },
+          "pr_path": "Settlement permit after 3 years (2 if German-trained). Citizenship generally after 5 years.",
+          "obstacles": "Recognition of the qualification (Anerkennung) can take months and may require adaptation courses, especially for regulated professions.",
+          "next_steps": ["Start recognition of your qualification (anerkennung-in-deutschland.de)", "Secure a matching job offer", "If 45+, check the €55,770/pension rule before accepting terms", "Apply for the work visa"],
+          "sources": ["https://www.make-it-in-germany.com/en/visa-residence/types/work-qualified-professionals"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "Professionally experienced workers (§19c(2))",
+          "category": "employer-sponsored",
+          "who_for": "Experienced professionals whose foreign qualification is state-recognised at home but who do not want full German recognition first.",
+          "requirements": "No German recognition procedure required. At least 2 years' relevant professional experience in the last 5 years, plus a state-recognised qualification (vocational training of at least 2 years or a degree) from the country of training. German job offer required. SALARY FIGURE CONFLICT: the route document states €45,630 while the Act overview states €45,934.20 — neither figure is coded until resolved against the primary source.",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": true,
+            "points_system": null,
+            "min_language": null,
+            "funds_or_salary_threshold": "UNVERIFIED — €45,630 vs €45,934.20 conflict between official pages; do not hard-code",
+            "min_education": "State-recognised qualification in home country (no German recognition needed)",
+            "min_experience_years": 2,
+            "occupation_list_required": null,
+            "notes": "Experience must be within the last 5 years and relevant to the job."
+          },
+          "fees": "Visa fee €75; residence permit up to €100; optional fast-track €411",
+          "family": {
+            "spouse": "Yes — family reunification available",
+            "spouse_work": "Yes, generally unrestricted",
+            "children": "Yes",
+            "parents": "Possible for titles first issued on/after 1 Mar 2024 (§36) with self-funded subsistence/insurance — verify case by case."
+          },
+          "pr_path": "Leads to settlement under the skilled-worker rules after the qualifying period (verify exact period for this title before publishing).",
+          "obstacles": "The unresolved salary-threshold conflict must be settled before the checker can test salary for this route.",
+          "next_steps": ["Document 2 years' relevant experience from the last 5", "Confirm your home-country qualification is state-recognised", "Secure a German job offer", "Verify the current salary threshold on the primary BAMF source, then apply"],
+          "sources": ["https://www.make-it-in-germany.com/en/visa-residence/types/other"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "Opportunity Card (Chancenkarte)",
+          "category": "points",
+          "who_for": "Job-seekers who want to come to Germany for up to a year to find qualified work — no job offer needed.",
+          "requirements": "Two doors. Door 1 (full recognition): qualification fully recognised in Germany — no points and no language proof needed. Door 2 (points): at least 6 points across qualification, experience, language, age, prior Germany stay and partner criteria; language German A1 or English B2; vocational training (≥2 years) or degree state-recognised at home. Proof of funds €1,091/month (blocked account or equivalent) — the detailed points table and funds figure need re-verification before hard-coding, so treat funds as indicative here. Part-time work up to 20 hrs/week allowed while job-hunting.",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": false,
+            "points_system": "Points door: minimum 6 points (qualification, experience, language, age, Germany ties, partner). Full-recognition door: no points needed",
+            "min_language": "German A1 or English B2 (points door only)",
+            "funds_or_salary_threshold": "Blocked-account proof ~€1,091/month — detailed figure UNVERIFIED for hard-coding",
+            "min_education": "Degree or ≥2-year vocational qualification, state-recognised at home",
+            "min_experience_years": null,
+            "occupation_list_required": null,
+            "notes": "The card itself has NO PR path — it converts to a work title only once a qualifying job is found."
+          },
+          "fees": "Visa fee €75",
+          "family": {
+            "spouse": "Family does not automatically accompany on the Opportunity Card; partner can earn points in the applicant's own application",
+            "spouse_work": "No automatic spousal work right on this card",
+            "children": "Not the intended use — family joins after conversion to a work title",
+            "parents": "No"
+          },
+          "pr_path": "No PR path from the card itself. Once in qualifying employment, switch to Blue Card/§18 titles and their settlement timelines.",
+          "obstacles": "One year is short to find a threshold-clearing job; funds must be shown up front; points-door language proof is mandatory.",
+          "next_steps": ["Decide your door: full recognition vs points", "Run the official self-check for points", "Arrange the blocked account", "Apply for the Opportunity Card and job-hunt on arrival (20 hrs/week part-time allowed)"],
+          "sources": ["https://www.make-it-in-germany.com/en/visa-residence/opportunity-card"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "Recognition Partnership (§16d(3))",
+          "category": "employer-sponsored",
+          "who_for": "Professionals with a German employer willing to employ them while their qualification recognition runs in Germany.",
+          "requirements": "Employer commits to the recognition partnership. German level A2 required. Residence title for 1 year, extendable up to 3 years while recognition is completed. Work in the occupation during the partnership. Family terms for this specific title are UNVERIFIED and not coded.",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": true,
+            "points_system": null,
+            "min_language": "German A2",
+            "funds_or_salary_threshold": null,
+            "min_education": "Home-country qualification pending German recognition",
+            "min_experience_years": null,
+            "occupation_list_required": "Job in the occupation undergoing recognition",
+            "notes": "Employer commitment to support recognition is a legal part of this title."
+          },
+          "fees": "Visa fee €75; residence permit up to €100",
+          "family": {
+            "spouse": "UNVERIFIED for this title — do not promise",
+            "spouse_work": "UNVERIFIED",
+            "children": "UNVERIFIED",
+            "parents": "No verified basis on this title"
+          },
+          "pr_path": "After recognition completes, move to a §18 qualified-professional title and its settlement timeline.",
+          "obstacles": "Requires an employer willing to carry the recognition process — a smaller pool of employers; A2 German needed before arrival.",
+          "next_steps": ["Reach German A2", "Find an employer offering a recognition partnership", "File the recognition application alongside the visa", "Complete recognition and switch to a §18 title"],
+          "sources": ["https://www.make-it-in-germany.com/en/visa-residence/types/recognition-partnership"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "Self-employment (§21)",
+          "category": "investor",
+          "who_for": "Founders and freelancers who want to run their own business in Germany.",
+          "requirements": "No fixed minimum investment is published. Three criteria are assessed: (1) economic interest or regional need for the business, (2) positive expected effect on the economy, (3) secured financing (own capital or a loan commitment). Applicants over 45 must show adequate pension provision. Settlement timing and family terms for this title are UNVERIFIED in the v1 pass (dedicated page not fully verified) — do not hard-code.",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": false,
+            "points_system": null,
+            "min_language": null,
+            "funds_or_salary_threshold": "No fixed minimum published — financing must be demonstrably secured",
+            "min_education": null,
+            "min_experience_years": null,
+            "occupation_list_required": null,
+            "notes": "Over-45 pension-provision requirement is a hard branch."
+          },
+          "fees": "Visa fee €75; residence permit up to €100",
+          "family": {
+            "spouse": "UNVERIFIED in v1 pass for this title",
+            "spouse_work": "UNVERIFIED",
+            "children": "UNVERIFIED",
+            "parents": "No verified basis on this title"
+          },
+          "pr_path": "UNVERIFIED in v1 pass — re-verify the §21 settlement timeline before publishing.",
+          "obstacles": "Discretionary local assessment (foreigners' authority + chamber input); a weak business plan fails even with funds available.",
+          "next_steps": ["Build a business plan addressing the three §21 criteria", "Secure financing evidence", "If 45+, document pension provision", "Apply with the business plan and financing proof"],
+          "sources": ["https://www.make-it-in-germany.com/en/visa-residence/types/setting-up-business"],
+          "verified": "2026-11-12"
+        }
+      ]
+    },
+    {
+      "country": "United Kingdom",
+      "sources_note": "GOV.UK only, verified 2026-11-12. Cross-cutting: 'dependant' on UK routes means partner + children only — parents are not dependants on ANY UK route. Health and Care Worker visa deliberately excluded (health/care professionals only).",
+      "routes": [
+        {
+          "name": "Skilled Worker visa",
+          "category": "employer-sponsored",
+          "who_for": "Professionals with a job offer from a Home Office-approved UK sponsor in an eligible occupation.",
+          "requirements": "Certificate of Sponsorship from a licensed sponsor is mandatory. Age 18+. English at B2 level. Salary must be the higher of £41,700/year or the occupation's going rate; a lower floor of £33,400 applies in defined cases (e.g. new entrants, certain PhD/STEM situations). Maintenance: £1,270 held for 28 days unless the sponsor certifies maintenance. Note: dependants are barred for most medium-skilled roles.",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": true,
+            "points_system": "Points-based system applies but the '70 points' total is UNVERIFIED in the v1 pass — do not use it; test the CoS + salary + English criteria directly",
+            "min_language": "English B2 (CEFR)",
+            "funds_or_salary_threshold": "Higher of £41,700/yr or going rate; £33,400 floor in defined cases; £1,270 maintenance for 28 days",
+            "min_education": null,
+            "min_experience_years": null,
+            "occupation_list_required": "Eligible occupation codes; sponsor must be licensed",
+            "notes": "Age minimum 18 (age_max null). Salary is tested against BOTH the general threshold and the going rate."
+          },
+          "fees": "£819 (≤3 yrs) / £1,618 (>3 yrs) when applying outside the UK + Immigration Health Surcharge usually £1,035/year",
+          "family": {
+            "spouse": "Partner and children can apply as dependants, except dependants are barred for most medium-skilled roles",
+            "spouse_work": "Dependant partners can generally work",
+            "children": "Yes, as dependants (subject to the medium-skilled bar)",
+            "parents": "No — parents are not dependants on any UK route."
+          },
+          "pr_path": "Indefinite Leave to Remain after 5 years. Citizenship follows ILR under the usual rules.",
+          "obstacles": "No sponsor = no route; the 2025-era salary thresholds (£41,700) price out many mid-level offers; sponsor licence and CoS add employer cost and delay.",
+          "next_steps": ["Apply only to employers on the register of licensed sponsors", "Check your occupation code's going rate before negotiating", "Meet the B2 English requirement with an approved test if needed", "Hold £1,270 for 28 days unless your sponsor certifies maintenance"],
+          "sources": ["https://www.gov.uk/skilled-worker-visa"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "Global Talent visa",
+          "category": "other",
+          "who_for": "Leaders or potential leaders in academia/research, arts and culture, or digital technology.",
+          "requirements": "Endorsement by an approved endorsing body (or an eligible international prize) is the gate. No job offer, no English requirement, no salary threshold. Maintenance amount is UNVERIFIED in the v1 pass and not coded. ILR after 3 or 5 years depending on field/endorsement type — per-endorser breakdown UNVERIFIED.",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": false,
+            "points_system": null,
+            "min_language": "None",
+            "funds_or_salary_threshold": null,
+            "min_education": null,
+            "min_experience_years": null,
+            "occupation_list_required": "Field must be academia/research, arts/culture or digital technology; endorsement required",
+            "notes": "Endorsement evidence is the entire test — no employer, salary or language substitutes."
+          },
+          "fees": "£766 total (endorsement + visa stages)",
+          "family": {
+            "spouse": "Yes, partner and children as dependants",
+            "spouse_work": "Yes, dependants can work",
+            "children": "Yes",
+            "parents": "No — parents are not dependants on any UK route."
+          },
+          "pr_path": "ILR after 3 years (some categories) or 5 years (others) — per-endorser breakdown UNVERIFIED; verify for the specific endorsement before promising 3 years.",
+          "obstacles": "Endorsement demands a documented record of exceptional talent/promise; ordinary seniority is not enough.",
+          "next_steps": ["Identify your endorsing body (e.g. Tech Nation's successor arrangements for digital tech, UKRI/academies for research)", "Assemble endorsement evidence — awards, media, recommendation letters", "Apply for endorsement first", "Apply for the visa once endorsed (or immediately if you hold an eligible prize)"],
+          "sources": ["https://www.gov.uk/global-talent"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "High Potential Individual (HPI) visa",
+          "category": "other",
+          "who_for": "Recent graduates of a university on the UK's global top-universities list for their graduation year.",
+          "requirements": "Qualification from an eligible non-UK university on the gov.uk list for the year of award, awarded within the last 5 years. English B2. Maintenance £1,270. No job offer needed. Age limit UNVERIFIED — not coded. Visa length 2 years (3 with a PhD).",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": false,
+            "points_system": null,
+            "min_language": "English B2 (CEFR)",
+            "funds_or_salary_threshold": "£1,270 maintenance",
+            "min_education": "Degree from a university on the HPI eligible list for the award year, within last 5 years",
+            "min_experience_years": null,
+            "occupation_list_required": null,
+            "notes": "Eligibility turns on the exact list for the exact award year — the same university may qualify one year and not another."
+          },
+          "fees": "£880 visa fee + £252 Ecctis verification + Immigration Health Surcharge",
+          "family": {
+            "spouse": "Yes, partner and children as dependants",
+            "spouse_work": "Yes, dependants can work",
+            "children": "Yes",
+            "parents": "No — parents are not dependants on any UK route."
+          },
+          "pr_path": "NO PR path — cannot extend and time on HPI does not lead to ILR directly. Switch to Skilled Worker or another route whose time counts.",
+          "obstacles": "Very few Indian universities appear on the year lists; the 5-year award window excludes most mid-career professionals.",
+          "next_steps": ["Check your university against the list for your graduation year", "Get the Ecctis eligibility verification", "Meet B2 English and the £1,270 maintenance", "Plan your switch route before the 2 years expire"],
+          "sources": ["https://www.gov.uk/high-potential-individual-visa"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "Innovator Founder visa",
+          "category": "investor",
+          "who_for": "Founders with a new, innovative, viable and scalable business idea endorsed in the UK.",
+          "requirements": "Endorsement by an approved endorsing body is mandatory; the business must be new, innovative, viable and scalable. English B2. Maintenance £1,270. NO fixed minimum investment is published on the route pages — do not quote one. ILR possible after 3 years, but the business-growth criteria for ILR are UNVERIFIED in the v1 pass.",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": false,
+            "points_system": null,
+            "min_language": "English B2 (CEFR)",
+            "funds_or_salary_threshold": "£1,270 maintenance; NO published minimum investment",
+            "min_education": null,
+            "min_experience_years": null,
+            "occupation_list_required": null,
+            "notes": "Endorsing body assesses the idea, not the founder's CV."
+          },
+          "fees": "£1,357 applying outside the UK + £1,000 endorsement fee + £500 per endorsing-body meeting; IHS amount not stated on route pages (UNVERIFIED)",
+          "family": {
+            "spouse": "Yes, partner and children as dependants",
+            "spouse_work": "Yes, dependants can work",
+            "children": "Yes",
+            "parents": "No — parents are not dependants on any UK route."
+          },
+          "pr_path": "ILR after 3 years if the business meets the growth criteria (criteria UNVERIFIED — verify before promising).",
+          "obstacles": "Endorsement is competitive and idea quality is decisive; secondary employment is restricted (work must be skilled); endorsement meetings carry extra fees.",
+          "next_steps": ["Develop a genuinely new, innovative, scalable concept", "Approach approved endorsing bodies for assessment", "Meet B2 English and hold £1,270 maintenance", "Apply after endorsement is issued"],
+          "sources": ["https://www.gov.uk/innovator-founder-visa"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "Scale-up Worker visa",
+          "category": "employer-sponsored",
+          "who_for": "Professionals hired by a UK business approved as a fast-growing scale-up sponsor.",
+          "requirements": "STATUS: still available at research date. Sponsor must be an approved scale-up sponsor (business showing ~20% growth and at least 10 employees). Certificate of Sponsorship required. English B2. Salary: higher of £39,100/year or the occupation going rate. Age limit UNVERIFIED — not coded. Extension requires PAYE earnings of at least £39,100 for at least half the time spent on the visa.",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": true,
+            "points_system": null,
+            "min_language": "English B2 (CEFR)",
+            "funds_or_salary_threshold": "Higher of £39,100/yr or going rate",
+            "min_education": null,
+            "min_experience_years": null,
+            "occupation_list_required": "Eligible occupation with a CoS from an approved scale-up sponsor",
+            "notes": "Only the first 6 months are tied to the sponsor; extension has its own earnings test."
+          },
+          "fees": "£937 + Immigration Health Surcharge",
+          "family": {
+            "spouse": "Yes, partner and children as dependants",
+            "spouse_work": "Yes, dependants can work",
+            "children": "Yes",
+            "parents": "No — parents are not dependants on any UK route."
+          },
+          "pr_path": "ILR after 5 years (if the extension earnings test and other requirements are met).",
+          "obstacles": "Very small pool of approved scale-up sponsors; salary/earnings tests apply twice (entry and extension).",
+          "next_steps": ["Look for roles at approved scale-up sponsors", "Check salary against £39,100 and the going rate", "Meet B2 English", "Track PAYE earnings from day one for the extension test"],
+          "sources": ["https://www.gov.uk/scale-up-worker-visa"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "India Young Professionals Scheme (IYPS)",
+          "category": "other",
+          "who_for": "Indian citizens aged 18–30 who want to live and work in the UK for up to 2 years.",
+          "requirements": "Ballot-only and temporary. Indian citizens aged 18–30. No job offer and no minimum salary. Several specifics are UNVERIFIED in the v1 pass (the dedicated gov.uk page was rate-limited and not retried): fee, IHS, savings figure, degree wording, English requirement, dependant bar — none of these are coded.",
+          "checker": {
+            "age_max": 30,
+            "needs_job_offer": false,
+            "points_system": null,
+            "min_language": "UNVERIFIED — do not hard-code",
+            "funds_or_salary_threshold": "UNVERIFIED — savings figure not confirmed",
+            "min_education": "UNVERIFIED wording — degree requirement to be confirmed on the route page",
+            "min_experience_years": null,
+            "occupation_list_required": null,
+            "notes": "Age minimum 18 as well as max 30. Ballot entry is required before applying."
+          },
+          "fees": "UNVERIFIED — fee and IHS not confirmed in v1 pass",
+          "family": {
+            "spouse": "UNVERIFIED — dependant rules not confirmed in v1 pass; do not promise",
+            "spouse_work": "UNVERIFIED",
+            "children": "UNVERIFIED",
+            "parents": "No — parents are not dependants on any UK route."
+          },
+          "pr_path": "NO PR path — maximum 2 years, cannot extend; switch to a qualifying route if eligible.",
+          "obstacles": "Ballot luck decides access; strictly age-capped at 30; temporary only.",
+          "next_steps": ["Enter the ballot when it opens (Indian citizens 18–30)", "Verify fee/savings/dependant rules on the gov.uk IYPS page before applying", "Treat it as a 2-year experience route, not a settlement route"],
+          "sources": ["https://www.gov.uk/india-young-professionals-scheme-visa"],
+          "verified": "2026-11-12"
+        }
+      ]
+    },
+    {
+      "country": "Singapore",
+      "sources_note": "MOM / ICA, verified 2026-11-12. Several MOM pages (PEP, ONE Pass, EntrePass, LTVP) were rate-limited (429) during research — figures taken from MOM search extracts are marked where they could not be fully verified on the page itself.",
+      "routes": [
+        {
+          "name": "Employment Pass (EP)",
+          "category": "employer-sponsored",
+          "who_for": "Foreign professionals, managers and executives with a Singapore job offer.",
+          "requirements": "Employer sponsorship mandatory. Salary must meet the age-graded minimum: non-financial sector currently S$5,600/month at age ≤23 rising to S$10,700 at 45+; from 1 Jan 2027 these rise to S$6,000 → S$11,500. Financial sector currently S$6,200 → S$11,800, rising to S$6,600 → S$12,700 from 1 Jan 2027. Most applicants must also pass COMPASS with at least 40 points across C1 salary, C2 qualifications, C3 diversity, C4 local employment, plus C5 Skills Bonus (shortage occupation list) and C6 Strategic Economic Priorities. Exemption from COMPASS at fixed monthly salary ≥ S$22,500. Dependant's Pass available if fixed salary ≥ S$6,000 (verified).",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": true,
+            "points_system": "COMPASS: 40 points to pass (C1–C6); exempt at fixed salary ≥ S$22,500/month",
+            "min_language": "No official English test requirement",
+            "funds_or_salary_threshold": "Non-financial: S$5,600 (≤23) → S$10,700 (45+), rising 1 Jan 2027 to S$6,000 → S$11,500. Financial: S$6,200 → S$11,800, rising to S$6,600 → S$12,700",
+            "min_education": "Degree or acceptable qualifications score under COMPASS C2",
+            "min_experience_years": null,
+            "occupation_list_required": "No list for EP itself; COMPASS C5 bonus for Shortage Occupation List roles",
+            "notes": "Salary threshold is age-graded — the checker must test the applicant's exact age band, not the floor."
+          },
+          "fees": "S$105 application + S$225 issuance + S$30 Multiple Journey Visa where applicable",
+          "family": {
+            "spouse": "Dependant's Pass for spouse and unmarried children under 21 if fixed salary ≥ S$6,000",
+            "spouse_work": "DP holders need their own work pass to work (Letter of Consent routes are limited — verify current MOM rules)",
+            "children": "Yes, via Dependant's Pass at the S$6,000 threshold",
+            "parents": "Long-Term Visit Pass for parents at a higher salary threshold (S$12,000) — UNVERIFIED in v1 pass (MOM LTVP page not opened, 429); do not hard-code."
+          },
+          "pr_path": "EP holders may apply for PR via ICA (see PR route). PR is discretionary — no published points system and no salary/residence minimum guarantees it.",
+          "obstacles": "COMPASS fails many mid-career applicants on diversity/local-employment criteria controlled by the employer, not the applicant; salary thresholds rise again on 1 Jan 2027.",
+          "next_steps": ["Use MOM's Self-Assessment Tool with your exact age and salary", "Check your COMPASS score with your employer (C3/C4 depend on the firm)", "Confirm the offer clears the threshold for your age band and sector", "Employer/agent applies; budget S$105 + S$225 + S$30"],
+          "sources": ["https://www.mom.gov.sg/passes-and-permits/employment-pass"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "S Pass",
+          "category": "employer-sponsored",
+          "who_for": "Mid-skilled technical and associate-professional staff hired by Singapore employers within quota.",
+          "requirements": "Employer sponsorship with quota and levy. Roles must be in Associate Professionals & Technicians (APT) occupations. Salary: non-financial S$3,300 (youngest band) → S$4,800, rising from 2027 to S$3,600 → S$5,100; financial S$3,800 → S$5,650. Dependant's Pass threshold is the same S$6,000 fixed salary — usually unreachable on S Pass pay. Levy figure (S$650) is UNVERIFIED and not coded.",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": true,
+            "points_system": null,
+            "min_language": "No official English test requirement",
+            "funds_or_salary_threshold": "Non-financial: S$3,300 → S$4,800 (S$3,600 → S$5,100 from 2027); financial: S$3,800 → S$5,650",
+            "min_education": "Diploma/technical qualifications typical for APT roles",
+            "min_experience_years": null,
+            "occupation_list_required": "APT occupation list applies",
+            "notes": "Employer quota is usually the binding constraint, not the applicant's profile."
+          },
+          "fees": "S$105 application + S$100 issuance",
+          "family": {
+            "spouse": "Only if fixed salary ≥ S$6,000 — rarely met on S Pass salaries",
+            "spouse_work": "DP holders need their own work pass",
+            "children": "Only at the same S$6,000 threshold",
+            "parents": "Not realistically available at S Pass salary levels"
+          },
+          "pr_path": "S Pass holders are an eligible PR applicant category at ICA, but PR remains discretionary.",
+          "obstacles": "Quota and levy make employers selective; salaries usually sit below the family threshold, so this is often a solo move.",
+          "next_steps": ["Confirm the employer has S Pass quota for your sector", "Check the salary against your age band", "Plan family finances on the basis that DPs usually need S$6,000", "Apply via the employer"],
+          "sources": ["https://www.mom.gov.sg/passes-and-permits/s-pass"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "Personalised Employment Pass (PEP)",
+          "category": "other",
+          "who_for": "Very high-earning EP holders and overseas professionals who want a pass not tied to one employer.",
+          "requirements": "Fixed monthly salary ≥ S$22,500 (VERIFIED). The following are UNVERIFIED in the v1 pass (MOM page rate-limited; figures from search extracts only) and must NOT be hard-coded: annual salary basis of S$270,000, 3-year non-renewable duration, 6-month unemployment limit. Family privilege thresholds also UNVERIFIED.",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": false,
+            "points_system": null,
+            "min_language": "No official English test requirement",
+            "funds_or_salary_threshold": "Fixed monthly salary ≥ S$22,500 (verified). Annual/duration details UNVERIFIED",
+            "min_education": null,
+            "min_experience_years": null,
+            "occupation_list_required": null,
+            "notes": "Not tied to a single employer, but the holder cannot start their own business on the PEP."
+          },
+          "fees": "S$105 application + S$225 issuance + S$30 Multiple Journey Visa where applicable",
+          "family": {
+            "spouse": "UNVERIFIED thresholds in v1 pass — PEP historically carries enhanced family privileges; verify on MOM before promising",
+            "spouse_work": "Verify current MOM rules",
+            "children": "UNVERIFIED thresholds",
+            "parents": "UNVERIFIED for PEP — do not promise"
+          },
+          "pr_path": "PEP holders may apply for PR via ICA (discretionary).",
+          "obstacles": "The S$22,500/month bar excludes most applicants; non-renewable, so it is a bridge, not a destination.",
+          "next_steps": ["Confirm your fixed salary meets S$22,500/month", "Re-verify duration, unemployment and family rules on the MOM PEP page", "Apply personally (not via an employer)"],
+          "sources": ["https://www.mom.gov.sg/passes-and-permits/personalised-employment-pass"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "Overseas Networks & Expertise Pass (ONE Pass)",
+          "category": "other",
+          "who_for": "Top talent in business, arts, culture, sports, academia and research earning at the very top of the market.",
+          "requirements": "Fixed monthly salary ≥ S$30,000 for the last 12 consecutive months, OR a prospective S$30,000 salary from an established Singapore company (established = market capitalisation ≥ US$500m or annual revenue ≥ US$200m). An achievements-based route exists for outstanding candidates and is assessed holistically. A new AI/Tech track announced from 28 Jan 2027 is FUTURE policy — do not use it in the checker. Duration, renewal and spouse-work specifics are UNVERIFIED in the v1 pass and not coded.",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": false,
+            "points_system": null,
+            "min_language": "No official English test requirement",
+            "funds_or_salary_threshold": "S$30,000/month fixed for 12 consecutive months, or prospective S$30,000 from an established company (market cap ≥ US$500m / revenue ≥ US$200m)",
+            "min_education": null,
+            "min_experience_years": null,
+            "occupation_list_required": null,
+            "notes": "Personal pass — not tied to one employer; can work for multiple employers concurrently per MOM design (verify details on MOM page)."
+          },
+          "fees": "S$105 application + S$225 issuance + S$30 Multiple Journey Visa where applicable",
+          "family": {
+            "spouse": "Family privileges apply; spouse work specifics UNVERIFIED in v1 pass — verify on MOM",
+            "spouse_work": "UNVERIFIED — verify before promising",
+            "children": "Yes, via dependant arrangements",
+            "parents": "UNVERIFIED for this pass — do not promise"
+          },
+          "pr_path": "ONE Pass holders may apply for PR via ICA (discretionary).",
+          "obstacles": "The S$30,000/month sustained-salary bar is the whole test for most applicants; the achievements route is discretionary.",
+          "next_steps": ["Document 12 consecutive months at ≥ S$30,000 fixed salary, or secure the established-company offer", "Alternatively prepare an achievements portfolio", "Apply to MOM directly", "Do not rely on the Jan 2027 AI/Tech track until it is live"],
+          "sources": ["https://www.mom.gov.sg/passes-and-permits/overseas-networks-expertise-pass"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "EntrePass",
+          "category": "investor",
+          "who_for": "Entrepreneurs starting a venture-backed or innovative-technology business in Singapore.",
+          "requirements": "Business must be registered as a private limited company with ACRA (or planned), and the applicant must hold at least 30% shareholding. Must meet at least 1 of 5 published criteria across entrepreneur/innovator/investor tracks — including having raised at least SGD 100,000 in a single funding round from recognised investors. Claims of 'no minimum salary' and the family-renewal milestones are UNVERIFIED in the v1 pass and not coded.",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": false,
+            "points_system": null,
+            "min_language": "No official English test requirement",
+            "funds_or_salary_threshold": "One qualifying criterion can be ≥ SGD 100,000 raised in a single round; other criteria are non-monetary (incubation, IP, research collaboration, VC investment record)",
+            "min_education": null,
+            "min_experience_years": null,
+            "occupation_list_required": null,
+            "notes": "Business must be venture-backed or possess innovative technology — ordinary trading/retail/F&B businesses are excluded by design."
+          },
+          "fees": "S$105 application + S$225 issuance + S$30 Multiple Journey Visa where applicable",
+          "family": {
+            "spouse": "Family privileges are tied to renewal milestones (business spend/headcount) — milestone specifics UNVERIFIED in v1 pass",
+            "spouse_work": "Verify on MOM",
+            "children": "At renewal milestones — UNVERIFIED specifics",
+            "parents": "At higher renewal milestones — UNVERIFIED; do not promise"
+          },
+          "pr_path": "EntrePass holders may apply for PR via ICA (discretionary); renewals depend on business performance.",
+          "obstacles": "Most conventional businesses fail the 'innovative/venture-backed' test; renewal milestones (local hiring, business spend) bite from year 2.",
+          "next_steps": ["Check your business against the 5 criteria honestly", "Register (or prepare to register) the ACRA company with ≥30% shareholding", "Prepare the business plan and funding/IP evidence", "Apply to MOM before incorporating if not yet registered"],
+          "sources": ["https://www.mom.gov.sg/passes-and-permits/entrepass"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "Permanent Residence (EP/S Pass holder category, via ICA)",
+          "category": "other",
+          "who_for": "Working pass holders (and certain other categories) who want to settle permanently in Singapore.",
+          "requirements": "Discretionary assessment by ICA — there is NO published points system, NO published salary minimum and NO published minimum residence period for this category. ICA states it weighs: family ties to Singaporeans/PRs, economic contribution, qualifications, age, family profile, and length of residency. Citizenship eligibility detail (adult PR aged 21+ with at least 2 years as PR) is UNVERIFIED on the ICA page in the v1 pass and not coded.",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": false,
+            "points_system": "None published — discretionary ICA assessment; do NOT model a points score",
+            "min_language": "No official English test requirement",
+            "funds_or_salary_threshold": null,
+            "min_education": null,
+            "min_experience_years": null,
+            "occupation_list_required": null,
+            "notes": "The checker can only test 'holds an eligible pass category' — all other factors are judgement-based. Never present a probability score."
+          },
+          "fees": "S$100 per applicant at submission; on approval S$20 (Entry Permit) + S$50 (Re-Entry Permit) + S$50 (identity card)",
+          "family": {
+            "spouse": "Spouse and children can be included in the PR application",
+            "spouse_work": "Spouse who gains PR has full work rights",
+            "children": "Yes, included — note male children who gain PR are liable for National Service",
+            "parents": "Parents are not included in a working-pass holder's PR application; PRs/citizens may later sponsor parents for LTVP under separate rules."
+          },
+          "pr_path": "This IS permanent residence. Processing generally within 6 months per ICA. Male PRs are subject to National Service obligations (second-generation liability matters for sons).",
+          "obstacles": "Approval is discretionary and opaque; many long-serving EP holders are rejected without reasons. National Service liability for sons is a major family consideration.",
+          "next_steps": ["Build the ICA factor profile: stable employment, family rootedness, time in Singapore", "Apply online via ICA e-Service with full family details", "Weigh the National Service implication for sons before applying", "Budget S$100 per applicant plus approval fees"],
+          "sources": ["https://www.ica.gov.sg/reside/PR/apply"],
+          "verified": "2026-11-12"
+        }
+      ]
+    },
+    {
+      "country": "UAE",
+      "sources_note": "u.ae / ICP (icp.gov.ae) / GDRFA, verified 2026-11-12. Cross-cutting: UAE has NO points system, NO permanent residence and NO ordinary citizenship path (citizenship is nomination-only for exceptional categories). General family-sponsorship rule: salary ≥ AED 4,000, or AED 3,000 + accommodation (spouse, unmarried daughters, sons under 25, children with special needs). Spouse working needs their own 2-year family-sponsorship work permit. Parents: only 1-year sponsorship with a guarantee deposit (amount unstated) — no verified salary threshold; do NOT use AED 20,000. Residence is generally nullified after >180 days outside the UAE (Golden/Green holders exempt). Direct ICP Golden/Green guide pages were rate-limited (429) — figures come from ICP indexed extracts (Golden Guide updated 10 Sep 2026; Green Guide 12 Sep 2026) and must be re-opened before locking.",
+      "routes": [
+        {
+          "name": "Standard Work Visa (employer work permit + residence)",
+          "category": "employer-sponsored",
+          "who_for": "Anyone 18+ with a job offer from a licensed UAE employer — the default route into the UAE.",
+          "requirements": "Employer obtains the work permit and residence. Age 18+. There is NO official minimum salary for issuing the work visa itself — AED 4,000 is the family-sponsorship threshold, not a visa floor. Permit valid 2 years, renewable. Employer work-permit fees range AED 250–AED 3,450 depending on the company's MoHRE classification — the only directly verified UAE fee figure in the v1 pass.",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": true,
+            "points_system": null,
+            "min_language": "No official language test",
+            "funds_or_salary_threshold": "No official minimum salary for the visa; AED 4,000/month (or AED 3,000 + accommodation) needed to sponsor family",
+            "min_education": "Attested educational certificate required for skilled categories",
+            "min_experience_years": null,
+            "occupation_list_required": "Job must match the employer's licensed activity and MoHRE occupation",
+            "notes": "Age minimum 18. Do not confuse the family-sponsorship threshold with a visa salary floor."
+          },
+          "fees": "Work permit AED 250–AED 3,450 by company classification (employer-paid); other government fees vary — UNVERIFIED totals",
+          "family": {
+            "spouse": "Yes, if the AED 4,000 (or AED 3,000 + accommodation) threshold is met",
+            "spouse_work": "Spouse needs their own work permit — a 2-year family-sponsorship work permit exists for this",
+            "children": "Yes — sons under 25, unmarried daughters, children with special needs",
+            "parents": "Only 1-year sponsorship with a guarantee deposit (amount unstated); no verified salary threshold — do NOT use AED 20,000."
+          },
+          "pr_path": "NO PR path. Residence is employment-linked and renewable; no ordinary citizenship path.",
+          "obstacles": "Residence ends with the job; >180 days outside the UAE nullifies residence; no long-term security regardless of years served.",
+          "next_steps": ["Secure a written offer from a licensed UAE employer", "Get educational certificates attested (India + UAE)", "Employer processes entry permit, medical and Emirates ID", "Check your salary against the AED 4,000 family-sponsorship threshold before relocating family"],
+          "sources": ["https://u.ae/en/information-and-services/visa-and-emirates-id/residence-visas"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "Green Visa — Skilled Employee (5-year)",
+          "category": "other",
+          "who_for": "Degree-holding employees in senior occupational levels who want 5-year self-sponsored residence.",
+          "requirements": "Self-sponsored 5-year residence, but a valid UAE employment contract is still required. Bachelor's degree, employment classified in MoHRE occupational levels 1–3, and salary ≥ AED 15,000/month. Total government fee UNVERIFIED.",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": true,
+            "points_system": null,
+            "min_language": "No official language test",
+            "funds_or_salary_threshold": "Salary ≥ AED 15,000/month",
+            "min_education": "Bachelor's degree",
+            "min_experience_years": null,
+            "occupation_list_required": "MoHRE skill levels 1–3",
+            "notes": "Self-sponsored residence ≠ no employer: a valid UAE contract is a condition."
+          },
+          "fees": "UNVERIFIED — no per-route fee schedule published on u.ae",
+          "family": {
+            "spouse": "Yes — Green visa holders can sponsor family under the general family rules",
+            "spouse_work": "Spouse needs their own work permit",
+            "children": "Yes — sons under 25, unmarried daughters",
+            "parents": "1-year sponsorship with guarantee deposit (amount unstated)"
+          },
+          "pr_path": "No PR path; 5-year renewable residence. No ordinary citizenship path.",
+          "obstacles": "Still contract-dependent despite 'self-sponsored' branding; salary and MoHRE level are tested on the contract, not the offer letter alone.",
+          "next_steps": ["Confirm your MoHRE occupational level is 1–3", "Check your contract salary is ≥ AED 15,000/month", "Prepare attested degree certificate", "Apply via ICP/GDRFA channels"],
+          "sources": ["https://u.ae/en/information-and-services/visa-and-emirates-id/residence-visas/green-visa"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "Green Visa — Freelancer / Self-Employed (5-year)",
+          "category": "other",
+          "who_for": "Freelancers and self-employed professionals with a UAE freelance permit and a strong income record.",
+          "requirements": "Bachelor's degree or specialised diploma plus a MoHRE freelance permit. Income test: AED 360,000 — WORDING DISPUTE: ICP guide summaries say 'in each of the previous two years', while Cabinet Resolution 65/2022 Art. 45 reads as income of AED 360,000 over the previous two years or proof of solvency. Do NOT hard-code the stricter reading.",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": false,
+            "points_system": null,
+            "min_language": "No official language test",
+            "funds_or_salary_threshold": "AED 360,000 income test — interpretation disputed (per-year vs two-year total); do not hard-code",
+            "min_education": "Bachelor's degree or specialised diploma",
+            "min_experience_years": null,
+            "occupation_list_required": "Freelance permit activity from MoHRE/free zone",
+            "notes": "Checker should flag the income-test interpretation for manual confirmation with ICP."
+          },
+          "fees": "UNVERIFIED — no per-route fee schedule published",
+          "family": {
+            "spouse": "Yes, under general family-sponsorship rules",
+            "spouse_work": "Spouse needs their own work permit",
+            "children": "Yes — sons under 25, unmarried daughters",
+            "parents": "1-year sponsorship with guarantee deposit (amount unstated)"
+          },
+          "pr_path": "No PR path; 5-year renewable residence.",
+          "obstacles": "Income evidence must come from the freelance activity; the disputed income wording can change eligibility — confirm with ICP before relying on either reading.",
+          "next_steps": ["Obtain the MoHRE freelance permit (or free-zone equivalent)", "Compile 2 years of income evidence", "Confirm the current income-test interpretation with ICP", "Apply for the 5-year Green residence"],
+          "sources": ["https://u.ae/en/information-and-services/visa-and-emirates-id/residence-visas/green-visa"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "Green Visa — Investor / Business Partner (5-year)",
+          "category": "investor",
+          "who_for": "Investors and business partners in licensed UAE commercial activities.",
+          "requirements": "5-year residence for investors/business partners with the required approvals and licences. ICP does NOT publish a minimum investment amount for this category — any figure quoted by agents is UNVERIFIED and must not be used.",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": false,
+            "points_system": null,
+            "min_language": "No official language test",
+            "funds_or_salary_threshold": "No minimum investment published by ICP — UNVERIFIED if quoted elsewhere",
+            "min_education": null,
+            "min_experience_years": null,
+            "occupation_list_required": "Licensed commercial/investment activity",
+            "notes": "Eligibility turns on licences and approvals, not a published capital figure."
+          },
+          "fees": "UNVERIFIED — no per-route fee schedule published",
+          "family": {
+            "spouse": "Yes, under general family-sponsorship rules",
+            "spouse_work": "Spouse needs their own work permit",
+            "children": "Yes — sons under 25, unmarried daughters",
+            "parents": "1-year sponsorship with guarantee deposit (amount unstated)"
+          },
+          "pr_path": "No PR path; 5-year renewable residence.",
+          "obstacles": "Local licensing and activity approvals decide the case; absence of a published capital threshold means outcomes vary by emirate and activity.",
+          "next_steps": ["Choose the business activity and licensing authority (mainland vs free zone)", "Obtain the trade licence and partner approvals", "Apply for the Green investor residence via ICP", "Do not rely on any agent-quoted 'minimum investment'"],
+          "sources": ["https://u.ae/en/information-and-services/visa-and-emirates-id/residence-visas/green-visa"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "Golden Visa — Skilled Professionals (10-year)",
+          "category": "other",
+          "who_for": "Highly paid senior professionals in MoHRE levels 1–2 who want 10-year residence.",
+          "requirements": "Employment in MoHRE occupational level 1 or 2, a bachelor's degree, salary ≥ AED 30,000/month, a valid UAE work permit, and health insurance. Total fee UNVERIFIED. Claims about sponsoring 'children of any age' and parents under this category are UNVERIFIED on the pages read — do not hard-code.",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": true,
+            "points_system": null,
+            "min_language": "No official language test",
+            "funds_or_salary_threshold": "Salary ≥ AED 30,000/month",
+            "min_education": "Bachelor's degree",
+            "min_experience_years": null,
+            "occupation_list_required": "MoHRE skill levels 1–2",
+            "notes": "Golden holders are exempt from the >180-day absence nullification."
+          },
+          "fees": "UNVERIFIED — no per-route fee schedule published on u.ae",
+          "family": {
+            "spouse": "Yes — Golden holders can sponsor spouse and children; enhanced terms claimed by agents (e.g. children of any age) are UNVERIFIED",
+            "spouse_work": "Spouse needs their own work permit",
+            "children": "Yes, per Golden visa family rules",
+            "parents": "UNVERIFIED on pages read — do not promise; general parent rule is 1-year sponsorship with deposit"
+          },
+          "pr_path": "No PR and no citizenship path — but 10-year renewable residence independent of a single employer spell, and exempt from the 180-day absence rule.",
+          "obstacles": "The AED 30,000 salary must be the contractual figure; allowances structures that dilute basic pay can cause refusals in practice.",
+          "next_steps": ["Verify your MoHRE level (1 or 2) with your employer", "Confirm contract salary ≥ AED 30,000/month", "Arrange compliant health insurance", "Apply via ICP/GDRFA Golden visa channels"],
+          "sources": ["https://u.ae/en/information-and-services/visa-and-emirates-id/residence-visas/golden-visa"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "Golden Visa — Investors (10-year)",
+          "category": "investor",
+          "who_for": "Investors placing at least AED 2 million in the UAE (deposit, company or real estate).",
+          "requirements": "Investment ≥ AED 2 million — via an investment fund deposit, OR a company that pays at least AED 250,000/year in tax, OR real estate. DURATION CONFLICT: u.ae pages variously state 10 years (public pages) and 5 years for the real-estate limb, while the ICP Guide (Sep 2026) states 10 years for all — do NOT code the real-estate duration until resolved.",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": false,
+            "points_system": null,
+            "min_language": "No official language test",
+            "funds_or_salary_threshold": "≥ AED 2,000,000 invested (deposit, company with ≥ AED 250,000/yr tax, or real estate)",
+            "min_education": null,
+            "min_experience_years": null,
+            "occupation_list_required": null,
+            "notes": "Duration for the real-estate limb is in conflict between official pages — flag, don't code."
+          },
+          "fees": "UNVERIFIED — no per-route fee schedule published",
+          "family": {
+            "spouse": "Yes — Golden holders can sponsor family",
+            "spouse_work": "Spouse needs their own work permit",
+            "children": "Yes",
+            "parents": "UNVERIFIED enhanced terms — apply the general 1-year deposit rule unless ICP confirms otherwise"
+          },
+          "pr_path": "No PR/citizenship; long-term renewable residence while the investment is maintained.",
+          "obstacles": "Funds must remain invested; property valuations and fund accreditation are checked; duration conflict for real estate must be clarified with ICP before purchase decisions.",
+          "next_steps": ["Choose the qualifying limb (deposit, company, real estate)", "Verify the current duration for that limb with ICP directly", "Complete the AED 2m investment with documented source of funds", "Apply via ICP/GDRFA"],
+          "sources": ["https://u.ae/en/information-and-services/visa-and-emirates-id/residence-visas/golden-visa"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "Golden Visa — Entrepreneurs",
+          "category": "investor",
+          "who_for": "Founders of innovative/technical projects, fast-growing SMEs, or founders who have exited a business.",
+          "requirements": "Qualify via one of: an innovative/technical project approved by an authorised incubator or authority; an SME with revenue ≥ AED 1,000,000; or a prior business exit ≥ AED 7,000,000. The frequently quoted AED 500,000 project-value figure is UNVERIFIED. DURATION CONFLICT: u.ae states 5 years, ICP guide states 10 years — do not code duration.",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": false,
+            "points_system": null,
+            "min_language": "No official language test",
+            "funds_or_salary_threshold": "SME revenue ≥ AED 1,000,000 or prior exit ≥ AED 7,000,000 (alternative limbs); AED 500,000 project-value figure UNVERIFIED",
+            "min_education": null,
+            "min_experience_years": null,
+            "occupation_list_required": "Innovative/technical project with incubator or authority approval",
+            "notes": "Duration conflict (5 vs 10 years) between official sources — flag for ICP confirmation."
+          },
+          "fees": "UNVERIFIED — no per-route fee schedule published",
+          "family": {
+            "spouse": "Yes — Golden family sponsorship",
+            "spouse_work": "Spouse needs their own work permit",
+            "children": "Yes",
+            "parents": "General 1-year deposit rule unless ICP confirms enhanced terms"
+          },
+          "pr_path": "No PR/citizenship; renewable long-term residence.",
+          "obstacles": "Incubator/authority approval is discretionary; revenue/exit evidence must be audited and UAE-recognised.",
+          "next_steps": ["Map your case to one qualifying limb", "Get incubator/authority approval for a project-based case", "Prepare audited revenue or exit documentation", "Confirm duration with ICP, then apply"],
+          "sources": ["https://u.ae/en/information-and-services/visa-and-emirates-id/residence-visas/golden-visa"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "Remote Work Visa (Virtual Work Residence, 1-year)",
+          "category": "other",
+          "who_for": "Professionals employed outside the UAE who want to live in the UAE while working remotely.",
+          "requirements": "Employment with a non-UAE employer, income ≥ USD 3,500/month. Note: sourced via GDRFA Dubai service extracts — the u.ae page itself was not directly opened in the v1 pass; re-verify before locking. Known fee components: entry visa AED 200 + 5% VAT, residence AED 200; total cost UNVERIFIED. This visa does NOT authorise taking a UAE local job.",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": false,
+            "points_system": null,
+            "min_language": "No official language test",
+            "funds_or_salary_threshold": "Income ≥ USD 3,500/month from a non-UAE employer",
+            "min_education": null,
+            "min_experience_years": null,
+            "occupation_list_required": null,
+            "notes": "needs_job_offer refers to a UAE job — a foreign employment contract IS required. Local UAE work is prohibited on this visa."
+          },
+          "fees": "Entry visa AED 200 + 5% VAT; residence AED 200; total UNVERIFIED",
+          "family": {
+            "spouse": "Family sponsorship under general rules once resident — verify specifics with GDRFA",
+            "spouse_work": "Spouse needs their own permit",
+            "children": "Under general family rules",
+            "parents": "General 1-year deposit rule"
+          },
+          "pr_path": "No PR path; 1-year renewable residence.",
+          "obstacles": "Income proof and remote-work evidence are scrutinised; cannot convert remote work into local employment without changing status.",
+          "next_steps": ["Prepare employment contract and salary proof ≥ USD 3,500/month", "Re-verify requirements on u.ae/GDRFA before applying", "Apply for entry visa, then residence and Emirates ID", "Do not accept UAE-local work while on this visa"],
+          "sources": ["https://u.ae/en/information-and-services/visa-and-emirates-id/residence-visas/residence-visa-for-remote-work"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "Retirement Residence (5-year)",
+          "category": "other",
+          "who_for": "Retirees aged 55+ who want to live in the UAE without working.",
+          "requirements": "Age 55+. At least 15 years' work history. Income ≥ AED 180,000/year (AED 240,000/year for Dubai). Property/savings limbs exist (AED 1m property or savings) but the limb logic is UNVERIFIED in the v1 pass — do not hard-code the combination rules.",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": false,
+            "points_system": null,
+            "min_language": "No official language test",
+            "funds_or_salary_threshold": "Income ≥ AED 180,000/yr (AED 240,000/yr Dubai); property/savings limb logic UNVERIFIED",
+            "min_education": null,
+            "min_experience_years": 15,
+            "occupation_list_required": null,
+            "notes": "Age MINIMUM 55 (age_max null). Work history of 15 years is part of eligibility."
+          },
+          "fees": "UNVERIFIED — no per-route fee schedule published",
+          "family": {
+            "spouse": "Spouse can be sponsored under the retiree's residence (verify age/income interplay with ICP)",
+            "spouse_work": "No work authorisation implied by this residence",
+            "children": "Adult children are not dependants; minor children under general rules",
+            "parents": "Not applicable in the usual case"
+          },
+          "pr_path": "No PR/citizenship; 5-year renewable retirement residence.",
+          "obstacles": "Income must be pension/retirement-type and documentable; Dubai's higher AED 240,000 threshold catches applicants who budget for the federal figure.",
+          "next_steps": ["Document 15 years of work history", "Prove income ≥ AED 180,000/yr (or AED 240,000 for Dubai)", "Choose the emirate before applying — thresholds differ", "Apply via ICP/GDRFA retirement channels"],
+          "sources": ["https://u.ae/en/information-and-services/visa-and-emirates-id/residence-visas/residence-for-retirees"],
+          "verified": "2026-11-12"
+        }
+      ]
+    },
+    {
+      "country": "United States",
+      "sources_note": "USCIS / travel.state.gov only, verified 2026-11-12, USD. The US has NO points system, no general age limit and no general English requirement for work/green-card routes (English + civics apply only at naturalisation, generally 5 years as a green-card holder). Parents are NEVER derivatives on employment routes; a green-card holder cannot petition for a parent — only a US citizen aged 21+ can, which in practice means parents can be sponsored only years later. FEE WARNING: I-129/I-140/I-485/I-907 amounts come from the USCIS Form G-1055 fee schedule (Oct 2026 edition) as reproduced in official-source summaries; the G-1055 PDF itself could not be opened in the research session (429). Re-open G-1055 and confirm every fee before the checker publishes fee figures. Visa Bulletin dates are for the November 2026 Bulletin and change monthly — re-verify on travel.state.gov before publishing. NO official wait-time exists for India EB queues — never convert Bulletin dates into estimated years.",
+      "routes": [
+        {
+          "name": "H-1B Specialty Occupations",
+          "category": "employer-sponsored",
+          "who_for": "Professionals with a US employer offer for a graduate-level 'specialty occupation' job.",
+          "requirements": "US bachelor's degree or foreign equivalent in a directly related specific specialty (or licence/experience equivalent), and the job must normally require that degree. Employer must pay at least the DOL prevailing wage for the role and area (LCA). No closed occupation list, no points, no English test, no age limit. Annual cap 65,000 plus 20,000 for US master's holders; cap-exempt employers (universities, nonprofits) skip the cap. From FY2027 selection is wage-weighted: registrations count 4× at OEWS wage Level IV, 3× at III, 2× at II, 1× at I. Stay up to 3 years, extendable to 6 (longer in defined green-card-pending cases).",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": true,
+            "points_system": null,
+            "min_language": "None",
+            "funds_or_salary_threshold": "Must be paid ≥ DOL prevailing wage for the occupation/area (no fixed dollar figure)",
+            "min_education": "Bachelor's degree (or equivalent) in a field directly related to the job",
+            "min_experience_years": null,
+            "occupation_list_required": "No list — job must be a 'specialty occupation'",
+            "notes": "Cap-subject cases need electronic registration first (USD 215 per beneficiary, verified). From 21 Sep 2025 a USD 100,000 Proclamation payment is required for certain petitions for beneficiaries outside the US without a valid H-1B visa (verified on the USCIS H-1B page) — check the live USCIS page, as litigation/reporting changes the picture."
+          },
+          "fees": "Registration USD 215 (verified). I-129 base from G-1055 (re-verify): USD 780 paper / 730 online; USD 460 small employers/nonprofits; Asylum Program Fee USD 600/300/0; ACWIA USD 1,500/750; Fraud Prevention USD 500; premium processing (I-907) USD 2,965. Plus the USD 100,000 Proclamation payment where it applies. State Dept visa fee UNVERIFIED.",
+          "family": {
+            "spouse": "Spouse and unmarried children under 21 in H-4 status",
+            "spouse_work": "Generally NO — only certain H-4 spouses (once the H-1B worker's green-card process has started, e.g. approved immigrant petition) may get an EAD",
+            "children": "H-4; can study, cannot work",
+            "parents": "Never derivatives — no parent route from H-1B."
+          },
+          "pr_path": "Temporary status only (6-year max with exceptions). Green card normally via employer EB-2/EB-3 (or EB-1) — subject to the India backlog. Citizenship generally 5 years after the green card.",
+          "obstacles": "Cap + wage-weighted selection means no offer at a strong wage level = weak odds; the USD 100,000 payment changes employer economics for overseas hires; the real long-term bottleneck is the India EB queue (see EB-2). After job loss there is a grace period of up to 60 days to find a new employer/change status/depart.",
+          "next_steps": ["Secure a genuine specialty-occupation offer", "Compare the offered wage with the DOL prevailing wage (it drives weighted selection)", "Employer files the LCA, then registers in cap season (USD 215)", "If selected, employer files I-129 in the filing window; check whether the USD 100,000 payment applies to your case on the live USCIS page", "Outside the US: visa interview at the US Embassy/Consulate"],
+          "sources": ["https://www.uscis.gov/working-in-the-united-states/h-1b-specialty-occupations", "https://www.uscis.gov/working-in-the-united-states/temporary-workers/h-1b-specialty-occupations/h-1b-cap-season"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "L-1A / L-1B Intracompany Transferee",
+          "category": "employer-sponsored",
+          "who_for": "Executives/managers (L-1A) or specialised-knowledge staff (L-1B) transferring within the same multinational group to a US office.",
+          "requirements": "Employed abroad continuously for 1 year within the last 3 years by the same group (parent/branch/subsidiary/affiliate) in a managerial, executive or specialised-knowledge role. Both entities must be doing business. NO degree requirement, no prevailing wage, no cap and no lottery. US employer files I-129 with L Supplement (or uses an approved blanket L). Max stay 7 years (L-1A) / 5 years (L-1B). NOTE: USCIS L-1 pages could not be opened in full in the research session (429); content verified via State Dept FAM and USCIS Policy Manual — re-open USCIS pages before publishing.",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": true,
+            "points_system": null,
+            "min_language": "None",
+            "funds_or_salary_threshold": "No prevailing-wage requirement",
+            "min_education": "None required",
+            "min_experience_years": 1,
+            "occupation_list_required": null,
+            "notes": "min_experience_years = 1 continuous year abroad in the last 3, in a qualifying capacity, for the same group. needs_job_offer = the US role must be within the same group."
+          },
+          "fees": "From G-1055 (re-verify): I-129 L classification USD 1,385 paper / 1,335 online; USD 695 small employer; Asylum Program Fee 600/300/0; Fraud Prevention USD 500; premium processing USD 2,965. State visa fee UNVERIFIED.",
+          "family": {
+            "spouse": "Spouse and unmarried children under 21 in L-2",
+            "spouse_work": "YES — L-2 spouses are employment-authorised incident to status (L-2S admission; no separate EAD needed)",
+            "children": "L-2; can study, cannot work",
+            "parents": "Never derivatives."
+          },
+          "pr_path": "Temporary. L-1A managers/executives commonly move to EB-1C (no PERM) — still subject to EB-1 India dates. Citizenship generally 5 years after green card.",
+          "obstacles": "Only works inside a qualifying multinational — useless with an unrelated US employer. USCIS scrutinises whether duties are genuinely managerial/executive/specialised; hard 7/5-year maximums.",
+          "next_steps": ["Confirm 1 continuous qualifying year abroad in the last 3 years", "Document the corporate relationship and that both entities are doing business", "US entity files I-129 + L Supplement (or blanket L)", "If permanence is the goal, assess EB-1C early — L-1 time is capped"],
+          "sources": ["https://www.uscis.gov/working-in-the-united-states/temporary-workers/l-1a-intracompany-transferee-executive-or-manager", "https://www.uscis.gov/working-in-the-united-states/temporary-workers/l-1b-intracompany-transferee-specialized-knowledge"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "O-1A Extraordinary Ability",
+          "category": "employer-sponsored",
+          "who_for": "Professionals in sciences, education, business or athletics who are at the very top of their field.",
+          "requirements": "Either a major internationally recognised award, OR evidence of at least 3 of the 8 regulatory criteria (prizes, expert-judged memberships, published material about you, judging others' work, original contributions of major significance, scholarly authorship, leading/critical role for distinguished organisations, high salary relative to the field) — followed by a final-merits assessment of the totality. No degree requirement, no fixed experience years, no cap, no lottery. A US employer, US agent or foreign employer via a US agent must petition — no self-petition (a beneficiary-owned company may petition). Up to 3 years, then 1-year extensions. NOTE: the USCIS O-1 page returned access errors to automated readers; criteria are 8 CFR 214.2(o)(3)(iii) as reflected in USCIS guidance — re-open before publishing.",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": true,
+            "points_system": null,
+            "min_language": "None",
+            "funds_or_salary_threshold": "No minimum salary — high salary is only one possible evidence criterion",
+            "min_education": "None required",
+            "min_experience_years": null,
+            "occupation_list_required": null,
+            "notes": "needs_job_offer = a petitioner (employer/agent) is required; the individual cannot self-petition. Meeting 3 of 8 criteria does not guarantee approval — final-merits review follows."
+          },
+          "fees": "From G-1055 (re-verify): I-129 O classification USD 1,055 paper / 1,005 online; USD 530 small employer; Asylum Program Fee 600/300/0; premium processing USD 2,965. State visa fee UNVERIFIED.",
+          "family": {
+            "spouse": "Spouse and unmarried children under 21 in O-3",
+            "spouse_work": "NO — O-3 spouses have no work authorisation",
+            "children": "O-3; can study, cannot work",
+            "parents": "Never derivatives."
+          },
+          "pr_path": "Temporary only. Common next step is EB-1A (similar evidence, self-petitionable) or EB-2 NIW. Citizenship generally 5 years after green card.",
+          "obstacles": "The evidentiary bar is genuinely high — internal awards and self-promotional coverage do not meet it; building a qualifying record takes years.",
+          "next_steps": ["Audit your record against all 8 criteria; find at least 3 with independent proof", "Close gaps first (judging, scholarly/major-media coverage, documented uptake of your work)", "Line up a US employer/agent petitioner and a defined US role", "File I-129 + O Supplement with the consultation opinion and evidence portfolio", "In parallel, assess EB-1A / EB-2 NIW"],
+          "sources": ["https://www.uscis.gov/working-in-the-united-states/temporary-workers/o-1-visa-for-individuals-with-extraordinary-ability"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "EB-1 First Preference (green card)",
+          "category": "other",
+          "who_for": "EB-1A extraordinary ability; EB-1B outstanding professors/researchers; EB-1C multinational managers/executives.",
+          "requirements": "NO labour certification (PERM) for any EB-1 subcategory. EB-1A: sustained national/international acclaim — major international award OR at least 3 of 10 regulatory criteria; NO job offer and self-petition allowed. EB-1B: international recognition as outstanding in an academic field, 3+ years teaching/research, qualifying job offer required. EB-1C: 1 year abroad in the last 3 with a qualifying group entity in a managerial/executive role, plus a US managerial/executive offer from the same group. No age, English, salary or investment requirements.",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": false,
+            "points_system": null,
+            "min_language": "None",
+            "funds_or_salary_threshold": null,
+            "min_education": null,
+            "min_experience_years": null,
+            "occupation_list_required": null,
+            "notes": "needs_job_offer is FALSE only for EB-1A. EB-1B and EB-1C require an offer. The checker must branch by subcategory. I-140 approval is not the green card — a visa number must be current for India."
+          },
+          "fees": "From G-1055 (re-verify): I-140 USD 715 paper / 665 online + Asylum Program Fee USD 600 (employer) / 300 (self-petitioner); then I-485 USD 1,440/1,390 (child under 14 with parent 950/900) or consular processing (State/USCIS immigrant fees UNVERIFIED); premium processing USD 2,965.",
+          "family": {
+            "spouse": "Spouse and unmarried children under 21 are derivative beneficiaries — green cards with the principal when a visa is available",
+            "spouse_work": "Spouse in the US may seek work authorisation while adjustment is pending",
+            "children": "Derivatives under 21, unmarried",
+            "parents": "NOT derivatives — ever."
+          },
+          "pr_path": "This IS a green card (after I-140 + I-485/consular step when the priority date is current). Citizenship generally 5 years as a green-card holder.",
+          "obstacles": "India EB-1 is backlogged, though least among EB categories — November 2026 Visa Bulletin, India EB-1: Final Action 01FEB23, Dates for Filing 01JUL24. Dates move monthly and can retrogress; USCIS announces monthly which chart may be used.",
+          "next_steps": ["Test EB-1A first — no employer and no PERM needed", "L-1A executives: test EB-1C with the same group", "File the I-140 — the filing date becomes your priority date", "Monitor the monthly Visa Bulletin (India, EB-1) and the USCIS chart announcement", "File I-485 or consular-process when your date is reached"],
+          "sources": ["https://www.uscis.gov/working-in-the-united-states/permanent-workers", "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin.html"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "EB-2 Second Preference — standard (employer-sponsored)",
+          "category": "employer-sponsored",
+          "who_for": "Advanced-degree professionals, or people of exceptional ability, with a permanent US job offer.",
+          "requirements": "Qualify via advanced degree (US master's+ or foreign equivalent, OR bachelor's + 5 years progressive post-degree experience, and the job must require it) OR exceptional ability (expertise significantly above ordinary, evidenced by at least 3 USCIS criteria). Employer normally first obtains an approved PERM labour certification (DOL ETA-9089, prevailing wage, recruitment test), then files I-140 and must show ability to pay. Job offer required — no self-petition on the standard route.",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": true,
+            "points_system": null,
+            "min_language": "None",
+            "funds_or_salary_threshold": "Employer must pay at least the DOL prevailing wage under PERM (no fixed dollar figure)",
+            "min_education": "Master's+ or bachelor's + 5 yrs progressive experience (advanced-degree limb), or exceptional ability",
+            "min_experience_years": null,
+            "occupation_list_required": null,
+            "notes": "Priority date = PERM filing date. For India this category is a rationing queue (see obstacles) — the checker must surface the current Visa Bulletin dates, date-stamped."
+          },
+          "fees": "From G-1055 (re-verify): I-140 USD 715/665 + Asylum Program Fee 600/300/0; PERM has no USCIS filing fee; then I-485 USD 1,440/1,390 (child 950/900) or consular fees (UNVERIFIED); premium processing USD 2,965.",
+          "family": {
+            "spouse": "Spouse and unmarried children under 21 are derivatives — green cards only when a visa is available for India (derivatives count against the same numbers)",
+            "spouse_work": "Possible while adjustment is pending, once filing is permitted",
+            "children": "Derivatives under 21, unmarried — ageing-out (CSPA) needs case-specific legal advice",
+            "parents": "NOT derivatives — ever."
+          },
+          "pr_path": "Green card category — but for India, grant is controlled by the Visa Bulletin. Citizenship 5 years AFTER the green card is actually granted, not after filing.",
+          "obstacles": "THE most important fact in the US dataset: November 2026 Visa Bulletin, India EB-2 Final Action 01NOV13, Dates for Filing 15JAN15 (rest of world EB-2 Final Action 01APR25). A new 2026 PERM/I-140 filer has a priority date years behind the cutoff — an approved petition does not mean a green card in the near term. Neither USCIS nor State publishes an estimated wait; the checker must NEVER show one.",
+          "next_steps": ["Confirm the job requires an advanced degree/equivalent and that you held the qualification before PERM filing", "Employer runs PERM recruitment and files ETA-9089 — earlier priority date is better", "Employer files I-140 with the approved PERM and ability-to-pay evidence", "Preserve lawful status while waiting (H-1B beyond-6-year extensions may apply)", "Track the Visa Bulletin monthly; file I-485 only when the USCIS chart permits for your priority date"],
+          "sources": ["https://www.uscis.gov/working-in-the-united-states/permanent-workers", "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin.html"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "EB-2 National Interest Waiver (NIW)",
+          "category": "other",
+          "who_for": "Advanced-degree professionals and exceptional-ability people — researchers, STEM specialists, entrepreneurs — whose proposed US work is in the national interest.",
+          "requirements": "First independently qualify for EB-2 (advanced degree or exceptional ability). Then meet all three Matter of Dhanasar prongs: (1) the proposed endeavour has substantial merit AND national importance; (2) you are well positioned to advance it; (3) on balance it benefits the US to waive the job-offer and labour-certification requirements. Job offer and PERM are waived — self-petition on I-140 with a specific proposed endeavour. No age, English, salary or funds requirements.",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": false,
+            "points_system": null,
+            "min_language": "None",
+            "funds_or_salary_threshold": null,
+            "min_education": "Must first meet EB-2 advanced-degree or exceptional-ability standard",
+            "min_experience_years": null,
+            "occupation_list_required": null,
+            "notes": "NIW removes the employer and PERM — it does NOT shorten the India EB-2 queue. Same Bulletin dates as standard EB-2."
+          },
+          "fees": "From G-1055 (re-verify): I-140 USD 715/665 + Asylum Program Fee USD 300 (self-petitioner); then I-485 USD 1,440/1,390 or consular fees (UNVERIFIED); premium processing USD 2,965.",
+          "family": {
+            "spouse": "Derivatives — green cards only when an India EB-2 visa is available",
+            "spouse_work": "While adjustment is pending, once filing is permitted",
+            "children": "Derivatives under 21, unmarried",
+            "parents": "NOT derivatives — ever."
+          },
+          "pr_path": "Green card category (EB-2). Priority date = I-140 filing date. Citizenship 5 years after the green card is granted.",
+          "obstacles": "Two hurdles: EB-2 standing AND all three Dhanasar prongs with forward-looking evidence — a strong CV alone is not enough. Decisive limit: India EB-2 Final Action 01NOV13 (Nov 2026) — an approved NIW gives you a petition and a priority date, not a green card and not by itself permission to live/work in the US.",
+          "next_steps": ["Confirm EB-2 standing (advanced degree or exceptional ability)", "Define ONE specific endeavour; map evidence to each Dhanasar prong", "Self-file I-140 requesting the NIW — filing date = priority date", "Maintain separate lawful status/residence plans while the date is not current", "File I-485/consular-process only when the Bulletin/USCIS chart permits"],
+          "sources": ["https://www.uscis.gov/working-in-the-united-states/permanent-workers", "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin.html"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "EB-3 Third Preference",
+          "category": "employer-sponsored",
+          "who_for": "Skilled workers, professionals (bachelor's), and other workers with a permanent US job offer.",
+          "requirements": "Skilled worker: job requires at least 2 years' training/experience and the applicant meets it. Professional: job requires a US bachelor's (or foreign equivalent) and the applicant holds it. Other worker: job requires under 2 years. Employer obtains approved PERM (ETA-9089) and files I-140, proving ability to pay at least the prevailing wage from the priority date. Job offer required in every subcategory; no self-petition and no NIW equivalent.",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": true,
+            "points_system": null,
+            "min_language": "None",
+            "funds_or_salary_threshold": "Employer pays ≥ DOL prevailing wage under PERM (no fixed dollar figure)",
+            "min_education": "Bachelor's for the Professional subcategory; none fixed for Skilled/Other",
+            "min_experience_years": 2,
+            "occupation_list_required": null,
+            "notes": "min_experience_years = 2 applies to the Skilled Worker subcategory only. Checker must branch by subcategory and surface current India EB-3 Bulletin dates."
+          },
+          "fees": "From G-1055 (re-verify): I-140 USD 715/665 + Asylum Program Fee 600/300/0; then I-485 USD 1,440/1,390 (child 950/900) or consular fees (UNVERIFIED); premium processing USD 2,965.",
+          "family": {
+            "spouse": "Derivatives — green cards when an India EB-3 visa is available",
+            "spouse_work": "While adjustment is pending, once filing is permitted",
+            "children": "Derivatives under 21, unmarried",
+            "parents": "NOT derivatives — ever."
+          },
+          "pr_path": "Green card category, subject to India availability. Citizenship 5 years after grant.",
+          "obstacles": "November 2026 Visa Bulletin, India EB-3: Final Action 22JAN14, Dates for Filing 15JAN15 — marginally ahead of EB-2 India that month, but the ordering reverses in other months, so EB-3 is not a reliable shortcut. EB-3 'Other Workers' is a separate, even more limited sub-queue — do not conflate.",
+          "next_steps": ["Match the subcategory (skilled/professional/other) to the actual job requirements", "Employer runs PERM and files ETA-9089 (sets the priority date)", "Employer files I-140 with the approved PERM", "Preserve US status while waiting", "File I-485/consular-process when the chart reaches your priority date"],
+          "sources": ["https://www.uscis.gov/working-in-the-united-states/permanent-workers", "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin.html"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "EB-5 Immigrant Investor Program (post-RIA 2022)",
+          "category": "investor",
+          "who_for": "Investors committing substantial lawful capital to a US new commercial enterprise that creates US jobs — no employer or degree needed.",
+          "requirements": "Investment for petitions filed on/after 15 Mar 2022: USD 1,050,000 standard, or USD 800,000 in a Targeted Employment Area (rural, or unemployment ≥150% of national average) or an infrastructure project. Amounts are inflation-adjusted every 5 years — the first adjustment applies to petitions filed on/after 1 Jan 2027, so these figures do not apply unchanged to 2027 filings. Must create full-time jobs (≥35 hrs/week) for at least 10 qualifying employees — direct jobs for standalone (I-526); direct/indirect for regional-center projects (I-526E). Regional Center Program authorised through 30 Sep 2027. Capital must be lawfully sourced, owned/controlled by the investor, and genuinely at risk — guaranteed-return structures do not qualify. Annual set-asides: 20% rural, 10% high-unemployment, 2% infrastructure. No education, experience, age or language requirements. Self-petition.",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": false,
+            "points_system": null,
+            "min_language": "None",
+            "funds_or_salary_threshold": "USD 1,050,000 standard / USD 800,000 TEA or infrastructure (petitions from 15 Mar 2022; inflation adjustment from 1 Jan 2027 filings)",
+            "min_education": "None",
+            "min_experience_years": null,
+            "occupation_list_required": null,
+            "notes": "10 full-time US jobs is a hard outcome test enforced at the I-829 stage, not at filing."
+          },
+          "fees": "Capital (not a fee): USD 800,000/1,050,000. I-526/I-526E filing fee USD 3,675 (pre-Apr-2024 amount to which USCIS states EB-5 fees reverted — verify in current G-1055). EB-5 Integrity Fund fee and I-829 fee: UNVERIFIED — excluded. Reports of a new EB-5 fee schedule from 30 Nov 2026 are NOT verified — do not publish post-Nov-2026 fees until G-1055 is re-checked. I-485 USD 1,440/1,390 or consular fees (UNVERIFIED).",
+          "family": {
+            "spouse": "Spouse and unmarried children under 21 are derivatives — conditional permanent residence with the investor",
+            "spouse_work": "Yes, as conditional permanent residents",
+            "children": "Derivatives under 21, unmarried — conditional residents",
+            "parents": "NOT derivatives. Only a naturalised citizen aged 21+ can later petition for a parent."
+          },
+          "pr_path": "Direct green-card route but CONDITIONAL for 2 years: file I-829 proving the investment was sustained and 10 jobs created/maintained to remove conditions. Citizenship generally 5 years after residence begins. India EB-5 Unreserved Final Action was reported as 01DEC23 in Nov 2026 Bulletin summaries (re-verify); set-aside currency for India is UNVERIFIED — never publish 'current' claims without opening the current Bulletin.",
+          "obstacles": "Capital must be genuinely at risk — loss is possible with no green-card guarantee if the project fails or jobs are not created. Source-of-funds tracing (including India-earned or gifted funds) is document-heavy. Thresholds rise for filings from 1 Jan 2027; regional-center authorisation runs only to 30 Sep 2027.",
+          "next_steps": ["Choose standalone (I-526, direct jobs) vs regional center (I-526E, indirect jobs count)", "Confirm TEA/infrastructure status (USD 800,000) vs standard (USD 1,050,000) using USCIS definitions, not marketing labels", "Complete the lawful source/path-of-funds file BEFORE transferring capital", "File I-526/I-526E — filing date = priority date", "After 2 years of conditional residence, file I-829 to remove conditions"],
+          "sources": ["https://www.uscis.gov/working-in-the-united-states/permanent-workers/employment-based-immigration-fifth-preference-eb-5/about-the-eb-5-visa-classification", "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin.html"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "TN USMCA Professionals — NOT APPLICABLE to this audience",
+          "category": "other",
+          "who_for": "Citizens of Canada and Mexico ONLY.",
+          "requirements": "Recorded for completeness and deliberately excluded: TN status is limited to Canadian and Mexican citizens under USMCA. Indian citizens do not qualify by Indian citizenship or residence. No fees, family or PR details recorded — not applicable.",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": true,
+            "points_system": null,
+            "min_language": null,
+            "funds_or_salary_threshold": null,
+            "min_education": null,
+            "min_experience_years": null,
+            "occupation_list_required": "USMCA profession list (for CA/MX citizens only)",
+            "notes": "EXCLUDED — checker must return 'not applicable: Indian citizens do not qualify' unless the person also holds Canadian or Mexican citizenship."
+          },
+          "fees": "Not applicable",
+          "family": {
+            "spouse": "Not applicable",
+            "spouse_work": "Not applicable",
+            "children": "Not applicable",
+            "parents": "Not applicable"
+          },
+          "pr_path": "Not applicable.",
+          "obstacles": "Citizenship gate — absolute for this audience.",
+          "next_steps": ["Do not pursue unless the applicant acquires Canadian or Mexican citizenship"],
+          "sources": ["https://www.uscis.gov/working-in-the-united-states/temporary-workers/tn-nafta-professionals"],
+          "verified": "2026-11-12"
+        }
+      ]
+    },
+    {
+      "country": "New Zealand",
+      "sources_note": "Immigration New Zealand (immigration.govt.nz) ONLY, verified 2026-11-12, NZD. Skilled-residence wage threshold (median wage) = NZD $35.00/hour from 9 Mar 2026 (June 2025 median; previously $33.56). Multiples: 1.1× = $38.50, 1.5× = $52.50, 2× = $70.00, 3× = $105.00. SMC changes effective 24 Aug 2026 are in force. General pattern: Resident Visa = live in NZ indefinitely; Permanent Resident Visa after 2 years as resident meeting conditions/commitment. INZ's general statement that citizenship may be possible after 5 years as a resident is INDICATIVE ONLY (detail sits with DIA — UNVERIFIED within the source rule). Parents can NEVER be included in a professional's application — only via the separate routes (Parent Resident Visa, Parent Boost Visitor Visa).",
+      "routes": [
+        {
+          "name": "Skilled Migrant Category Resident Visa (SMC)",
+          "category": "points",
+          "who_for": "Skilled professionals with a skilled job or job offer from an accredited NZ employer who can reach the points or experience thresholds.",
+          "requirements": "Age 55 or younger. A current job or offer from an ACCREDITED employer is mandatory: full-time (≥30 hrs/wk), permanent or fixed-term ≥12 months, paid at least $35.00/hr for ANZSCO skill level 1–3 jobs, or $52.50/hr (1.5×) for ANZSCO 4–5/unlisted. English: principal applicant IELTS overall 6.5 (or TOEFL iBT 79, PTE Academic 58, B2 First 176, OET C+), in-person, ≤2 years old. POINTS PATHWAY: 6 points required (realistic passing level = exactly 6). Claim 3–6 points from ONE source only — qualification, NZ occupational registration, or income — topped up only by NZ skilled work experience (1 pt = 1 yr, 2 pts = 1.5 yrs, 3 pts = 2 yrs, at the SMC wage threshold). Qualifications (from 24 Aug 2026): doctorate 6; NZ master's with bachelor's 6; overseas master's with bachelor's 5; NZ bachelor's 5; overseas bachelor's 4; overseas honours/PG diploma/cert with bachelor's 4. Income points: 3 pts at 1.5× ($52.50/hr), 4 pts at 2× ($70.00), 6 pts at 3× ($105.00). Overseas qualifications need an NZQA IQA unless on the exempt list. TWO NON-POINTS PATHWAYS in the same visa: Skilled Work Experience pathway (ANZSCO 1–3 job at ≥1.1× = $38.50/hr, 3 years' relevant experience anywhere PLUS 2 further years skilled work in NZ; Amber List jobs need 1.2×; Red List excluded) and Trades & Technician pathway (listed occupation, Level 4+ qualification, 2.5 years post-qualification experience plus 1.5 years in NZ, paid ≥ $35.00/hr). Process: free EOI → invitation → lodge within 4 months. No settlement-funds requirement.",
+          "checker": {
+            "age_max": 55,
+            "needs_job_offer": true,
+            "points_system": "6 points required: 3–6 from ONE of qualification/registration/income, plus NZ skilled-work top-ups only (1 pt/yr, 2 pts/1.5 yrs, 3 pts/2 yrs). Alternative non-points pathways exist (Skilled Work Experience; Trades & Technician)",
+            "min_language": "IELTS overall 6.5 principal applicant (or equivalent)",
+            "funds_or_salary_threshold": "Job paid ≥ NZD $35.00/hr (ANZSCO 1–3) or ≥ $52.50/hr (ANZSCO 4–5/unlisted); income points at $52.50/$70.00/$105.00 per hour",
+            "min_education": "Points depend on level: overseas bachelor's = 4 pts; NZQA IQA needed unless exempt",
+            "min_experience_years": null,
+            "occupation_list_required": "ANZSCO skill level governs the wage threshold; Red List occupations excluded from two pathways",
+            "notes": "Despite being the flagship 'points' visa, a NZ job offer from an accredited employer is MANDATORY — there is no offshore, no-offer points route in NZ."
+          },
+          "fees": "EOI NZD $0; residence application from NZD $6,450 (fee $2,880 + levy $3,570; INZ table from 1 Oct 2024)",
+          "family": {
+            "spouse": "Partner and dependent children aged 24 or younger can be included in the same application",
+            "spouse_work": "Partner included gets residence — open work rights as a resident",
+            "children": "Yes, aged 24 or younger, included",
+            "parents": "NEVER includable — only the separate Parent Resident Visa or Parent Boost Visitor Visa, and only once the child is a resident/citizen."
+          },
+          "pr_path": "This IS a Resident Visa. Permanent Resident Visa after 2 years as resident meeting conditions. Citizenship possibly after 5 years as resident (indicative; DIA criteria UNVERIFIED).",
+          "obstacles": "Most overseas-qualified applicants cannot reach 6 points without first working in NZ (typically on an AEWV) — the realistic sequence is job → AEWV → 1–2 years NZ work → SMC. Wage thresholds rise with the median wage; IQA assessment delays affect non-exempt Indian qualifications.",
+          "next_steps": ["Run the INZ SMC points calculator for your exact qualification/income", "Start the NZQA IQA if your qualification is not on the exempt list", "Target accredited employers with roles at ≥ $35.00/hr", "Sit IELTS/PTE early, aiming for overall 6.5 (2-year validity)", "Submit the free EOI only once you genuinely meet a pathway; lodge within 4 months of invitation"],
+          "sources": ["https://www.immigration.govt.nz/visas/skilled-migrant-category-resident-visa"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "Straight to Residence Visa (Green List Tier 1)",
+          "category": "employer-sponsored",
+          "who_for": "Professionals whose job or offer is a Green List Tier 1 in-demand occupation meeting that occupation's exact requirements.",
+          "requirements": "Age 55 or younger. Job/offer with an ACCREDITED employer: full-time, permanent or fixed-term ≥12 months (or contract(s) ≥6 months). Occupation must be on Green List Tier 1 (Appendix 13) — verified examples include engineers, Registered Nurses in named specialities, auditors, Construction Project Manager, Quantity Surveyor, Surveyor, specified ICT roles, medical specialists. Pay at least the rate specified for the occupation, or $35.00/hr if none is specified — specified rates can be far higher (External Auditor ≥ $45.50/hr; Systems Administrator ≥ $70.00/hr). Qualification/registration exactly as specified per occupation; overseas qualifications may need IQA. English: IELTS overall 6.5 or equivalent. No points, no funds requirement.",
+          "checker": {
+            "age_max": 55,
+            "needs_job_offer": true,
+            "points_system": null,
+            "min_language": "IELTS overall 6.5 (or equivalent)",
+            "funds_or_salary_threshold": "Occupation-specified rate, else ≥ NZD $35.00/hr (examples: External Auditor ≥ $45.50/hr; Systems Administrator ≥ $70.00/hr)",
+            "min_education": "Exactly as specified for the Green List occupation; NZ registration where required",
+            "min_experience_years": null,
+            "occupation_list_required": "Green List Tier 1 (Appendix 13) — exact occupation match required",
+            "notes": "Green List is volatile: announced changes from 8 Mar 2027 (e.g. Career Counsellor leaves Tier 1) — re-verify the list at application time."
+          },
+          "fees": "From NZD $6,450 (fee $2,880 + levy $3,570)",
+          "family": {
+            "spouse": "Partner and dependent children ≤24 includable; family aged 16+ need IELTS 5.0 or paid ESOL lessons",
+            "spouse_work": "Partner gets residence with open work rights",
+            "children": "Yes, ≤24, included",
+            "parents": "NEVER includable — separate parent routes only."
+          },
+          "pr_path": "Resident Visa on grant — NO prior NZ work period required. PRV after 2 years as resident.",
+          "obstacles": "The occupation must match the Tier 1 listing exactly, including qualification, registration and pay conditions — a similar job title is not enough. NZ professional registration (nursing/medical councils, Engineering NZ) can be the long pole.",
+          "next_steps": ["Search your exact occupation on the INZ Green List tool; note tier and all requirements", "Start NZ registration or IQA if the occupation requires it", "Apply only to accredited employers paying at/above the specified rate", "Meet IELTS 6.5", "Apply for residence directly once you hold the offer"],
+          "sources": ["https://www.immigration.govt.nz/visas/straight-to-residence-visa/"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "Work to Residence Visa (Green List Tier 2)",
+          "category": "employer-sponsored",
+          "who_for": "Professionals in a Green List Tier 2 occupation who first work 24 months in NZ in that occupation.",
+          "requirements": "Age 55 or younger at the residence application. Core gate: 24 months working in NZ in a Tier 2 occupation within the 30 months immediately before applying, on a work visa (typically AEWV), paid at or above the required rate throughout the counting period, and a current job/offer with an accredited employer (full-time, permanent or ≥12-month fixed term). Wage: the occupation's specified rate, or $35.00/hr if none. From 24 Aug 2026 the applicable rate is locked to the rate in force when you started counting. Specified trades have their own rates (e.g. Metal Fabricator/Welder/Fitter/Machinist ≥ $43.63/hr; Panel Beater/Vehicle Painter/Paving Plant Operator ≥ $38.59/hr). English: IELTS overall 6.5. Related but separate visas with the same 24-in-30 pattern: Care Workforce WTR and Transport WTR.",
+          "checker": {
+            "age_max": 55,
+            "needs_job_offer": true,
+            "points_system": null,
+            "min_language": "IELTS overall 6.5 (or equivalent)",
+            "funds_or_salary_threshold": "Occupation-specified rate, else ≥ NZD $35.00/hr, for the whole 24-month counting period",
+            "min_education": "Per-occupation Green List requirements",
+            "min_experience_years": 2,
+            "occupation_list_required": "Green List Tier 2 — exact occupation match",
+            "notes": "min_experience_years = 2 means 24 months IN NZ in the occupation within a 30-month window. WARNING: 17 Tier 2 occupations leave this pathway from 8 Mar 2027 — check occupation status before starting the clock."
+          },
+          "fees": "From NZD $6,450 (fee $2,880 + levy $3,570); preceding AEWV years are charged separately",
+          "family": {
+            "spouse": "Partner and dependent children ≤24 includable in the RESIDENCE application (16+: IELTS 5.0 or paid ESOL)",
+            "spouse_work": "Partner gets residence with open work rights",
+            "children": "Yes, ≤24, in the residence application — during the preceding AEWV years family need their own visas under AEWV rules",
+            "parents": "NEVER includable — separate parent routes only."
+          },
+          "pr_path": "Resident Visa after the 24 months. PRV after a further 2 years as resident.",
+          "obstacles": "No residence on day one — minimum ~2 years working in NZ first, and the 24 months must fall inside a 30-month window, so gaps or employer changes can break eligibility. Pay must stay at/above the required rate for the whole counting period.",
+          "next_steps": ["Confirm your occupation is Tier 2 (not Tier 1, not removed from Mar 2027) and record its specified wage", "Enter on an AEWV with an accredited employer in the exact occupation", "Keep payslips and contracts proving 24 months at/above the rate within 30 months", "Meet IELTS 6.5 in time for the residence application", "Apply as soon as the 24 qualifying months complete — and before turning 56"],
+          "sources": ["https://www.immigration.govt.nz/visas/work-to-residence-visa/"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "Accredited Employer Work Visa (AEWV)",
+          "category": "employer-sponsored",
+          "who_for": "Professionals with a full-time offer from an accredited NZ employer with an approved job check — the normal first step toward NZ residence.",
+          "requirements": "No maximum age in INZ's published criteria. Job offer: full-time (≥30 hrs/wk) from an ACCREDITED employer with an APPROVED JOB CHECK (three steps: employer accreditation → job check → worker visa). Tied to the employer/job/location; changing employer needs a Job Change. Wage: NO median-wage requirement since 10 Mar 2025 — must pay at least the NZ market rate for the role and at least minimum wage (exact current minimum-wage rate UNVERIFIED in this pass). Skills threshold — meet ONE: ≥2 years' relevant experience; OR a relevant Level 4+ qualification; OR a Green List job meeting its requirements; OR pay ≥ $70.00/hr (2× median). English required ONLY for ANZSCO skill level 3–5 jobs: IELTS overall 4.0 or PTE Academic 29. Stay: up to 5 years (skill levels 1–3) or 3 years (most skill level 4–5); after the maximum continuous stay, 12 months outside NZ before a new AEWV unless residence is reached first.",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": true,
+            "points_system": null,
+            "min_language": "IELTS overall 4.0 / PTE 29 ONLY for ANZSCO skill level 3–5 jobs; none for levels 1–2",
+            "funds_or_salary_threshold": "Market rate for the role; no median-wage requirement since 10 Mar 2025 (exact minimum-wage rate UNVERIFIED)",
+            "min_education": "One of: Level 4+ relevant qualification, 2 yrs experience, Green List compliance, or pay ≥ NZD $70.00/hr",
+            "min_experience_years": 2,
+            "occupation_list_required": "Employer must pass a job check for the specific role",
+            "notes": "min_experience_years applies only if using the experience limb of the skills threshold. AEWV time counts toward SMC/Green List residence only if occupation and wage meet residence thresholds from the start."
+          },
+          "fees": "Worker application from NZD $1,540 (fee $480 + levy $1,060). Employer-side: standard accreditation NZD $775; job check NZD $735",
+          "family": {
+            "spouse": "Partner CANNOT be included in the AEWV — separate partner visa. Partner work-visa support generally requires an ANZSCO 1–3 role paid ≥80% of the median wage, or ≥1.5× median at any skill level, or a Green List role at ≥ the median (2025 Operational Manual FORMULA verified; the dollar figures tied to the old $33.56 median are superseded — use the formula, not hard dollars; post-Mar-2026 dollar update UNVERIFIED)",
+            "spouse_work": "Possible via a separate partner work visa if the pay/skill formula is met",
+            "children": "Separate visitor/student visas; supporting them requires earnings ≥ NZD $55,844/year gross (Operational Manual, Dec 2025; two AEWV parents may combine). ANZSCO 4–5 holders generally cannot support family visas except in specified cases",
+            "parents": "No route via AEWV — parent routes open only once the child is a resident/citizen."
+          },
+          "pr_path": "NO direct PR path — temporary only. It is a feeder: AEWV time in the right occupation at the right wage counts toward SMC points/pathways and the Green List Tier 2 24-month requirement.",
+          "obstacles": "Entirely employer-dependent. INZ warns job-offer scams targeting India/South Asia are common — genuine employers/recruiters cannot charge for a job. Skill level 4–5 roles get shorter stays and largely no family support.",
+          "next_steps": ["Verify the employer on INZ's accredited employer list before accepting any offer", "Confirm the ANZSCO skill level and market rate — and the $35.00/hr residence threshold if residence is the goal", "Evidence one skills-threshold route (2 years' experience or Level 4+/IQA)", "Sit the English test only if your job is skill level 3–5", "Apply online after the employer's job-check token is issued; never pay a recruiter for the job itself"],
+          "sources": ["https://www.immigration.govt.nz/aewv"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "India Skilled Work Visa (NZ–India FTA)",
+          "category": "employer-sponsored",
+          "who_for": "Citizens of India, outside NZ, with a full-time offer in a listed skilled occupation from an AEWV-accredited employer.",
+          "requirements": "In force 20 Oct 2026 under the NZ–India FTA. Indian passport holders only; must be OUTSIDE NZ for the first visa. Employer must be AEWV-accredited; NO job check required. Offer must be full-time (≥30 hrs/wk) in one of 11 listed occupations with per-sector caps on visas available (as at 20 Oct 2026: Software Engineer/Software & Applications Programmers/ICT Project Manager 1,000; Civil/Mechanical/Structural/Environmental Engineer 1,000; Construction Project Manager/Building Project Manager 700; Primary and Secondary School Teacher 500; Registered Nurse 900; Physiotherapist 300; FTA-wide ceiling of 5,000 Temporary Employment Entry holders in NZ at any time across skilled + iconic categories). Occupation-specific qualification/experience rules apply (e.g. ICT: a specified qualification route or ≥5 years' experience); NZ registration where required. An acceptable English test (≤2 years, in-person) is MANDATORY — per-occupation minimum scores are UNVERIFIED and not coded. Maximum total stay 3 years; then 3 years outside NZ before another India Skilled/Iconic visa. Fee UNVERIFIED — do NOT assume the AEWV fee.",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": true,
+            "points_system": null,
+            "min_language": "English test mandatory — per-occupation minimum scores UNVERIFIED, do not hard-code",
+            "funds_or_salary_threshold": null,
+            "min_education": "Occupation-specific (e.g. ICT qualification route or 5 yrs experience); NZ registration where required",
+            "min_experience_years": null,
+            "occupation_list_required": "Closed list of 11 occupations with per-sector caps",
+            "notes": "Citizenship gate: Indian citizens only, applying from outside NZ. CRITICAL: time on this visa does NOT count toward any skilled-residence work-experience requirement."
+          },
+          "fees": "UNVERIFIED — no official figure confirmed; do not reuse the AEWV NZD $1,540",
+          "family": {
+            "spouse": "UNVERIFIED — partner/child support rights not confirmed on official pages read; do not assume AEWV rules",
+            "spouse_work": "UNVERIFIED",
+            "children": "UNVERIFIED",
+            "parents": "No route via this visa."
+          },
+          "pr_path": "NO PR PATH — INZ states Temporary Employment Entry visas do not provide a pathway to residence, and this visa's work does not count toward skilled-residence experience requirements. Residence requires switching to a qualifying route (e.g. AEWV → SMC/Green List) on its own terms.",
+          "obstacles": "Hard sector caps, first-come; closed occupation list; the 3-years-in/3-years-out rule. The biggest trap: users may assume this 'skilled' visa builds residence time — it does not.",
+          "next_steps": ["Check your occupation and its sector cap on the INZ India Skilled Work Visa page", "Read the per-occupation qualification/experience/registration requirements", "Secure an offer (≥30 hrs/wk) from an AEWV-accredited employer", "Sit the required English test", "If residence is the real goal, compare the AEWV first — AEWV time can count toward residence, this visa's cannot"],
+          "sources": ["https://www.immigration.govt.nz/visas/india-skilled-work-visa/"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "Active Investor Plus Visa",
+          "category": "investor",
+          "who_for": "High-net-worth individuals investing at least NZD $5 million in acceptable NZ investments — a Resident Visa, not a work route.",
+          "requirements": "Choose ONE category: Growth — at least NZD $5 million for 36 months (managed funds on the Invest NZ acceptable list, Invest NZ-approved direct investments; philanthropy capped at 20%); or Balanced — at least NZD $10 million for 60 months (broader mix incl. listed equities, bonds, approved property/direct investments). Funds must be legally earned/acquired, transferred through the banking system, invested in NZD in NZ, and not for personal use. Time in NZ: Growth ≥21 days as resident over 36 months; Balanced ≥105 days over 60 months (reducible by 14 days per extra $1m in Growth-type investments, max reduction 42 days). NO age limit and NO English requirement (English removed 1 Apr 2025). No education/experience/points. Evidence checks at 24 months and at the end of the investment period.",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": false,
+            "points_system": null,
+            "min_language": "None",
+            "funds_or_salary_threshold": "Growth NZD $5,000,000 / 36 months; Balanced NZD $10,000,000 / 60 months",
+            "min_education": "None",
+            "min_experience_years": null,
+            "occupation_list_required": null,
+            "notes": "Days-in-NZ test: Growth 21 days/36 months; Balanced 105 days/60 months (reducible)."
+          },
+          "fees": "NZD $27,470 total (application fee $12,070 + levy $15,400)",
+          "family": {
+            "spouse": "Partner and dependent children can be included; included family must enter NZ within 12 months of grant or reapply",
+            "spouse_work": "Partner included is a resident",
+            "children": "Yes, included; a child born after grant joins via a Dependent Child Resident Visa",
+            "parents": "NOT includable — parent routes apply separately once the investor is a resident."
+          },
+          "pr_path": "Resident Visa from grant (travel conditions 4 years Growth / 6 years Balanced from first entry). Permanent Resident Visa after the investment period (36/60 months) once conditions are met and removed (removal: no cost).",
+          "obstacles": "Capital is genuinely at risk and locked for 3–5 years, with compliance checks at 24 months and period-end; failure to meet conditions can mean leaving NZ. Only Invest NZ-approved funds/direct investments qualify.",
+          "next_steps": ["Choose Growth ($5m/3 yrs) vs Balanced ($10m/5 yrs) by risk and time-in-NZ preference", "Document the lawful source of funds and the banking transfer path", "Use only Invest NZ-acceptable investments", "Apply stating the category and nominated funds", "Diarise the 24-month and end-of-period evidence requirements"],
+          "sources": ["https://www.immigration.govt.nz/visas/active-investor-plus-visa/"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "Business Investor Work Visa → Business Investor Resident Visa",
+          "category": "investor",
+          "who_for": "Experienced business people aged 55 or younger who will buy into and actively run an established NZ business.",
+          "requirements": "Invest at least NZD $1 million in an established business (residence after 3 years of running it) or at least NZD $2 million (fast-track residence after 12 months). Investment excludes GST, business property value and transaction fees, and must result in at least 25% ownership. Reserve funds of at least NZD $500,000 on top, to support yourself/family. The business must have traded ≥5 years, be lawful and operating in NZ, employ ≥5 FTE staff, not have been owned by you/family, and not have been used for an approved business-investor/entrepreneur application in the last 10 years; some business types are excluded (e.g. gambling, tobacco, fast food, franchises). Independent due diligence + Business Proposal form required (accountant's valuation/financial DD, NZ lawyer's legal DD). Experience: at least 3 years' acceptable business experience (self-employment in a business with ≥5 FTE staff or ≥$1m annual revenue; or senior management with ≥5 direct FTE reports and ≥$5m annual turnover). Age 55 or younger. English IELTS 5.0 or equivalent. Visa runs up to 4 years: Establishment stage ≤12 months (evidence of purchase/start within the first 9 months or the visa expires at 12 months), then Operating stage; one renewal of up to 2 years possible. Resident Visa conditions: actively run the business for the required period, maintain ≥5 FTE jobs, create and maintain ≥1 new FTE job for a NZ citizen/resident for ≥12 months, spend ≥184 days/year in NZ.",
+          "checker": {
+            "age_max": 55,
+            "needs_job_offer": false,
+            "points_system": null,
+            "min_language": "IELTS 5.0 or equivalent",
+            "funds_or_salary_threshold": "Investment ≥ NZD $1,000,000 (3-yr track) or ≥ NZD $2,000,000 (12-month fast track), PLUS ≥ NZD $500,000 reserve funds",
+            "min_education": "None — business-experience test instead",
+            "min_experience_years": 3,
+            "occupation_list_required": null,
+            "notes": "Must actively run the business — this is not a passive investment. Fast-track residents must still run the business for 3 years in total as a Resident Visa condition."
+          },
+          "fees": "Work Visa NZD $12,380 (fee $11,320 + levy $1,060); Resident Visa NZD $14,890 (fee $11,320 + levy $3,570); total government fees both stages NZD $27,270 (before DD/legal/accounting costs)",
+          "family": {
+            "spouse": "Partner and dependent children can be included in the Work Visa application — partner may get a work visa, children student/visitor visas",
+            "spouse_work": "Partner work visa available at the work-visa stage",
+            "children": "Yes, included (student/visitor visas at work stage)",
+            "parents": "NOT includable — separate parent routes only."
+          },
+          "pr_path": "Resident Visa after 3 years ($1m) or 12 months ($2m) of compliant operation; PRV after 2 years as resident meeting conditions.",
+          "obstacles": "You must actually buy and run a real 5+-year-old, 5+-staff business; the purchase must complete inside the Establishment stage or the visa lapses. Job-creation and 184-days/year presence conditions are audited before residence.",
+          "next_steps": ["Confirm 3 years' acceptable business experience with documents", "Identify a qualifying business; commission independent valuation and financial/legal due diligence", "Prove the $1m/$2m funds (lawfully earned; limited borrowing) plus the $500k reserve", "Meet IELTS 5.0 if needed; lodge with the Business Proposal form", "Complete the purchase within 9 months of grant and run the business to the job/presence conditions from day one"],
+          "sources": ["https://www.immigration.govt.nz/visas/business-investor-work-visa/", "https://www.immigration.govt.nz/visas/business-investor-resident-visa/"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "Parent Resident Visa (Parent Category) — separate route",
+          "category": "family",
+          "who_for": "Parents (and grandparents/legal guardians in defined cases) of an adult NZ citizen or resident who can sponsor them — only AFTER the professional child is settled in NZ.",
+          "requirements": "Sponsor (the child): 18+, a NZ citizen or resident for at least 3 years, living in NZ, and present in NZ at least 184 days in EACH of the 3 years before the residence application. Can sponsor alone, or jointly with a partner or an adult sibling. Sponsor agrees to meet the parent's living costs for the first 10 years plus any deportation costs. Sponsor income test (taxable income on Inland Revenue statements, met in 2 of the 3 years before EOI selection; rates from 30 Apr 2026): single sponsor — 1.5× median wage for 1 parent = NZD $109,200/year, +0.5× median ($36,400) per additional parent (2 parents = $145,600); two joint sponsors — 2× median for 1 parent, +0.5× per additional parent. Process: EOI → selection → invitation (apply within 4 months). Annual cap 2,500 visas. Selection moved on 5 Oct 2026 to a hybrid model (~90% queue date order, ~10% ballot; first hybrid selection 10 Nov 2026); EOIs no longer expire if interest is re-confirmed every 2 years. Parent must meet health (medical + chest X-ray) and character (police certificates) standards; English — speak/understand English OR pre-purchase ESOL lessons. The parent's partner can be included if the relationship is genuine. No age, education, points or job-offer requirements.",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": false,
+            "points_system": null,
+            "min_language": "Parent: English OR pre-purchased ESOL lessons",
+            "funds_or_salary_threshold": "SPONSOR income: NZD $109,200/yr (1 sponsor, 1 parent), $145,600 (1 sponsor, 2 parents); joint sponsors 2× median for 1 parent — met in 2 of 3 tax years",
+            "min_education": "None",
+            "min_experience_years": null,
+            "occupation_list_required": null,
+            "notes": "The test falls on the SPONSOR, not the parent. Sponsor must be a citizen/resident ≥3 years with ≥184 days/year in NZ."
+          },
+          "fees": "EOI NZD $450; residence application NZD $5,360 (fee $1,940 + levy $3,420); total NZD $5,810",
+          "family": {
+            "spouse": "The parent's partner can be included in the same application",
+            "spouse_work": "Included partner is a resident",
+            "children": "No provision verified to bring the parent's other dependent children as a family unit",
+            "parents": "This route IS the parent route."
+          },
+          "pr_path": "Resident Visa (indefinite stay) — BUT a Permanent Resident Visa only after holding the Parent Resident Visa for 10 years in a row, not the usual 2. Treat PRV timing as 10 years for this visa.",
+          "obstacles": "Cannot start until the child has been a resident/citizen for 3 years AND meets a high sponsor-income test sustained over 2 of 3 tax years. The 2,500/year cap with a queue means meeting the criteria does not mean quick selection. The sponsor is financially liable for 10 years, and the health standard can be decisive for older parents.",
+          "next_steps": ["Child secures residence first; track the 3-year and 184-days/year clocks", "Child builds IRD-evidenced income of at least $109,200 (single sponsor, 1 parent) for 2 of 3 years", "Lodge the parent's EOI ($450); keep details current and re-confirm interest every 2 years", "On invitation, complete medicals and police certificates and lodge within 4 months", "In parallel, assess the Parent Boost Visitor Visa for visits in the meantime"],
+          "sources": ["https://www.immigration.govt.nz/visas/parent-resident-visa/"],
+          "verified": "2026-11-12"
+        },
+        {
+          "name": "Parent Boost Visitor Visa — separate, NOT residence",
+          "category": "family",
+          "who_for": "Parents of NZ citizens/residents who want long stays while the Parent Resident Visa is unavailable or pending — visiting only.",
+          "requirements": "Apply from OUTSIDE NZ; sponsored by an adult child who is a NZ citizen/resident (sponsor present in NZ ≥184 days/year). Stay up to 5 years, multiple entry; a second 5-year visa is possible (10 years total maximum). Compliance check after 3 years (leave NZ, new medical certificate, prove insurance maintained). Money — meet ONE of: (a) sponsor income ≥ NZD $72,800/year for 1 parent (1× median; joint sponsors 1.5×; +0.5× per extra parent), evidenced over 2 of the last 3 tax years; (b) parent's own ongoing income ≥ $33,663.24/year single or $51,182.56/year couple; or (c) parent's own funds ≥ $170,000 single or $260,000 couple. Rates update each April. INSURANCE IS MANDATORY for the entire stay (12 months bought upfront after approval in principle): emergency medical cover ≥ $250,000/year, cancer treatment ≥ $100,000/year, plus repatriation and return of remains, from an insurer rated at least A (strong) or equivalent. Failing to maintain insurance can cancel the visa and damage future Parent Resident Visa eligibility. Full medical required. No age, education, language or points requirements.",
+          "checker": {
+            "age_max": null,
+            "needs_job_offer": false,
+            "points_system": null,
+            "min_language": "None",
+            "funds_or_salary_threshold": "Sponsor income ≥ NZD $72,800/yr (1 parent) OR parent income ≥ $33,663.24/yr single / $51,182.56 couple OR parent funds ≥ $170,000 single / $260,000 couple; PLUS mandatory insurance (emergency ≥ $250,000/yr, cancer ≥ $100,000/yr)",
+            "min_education": "None",
+            "min_experience_years": null,
+            "occupation_list_required": null,
+            "notes": "Visitor visa — NO work rights as a residence route, and INZ states expressly it is not a pathway to residence."
+          },
+          "fees": "NZD $3,000 for most applicants (fee + levy) plus NZD $100 International Visitor Conservation and Tourism Levy; insurance premiums extra and significant",
+          "family": {
+            "spouse": "The applicant parent may include their partner (couple thresholds then apply)",
+            "spouse_work": "No — visitor status",
+            "children": "No provision verified to include dependent children as a family unit",
+            "parents": "This route IS for parents — as visitors only."
+          },
+          "pr_path": "NONE — INZ expressly: this visa 'is not a pathway to residence'. Time on it does not advance the Parent Resident Visa (and breaking insurance conditions can harm that eligibility). Residence for parents = Parent Resident Visa only.",
+          "obstacles": "Insurance cost and availability for older parents, maintained continuously for 5–10 years, is the real price of this visa. Must apply offshore; the year-3 compliance check requires leaving NZ.",
+          "next_steps": ["Confirm the child sponsor meets the 184-days test and (if used) the $72,800 income test", "Quote compliant insurance (≥$250k emergency / ≥$100k cancer) BEFORE applying", "Choose the money route: sponsor income vs parent income vs parent funds", "Apply from outside NZ; buy 12 months of insurance within 3 months of approval in principle", "Diarise the year-3 offshore compliance check"],
+          "sources": ["https://www.immigration.govt.nz/visas/parent-boost-visitor-visa/"],
+          "verified": "2026-11-12"
+        }
+      ]
+    }
+  ]
+}
