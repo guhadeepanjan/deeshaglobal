@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Morning Globe — Sunday, 15 November 2026</title>
+<meta name="description" content="The Morning Globe e-newspaper: 48 verified stories across seven sections plus briefs — Breaking, Sports, Science & Tech, Business, AI, Banking and Banking Regulators. Every story sourced.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800;900&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--grad:linear-gradient(92deg,#7c3aed,#ec4899 55%,#f97316);--ink:#14101f;--mut:#5c5570;--bg:#faf8ff;--card:#fff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+a{color:inherit;text-decoration:none}
+img{display:block;width:100%;height:100%;object-fit:cover}
+.topstrip{background:#14101f;color:#fff;font-size:.82rem;padding:.5rem 1rem;text-align:center}
+.topstrip a{color:#ffb38a;font-weight:700;text-decoration:underline}
+header.mast{text-align:center;padding:1.2rem 1rem .4rem}
+.mast h1{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-weight:800;font-size:clamp(2.1rem,8.5vw,4.2rem);letter-spacing:.005em;line-height:1.05;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.mast .date{font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.8rem;color:var(--mut);margin-top:.35rem}
+.mast .tag{font-size:.95rem;color:var(--mut);margin-top:.2rem}
+.banner{height:150px;margin:.9rem auto 0;max-width:1180px;border-radius:0;overflow:hidden;position:relative}
+.banner img{object-position:center 38%}
+.banner span{position:absolute;left:0;right:0;bottom:0;padding:1.4rem 1rem .55rem;color:#fff;font-weight:600;font-size:.85rem;background:linear-gradient(transparent,rgba(10,6,24,.75))}
+.wrap{max-width:1180px;margin:0 auto;padding:0 14px}
+.ticker{display:flex;gap:1.4rem;overflow-x:auto;white-space:nowrap;background:#14101f;color:#fff;border-radius:12px;padding:.55rem 1rem;margin:1rem 0;font-size:.83rem;scrollbar-width:none}
+.ticker b{color:#ffb38a} .ticker .up{color:#4ade80}
+nav.sections{display:flex;gap:.45rem;overflow-x:auto;padding:.4rem 0 .8rem;scrollbar-width:none}
+nav.sections a{flex:0 0 auto;font-size:.8rem;font-weight:700;padding:.42rem .8rem;border-radius:999px;background:#fff;border:1.5px solid #e6def7;color:var(--ink)}
+.hero{display:grid;grid-template-columns:1.15fr 1fr;background:var(--card);border-radius:20px;overflow:hidden;box-shadow:0 12px 34px rgba(60,20,120,.13);margin:.4rem 0 1.4rem}
+.hero .thumb{min-height:260px}
+.hero .body{padding:1.3rem 1.4rem}
+.kicker{display:inline-block;background:var(--grad);color:#fff;font-weight:800;font-size:.72rem;letter-spacing:.12em;padding:.3rem .7rem;border-radius:999px;text-transform:uppercase}
+.hero h2{font-family:'Archivo',sans-serif;font-weight:900;font-size:clamp(1.5rem,4.6vw,2.3rem);line-height:1.12;margin:.6rem 0 .55rem}
+.hero p{color:#37304d;font-size:1rem}
+.section{margin:2rem 0}
+.sec-head{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap;border-bottom:3px solid var(--sec);padding-bottom:.5rem;margin-bottom:1rem}
+.sec-chip{background:var(--sec);color:#fff;font-family:'Archivo',sans-serif;font-weight:800;font-size:1.05rem;padding:.35rem .9rem;border-radius:10px;text-transform:uppercase;letter-spacing:.03em}
+.sec-sub{color:var(--mut);font-size:.85rem;font-weight:600}
+.sec-count{margin-left:auto;color:var(--mut);font-size:.8rem;font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.1rem}
+.card{background:var(--card);border-radius:16px;overflow:hidden;box-shadow:0 4px 18px rgba(60,20,120,.08);display:flex;flex-direction:column;border-top:4px solid var(--sec)}
+.card .thumb{height:170px;flex:0 0 auto}
+.card.lead{grid-column:span 2}
+.card.lead .thumb{height:230px}
+.card .body{padding:.95rem 1.05rem 1.05rem;display:flex;flex-direction:column;gap:.5rem;flex:1}
+.card h3,.brief h4{font-family:'Archivo',sans-serif;font-weight:800;line-height:1.22}
+.card h3{font-size:1.13rem} .card.lead h3{font-size:1.45rem}
+.card p,.brief p{font-size:.92rem;color:#37304d}
+.meta{margin-top:auto;display:flex;justify-content:space-between;align-items:baseline;gap:.6rem;padding-top:.35rem}
+.credit{font-size:.7rem;color:#8a83a0}
+.read{font-size:.8rem;font-weight:700;color:#7c3aed;white-space:nowrap}
+.hl:hover h3,.hl:hover h4{text-decoration:underline}
+.briefs{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:1rem}
+.brief{background:var(--card);border-radius:14px;overflow:hidden;box-shadow:0 4px 16px rgba(60,20,120,.08);display:flex;flex-direction:column}
+.brief .thumb{height:130px;flex:0 0 auto}
+.brief .body{padding:.8rem .95rem .95rem;display:flex;flex-direction:column;gap:.45rem;flex:1}
+.brief h4{font-size:1rem}
+.brief p{font-size:.87rem}
+.more-head{border-bottom:3px solid transparent;border-image:var(--grad) 1}
+footer{margin:2.6rem 0 0;background:#14101f;color:#cfc9e6;padding:1.6rem 1rem 2rem;text-align:center;font-size:.88rem}
+footer .brand{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-weight:800;font-size:1.35rem;letter-spacing:.01em;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+footer a{color:#ffb38a;font-weight:700}
+footer .small{font-size:.75rem;color:#8a83a0;margin-top:.6rem}
+#followModal{position:fixed;inset:0;display:none;align-items:flex-end;justify-content:center;background:rgba(16,10,32,.55);z-index:60;padding:0}
+#followModal.open{display:flex}
+.modal-card{background:#fff;width:100%;max-width:460px;border-radius:22px 22px 0 0;padding:1.5rem 1.4rem 1.7rem;text-align:center;box-shadow:0 -12px 40px rgba(0,0,0,.3);animation:slideUp .45s cubic-bezier(.2,.9,.3,1)}
+@keyframes slideUp{from{transform:translateY(60px);opacity:0}to{transform:translateY(0);opacity:1}}
+@media(min-width:640px){#followModal{align-items:center;padding:1rem}.modal-card{border-radius:22px}}
+.modal-card .globe{width:64px;height:64px;margin:0 auto .7rem;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:1.9rem}
+.modal-card h3{font-family:'Archivo',sans-serif;font-weight:900;font-size:1.35rem;line-height:1.2}
+.modal-card p{color:var(--mut);font-size:.93rem;margin:.55rem 0 1.1rem}
+.btn-follow{display:block;background:var(--grad);color:#fff;font-weight:800;font-size:1rem;padding:.85rem 1rem;border-radius:999px}
+.btn-continue{display:block;margin-top:.6rem;background:none;border:none;width:100%;font:inherit;font-weight:600;color:var(--mut);padding:.6rem;cursor:pointer}
+.modal-x{float:right;background:none;border:none;font-size:1.3rem;color:var(--mut);cursor:pointer;line-height:1}
+@media(max-width:760px){.hero{grid-template-columns:1fr}.card.lead{grid-column:span 1}.card.lead .thumb{height:190px}.banner{height:110px}}
+</style>
+</head>
+<body>
+<div class="topstrip">Today's edition is also live as one swipeable post on Instagram — <a href="https://www.instagram.com/themorningglobe/" target="_blank" rel="noopener">read it on @themorningglobe</a></div>
+<header class="mast">
+  <h1>THE MORNING GLOBE</h1>
+  <div class="date">Sunday, 15 November 2026 · Morning Edition · Vol. 1 No. 9</div>
+  <div class="tag">Your morning news in seven sections — every story sourced, every photo real.</div>
+</header>
+<div class="banner"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Brisbane_Airport_Domestic_Terminal_flights_departures_board%2C_June_2022.jpg/960px-Brisbane_Airport_Domestic_Terminal_flights_departures_board%2C_June_2022.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="US airport"><span>America leads the day: all US flights grounded after a communications outage, India win a last-ball U19 Asia Cup final, and markets close a third straight week higher.</span></div>
+<div class="wrap">
+  <div class="ticker"><span><b>SENSEX</b> 81,592.45 <span class="up">▼ 0.39% Fri</span></span><span><b>NIFTY</b> 25,144.30 <span class="up">▼ 0.61% Fri</span></span><span><b>NIFTY BANK</b> 61,034 <span class="up">+3.7% week</span></span><span><b>RUPEE</b> 94.24 / $</span><span><b>WEEK</b> 3rd straight gain</span><span><b>CPI OCT</b> 6.09%</span></div>
+  <nav class="sections">
+    <a href="#breaking">Breaking</a><a href="#sports">Sports</a><a href="#scitech">Sci-Tech</a><a href="#business">Business</a><a href="#ai">AI</a><a href="#banking">Banking</a><a href="#regulators">Regulators</a><a href="#more">More Sections</a>
+  </nav>
+  <article class="hero">
+    <a class="thumb" href="https://www.thehindu.com/news/morning-digest-on-november-14-2026/article71700687.ece" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Brisbane_Airport_Domestic_Terminal_flights_departures_board%2C_June_2022.jpg/960px-Brisbane_Airport_Domestic_Terminal_flights_departures_board%2C_June_2022.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="US airport"></a>
+    <div class="body">
+      <span class="kicker">Top Story · Breaking</span>
+      <a class="hl" href="https://www.thehindu.com/news/morning-digest-on-november-14-2026/article71700687.ece" target="_blank" rel="noopener"><h2>All departing US flights grounded after a major communications outage</h2></a>
+      <p>All flights in the United States were grounded on Friday 13 November after what officials called a major communications outage, The Hindu&#x27;s Morning Digest reports. Officials insisted it was not the result of any nefarious attack. The nationwide stop left tens of thousands of passengers in limbo and was only the second such alert in US airspace since the 9/11 attacks.</p>
+      <div class="meta"><span class="credit">Photo: Airport (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.thehindu.com/news/morning-digest-on-november-14-2026/article71700687.ece" target="_blank" rel="noopener">Read at The Hindu &#8599;</a></div>
+    </div>
+  </article>
+  <section id="breaking" class="section" style="--sec:#e11d48">
+  <div class="sec-head"><span class="sec-chip">Breaking Top News</span><span class="sec-sub">Politics · India & Global</span><span class="sec-count">6 stories</span></div>
+  <div class="grid"><article class="card lead">
+      <a class="thumb" href="https://www.thehindu.com/news/morning-digest-on-november-14-2026/article71700687.ece" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Brisbane_Airport_Domestic_Terminal_flights_departures_board%2C_June_2022.jpg/960px-Brisbane_Airport_Domestic_Terminal_flights_departures_board%2C_June_2022.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.thehindu.com/news/morning-digest-on-november-14-2026/article71700687.ece" target="_blank" rel="noopener"><h3>All departing US flights grounded after a major communications outage</h3></a>
+        <p>All flights in the United States were grounded on Friday 13 November after what officials called a major communications outage, The Hindu&#x27;s Morning Digest reports. Officials insisted it was not the result of any nefarious attack. The nationwide stop left tens of thousands of passengers in limbo and was only the second such alert in US airspace since the 9/11 attacks.</p>
+        <div class="meta"><span class="credit">Photo: Airport (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.thehindu.com/news/morning-digest-on-november-14-2026/article71700687.ece" target="_blank" rel="noopener">Read at The Hindu &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://theraisinapost.com/24-hours/india-news/2026-11-14/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Cybersecurity_court_document_and_gavel.jpg/960px-Cybersecurity_court_document_and_gavel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://theraisinapost.com/24-hours/india-news/2026-11-14/" target="_blank" rel="noopener"><h3>PMO summons telecom secretary over forged court orders used to block 129 betting sites</h3></a>
+        <p>The Prime Minister&#x27;s Office has summoned telecommunications secretary Amit Agrawal after purported court orders were used to direct the blocking of 129 betting websites, Reuters reported on 14 November via The Raisina Post. Emails purporting to come from lawyers carried documents with fabricated court insignia, seals and QR codes. The Department of Telecommunications has begun an internal inquiry and police are investigating suspected forgery and cheating.</p>
+        <div class="meta"><span class="credit">Photo: Court (scene photo) - Wikimedia Commons</span><a class="read" href="https://theraisinapost.com/24-hours/india-news/2026-11-14/" target="_blank" rel="noopener">Read at Reuters via The Raisina Post &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.thehindu.com/news/morning-digest-on-november-14-2026/article71700687.ece" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Ajay_Maken_delivering_the_keynote_address%2C_at_India_Conference_on_%22Challenges_of_Urbanisation%22%2C_in_John_F._Kennedy_School_of_Government%2C_Harvard_University%2C_USA_on_March_10%2C_2013.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.thehindu.com/news/morning-digest-on-november-14-2026/article71700687.ece" target="_blank" rel="noopener"><h3>US assures India of a comparative tariff advantage in interim trade deal breakthrough</h3></a>
+        <p>In a significant breakthrough towards concluding the India-US interim trade deal, the US has assured India of a comparative advantage over its competitors once it finalises its tariff structure, a senior Commerce Ministry official said, The Hindu reports. Both sides are working to complete the deal by the end of the current financial year, as agreed in the February 2026 Modi-Trump joint statement.</p>
+        <div class="meta"><span class="credit">Photo: Trade (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.thehindu.com/news/morning-digest-on-november-14-2026/article71700687.ece" target="_blank" rel="noopener">Read at The Hindu &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.thehindu.com/news/morning-digest-on-november-14-2026/article71700687.ece" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/CMA_CGM_ship_on_the_Mississippi_River%2C_New_Orleans_2023.jpg/960px-CMA_CGM_ship_on_the_Mississippi_River%2C_New_Orleans_2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.thehindu.com/news/morning-digest-on-november-14-2026/article71700687.ece" target="_blank" rel="noopener"><h3>Tanker hits river cruise boat on the Mississippi at New Orleans; all 180 aboard survive</h3></a>
+        <p>A tanker that apparently lost its steering slammed into a docked river cruise boat with 180 people aboard in New Orleans on Friday, The Hindu reports. All aboard survived after the crash prompted a massive rescue operation as the cruise boat took on water and began to topple over.</p>
+        <div class="meta"><span class="credit">Photo: Mississippi River (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.thehindu.com/news/morning-digest-on-november-14-2026/article71700687.ece" target="_blank" rel="noopener">Read at The Hindu &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.thehindu.com/news/morning-digest-on-november-14-2026/article71700687.ece" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.thehindu.com/news/morning-digest-on-november-14-2026/article71700687.ece" target="_blank" rel="noopener"><h3>Low pressure over Bay of Bengal likely to become a cyclonic storm around 16 November</h3></a>
+        <p>A low pressure area formed over the Southeast Bay of Bengal on Friday morning and is likely to intensify into a cyclonic storm over the central Bay of Bengal around the evening of Monday 16 November, the India Meteorological Department said, The Hindu reports. The system is expected to become a well-marked low on Saturday and a depression around Sunday morning.</p>
+        <div class="meta"><span class="credit">Photo: Bay of Bengal (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.thehindu.com/news/morning-digest-on-november-14-2026/article71700687.ece" target="_blank" rel="noopener">Read at The Hindu (IMD) &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.pw.live/school-prep/exams/school-assembly-news-headlines-today" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Prime_Minister_of_Bharat%2C_Shri_Narendra_Damodardas_Modi_is_welcomed_upon_his_arrival_at_Bengaluru_airport_by_the_Chief_Minister_of_Karnataka%2C_Shri_Siddaramaiah.jpg/960px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.pw.live/school-prep/exams/school-assembly-news-headlines-today" target="_blank" rel="noopener"><h3>PM Modi joins Prashanti Kutiram golden jubilee in Bengaluru; ASEAN Summit in Philippines next</h3></a>
+        <p>Prime Minister Narendra Modi joined the Golden Jubilee celebrations of Prashanti Kutiram in Bengaluru, Physics Wallah&#x27;s 15 November headlines report. Separately, the Prime Minister is scheduled to participate in the ASEAN Summit in the Philippines on 16-17 November, The Daily Jagran reports, where leaders are expected to discuss regional cooperation and economic partnerships.</p>
+        <div class="meta"><span class="credit">Photo: Narendra Modi (file photo) - Wikimedia Commons</span><a class="read" href="https://www.pw.live/school-prep/exams/school-assembly-news-headlines-today" target="_blank" rel="noopener">Read at Physics Wallah / The Daily Jagran &#8599;</a></div>
+      </div>
+    </article></div>
+</section><section id="sports" class="section" style="--sec:#16a34a">
+  <div class="sec-head"><span class="sec-chip">Sports</span><span class="sec-sub">Cricket First · Then The World</span><span class="sec-count">6 stories</span></div>
+  <div class="grid"><article class="card lead">
+      <a class="thumb" href="https://www.cricbuzz.com/cricket-news/140907/india-prevail-in-last-ball-thriller-against-pakistan-to-clinch-u19-asia-cup" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.cricbuzz.com/cricket-news/140907/india-prevail-in-last-ball-thriller-against-pakistan-to-clinch-u19-asia-cup" target="_blank" rel="noopener"><h3>India beat Pakistan by one wicket off the last ball to win the U19 Asia Cup</h3></a>
+        <p>India clinched the Under-19 Asia Cup in a last-ball thriller at Al Amerat, Oman on Saturday, chasing 338 to finish on 339 for 9, Cricbuzz reports. Pakistan made 337/9 (Usman Khan 107, Abdul Qadir 80; Kavya Patel 4/68). For India, Lakshya Raichandani made 80 and Aaryavir Sehwag 58, before Mohit Ulva&#x27;s unbeaten 49 off 26 balls - including a four when 3 were needed off the final ball - sealed a record-extending ninth title.</p>
+        <div class="meta"><span class="credit">Photo: India U19 cricket (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.cricbuzz.com/cricket-news/140907/india-prevail-in-last-ball-thriller-against-pakistan-to-clinch-u19-asia-cup" target="_blank" rel="noopener">Read at Cricbuzz &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.cricbuzz.com/cricket-news/140900/nz-vs-ind-5th-odi-indias-misfiring-batting-seeks-strong-finish-in-mount-maunganui-cricbuzzcom" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.cricbuzz.com/cricket-news/140900/nz-vs-ind-5th-odi-indias-misfiring-batting-seeks-strong-finish-in-mount-maunganui-cricbuzzcom" target="_blank" rel="noopener"><h3>Series on the line: India seek a strong finish in today&#x27;s fifth ODI at Mount Maunganui</h3></a>
+        <p>India face New Zealand in the fifth and final ODI at Bay Oval, Mount Maunganui today (7:30 AM IST), leading the series 2-1 but reeling from Friday&#x27;s 89 all out, Cricbuzz reports. Matt Henry and Kyle Jamieson have been released for Test preparations, as has India&#x27;s Gurnoor Brar, who joins the Test squad in Wellington. Virat Kohli now has 20 ODI ducks, the joint-most for India alongside Sachin Tendulkar.</p>
+        <div class="meta"><span class="credit">Photo: Shreyas Iyer (file photo) - Wikimedia Commons</span><a class="read" href="https://www.cricbuzz.com/cricket-news/140900/nz-vs-ind-5th-odi-indias-misfiring-batting-seeks-strong-finish-in-mount-maunganui-cricbuzzcom" target="_blank" rel="noopener">Read at Cricbuzz &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.thehindu.com/sport/football/india-beat-bhutan-2-1-to-enter-saff-championship-final/article71701546.ece" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.thehindu.com/sport/football/india-beat-bhutan-2-1-to-enter-saff-championship-final/article71701546.ece" target="_blank" rel="noopener"><h3>India beat Bhutan 2-1 to reach the SAFF Championship final in Dhaka</h3></a>
+        <p>Defending champions India rode on goals from P.V. Vishnu (8th minute) and Chinglensana Singh (27th) to beat Bhutan 2-1 and enter the SAFF Championship final in Dhaka on Saturday, The Hindu reports. Kinzang Tashi Tobden pulled one back for Bhutan in the 48th minute after VAR overturned an offside call - the match marked the first use of VAR in SAFF Championship history. India, fielding a U-23 reserve squad under Naushad Moosa, will face Bangladesh or Pakistan in the final on 17 November.</p>
+        <div class="meta"><span class="credit">Photo: Football (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.thehindu.com/sport/football/india-beat-bhutan-2-1-to-enter-saff-championship-final/article71701546.ece" target="_blank" rel="noopener">Read at The Hindu &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.wionews.com/sports/lakshya-sen-makes-history-becomes-first-indian-to-storm-into-kumamoto-masters-final-1794651799937/amp" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Badminton_at_the_2018_Summer_Youth_Olympics_%E2%80%93_Boys_Quarterfinals_Rumbay-Sen_01.jpg/960px-Badminton_at_the_2018_Summer_Youth_Olympics_%E2%80%93_Boys_Quarterfinals_Rumbay-Sen_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.wionews.com/sports/lakshya-sen-makes-history-becomes-first-indian-to-storm-into-kumamoto-masters-final-1794651799937/amp" target="_blank" rel="noopener"><h3>Lakshya Sen becomes the first Indian to reach the Kumamoto Masters final</h3></a>
+        <p>Lakshya Sen made history on Saturday by becoming the first Indian to reach the final of the Kumamoto Masters Japan, beating Indonesia&#x27;s sixth seed Alwi Farhan 21-12, 15-21, 21-11 in a 70-minute semi-final, WION reports. Fresh from winning the HYLO Open, the eighth seed will face Kunlavut Vitidsarn or Koki Watanabe in the final, with BWF World Tour Finals qualification also in play.</p>
+        <div class="meta"><span class="credit">Photo: Lakshya Sen (file photo) - Wikimedia Commons</span><a class="read" href="https://www.wionews.com/sports/lakshya-sen-makes-history-becomes-first-indian-to-storm-into-kumamoto-masters-final-1794651799937/amp" target="_blank" rel="noopener">Read at WION &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.outlookindia.com/amp/story/sports/cricket/shreyas-iyer-reaction-india-batting-collapse-matt-henry-six-wicket-haul-ind-vs-nz-4th-odi-heavy-defeat-2026" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.outlookindia.com/amp/story/sports/cricket/shreyas-iyer-reaction-india-batting-collapse-matt-henry-six-wicket-haul-ind-vs-nz-4th-odi-heavy-defeat-2026" target="_blank" rel="noopener"><h3>&#x27;A tough one to take&#x27;: Iyer blames shifting conditions after Henry&#x27;s 6/27 rout</h3></a>
+        <p>India captain Shreyas Iyer attributed Friday&#x27;s 244-run defeat to the dramatic change in pitch conditions, while acknowledging Matt Henry&#x27;s sensational 6/27, Outlook India reports. India were bowled out for 89 in 26.4 overs chasing 334, with Henry removing Rohit Sharma, Virat Kohli and Iyer himself for ducks in the first over.</p>
+        <div class="meta"><span class="credit">Photo: Shreyas Iyer (file photo) - Wikimedia Commons</span><a class="read" href="https://www.outlookindia.com/amp/story/sports/cricket/shreyas-iyer-reaction-india-batting-collapse-matt-henry-six-wicket-haul-ind-vs-nz-4th-odi-heavy-defeat-2026" target="_blank" rel="noopener">Read at Outlook India &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.thedailyjagran.com/education/news/todays-school-assembly-news-headline-november-15-2026-check-top-national-international-and-sports-news-here-10336302" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.thedailyjagran.com/education/news/todays-school-assembly-news-headline-november-15-2026-check-top-national-international-and-sports-news-here-10336302" target="_blank" rel="noopener"><h3>Sooryavanshi becomes the youngest captain in men&#x27;s T20 cricket history</h3></a>
+        <p>Vaibhav Sooryavanshi has become the youngest captain in men&#x27;s T20 cricket history, The Daily Jagran&#x27;s 15 November sports headlines report, as the Syed Mushtaq Ali Trophy season gets under way with India&#x27;s T20 stars in domestic action. In other results, Katerina Siniakova clinched a record sixth year-end WTA No. 1 doubles finish.</p>
+        <div class="meta"><span class="credit">Photo: Young cricket (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.thedailyjagran.com/education/news/todays-school-assembly-news-headline-november-15-2026-check-top-national-international-and-sports-news-here-10336302" target="_blank" rel="noopener">Read at The Daily Jagran &#8599;</a></div>
+      </div>
+    </article></div>
+</section><section id="scitech" class="section" style="--sec:#0891b2">
+  <div class="sec-head"><span class="sec-chip">Science &amp; Technology</span><span class="sec-sub">Space · Research · The Planet</span><span class="sec-count">6 stories</span></div>
+  <div class="grid"><article class="card lead">
+      <a class="thumb" href="https://www.thehindu.com/news/morning-digest-on-november-14-2026/article71700687.ece" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/20140511_Microsoft_Development_Game_Studios_Japan.jpg/960px-20140511_Microsoft_Development_Game_Studios_Japan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.thehindu.com/news/morning-digest-on-november-14-2026/article71700687.ece" target="_blank" rel="noopener"><h3>Microsoft outage hits businesses worldwide; Indian firms feel the impact</h3></a>
+        <p>The global disruption of Microsoft services that began on Thursday 12 November and continued late into Friday affected several Indian businesses&#x27; internal communications and customer-facing operations, The Hindu reports. The company said it was making progress fixing the outage, which hit email access and workplace applications across businesses, public services and other organisations globally, from startups to multinational corporations in India.</p>
+        <div class="meta"><span class="credit">Photo: Microsoft (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.thehindu.com/news/morning-digest-on-november-14-2026/article71700687.ece" target="_blank" rel="noopener">Read at The Hindu &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.linkedin.com/posts/prinsciadvoff_the-honble-prime-minister-of-india-shri-activity-7527253372073185280-FTjO" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.linkedin.com/posts/prinsciadvoff_the-honble-prime-minister-of-india-shri-activity-7527253372073185280-FTjO" target="_blank" rel="noopener"><h3>PM inaugurates India&#x27;s first LED dome planetarium, COSMOS-Mysuru</h3></a>
+        <p>Prime Minister Narendra Modi inaugurated India&#x27;s first LED dome planetarium and the Data Analysis Training and Astronomy Resource Centre (DATARC) under the COSMOS project at the University of Mysore on 13 November, the Office of the Principal Scientific Adviser reports. The planetarium has a 15-metre LED dome seating 130-150 people and will draw on real-time and archival data from telescopes and ISRO missions. It is coordinated by the Indian Institute of Astrophysics, Bengaluru.</p>
+        <div class="meta"><span class="credit">Photo: Planetarium / astronomy (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.linkedin.com/posts/prinsciadvoff_the-honble-prime-minister-of-india-shri-activity-7527253372073185280-FTjO" target="_blank" rel="noopener">Read at Office of the Principal Scientific Adviser &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://techwordnews.com/rajya-sabha-panel-to-visit-isro-hal-facility-in-bengaluru/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/9th_Bengaluru_Space_Expo_2026%2C_Bangalore_International_Exhibition_Centre_110.jpg/960px-9th_Bengaluru_Space_Expo_2026%2C_Bangalore_International_Exhibition_Centre_110.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://techwordnews.com/rajya-sabha-panel-to-visit-isro-hal-facility-in-bengaluru/" target="_blank" rel="noopener"><h3>Rajya Sabha panel reviews HAL and ISRO facilities in Bengaluru</h3></a>
+        <p>Members of a Rajya Sabha committee visited Hindustan Aeronautics Limited and ISRO&#x27;s UR Rao Satellite Centre in Bengaluru on Friday on a study visit, Tech Word News (The Hindu) reports. The committee, headed by Milind Deora, inspected HAL&#x27;s LCA Tejas division and discussed the future of India&#x27;s space sector, from liberalisation and reusable rockets to the Chandrayaan mission, space debris and e-waste regulations.</p>
+        <div class="meta"><span class="credit">Photo: ISRO (scene photo) - Wikimedia Commons</span><a class="read" href="https://techwordnews.com/rajya-sabha-panel-to-visit-isro-hal-facility-in-bengaluru/" target="_blank" rel="noopener">Read at Tech Word News / The Hindu &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.viksitharyana.com/english/isro-sdsc-shar-recruitment-2026-97-posts/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.viksitharyana.com/english/isro-sdsc-shar-recruitment-2026-97-posts/" target="_blank" rel="noopener"><h3>ISRO&#x27;s Sriharikota centre reopens applications for 97 posts; last date 16 November</h3></a>
+        <p>The Satish Dhawan Space Centre SHAR, Sriharikota has reopened online applications for 97 posts under Advertisement SDSC SHAR/RMT/03/2026, with the portal open from 13 to 16 November, Viksit Haryana reports. Technician-B is the largest group with 43 posts, followed by Multi-Tasking Staff (16) and Technical Assistant (14). Eligibility is counted as on 9 November 2026.</p>
+        <div class="meta"><span class="credit">Photo: ISRO launch facility (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.viksitharyana.com/english/isro-sdsc-shar-recruitment-2026-97-posts/" target="_blank" rel="noopener">Read at Viksit Haryana (ISRO SDSC SHAR) &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.thehindu.com/news/morning-digest-on-november-14-2026/article71700687.ece" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/A_long_wall_in_a_room_with_decorated_pharmacy_jars_on_shelve_Wellcome_V0029792.jpg/960px-A_long_wall_in_a_room_with_decorated_pharmacy_jars_on_shelve_Wellcome_V0029792.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.thehindu.com/news/morning-digest-on-november-14-2026/article71700687.ece" target="_blank" rel="noopener"><h3>Comply with new prices of 137 anti-cancer drugs or face action, regulator warns</h3></a>
+        <p>The National Pharmaceutical Pricing Authority has warned of penal action against those failing to comply with the revised prices of 137 non-scheduled anti-cancer drugs, The Hindu reports. State drug controllers must strictly monitor prices and submit action-taken reports by 16 November. The revised prices took effect on 9 November following an October gazette order capping the trade margin on these medicines at 30%.</p>
+        <div class="meta"><span class="credit">Photo: Pharmacy (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.thehindu.com/news/morning-digest-on-november-14-2026/article71700687.ece" target="_blank" rel="noopener">Read at The Hindu (NPPA) &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.thedailyjagran.com/education/news/todays-school-assembly-news-headline-november-15-2026-check-top-national-international-and-sports-news-here-10336302" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Fields_Zangla_Zanskar_River_Ladakh_Jun24_A7CR_00981.jpg/960px-Fields_Zangla_Zanskar_River_Ladakh_Jun24_A7CR_00981.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.thedailyjagran.com/education/news/todays-school-assembly-news-headline-november-15-2026-check-top-national-international-and-sports-news-here-10336302" target="_blank" rel="noopener"><h3>Three earthquakes recorded in Chenab Valley, one in Ladakh; Odisha clears Rs 625 crore river projects</h3></a>
+        <p>Three earthquakes were recorded in the Chenab Valley region while one struck the Union Territory of Ladakh, The Daily Jagran&#x27;s 15 November headlines report. Separately, Odisha has sanctioned five river storage projects with an investment of Rs 625 crore, aimed at water storage and irrigation infrastructure.</p>
+        <div class="meta"><span class="credit">Photo: Himalayas (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.thedailyjagran.com/education/news/todays-school-assembly-news-headline-november-15-2026-check-top-national-international-and-sports-news-here-10336302" target="_blank" rel="noopener">Read at The Daily Jagran &#8599;</a></div>
+      </div>
+    </article></div>
+</section><section id="business" class="section" style="--sec:#d97706">
+  <div class="sec-head"><span class="sec-chip">Business &amp; Investment</span><span class="sec-sub">Markets · Earnings · Deals</span><span class="sec-count">6 stories</span></div>
+  <div class="grid"><article class="card lead">
+      <a class="thumb" href="https://ianslive.in/sensex-nifty-extend-gains-for-third-straight-week-amid-strong-foreign-inflows--20261114145637" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://ianslive.in/sensex-nifty-extend-gains-for-third-straight-week-amid-strong-foreign-inflows--20261114145637" target="_blank" rel="noopener"><h3>Markets extend gains for a third straight week on foreign inflows, IANS reports</h3></a>
+        <p>Indian equity benchmarks extended gains for a third consecutive week amid sustained foreign inflows and strong domestic fundamentals, IANS reported on 14 November. The Nifty added 0.46% during the week (0.63% on the November 9-13 measure) and the Sensex gained 0.36-0.73% for the week, even as both slipped on Friday. Bank Nifty outperformed, advancing 3.7% during the week.</p>
+        <div class="meta"><span class="credit">Photo: BSE, Mumbai - Wikimedia Commons</span><a class="read" href="https://ianslive.in/sensex-nifty-extend-gains-for-third-straight-week-amid-strong-foreign-inflows--20261114145637" target="_blank" rel="noopener">Read at IANS &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://english.webdunia.com/article/finance/stock-markets-snap-three-session-winning-streak-nifty-below-25-200-mark-126111400004_1.html" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://english.webdunia.com/article/finance/stock-markets-snap-three-session-winning-streak-nifty-below-25-200-mark-126111400004_1.html" target="_blank" rel="noopener"><h3>Friday close: Sensex down 319 points at 81,592, Nifty below 25,200 at 25,144</h3></a>
+        <p>Indian markets snapped a three-session winning streak on Friday: the Sensex closed down 318.56 points (0.39%) at 81,592.45 and the Nifty fell 155.05 points (0.61%) to 25,144.30 amid broad-based selling, Webdunia reports. The rupee weakened for a second straight session, falling 21 paise to close at 94.24 per US dollar, from 94.03 previously. Markets are closed over the weekend and reopen Monday.</p>
+        <div class="meta"><span class="credit">Photo: Stock exchange (scene photo) - Wikimedia Commons</span><a class="read" href="https://english.webdunia.com/article/finance/stock-markets-snap-three-session-winning-streak-nifty-below-25-200-mark-126111400004_1.html" target="_blank" rel="noopener">Read at Webdunia &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.multibagg.ai/market-pulse/articles/nifty-outlook-inflation-support-test-cmwg23w9w000o2sqmsu14a55x" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.multibagg.ai/market-pulse/articles/nifty-outlook-inflation-support-test-cmwg23w9w000o2sqmsu14a55x" target="_blank" rel="noopener"><h3>Nifty&#x27;s 25,000 support faces an inflation test in the week ahead</h3></a>
+        <p>The Nifty 50 enters the 16-20 November week at 25,144.30, and its ability to hold 25,000 will be tested after October retail inflation rose to 6.09%, above the RBI&#x27;s 6% upper tolerance limit, Multibagg&#x27;s market outlook notes. Bank Nifty closed Friday 0.79% lower at 61,034.10 after a 3.71% weekly advance. Analysts flag crude prices and the December RBI decision as the next triggers.</p>
+        <div class="meta"><span class="credit">Photo: Markets (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.multibagg.ai/market-pulse/articles/nifty-outlook-inflation-support-test-cmwg23w9w000o2sqmsu14a55x" target="_blank" rel="noopener">Read at Multibagg (IRIS) &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://theraisinapost.com/24-hours/india-news/2026-11-14/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Cairo_Skyline_%282020%29.jpg/960px-Cairo_Skyline_%282020%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://theraisinapost.com/24-hours/india-news/2026-11-14/" target="_blank" rel="noopener"><h3>Piyush Goyal leads a 130-plus business delegation to Egypt on 15-16 November</h3></a>
+        <p>Commerce Minister Piyush Goyal will visit Egypt on 15-16 November to co-chair the seventh India-Egypt Joint Trade Committee meeting, the Commerce Ministry announced on Saturday via PIB, The Raisina Post reports. The delegation includes more than 130 business leaders and startup representatives, with a proposed India-Egypt startup forum and a focus on infrastructure, manufacturing and logistics.</p>
+        <div class="meta"><span class="credit">Photo: Cairo (scene photo) - Wikimedia Commons</span><a class="read" href="https://theraisinapost.com/24-hours/india-news/2026-11-14/" target="_blank" rel="noopener">Read at PIB via The Raisina Post &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.pw.live/school-prep/exams/school-assembly-news-headlines-today" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Port_Area_of_Visakhapatnam_city_%2C_Andhra_Pradesh_01.jpg/960px-Port_Area_of_Visakhapatnam_city_%2C_Andhra_Pradesh_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.pw.live/school-prep/exams/school-assembly-news-headlines-today" target="_blank" rel="noopener"><h3>Visakhapatnam hosts the 31st CII Partnership Summit with global business leaders</h3></a>
+        <p>Visakhapatnam is hosting the 31st CII Partnership Summit 2026 with global business and policy leaders, Physics Wallah&#x27;s business headlines report. In Andhra Pradesh, Chief Minister Naidu has called on industries to turn investment MoUs into projects on the ground and support poor families through the P4 programme.</p>
+        <div class="meta"><span class="credit">Photo: Visakhapatnam (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.pw.live/school-prep/exams/school-assembly-news-headlines-today" target="_blank" rel="noopener">Read at Physics Wallah &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.pw.live/school-prep/exams/school-assembly-news-headlines-today" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.pw.live/school-prep/exams/school-assembly-news-headlines-today" target="_blank" rel="noopener"><h3>SBI report projects crude oil could fall to $70 a barrel in 2027</h3></a>
+        <p>An SBI report projects crude oil prices could drop to $70 a barrel in 2027, Physics Wallah&#x27;s 15 November business headlines note - a development that would ease India&#x27;s import bill and inflation pressure if it materialises. Separately, J.P. Morgan estimates US humanoid robot output could reach 4 lakh units by 2030.</p>
+        <div class="meta"><span class="credit">Photo: Oil market (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.pw.live/school-prep/exams/school-assembly-news-headlines-today" target="_blank" rel="noopener">Read at Physics Wallah (SBI report) &#8599;</a></div>
+      </div>
+    </article></div>
+</section><section id="ai" class="section" style="--sec:#7c3aed">
+  <div class="sec-head"><span class="sec-chip">Artificial Intelligence</span><span class="sec-sub">Models · Policy · The Build-Out</span><span class="sec-count">6 stories</span></div>
+  <div class="grid"><article class="card lead">
+      <a class="thumb" href="https://www.preciseimpact.ai/briefing/ai-news-digest-2026-11-14" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Freshly_painted_memes_at_MobileCoin_HQ_%2851099753491%29.jpg/960px-Freshly_painted_memes_at_MobileCoin_HQ_%2851099753491%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.preciseimpact.ai/briefing/ai-news-digest-2026-11-14" target="_blank" rel="noopener"><h3>ChatGPT Wallet lets US users approve purchases made by their AI agents</h3></a>
+        <p>OpenAI has launched ChatGPT Wallet with American Express, Mastercard and Visa, enabling its agents to make purchases on users&#x27; behalf with approval, Precise Impact AI&#x27;s 14 November brief reports. The wallet gives agents a payment token instead of the user&#x27;s card and asks for confirmation on purchases, starting with adult US Pro users.</p>
+        <div class="meta"><span class="credit">Photo: Digital payments (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.preciseimpact.ai/briefing/ai-news-digest-2026-11-14" target="_blank" rel="noopener">Read at Precise Impact AI &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://sxf.si/brief/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://sxf.si/brief/" target="_blank" rel="noopener"><h3>OpenAI unveils Daybreak: coordinated pen-testing agents with reviewed fixes</h3></a>
+        <p>OpenAI introduced Daybreak Red Team and Daybreak Defense Factory at its Cyber at the Frontier event on 12 November, SXF Brief reports. The tools use coordinated penetration-testing agents and a vulnerability-remediation workflow; Red Team access is restricted and fixes require human review before they are applied.</p>
+        <div class="meta"><span class="credit">Photo: Cybersecurity (scene photo) - Wikimedia Commons</span><a class="read" href="https://sxf.si/brief/" target="_blank" rel="noopener">Read at SXF Brief &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.financeintelligence.com.au/2026/11/ai-news-wrap-up-canberra-moves-to.html" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Australian_House_of_Representatives_-_Parliament_of_Australia.jpg/960px-Australian_House_of_Representatives_-_Parliament_of_Australia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.financeintelligence.com.au/2026/11/ai-news-wrap-up-canberra-moves-to.html" target="_blank" rel="noopener"><h3>Australia proposes a frontier AI safety regulator with mandatory incident reporting</h3></a>
+        <p>Australia&#x27;s Prime Minister announced proposed Australian AI Standards on 10 November, including an AI safety regulator and mandatory incident reporting for frontier AI companies, Finance Intelligence&#x27;s weekly wrap reports. In the same week, Microsoft&#x27;s Copilot in Excel gained journal-drafting and account-reconciliation features, with general availability from 13 November.</p>
+        <div class="meta"><span class="credit">Photo: Canberra (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.financeintelligence.com.au/2026/11/ai-news-wrap-up-canberra-moves-to.html" target="_blank" rel="noopener">Read at Finance Intelligence &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.financeintelligence.com.au/2026/11/ai-news-wrap-up-canberra-moves-to.html" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.financeintelligence.com.au/2026/11/ai-news-wrap-up-canberra-moves-to.html" target="_blank" rel="noopener"><h3>Breach two vendors away exposed some Notion AI chats, via Fireworks AI</h3></a>
+        <p>Notion disclosed that some Notion AI chat transcripts were exposed after a breach at Fireworks AI, one of its model-hosting suppliers, Finance Intelligence reports (via TechCrunch, SecurityWeek, VentureBeat). A third-party cloud provider used by Fireworks was breached on 23 October; Fireworks told Notion on 2 November and Notion disconnected the next day. Cursor reported a related exposure involving the same vendor.</p>
+        <div class="meta"><span class="credit">Photo: Cyber security (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.financeintelligence.com.au/2026/11/ai-news-wrap-up-canberra-moves-to.html" target="_blank" rel="noopener">Read at Finance Intelligence &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.everydev.ai/p/news-weekly-ai-dev-news-digest-november-8-november-13-2026" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.everydev.ai/p/news-weekly-ai-dev-news-digest-november-8-november-13-2026" target="_blank" rel="noopener"><h3>Anthropic heads for a Nasdaq listing on 19 November under ticker ANT</h3></a>
+        <p>Anthropic expects its shares to begin trading on the Nasdaq Global Select Market on 19 November under the ticker ANT, EveryDev&#x27;s weekly digest reports from the SEC filing. Anthropic and existing shareholders plan to offer 825 million shares at $70 to $78 each. The company reported $33.2 billion in revenue for the first nine months of 2026 and a $1.3 billion operating loss for the same period.</p>
+        <div class="meta"><span class="credit">Photo: Anthropic (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.everydev.ai/p/news-weekly-ai-dev-news-digest-november-8-november-13-2026" target="_blank" rel="noopener">Read at EveryDev (SEC filing) &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.financeintelligence.com.au/2026/11/ai-news-wrap-up-canberra-moves-to.html" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.financeintelligence.com.au/2026/11/ai-news-wrap-up-canberra-moves-to.html" target="_blank" rel="noopener"><h3>Model prices move both ways: Gemini 4 Carbon doubles in December, Claude Fable 5.2 gets cheaper</h3></a>
+        <p>Google&#x27;s Gemini 4 Carbon introductory pricing of $2 per million input tokens and $10 per million output tokens runs to 30 November, then doubles to $4 and $20 from 1 December, Finance Intelligence reports. A day earlier, Anthropic released Claude Fable 5.2 at $8 and $40, down from $10 and $50 for Fable 5.1, claiming outputs up to 30% faster.</p>
+        <div class="meta"><span class="credit">Photo: AI models (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.financeintelligence.com.au/2026/11/ai-news-wrap-up-canberra-moves-to.html" target="_blank" rel="noopener">Read at Finance Intelligence &#8599;</a></div>
+      </div>
+    </article></div>
+</section><section id="banking" class="section" style="--sec:#0f766e">
+  <div class="sec-head"><span class="sec-chip">Banking</span><span class="sec-sub">Indian & Global Banks</span><span class="sec-count">6 stories</span></div>
+  <div class="grid"><article class="card lead">
+      <a class="thumb" href="https://ianslive.in/sensex-nifty-extend-gains-for-third-straight-week-amid-strong-foreign-inflows--20261114145637" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://ianslive.in/sensex-nifty-extend-gains-for-third-straight-week-amid-strong-foreign-inflows--20261114145637" target="_blank" rel="noopener"><h3>Bank Nifty outperforms with a 3.7% weekly gain, closing Friday at 61,034</h3></a>
+        <p>The Bank Nifty outperformed benchmark indices during the week, advancing about 3.7%, although it shed 0.8% in the final trading session to close at 61,034.10 on Friday, IANS and Multibagg market reports show. Financials have led the recent rally on sustained foreign inflows, even as Friday&#x27;s broad sell-off pulled the headline indices lower.</p>
+        <div class="meta"><span class="credit">Photo: Banking district (scene photo) - Wikimedia Commons</span><a class="read" href="https://ianslive.in/sensex-nifty-extend-gains-for-third-straight-week-amid-strong-foreign-inflows--20261114145637" target="_blank" rel="noopener">Read at IANS / Multibagg &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://sundayguardianlive.com/india/bank-holiday-today-november-14-are-banks-open-or-closed-across-india-on-saturday-check-sbi-hdfc-icici-branch-status-and-full-november-holiday-list-321956/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://sundayguardianlive.com/india/bank-holiday-today-november-14-are-banks-open-or-closed-across-india-on-saturday-check-sbi-hdfc-icici-branch-status-and-full-november-holiday-list-321956/" target="_blank" rel="noopener"><h3>Banks closed across India on Saturday 14 November for the second-Saturday holiday</h3></a>
+        <p>Bank branches across India remained closed on Saturday 14 November as the day fell on the second Saturday of the month, a regular holiday under RBI rules, The Sunday Guardian reports. Public and private lenders including SBI, HDFC Bank, ICICI Bank, Axis Bank and PNB offered no regular branch services; UPI, mobile and internet banking, and ATMs remained available. Branches reopen Monday 16 November, subject to local holidays.</p>
+        <div class="meta"><span class="credit">Photo: Bank branches (scene photo) - Wikimedia Commons</span><a class="read" href="https://sundayguardianlive.com/india/bank-holiday-today-november-14-are-banks-open-or-closed-across-india-on-saturday-check-sbi-hdfc-icici-branch-status-and-full-november-holiday-list-321956/" target="_blank" rel="noopener">Read at The Sunday Guardian &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.jagranjosh.com/lite/articles/sbi-clerk-prelims-result-2026-live-updates-download-scorecard-pdf-at-sbi-bank-in-lb-206826" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.jagranjosh.com/lite/articles/sbi-clerk-prelims-result-2026-live-updates-download-scorecard-pdf-at-sbi-bank-in-lb-206826" target="_blank" rel="noopener"><h3>SBI Clerk prelims result still awaited; mains tentatively on 26 November</h3></a>
+        <p>The SBI Clerk (Junior Associate) Prelims Result 2026 for regular vacancies was still awaited on the official SBI page as of 14 November, Jagran Josh&#x27;s live coverage reports. The prelims were held on 26-27 September for 7,680 regular vacancies under advertisement CRPD/CR/2026-27/17; candidates who qualify will sit the mains, tentatively scheduled for 26 November. SBI has not announced a confirmed release time.</p>
+        <div class="meta"><span class="credit">Photo: SBI (institution scene) - Wikimedia Commons</span><a class="read" href="https://www.jagranjosh.com/lite/articles/sbi-clerk-prelims-result-2026-live-updates-download-scorecard-pdf-at-sbi-bank-in-lb-206826" target="_blank" rel="noopener">Read at Jagran Josh &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.thehindubusinessline.com/portfolio/stock-fundamental-analysis-india/icici-life-share-price-valuation-discount-investment-analysis/article71697771.ece/amp/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/ICICI_Lombard_Head_Office_located_at_Prabhadevi%2C_Mumbai.jpg/960px-ICICI_Lombard_Head_Office_located_at_Prabhadevi%2C_Mumbai.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.thehindubusinessline.com/portfolio/stock-fundamental-analysis-india/icici-life-share-price-valuation-discount-investment-analysis/article71697771.ece/amp/" target="_blank" rel="noopener"><h3>ICICI Life trades at a wider valuation discount: is it a buying opportunity?</h3></a>
+        <p>ICICI Life Insurance was trading at around Rs 456 on 13 November, down 30% from its December 19 close, against falls of 12-23% for SBI Life, Max Financial and HDFC Life, The Hindu BusinessLine&#x27;s analysis notes. At nearly 1.2 times embedded value - against about Rs 193 per Rs 100 for HDFC Life and Rs 205 for SBI Life - the stock offers considerably better valuation comfort, though uneven sales growth and proposed regulatory changes weigh on sentiment.</p>
+        <div class="meta"><span class="credit">Photo: ICICI (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.thehindubusinessline.com/portfolio/stock-fundamental-analysis-india/icici-life-share-price-valuation-discount-investment-analysis/article71697771.ece/amp/" target="_blank" rel="noopener">Read at The Hindu BusinessLine &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.indianbankingradar.com/articles/indian-banking-radar-ibr-banking-economy-intelligence-daily-15" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.indianbankingradar.com/articles/indian-banking-radar-ibr-banking-economy-intelligence-daily-15" target="_blank" rel="noopener"><h3>Non-food bank credit growth accelerates to 19.1% year on year</h3></a>
+        <p>RBI&#x27;s September 2026 sectoral credit data reported year-on-year non-food bank credit growth of 19.1%, compared with 11.2% in the corresponding period of the previous year, Indian Banking Radar&#x27;s 11 November bulletin reports. NBFC credit grew 15.4% year on year in the same data, up from 13.3% in September 2025.</p>
+        <div class="meta"><span class="credit">Photo: Bank lending (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.indianbankingradar.com/articles/indian-banking-radar-ibr-banking-economy-intelligence-daily-15" target="_blank" rel="noopener">Read at Indian Banking Radar (RBI data) &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.indianbankingradar.com/articles/indian-banking-radar-ibr-banking-economy-intelligence-daily-13" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.indianbankingradar.com/articles/indian-banking-radar-ibr-banking-economy-intelligence-daily-13" target="_blank" rel="noopener"><h3>Public sector banks report Rs 53,771 crore combined net profit in Q2 FY27</h3></a>
+        <p>India&#x27;s 12 public sector banks reported a combined net profit of Rs 53,771 crore in Q2 FY27, Indian Banking Radar reports from bank filings. SBI alone contributed Rs 23,038 crore, up 14.28% year on year, with net interest income up 14.69%. SBI also acquired retail loan assets worth over Rs 17,000 crore in H1 FY27.</p>
+        <div class="meta"><span class="credit">Photo: Public sector banks (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.indianbankingradar.com/articles/indian-banking-radar-ibr-banking-economy-intelligence-daily-13" target="_blank" rel="noopener">Read at Indian Banking Radar &#8599;</a></div>
+      </div>
+    </article></div>
+</section><section id="regulators" class="section" style="--sec:#b45309">
+  <div class="sec-head"><span class="sec-chip">Banking Regulators</span><span class="sec-sub">Guidelines & Actions Worldwide</span><span class="sec-count">6 stories</span></div>
+  <div class="grid"><article class="card lead">
+      <a class="thumb" href="https://www.pw.live/school-prep/exams/school-assembly-news-headlines-today" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.pw.live/school-prep/exams/school-assembly-news-headlines-today" target="_blank" rel="noopener"><h3>CEA warns supply disruptions could limit the impact of monetary policy</h3></a>
+        <p>Chief Economic Adviser V. Anantha Nageswaran has warned that supply disruptions could limit the impact of monetary policies, Physics Wallah&#x27;s 15 November headlines report - a caution that lands as October inflation of 6.09% sits above the RBI&#x27;s 6% upper tolerance limit ahead of the December policy decision, with the repo rate at 5.50%.</p>
+        <div class="meta"><span class="credit">Photo: RBI, Mumbai - Wikimedia Commons</span><a class="read" href="https://www.pw.live/school-prep/exams/school-assembly-news-headlines-today" target="_blank" rel="noopener">Read at Physics Wallah &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.wirony.com/india/business/sebi-cuts-no-proof-rupee-derivatives-limit-to-usd-5-million-matching-rbis-95-tightening-who-is-affected/526-2026-11-05" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.wirony.com/india/business/sebi-cuts-no-proof-rupee-derivatives-limit-to-usd-5-million-matching-rbis-95-tightening-who-is-affected/526-2026-11-05" target="_blank" rel="noopener"><h3>SEBI cuts the no-proof rupee derivatives limit to $5 million, matching the RBI</h3></a>
+        <p>SEBI&#x27;s 5 November circular cut the size of rupee currency derivative positions that can be taken on exchanges without proving a real underlying exposure to a single limit of $5 million notional, outstanding at any point across all rupee pairs and exchanges, Wirony&#x27;s explainer reports. The change brings exchanges in line with the RBI, which set the same figure on 10 October, replacing an earlier $100 million limit - a 95% cut.</p>
+        <div class="meta"><span class="credit">Photo: SEBI / markets (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.wirony.com/india/business/sebi-cuts-no-proof-rupee-derivatives-limit-to-usd-5-million-matching-rbis-95-tightening-who-is-affected/526-2026-11-05" target="_blank" rel="noopener">Read at Wirony (SEBI circular) &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://sahasacademy.in/rbi-sebi-regulatory-updates-06-november-2026" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://sahasacademy.in/rbi-sebi-regulatory-updates-06-november-2026" target="_blank" rel="noopener"><h3>RBI hands non-bank payment operators one consolidated cyber rulebook</h3></a>
+        <p>On 5 November the RBI issued the consolidated Cyber Resilience and Digital Payment Security Controls Master Directions, 2026 for non-bank payment system operators (circular RBI/DPSS/2026-27/475), SAHAS Academy&#x27;s regulatory update reports. The directions merge earlier cybersecurity and payment-security instructions into a single reference and apply to authorised non-bank PSOs including NPCI, card networks, payment aggregators and PPI issuers.</p>
+        <div class="meta"><span class="credit">Photo: Digital payments security (scene photo) - Wikimedia Commons</span><a class="read" href="https://sahasacademy.in/rbi-sebi-regulatory-updates-06-november-2026" target="_blank" rel="noopener">Read at SAHAS Academy (RBI) &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://sahasacademy.in/rbi-sebi-regulatory-updates-06-november-2026" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://sahasacademy.in/rbi-sebi-regulatory-updates-06-november-2026" target="_blank" rel="noopener"><h3>RBI consults on five entity-wise priority-sector lending rulebooks; comments by 26 November</h3></a>
+        <p>The RBI&#x27;s 5 November draft directions consolidate priority-sector lending instructions into five separate rulebooks for Commercial Banks, Small Finance Banks, Local Area Banks, Regional Rural Banks and Urban Co-operative Banks, SAHAS Academy reports. Stakeholders may submit comments via the RBI&#x27;s Connect 2 Regulate portal or by email on or before 26 November 2026. The drafts are not yet enforceable changes.</p>
+        <div class="meta"><span class="credit">Photo: Priority-sector lending (scene photo) - Wikimedia Commons</span><a class="read" href="https://sahasacademy.in/rbi-sebi-regulatory-updates-06-november-2026" target="_blank" rel="noopener">Read at SAHAS Academy (RBI draft) &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://watch.cashlessconsumer.in/posts/2026-11-06-fintech-deep-dive-friday/" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://watch.cashlessconsumer.in/posts/2026-11-06-fintech-deep-dive-friday/" target="_blank" rel="noopener"><h3>SEBI overhauls KYC for NRIs and overseas Indians, effective 3 December</h3></a>
+        <p>SEBI&#x27;s 4 November circular overhauls KYC for individual Persons Resident Outside India - NRIs, OCIs and foreign nationals - effective 3 December 2026, Cashless Consumer&#x27;s regulatory roundup reports. Digital KYC onboarding is permitted for eligible clients located in FATF-compliant countries even when they are physically outside India.</p>
+        <div class="meta"><span class="credit">Photo: Digital KYC (scene photo) - Wikimedia Commons</span><a class="read" href="https://watch.cashlessconsumer.in/posts/2026-11-06-fintech-deep-dive-friday/" target="_blank" rel="noopener">Read at Cashless Consumer (SEBI) &#8599;</a></div>
+      </div>
+    </article><article class="card">
+      <a class="thumb" href="https://www.indianbankingradar.com/articles/indian-banking-radar-ibr-banking-economy-intelligence-daily-15" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body">
+        <a class="hl" href="https://www.indianbankingradar.com/articles/indian-banking-radar-ibr-banking-economy-intelligence-daily-15" target="_blank" rel="noopener"><h3>RBI releases FLA Census 2025-26 and constitutes a financial-markets consultative committee</h3></a>
+        <p>The RBI released the provisional results of its annual Census on Foreign Liabilities and Assets (FLA) of Indian direct investment entities on 6 November, Indian Banking Radar reports. The central bank also constituted the Technical Consultative Committee for Financial Markets (TCCFM) on 4 November to strengthen engagement with market participants on policy and operational matters.</p>
+        <div class="meta"><span class="credit">Photo: RBI (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.indianbankingradar.com/articles/indian-banking-radar-ibr-banking-economy-intelligence-daily-15" target="_blank" rel="noopener">Read at Indian Banking Radar (RBI) &#8599;</a></div>
+      </div>
+    </article></div>
+</section>
+  <section id="more" class="section">
+    <div class="sec-head more-head"><span class="sec-chip" style="background:linear-gradient(92deg,#7c3aed,#ec4899,#f97316)">More Across The Sections</span><span class="sec-sub">City · Health · Education · Awards · Defence · World</span><span class="sec-count">6 briefs</span></div>
+    <div class="briefs"><article class="brief">
+      <a class="thumb" href="https://www.thedailyjagran.com/education/news/todays-school-assembly-news-headline-november-15-2026-check-top-national-international-and-sports-news-here-10336302" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body"><a class="hl" href="https://www.thedailyjagran.com/education/news/todays-school-assembly-news-headline-november-15-2026-check-top-national-international-and-sports-news-here-10336302" target="_blank" rel="noopener"><h4>HEALTH - Former Vice-President Dhankhar discharged from AIIMS, New Delhi</h4></a>
+      <p>Former Vice-President Jagdeep Dhankhar has been discharged from AIIMS, New Delhi, following his medical evaluation and treatment, The Daily Jagran&#x27;s 15 November headlines report.</p>
+      <div class="meta"><span class="credit">Photo: New Delhi (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.thedailyjagran.com/education/news/todays-school-assembly-news-headline-november-15-2026-check-top-national-international-and-sports-news-here-10336302" target="_blank" rel="noopener">The Daily Jagran &#8599;</a></div></div>
+    </article><article class="brief">
+      <a class="thumb" href="https://www.thedailyjagran.com/education/news/todays-school-assembly-news-headline-november-15-2026-check-top-national-international-and-sports-news-here-10336302" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Gudele_2%2C_Juba_South_Sudan.jpg/960px-Gudele_2%2C_Juba_South_Sudan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body"><a class="hl" href="https://www.thedailyjagran.com/education/news/todays-school-assembly-news-headline-november-15-2026-check-top-national-international-and-sports-news-here-10336302" target="_blank" rel="noopener"><h4>WORLD - South Sudan postpones its first national elections until February</h4></a>
+      <p>South Sudan has postponed its first national elections until February, The Daily Jagran&#x27;s international headlines report. Separately, US Republicans derailed a bid to impeach Defense Secretary Hegseth, and Secretary Rubio assailed the international court in a speech to a conservative legal group.</p>
+      <div class="meta"><span class="credit">Photo: South Sudan (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.thedailyjagran.com/education/news/todays-school-assembly-news-headline-november-15-2026-check-top-national-international-and-sports-news-here-10336302" target="_blank" rel="noopener">The Daily Jagran &#8599;</a></div></div>
+    </article><article class="brief">
+      <a class="thumb" href="https://www.thedailyjagran.com/education/news/todays-school-assembly-news-headline-november-15-2026-check-top-national-international-and-sports-news-here-10336302" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body"><a class="hl" href="https://www.thedailyjagran.com/education/news/todays-school-assembly-news-headline-november-15-2026-check-top-national-international-and-sports-news-here-10336302" target="_blank" rel="noopener"><h4>ENERGY - Hormuz LNG traffic hits its highest in October since the Iran war began</h4></a>
+      <p>LNG traffic through the Strait of Hormuz hit its highest level in October since the Iran war began, The Daily Jagran reports - a closely watched gauge of energy flows through the chokepoint, even as crude markets watch for a possible slide towards $70 a barrel in 2027.</p>
+      <div class="meta"><span class="credit">Photo: Energy shipping (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.thedailyjagran.com/education/news/todays-school-assembly-news-headline-november-15-2026-check-top-national-international-and-sports-news-here-10336302" target="_blank" rel="noopener">The Daily Jagran &#8599;</a></div></div>
+    </article><article class="brief">
+      <a class="thumb" href="https://www.pw.live/school-prep/exams/school-assembly-news-headlines-today" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Volodymyr_Zelensky_Official_portrait.jpg/960px-Volodymyr_Zelensky_Official_portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body"><a class="hl" href="https://www.pw.live/school-prep/exams/school-assembly-news-headlines-today" target="_blank" rel="noopener"><h4>DIPLOMACY - Zelenskyy holds talks with Witkoff and Kushner in Ireland, announces prisoner swap</h4></a>
+      <p>Ukrainian President Zelenskyy held talks with US envoys Witkoff and Kushner in Ireland and announced a major prisoner swap, Physics Wallah&#x27;s international headlines report.</p>
+      <div class="meta"><span class="credit">Photo: Volodymyr Zelenskyy (file photo) - Wikimedia Commons</span><a class="read" href="https://www.pw.live/school-prep/exams/school-assembly-news-headlines-today" target="_blank" rel="noopener">Physics Wallah &#8599;</a></div></div>
+    </article><article class="brief">
+      <a class="thumb" href="https://www.thehindu.com/news/morning-digest-on-november-14-2026/article71700687.ece" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg/1280px-South_facade_of_the_White_House%2C_Washington_DC%2C_as_seen_from_the_Washington_Monument.jpg" alt="" loading="lazy"></a>
+      <div class="body"><a class="hl" href="https://www.thehindu.com/news/morning-digest-on-november-14-2026/article71700687.ece" target="_blank" rel="noopener"><h4>CLIMATE - Urgent climate finance pleas at COP31 face a slow response</h4></a>
+      <p>Urgent pleas for cash from poor nations most exposed to climate disasters risk meeting a sluggish response at Turkiye&#x27;s COP31 talks as Western governments put national security and living costs first, The Hindu reports. Rich countries agreed two years ago to triple climate funding for poorer countries to $300 billion per year by 2035.</p>
+      <div class="meta"><span class="credit">Photo: Climate summit (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.thehindu.com/news/morning-digest-on-november-14-2026/article71700687.ece" target="_blank" rel="noopener">The Hindu &#8599;</a></div></div>
+    </article><article class="brief">
+      <a class="thumb" href="https://www.thehindu.com/news/morning-digest-on-november-14-2026/article71700687.ece" target="_blank" rel="noopener"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Istanbul_and_Bosporus_big.jpg/960px-Istanbul_and_Bosporus_big.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="" loading="lazy"></a>
+      <div class="body"><a class="hl" href="https://www.thehindu.com/news/morning-digest-on-november-14-2026/article71700687.ece" target="_blank" rel="noopener"><h4>DEFENCE - Turkiye and Qatar sign a mutual defence agreement</h4></a>
+      <p>Turkiye and Qatar signed a mutual defence agreement on Friday as President Erdogan met the Qatari Emir Sheikh Tamim bin Hamad al-Thani in Istanbul, The Hindu reports. Erdogan said the two countries would continue working together to prevent the resurgence of war in the Gulf region and establish a basis for dialogue and peace.</p>
+      <div class="meta"><span class="credit">Photo: Istanbul (scene photo) - Wikimedia Commons</span><a class="read" href="https://www.thehindu.com/news/morning-digest-on-november-14-2026/article71700687.ece" target="_blank" rel="noopener">The Hindu &#8599;</a></div></div>
+    </article></div>
+  </section>
+</div>
+<footer>
+  <div class="brand">THE MORNING GLOBE</div>
+  <p>Every story sourced. Every photo real. Back tomorrow at 6:30 AM.</p>
+  <p>Follow the paper: <a href="https://www.instagram.com/themorningglobe" target="_blank" rel="noopener">@themorningglobe</a> · From the house of Deesha Global: <a href="https://www.instagram.com/deeshaglobal" target="_blank" rel="noopener">@deeshaglobal</a></p>
+  <p class="small">The Morning Globe — web edition, Sunday, 15 November 2026. Stories link to their original publishers; photos via Wikimedia Commons unless credited otherwise.</p>
+</footer>
+<div id="followModal" role="dialog" aria-modal="true" aria-labelledby="fmTitle">
+  <div class="modal-card">
+    <button class="modal-x" id="fmClose" aria-label="Close">&times;</button>
+    <div class="globe">🌅</div>
+    <h3 id="fmTitle">Enjoying the paper?</h3>
+    <p>The Morning Globe comes from the team at <b>Deesha Global</b> — follow <b>@deeshaglobal</b> for honest study, work and move-abroad guidance, and this paper in your feed every morning.</p>
+    <a class="btn-follow" href="https://www.instagram.com/deeshaglobal" target="_blank" rel="noopener">Follow @deeshaglobal</a>
+    <button class="btn-continue" id="fmContinue">Continue reading</button>
+  </div>
+</div>
+<script>
+(function () {
+  var KEY = 'tmg_follow_prompt_seen';
+  var modal = document.getElementById('followModal');
+  function dismiss() {
+    modal.classList.remove('open');
+    try { sessionStorage.setItem(KEY, '1'); } catch (e) {}
+  }
+  document.getElementById('fmContinue').addEventListener('click', dismiss);
+  document.getElementById('fmClose').addEventListener('click', dismiss);
+  modal.addEventListener('click', function (e) { if (e.target === modal) dismiss(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') dismiss(); });
+  var already = false;
+  try { already = !!sessionStorage.getItem(KEY); } catch (e) {}
+  if (!already) {
+    setTimeout(function () {
+      modal.classList.add('open');
+      try { sessionStorage.setItem(KEY, '1'); } catch (e) {}
+    }, 60000);
+  }
+})();
+</script>
+</body>
+</html>
+
+<script>
+(function () {
+  var KEY = 'tmg_follow_prompt_seen';
+  var modal = document.getElementById('followModal');
+  function dismiss() {
+    modal.classList.remove('open');
+    try { sessionStorage.setItem(KEY, '1'); } catch (e) {}
+  }
+  document.getElementById('fmContinue').addEventListener('click', dismiss);
+  document.getElementById('fmClose').addEventListener('click', dismiss);
+  modal.addEventListener('click', function (e) { if (e.target === modal) dismiss(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') dismiss(); });
+  var already = false;
+  try { already = !!sessionStorage.getItem(KEY); } catch (e) {}
+  if (!already) {
+    setTimeout(function () {
+      modal.classList.add('open');
+      try { sessionStorage.setItem(KEY, '1'); } catch (e) {}
+    }, 60000);
+  }
+})();
+</script>
+</body>
+</html>
