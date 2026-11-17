@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CareerCompass by Deesha Global — One CV. One Country. One Career Strategy.</title>
+<meta name="description" content="CareerCompass by Deesha Global: a personalised, evidence-based career strategy for India, Singapore, the UAE, the UK and Canada — built only from verified data.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js" defer></script>
+</head>
+<body>
+
+<div id="sampleBanner" class="sample-banner" hidden>
+  ⚠ Illustrative sample — <strong>“Illustrative sample candidate — not a real person.”</strong> You are viewing the sample flow described in the product specification. No real person's data is used.
+</div>
+
+<header class="site-header">
+  <div class="wrap header-in">
+    <div class="brand">
+      <div class="brand-mark">DG</div>
+      <div>
+        <div class="brand-name">CareerCompass <span>by Deesha Global</span></div>
+        <div class="brand-sub">Study · Move · Work — the third Deesha Global tool</div>
+      </div>
+    </div>
+    <nav class="header-nav">
+      <button class="link-btn" id="navSample">View a sample report</button>
+      <button class="link-btn" id="navDelete">Delete my data</button>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>One CV. One country.<br>One personalised career strategy.</h1>
+    <p class="hero-sub">CareerCompass matches your confirmed profile against Deesha Global's verified dataset for
+      <strong>India, Singapore, the UAE, the UK and Canada</strong> — the recruitment firms that actually recruit your profile,
+      the skills to prioritise, and where to base your search. Every recommendation carries its source and the date it was checked.
+      If the data does not support a recommendation, CareerCompass says so rather than inventing one.</p>
+    <div class="hero-points">
+      <div class="hp"><strong>Dataset-first</strong><span>No invented firms, employers, fees or vacancies — ever.</span></div>
+      <div class="hp"><strong>Your CV is not stored</strong><span>It is processed, then deleted. Only the profile you confirm is kept.</span></div>
+      <div class="hp"><strong>Scores you can inspect</strong><span>Suitability assessments with the full breakdown shown — never a promise of an offer.</span></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap">
+
+  <!-- STEP 1 · INTAKE -->
+  <section id="stepIntake" class="card step">
+    <div class="step-head"><span class="step-no">1</span><h2>Start with your CV</h2></div>
+
+    <h3 class="lbl">Target country</h3>
+    <div class="country-grid" id="countryGrid" role="radiogroup" aria-label="Target country"></div>
+
+    <h3 class="lbl">Your CV</h3>
+    <div class="tabs" role="tablist">
+      <button class="tab active" data-tab="upload" role="tab">Upload a file</button>
+      <button class="tab" data-tab="paste" role="tab">Paste CV text</button>
+      <button class="tab" data-tab="describe" role="tab">Describe your experience</button>
+    </div>
+    <div class="tabpane" id="pane-upload">
+      <label class="drop" for="cvFile">
+        <input type="file" id="cvFile" accept=".pdf,.docx,.txt" hidden>
+        <span class="drop-title">Choose a PDF, DOCX or TXT file</span>
+        <span class="drop-sub" id="fileName">Maximum 10 MB. The file is read in your browser only — it is never uploaded.</span>
+      </label>
+    </div>
+    <div class="tabpane" id="pane-paste" hidden>
+      <textarea id="cvText" rows="9" placeholder="Paste the text of your CV here…"></textarea>
+    </div>
+    <div class="tabpane" id="pane-describe" hidden>
+      <textarea id="cvDescribe" rows="9" placeholder="Describe your experience in plain English — roles, industries, years of experience, key skills, qualifications…"></textarea>
+    </div>
+
+    <label class="fld">
+      <span>LinkedIn profile URL <em>(optional — stored as a reference only, never scraped)</em></span>
+      <input type="url" id="linkedinUrl" placeholder="https://www.linkedin.com/in/…">
+    </label>
+
+    <div class="consent">
+      <label>
+        <input type="checkbox" id="consentBox">
+        <span><strong>Consent (required).</strong> I agree that CareerCompass may process my CV to extract a career profile.
+        The file is processed entirely in my browser and is <strong>never uploaded or stored anywhere</strong>.
+        Only the extracted profile I confirm is kept, in this browser, and I can delete my profile and data at any time using “Delete my data”.
+        CareerCompass is for working-age jobseekers (18+).</span>
+      </label>
+      <div class="consent-meta">Consent text version 2026-11-17 · Processing never begins without this tick.</div>
+    </div>
+
+    <button class="btn primary" id="extractBtn" disabled>Extract my profile →</button>
+    <p class="err" id="intakeErr" role="alert"></p>
+  </section>
+
+  <!-- STEP 2 · PROFILE CONFIRMATION -->
+  <section id="stepProfile" class="card step" hidden>
+    <div class="step-head"><span class="step-no">2</span><h2>Confirm your extracted profile</h2></div>
+    <p class="note">Nothing is generated from an unconfirmed profile. Check each field — fields marked
+      <span class="prov ai_inferred">assessed</span> are CareerCompass's reading of your document and are visually distinct until you confirm them;
+      <span class="prov verified">from your document</span> means the fact appears in the text you provided. Edit anything that is wrong.</p>
+    <div id="profileForm"></div>
+    <h3 class="lbl">Missing or uncertain — please review</h3>
+    <ul class="missing" id="missingList"></ul>
+    <label class="fld">
+      <span>Target country for this report</span>
+      <select id="countrySelect"></select>
+    </label>
+    <div class="row-btns">
+      <button class="btn ghost" id="backToIntake">← Back</button>
+      <button class="btn primary" id="confirmBtn">Confirm profile &amp; build my summary →</button>
+    </div>
+  </section>
+
+  <!-- STEP 3 · SUMMARY + GATE -->
+  <section id="stepSummary" class="card step" hidden>
+    <div class="step-head"><span class="step-no">3</span><h2>Your CareerCompass summary</h2></div>
+    <div id="summaryBody"></div>
+    <div class="gate" id="gateBox">
+      <h3>Unlock the full report</h3>
+      <p>The full report — every firm with its match breakdown, your skill priorities, locations, eligibility guidance and your
+        30-60-90-day plan — unlocks with an email verification code, the same gate Deesha Global uses for the Relocation Assessment.
+        Enter your email address and we will send you a six-digit code through Deesha Global's email verification service.
+        At launch the full report is provided at no charge.</p>
+      <div id="gateForm">
+        <div class="gate-row">
+          <input type="email" id="gateEmail" placeholder="you@example.com" autocomplete="email">
+          <button class="btn primary" id="sendCodeBtn">Send my code</button>
+        </div>
+        <div id="otpArea" hidden>
+          <p class="gate-msg" id="gateMsg" role="status"></p>
+          <div class="gate-row">
+            <input type="text" id="otpInput" inputmode="numeric" maxlength="6" placeholder="6-digit code" autocomplete="one-time-code">
+            <button class="btn primary" id="verifyBtn">Verify &amp; unlock →</button>
+          </div>
+          <div class="gate-row">
+            <button class="btn ghost" id="resendBtn" type="button" disabled>Resend code</button>
+            <span class="note" id="resendNote"></span>
+          </div>
+        </div>
+        <p class="err" id="gateErr" role="alert"></p>
+      </div>
+      <div id="gateDone" hidden></div>
+    </div>
+  </section>
+
+  <!-- STEP 4 · FULL REPORT -->
+  <section id="stepReport" class="step" hidden>
+    <div class="report-actions">
+      <h2>Your full CareerCompass report</h2>
+      <div>
+        <button class="btn ghost" id="printBtn">Print / save as PDF</button>
+        <button class="btn ghost" id="restartBtn">Start again</button>
+      </div>
+    </div>
+    <div id="reportBody"></div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-brand">CareerCompass by Deesha Global</div>
+    <p>CareerCompass provides career guidance based on verified public data. It is <strong>not</strong> immigration, legal or hiring advice,
+      and no score or recommendation is a promise of an interview, an offer or a visa outcome. CareerCompass never contacts recruiters
+      or submits applications on your behalf — it recommends; you act.</p>
+    <p class="foot-meta">Firm dataset version <span id="dsVersion">—</span> · Firms verified 2026-11-16 against their official websites ·
+      Extraction runs entirely in your browser — your CV is never uploaded. The full report is unlocked by email verification through Deesha Global's email service.</p>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/extract.js"></script>
+<script src="js/report.js"></script>
+<script src="js/sample.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
