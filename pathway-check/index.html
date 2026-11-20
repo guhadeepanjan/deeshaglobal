@@ -10,33 +10,33 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Relocation Assessment | Deesha Global">
 <meta name="twitter:description" content="We assess your profile against the immigration routes in force across eight countries, and tell you plainly where you stand on each one.">
-<link rel="stylesheet" href="../assets/css/design.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/css/design.css">
 <style>
 .pc-wide{max-width:1460px;margin:0 auto;padding:0 32px}
 .pc-hero{padding:54px 0 42px}
-.pc-hero p.pc-herobody{color:#cbd5e1;font-size:16.5px;line-height:1.65;max-width:1060px}
+.pc-hero p.pc-herobody{color:var(--ink-2);font-size:16.5px;line-height:1.65;max-width:1060px}
 .pc-section{padding:46px 0}
 .pc-section h2{margin-bottom:8px}
 .pc-intro{color:var(--ink2);font-size:16px;line-height:1.6;max-width:1060px;margin:0 0 6px}
 .pc-form{display:grid;grid-template-columns:repeat(3,1fr);gap:14px 20px;margin-top:22px}
 .pc-field label{display:block;font-weight:700;font-size:13.5px;margin-bottom:6px;color:var(--ink)}
-.pc-field select{width:100%;padding:11px 10px;border:1.5px solid var(--line);border-radius:6px;font-size:15px;background:#fff;color:var(--ink)}
+.pc-field select{width:100%;padding:12px;border:1px solid var(--line);border-radius:12px;font-size:15px;background:#fff;color:var(--ink)}
 .pc-field select:focus{outline:2px solid var(--gold);outline-offset:1px}
 .pc-form .pc-submit{grid-column:1/-1;margin-top:4px}
-.pc-error{display:none;background:#fdecec;border:1px solid #e5a3a3;color:#7a1f1f;border-radius:6px;padding:12px 16px;margin-top:16px;font-size:14.5px}
-.pc-disclaimer{background:#fff;border:1.5px solid var(--gold);border-radius:8px;padding:16px 20px;margin-top:24px}
+.pc-error{display:none;background:#fdecec;border:1px solid #e5a3a3;color:#7a1f1f;border-radius:12px;padding:12px 16px;margin-top:16px;font-size:14.5px}
+.pc-disclaimer{background:var(--gold-soft);border:1px solid #eee0ae;border-radius:14px;padding:16px 20px;margin-top:24px}
 .pc-disclaimer p{margin:0;font-size:14px;line-height:1.6;color:var(--muted)}
 .pc-layer{margin-top:8px}
 .pc-l1grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
-.pc-country{display:flex;gap:14px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px 16px}
+.pc-country{display:flex;gap:14px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 18px}
 .pc-rank{flex:0 0 auto;width:36px;height:36px;border-radius:50%;background:var(--navy);color:var(--gold-bright);font-family:var(--serif);font-weight:700;font-size:17px;display:flex;align-items:center;justify-content:center}
 .pc-country h3{margin:0 0 4px;font-size:19px}
 .pc-country p{margin:0 0 4px;font-size:14.5px;line-height:1.5}
 .pc-cnote{color:var(--muted);font-size:13px!important}
 .pc-counts{color:var(--teal);font-weight:700;font-size:12px!important;text-transform:uppercase;letter-spacing:.04em}
 .pc-country-block{margin-top:28px}
-.pc-country-block>h3{font-size:22px;border-bottom:3px solid var(--gold);padding-bottom:7px}
-.pc-card{background:#fff;border:1px solid var(--line);border-left:6px solid var(--muted);border-radius:8px;padding:16px 18px;margin:12px 0}
+.pc-country-block>h3{font-size:22px;border-bottom:2px solid var(--gold-bright);padding-bottom:7px}
+.pc-card{background:#fff;border:1px solid var(--line);border-left:6px solid var(--muted);border-radius:16px;padding:18px 20px;margin:12px 0}
 .pc-card-likely{border-left-color:#1e7d4f}
 .pc-card-borderline{border-left-color:var(--gold)}
 .pc-card-notyet{border-left-color:#b03a2e}
@@ -50,7 +50,7 @@
 .v-notyet{background:#fde8e5;color:#7c241a}
 .v-offer{background:#e0efec;color:#0f3d36}
 .v-unavailable{background:#e8ebee;color:#44505c}
-.pc-gap{background:#fdf8ec;border:1px solid var(--gold);border-radius:8px;padding:11px 15px;margin:12px 0;font-size:14px}
+.pc-gap{background:var(--gold-soft);border:1px solid #eee0ae;border-radius:14px;padding:11px 15px;margin:12px 0;font-size:14px}
 .pc-gap-hard{background:#fdf0ee;border-color:#e0a49c}
 .pc-gap ul{margin:5px 0 0;padding-left:19px}
 .pc-gap li{margin:3px 0}
@@ -59,25 +59,25 @@
 .pc-fam{grid-template-columns:repeat(4,1fr)}
 .pc-facts b{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--teal)}
 .pc-facts p{margin:3px 0 0;font-size:14px;line-height:1.55}
-.pc-est{background:#eef4ff;border:1px solid #b9c9e8;border-radius:8px;padding:11px 15px;margin-top:12px;font-size:14px;line-height:1.6}
+.pc-est{background:var(--bg-sky);border:1px solid var(--line);border-radius:14px;padding:11px 15px;margin-top:12px;font-size:14px;line-height:1.6}
 .pc-steps{margin-top:12px;font-size:14px}
 .pc-steps ol{margin:5px 0 0;padding-left:20px}
 .pc-steps li{margin:3px 0}
 .pc-sources{font-size:12.5px;color:var(--muted);margin-top:12px}
 .pc-sources a{color:var(--teal)}
 .pc-select-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:16px}
-.pc-select-item{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--line);border-radius:8px;padding:12px 14px;background:#fff;cursor:pointer}
+.pc-select-item{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--line);border-radius:14px;padding:12px 14px;background:#fff;cursor:pointer}
 .pc-select-item:hover{border-color:var(--gold)}
-.pc-select-item input{margin-top:3px;width:17px;height:17px;accent-color:var(--navy)}
+.pc-select-item input{margin-top:3px;width:17px;height:17px;accent-color:var(--teal-dark)}
 .pc-select-item b{font-size:15.5px;display:block}
 .pc-select-item span{display:block;font-size:12.5px;color:var(--muted);margin-top:2px;line-height:1.45}
 .pc-select-actions{margin-top:16px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
 .pc-selmsg{font-size:14px;color:#7a5b00}
-.pc-verifybox{background:#fff;border:1.5px solid var(--navy);border-radius:10px;padding:22px 24px;margin-top:18px;max-width:860px}
+.pc-verifybox{background:#fff;border:1.5px solid var(--teal-dark);border-radius:20px;padding:24px 26px;margin-top:18px;max-width:860px}
 .pc-vrow{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;margin-top:14px}
 .pc-vfield label{display:block;font-weight:700;font-size:13.5px;margin-bottom:6px;color:var(--ink)}
-.pc-vfield input[type=email]{width:340px;max-width:100%;padding:12px;border:1.5px solid var(--line);border-radius:6px;font-size:15.5px}
-.pc-vfield input[type=text]{padding:12px;border:1.5px solid var(--line);border-radius:6px;font-size:19px;letter-spacing:.3em;text-align:center;width:210px}
+.pc-vfield input[type=email]{width:340px;max-width:100%;padding:12px;border:1px solid var(--line);border-radius:12px;font-size:15.5px}
+.pc-vfield input[type=text]{padding:12px;border:1px solid var(--line);border-radius:12px;font-size:19px;letter-spacing:.3em;text-align:center;width:210px}
 .pc-vfield input:focus{outline:2px solid var(--gold);outline-offset:1px}
 .pc-consent{display:flex;gap:9px;align-items:flex-start;font-size:13.5px;color:var(--ink2);margin-top:14px;max-width:760px;line-height:1.5}
 .pc-vmsg{font-size:14.5px;margin-top:14px;line-height:1.55;color:var(--ink2)}
@@ -85,9 +85,9 @@
 .pc-vnote{font-size:13px;color:var(--muted);margin-top:8px}
 .pc-linkbtn{background:none;border:none;padding:0;color:var(--teal);font-size:14.5px;font-weight:700;cursor:pointer;text-decoration:underline}
 .pc-linkbtn:disabled{color:var(--muted);cursor:default;text-decoration:none;font-weight:400}
-.pc-consult{background:var(--navy);color:#f5f8ff;border-radius:12px;padding:28px 30px;margin-top:44px}
+.pc-consult{background:linear-gradient(135deg,var(--teal-dark),var(--teal));color:#eaf4f1;border-radius:20px;padding:30px 32px;margin-top:44px}
 .pc-consult h2{color:#fff;margin-top:0}
-.pc-consult p{color:#dbe4ee;line-height:1.65;max-width:1060px}
+.pc-consult p{color:#bcd4cd;line-height:1.65;max-width:1060px}
 .pc-consult .btn{margin-top:8px}
 .pc-printhead{display:none}
 @media (max-width:1100px){.pc-form{grid-template-columns:1fr 1fr}.pc-facts{grid-template-columns:1fr 1fr}.pc-fam{grid-template-columns:1fr 1fr}.pc-select-grid{grid-template-columns:1fr 1fr}}

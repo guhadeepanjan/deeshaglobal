@@ -577,9 +577,9 @@
     };
     var dots = items.map(function (l) {
       var xy = pos[l.name] || [250, 140];
-      return '<g><circle cx="' + xy[0] + '" cy="' + xy[1] + '" r="17" fill="#0d2b45" stroke="#c6a15b" stroke-width="2.5"/>' +
+      return '<g><circle cx="' + xy[0] + '" cy="' + xy[1] + '" r="17" fill="#0b3b36" stroke="#c9a227" stroke-width="2.5"/>' +
         '<text x="' + xy[0] + '" y="' + (xy[1] + 5) + '" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">' + l.suitability_score + "</text>" +
-        '<text x="' + xy[0] + '" y="' + (xy[1] + 34) + '" text-anchor="middle" font-size="11.5" fill="#123a5c" font-weight="600">' + esc(l.name) + "</text></g>";
+        '<text x="' + xy[0] + '" y="' + (xy[1] + 34) + '" text-anchor="middle" font-size="11.5" fill="#14201c" font-weight="600">' + esc(l.name) + "</text></g>";
     }).join("");
     return '<div class="mapbox"><svg viewBox="0 0 520 250" width="100%" role="img" aria-label="Schematic map of Singapore employment clusters">' +
       '<path d="M30,150 Q90,95 200,105 Q320,60 430,70 Q500,80 495,120 Q480,165 380,180 Q260,215 150,205 Q60,195 30,150 Z" fill="#e8eef4" stroke="#b9c9d8"/>' + dots + "</svg>" +
