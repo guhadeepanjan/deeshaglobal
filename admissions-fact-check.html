@@ -70,6 +70,8 @@
 .fc-disclaimer{background:var(--gold-soft);border:1px solid #eee0ae;border-radius:14px;padding:20px 24px;color:var(--ink2);font-size:15px}
 @media(max-width:860px){.fc-selects{grid-template-columns:1fr}}
 @media(max-width:700px){.fc-block,.fc-result-head{padding:24px 20px}.fc-stream{grid-template-columns:1fr}.fc-stream .fc-stream-fee{text-align:left}.fc-stream .fc-stream-fee span{margin-left:0}.fc-fee-row b{white-space:normal;text-align:right}}
+/* Sticky header readability on this page: near-opaque so scrolled content never shows through and clashes with the header text */
+.header-unit{background:rgba(255,255,255,.97);backdrop-filter:blur(14px) saturate(1.5);-webkit-backdrop-filter:blur(14px) saturate(1.5)}
 </style>
 </head><body>
 <div class="header-unit"><header class="site-header"><div class="wrap nav">
