@@ -122,7 +122,6 @@ h4{font-family:var(--sans);font-size:16px;font-weight:700;margin:0}
 .card h3{margin:10px 0 8px}
 .card p{color:var(--ink-2);margin:0 0 14px;font-size:15.5px}
 .card .more{font-weight:700;font-size:14px;color:var(--gold)}
-.card .more::after{content:" →"}
 .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
 .step{border-top:2px solid var(--ink);padding-top:18px}
 .step b{font-family:var(--serif);font-style:italic;font-size:22px;font-weight:500;color:var(--gold)}
@@ -197,7 +196,7 @@ h4{font-family:var(--sans);font-size:16px;font-weight:700;margin:0}
 .card-media{display:block;margin:2px 0 20px}
 .card-media img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:14px;border:1px solid var(--line)}
 .page-visual{max-width:1120px;margin:44px auto 0;padding:0 24px}
-.page-visual img{display:block;width:100%;aspect-ratio:21/9;object-fit:cover;border-radius:var(--radius)}
+.page-visual img{display:block;width:100%;aspect-ratio:21/9;object-fit:cover;border-radius:var(--radius);background:var(--bg-sky)}
 @media(max-width:640px){.page-visual{margin-top:30px;padding:0 16px}.page-visual img{aspect-ratio:16/10}.hero-factcheck-chip{font-size:13px;padding:8px 13px}}
 
 /* ---------- Article components (HR Technology long-form) ---------- */
