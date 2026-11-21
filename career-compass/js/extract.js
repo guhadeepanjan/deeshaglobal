@@ -114,10 +114,18 @@
     // --- name ---------------------------------------------------------------
     var nameM = text.match(/^\s*name\s*[:\-]\s*(.+)$/im);
     if (nameM) { profile.name = nameM[1].trim(); prov.name = "verified"; }
-    else if (lines.length) {
-      var first = lines[0];
-      if (/^[A-Z][a-zA-Z.'-]+(\s+[A-Z][a-zA-Z.'-]+){1,3}$/.test(first) && first.length <= 40 && !/curriculum|resume|cv\b/i.test(first)) {
-        profile.name = first; prov.name = "ai_inferred";
+    else {
+      // Scan the first few lines: real CVs often put a heading ("Curriculum
+      // Vitae"), a headline or a contact line before/above the name, and
+      // names are frequently set in ALL CAPS.
+      for (var ni = 0; ni < Math.min(5, lines.length) && !profile.name; ni++) {
+        var cand = lines[ni];
+        if (cand.length > 40 || /@|https?:|www\.|\d{5,}/.test(cand)) continue;
+        if (/^(curriculum vitae|resume|cv|profile|professional summary|summary|experience|education|skills)\b/i.test(cand)) continue;
+        if (/^[A-Za-z][a-zA-Z.'-]+(\s+[A-Za-z][a-zA-Z.'-]+){1,3}$/.test(cand) &&
+            !/(head|manager|director|officer|lead|consultant|engineer|analyst|executive|specialist|president|bank|operations|payments)\b/i.test(cand)) {
+          profile.name = cand; prov.name = "ai_inferred";
+        }
       }
     }
     if (!profile.name) missing.push("Name not stated in the document");
@@ -148,18 +156,46 @@
     // --- employment history (blocks anchored on date ranges) ----------------
     var blocks = [];
     var blockRe = /((?:19|20)\d{2})\s*[-–—]\s*((?:19|20)\d{2}|present|current)/i;
+    var CITY_WORDS = ["mumbai", "delhi", "new delhi", "bengaluru", "bangalore", "chennai", "hyderabad", "pune", "kolkata", "ahmedabad", "singapore", "dubai", "abu dhabi", "london", "toronto", "new york", "sydney", "hong kong", "india", "uae", "uk", "usa"];
     function splitTitleEmployer(head) {
       var parts = String(head || "").split(/\s*[,|]\s+|\s+[-–—]\s+/).map(function (p) { return p.trim(); }).filter(Boolean);
-      return { title: parts[0] || null, employer: parts.length > 1 ? parts[1] : null };
+      var title = parts[0] || null, employer = null, place = null;
+      if (parts.length > 1) {
+        // "ABC Bank, Mumbai" — a trailing city/country is a place, not an employer.
+        if (CITY_WORDS.indexOf(parts[parts.length - 1].toLowerCase()) > -1 && /(bank|group|ltd|limited|inc|corp|company|technologies|solutions|capital|financial|insurance|consulting|systems|labs|airlines|energy|pharma)/i.test(parts[0])) {
+          employer = parts[0]; place = parts[parts.length - 1];
+          title = null; // title unknown from this line alone; caller may pair it with a title line
+          return { title: title, employer: employer, place: place, employerOnly: true };
+        }
+        employer = parts[1];
+      }
+      return { title: title, employer: employer, place: place };
     }
     lines.forEach(function (line, i) {
       var m = line.match(blockRe);
       if (m) {
         var rest = line.slice(m.index + m[0].length).replace(/^[\s,|·-]+/, "").trim();
+        // Text BEFORE the date on the same line is the common layout:
+        // "Head of Operations, ABC Bank — Jul 2020 – Present". Strip the
+        // trailing month name that belongs to the date, not the heading.
+        var pre = line.slice(0, m.index).replace(/(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s*$/i, "").replace(/[\s,|·—–-]+$/, "").trim();
         var head = null;
         if (rest.length >= 3 && rest.length <= 90) head = rest;                    // "2019 - Present  Head of Ops, ABC Bank"
-        else if (i > 0 && lines[i - 1].length <= 70 && !/[.!?]\s/.test(lines[i - 1])) head = lines[i - 1]; // title on the line above
+        else if (pre.length >= 3 && pre.length <= 90 && !/[.!?]\s/.test(pre) && !/^(experience|education|employment|work history|career history)\b/i.test(pre)) head = pre;
+        else if (i > 0 && lines[i - 1].length <= 70 && !/[.!?]\s/.test(lines[i - 1]) && !/^(experience|education|employment|work history|career history|professional summary|summary)\b/i.test(lines[i - 1])) head = lines[i - 1]; // title on the line above
         var te = splitTitleEmployer(head);
+        // "ABC Bank, Mumbai" line above a date line: pair it with the title
+        // line above it when one exists ("Senior Operations Manager" / "ABC Bank, Mumbai" / dates).
+        if (te.employerOnly) {
+          // The employer line may itself be the line above the dates, with
+          // the title one line higher still — check both.
+          for (var ai = i - 1; ai >= Math.max(0, i - 2) && !te.title; ai--) {
+            var above = lines[ai];
+            if (above === head) continue;
+            if (above.length <= 70 && !blockRe.test(above) && !/[.!?]\s/.test(above) && /(head|manager|director|officer|lead|consultant|engineer|analyst|executive|specialist|vp|president)/i.test(above)) te.title = above;
+          }
+        }
+        if (te.place && !profile.currentLocation) { profile.currentLocation = te.place; prov.currentLocation = "ai_inferred"; }
         blocks.push({ title: te.title, employer: te.employer, period: m[0], current: /present|current/i.test(m[2]) });
       }
     });
@@ -222,9 +258,21 @@
     if (profile.languages.length) prov.languages = "verified";
     var locM = text.match(/(based in|located in|location)\s*[:\-]?\s*([A-Z][a-zA-Z ]{2,30})/i);
     if (locM) { profile.currentLocation = locM[2].trim(); prov.currentLocation = "verified"; }
-    else {
-      var foundCountry = COUNTRIES.filter(function (c) { return hasKey(lower, c); });
-      if (foundCountry.length === 1) { profile.currentLocation = foundCountry[0]; prov.currentLocation = "ai_inferred"; }
+    else if (!profile.currentLocation) {
+      // A recognisable city in a short header/employer line ("… | Singapore",
+      // "ABC Bank, Mumbai") is a better location signal than a country that
+      // merely appears somewhere in the body text.
+      var CITIES = ["Mumbai", "New Delhi", "Delhi", "Bengaluru", "Bangalore", "Chennai", "Hyderabad", "Pune", "Kolkata", "Singapore", "Dubai", "Abu Dhabi", "London", "Toronto", "Hong Kong", "Sydney", "New York"];
+      for (var ci = 0; ci < lines.length && !profile.currentLocation; ci++) {
+        if (lines[ci].length > 70) continue;
+        for (var cj = 0; cj < CITIES.length; cj++) {
+          if (hasKey(lines[ci].toLowerCase(), CITIES[cj].toLowerCase())) { profile.currentLocation = CITIES[cj]; prov.currentLocation = "ai_inferred"; break; }
+        }
+      }
+      if (!profile.currentLocation) {
+        var foundCountry = COUNTRIES.filter(function (c) { return hasKey(lower, c); });
+        if (foundCountry.length === 1) { profile.currentLocation = foundCountry[0]; prov.currentLocation = "ai_inferred"; }
+      }
     }
     if (!profile.currentLocation) missing.push("Current location is not stated in the document");
     missing.push("Work-authorisation position for the target country is not stated in the document");
